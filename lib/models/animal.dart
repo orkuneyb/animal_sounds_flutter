@@ -1,24 +1,28 @@
 class Animal {
-  String? id;
-  String? name;
-  String? description;
-  String? imageUrl;
+  late int index;
+  late String name;
+  late String description;
+  late String imagePath;
 
-  Animal({this.id, this.name, this.description, this.imageUrl});
+  Animal(
+      {required this.index,
+      required this.name,
+      required this.description,
+      required this.imagePath});
 
   Animal.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
+    index = json['index'];
     name = json['name'];
     description = json['description'];
-    imageUrl = json['imageUrl'];
+    imagePath = json['imageUrl'];
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
+    data['id'] = index;
     data['name'] = this.name;
     data['description'] = this.description;
-    data['imageUrl'] = this.imageUrl;
+    data['imageUrl'] = this.imagePath;
     return data;
   }
 }
