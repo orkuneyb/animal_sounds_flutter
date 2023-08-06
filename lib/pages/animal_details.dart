@@ -1,5 +1,6 @@
 import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
+import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
@@ -58,9 +59,21 @@ class _AnimalDetailsPageState extends State<AnimalDetailsPage> {
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           color: Colors.yellow[200],
-          child: Image.asset(
-            AnimalRepository.animals[currentAnimalIndex].imagePath,
-            fit: BoxFit.contain,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                AnimalRepository.animals[currentAnimalIndex].imagePath,
+                fit: BoxFit.contain,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text(
+                widget.animal.name.toUpperCase(),
+                style: MyTextStyles.titleTextStyle,
+              )
+            ],
           ),
         ),
       ],
