@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  assets_audio_player: ^3.0.6
 
 dev_dependencies:
   flutter_test:
@@ -26,3 +27,4 @@ flutter:
   assets:
     - assets/animal_images/
     - assets/animal_sounds/
+    - assets/
