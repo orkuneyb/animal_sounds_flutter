@@ -1,6 +1,7 @@
 import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/pages/animal_details.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
+import 'package:animal_sounds_flutter/transitions/page_transitions.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -26,10 +27,8 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                  builder: (context) => AnimalDetailsPage(
-                    animal: animal,
-                  ),
+                PageTransitions.createScaleTransition(
+                  AnimalDetailsPage(animal: animal),
                 ),
               );
             },
@@ -50,16 +49,17 @@ class _HomePageState extends State<HomePage> {
   AppBar appBarWidget() {
     return AppBar(
       centerTitle: true,
+      automaticallyImplyLeading: false,
       title: const Text(
         "Hayvan Sesleri",
       ),
-      leading: const Icon(
-        Icons.menu,
-      ),
-      actions: const [
-        Icon(
-          Icons.settings,
-        )
+      actions: [
+        IconButton(
+          icon: const Icon(Icons.settings),
+          onPressed: () {
+            Navigator.pushNamed(context, "/settingsPage");
+          },
+        ),
       ],
     );
   }

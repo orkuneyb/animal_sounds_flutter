@@ -9,11 +9,13 @@ environment:
   sdk: '>=3.0.3 <4.0.0'
 
 dependencies:
+  app_settings: ^5.0.0
+  assets_audio_player: ^3.0.6
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
-  assets_audio_player: ^3.0.6
+  provider: ^6.1.1
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:

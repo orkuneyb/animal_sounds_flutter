@@ -3,6 +3,9 @@ import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/settings_provider.dart';
 
 class AnimalDetailsPage extends StatefulWidget {
   final Animal animal;
@@ -15,6 +18,7 @@ class AnimalDetailsPage extends StatefulWidget {
 class _AnimalDetailsPageState extends State<AnimalDetailsPage> {
   late int currentAnimalIndex;
   final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
+  late SettingsProvider _settingsProvider;
 
   @override
   void initState() {
@@ -35,6 +39,8 @@ class _AnimalDetailsPageState extends State<AnimalDetailsPage> {
       await audioPlayer.open(
         Audio(audioPath),
       );
+
+      audioPlayer.setVolume(_settingsProvider.getAnimalSoundLevel);
       audioPlayer.playlistAudioFinished.listen((event) {
         Navigator.pop(context);
       });
@@ -45,6 +51,7 @@ class _AnimalDetailsPageState extends State<AnimalDetailsPage> {
 
   @override
   Widget build(BuildContext context) {
+    _settingsProvider = Provider.of<SettingsProvider>(context);
     return Scaffold(
       body: bodyWidget(),
     );
