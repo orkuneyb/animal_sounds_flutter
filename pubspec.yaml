@@ -40,6 +40,7 @@ flutter_native_splash:
   web: false
   android_12:
     color: "#c2c8b4"
+    icon_background_color: "#c2c8b4"
 
 flutter:
   uses-material-design: true
