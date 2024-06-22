@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/pages/animal_details.dart';
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      animal.name,
+                      animal.name.tr(),
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -74,9 +75,9 @@ class _HomePageState extends State<HomePage> {
     return AppBar(
       centerTitle: true,
       automaticallyImplyLeading: false,
-      title: const Text(
-        "Hayvan Sesleri",
-        style: TextStyle(
+      title: Text(
+        "app_name".tr(),
+        style: const TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),
