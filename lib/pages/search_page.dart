@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import '../providers/search_provider.dart';
 import '../models/animal.dart';
-import 'animal_details.dart';
+import 'animal_sound_page.dart';
 import '../transitions/page_transitions.dart';
 
 class SearchPage extends StatelessWidget {
@@ -169,7 +169,7 @@ class _AnimalListItem extends StatelessWidget {
         Navigator.push(
           context,
           PageTransitions.createScaleTransition(
-            AnimalDetailsPage(animal: animal),
+            AnimalSoundPage(animal: animal),
           ),
         );
       },

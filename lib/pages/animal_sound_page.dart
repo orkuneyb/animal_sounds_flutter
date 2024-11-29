@@ -8,15 +8,15 @@ import 'package:provider/provider.dart';
 
 import '../providers/settings_provider.dart';
 
-class AnimalDetailsPage extends StatefulWidget {
+class AnimalSoundPage extends StatefulWidget {
   final Animal animal;
-  const AnimalDetailsPage({super.key, required this.animal});
+  const AnimalSoundPage({super.key, required this.animal});
 
   @override
-  State<AnimalDetailsPage> createState() => _AnimalDetailsPageState();
+  State<AnimalSoundPage> createState() => _AnimalSoundPageState();
 }
 
-class _AnimalDetailsPageState extends State<AnimalDetailsPage> {
+class _AnimalSoundPageState extends State<AnimalSoundPage> {
   late int currentAnimalIndex;
   final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
   late SettingsProvider _settingsProvider;

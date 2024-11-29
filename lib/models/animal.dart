@@ -4,6 +4,12 @@ class Animal {
   late String description;
   late String imagePath;
   late String soundPath;
+  late String size;
+  late String weight;
+  late String lifespan;
+  late String habitat;
+  late String diet;
+  late List<String> funFacts;
 
   Animal({
     required this.index,
@@ -11,6 +17,12 @@ class Animal {
     required this.description,
     required this.imagePath,
     required this.soundPath,
+    this.size = '',
+    this.weight = '',
+    this.lifespan = '',
+    this.habitat = '',
+    this.diet = '',
+    this.funFacts = const [],
   });
 
   Animal.fromJson(Map<String, dynamic> json) {
@@ -19,6 +31,11 @@ class Animal {
     description = json['description'];
     imagePath = json['imageUrl'];
     soundPath = json['soundPath'];
+    size = json['size'];
+    weight = json['weight'];
+    lifespan = json['lifespan'];
+    diet = json['diet'];
+    funFacts = json['funFacts'];
   }
 
   Map<String, dynamic> toJson() {

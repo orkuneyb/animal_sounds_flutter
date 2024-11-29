@@ -1,10 +1,13 @@
+import 'package:animal_sounds_flutter/pages/animal_info_page.dart';
+import 'package:animal_sounds_flutter/pages/favorites_page.dart';
 import 'package:animal_sounds_flutter/pages/search_page.dart';
+import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/models/category.dart';
-import 'package:animal_sounds_flutter/pages/animal_details.dart';
+import 'package:animal_sounds_flutter/pages/animal_sound_page.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
 import 'package:animal_sounds_flutter/providers/category_provider.dart';
 import 'package:animal_sounds_flutter/transitions/page_transitions.dart';
@@ -137,8 +140,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _buildAnimalGrid() {
-    return Consumer<CategoryProvider>(
-      builder: (context, categoryProvider, child) {
+    return Consumer2<CategoryProvider, FavoritesProvider>(
+      builder: (context, categoryProvider, favoritesProvider, child) {
         List<Animal> filteredAnimals =
             categoryProvider.selectedCategoryId == null
                 ? AnimalRepository.animals
@@ -165,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   PageTransitions.createScaleTransition(
-                    AnimalDetailsPage(animal: animal),
+                    AnimalSoundPage(animal: animal),
                   ),
                 );
               },
@@ -175,23 +178,71 @@ class _HomePageState extends State<HomePage> {
                   borderRadius: BorderRadius.circular(15),
                 ),
                 color: Colors.amber[100 * ((index % 8) + 1)],
-                child: Column(
+                child: Stack(
+                  fit: StackFit.expand,
                   children: [
-                    Expanded(
-                      child: Image.asset(
-                        animal.imagePath,
-                        fit: BoxFit.contain,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          PageTransitions.createScaleTransition(
+                            AnimalSoundPage(animal: animal),
+                          ),
+                        );
+                      },
+                      child: Column(
+                        children: [
+                          Expanded(
+                            child: Hero(
+                              tag: 'animal_image_${animal.index}',
+                              child: Image.asset(
+                                animal.imagePath,
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              animal.name.tr(),
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        animal.name.tr(),
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
+                    Positioned(
+                      top: 8,
+                      right: 8,
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                PageTransitions.createScaleTransition(
+                                  AnimalInfoPage(animal: animal),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.all(4),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(
+                                Icons.info_outline,
+                                color: Colors.orangeAccent,
+                                size: 24,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -206,7 +257,6 @@ class _HomePageState extends State<HomePage> {
 
   AppBar appBarWidget() {
     return AppBar(
-      centerTitle: true,
       automaticallyImplyLeading: false,
       title: Text(
         "app_name".tr(),
@@ -216,6 +266,15 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       actions: [
+        IconButton(
+          icon: const Icon(Icons.favorite),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const FavoritesPage()),
+            );
+          },
+        ),
         IconButton(
           icon: const Icon(Icons.search),
           onPressed: () {
