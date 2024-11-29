@@ -1,5 +1,6 @@
 import 'package:animal_sounds_flutter/pages/animal_info_page.dart';
 import 'package:animal_sounds_flutter/pages/favorites_page.dart';
+import 'package:animal_sounds_flutter/pages/quiz_start_page.dart';
 import 'package:animal_sounds_flutter/pages/search_page.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -266,6 +267,15 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       actions: [
+        IconButton(
+          icon: const Icon(Icons.extension),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const QuizStartPage()),
+            );
+          },
+        ),
         IconButton(
           icon: const Icon(Icons.favorite),
           onPressed: () {

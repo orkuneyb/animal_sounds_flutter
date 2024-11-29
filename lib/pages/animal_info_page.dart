@@ -218,13 +218,24 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
                 ),
               ),
               const SizedBox(width: 8),
-              Text(
-                title,
-                style: const TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black87,
-                ),
+              Row(
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () => _speak(title),
+                    icon: const Icon(
+                      Icons.volume_up,
+                      color: Colors.orangeAccent,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
@@ -240,6 +251,8 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
     required String label,
     required String value,
   }) {
+    String fullText = '$label: $value';
+
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8.0),
       padding: const EdgeInsets.all(12.0),
@@ -271,7 +284,37 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
                   ),
                 ),
                 const SizedBox(height: 4),
-                _buildTextWithSpeech(value),
+                ValueListenableBuilder<bool>(
+                  valueListenable: isSpeakingNotifier,
+                  builder: (context, isSpeaking, child) {
+                    bool isThisTextPlaying =
+                        currentlyPlayingText == fullText && isSpeaking;
+                    return Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            value,
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.black87,
+                              height: 1.5,
+                            ),
+                          ),
+                        ),
+                        IconButton(
+                          icon: Icon(
+                            isThisTextPlaying
+                                ? Icons.stop_circle
+                                : Icons.play_circle,
+                            color: Colors.orangeAccent,
+                            size: 30,
+                          ),
+                          onPressed: () => _speak(fullText),
+                        ),
+                      ],
+                    );
+                  },
+                ),
               ],
             ),
           ),
