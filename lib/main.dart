@@ -1,6 +1,7 @@
 import 'package:animal_sounds_flutter/pages/home.dart';
 import 'package:animal_sounds_flutter/pages/settings.dart';
 import 'package:animal_sounds_flutter/providers/category_provider.dart';
+import 'package:animal_sounds_flutter/providers/search_provider.dart';
 import 'package:animal_sounds_flutter/providers/settings_provider.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (context) => SettingsProvider()),
         ChangeNotifierProvider(create: (_) => CategoryProvider()),
+        ChangeNotifierProvider(create: (_) => SearchProvider()),
       ],
       child: MaterialApp(
         localizationsDelegates: context.localizationDelegates,
