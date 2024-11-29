@@ -32,5 +32,22 @@
     "fox": "Tilki",
     "settings": "Ayarlar",
     "sound_settings": "Ses Ayarları",
-    "sound_level": "Ses Düzeyi"
+    "sound_level": "Ses Düzeyi",
+    "all": "Tümü",
+    "domestic_animals": "Evcil Hayvanlar",
+    "domestic_animals_desc": "Evde ve çiftlikte yaşayan hayvanlar",
+    "wild_animals": "Vahşi Hayvanlar",
+    "wild_animals_desc": "Doğal yaşam alanlarında yaşayan yabani hayvanlar",
+    "sea_animals": "Deniz Canlıları",
+    "sea_animals_desc": "Okyanus ve denizlerde yaşayan canlılar",
+    "birds": "Kuşlar",
+    "birds_desc": "Gökyüzünün özgür canlıları",
+    "insects": "Böcekler",
+    "insects_desc": "Küçük ama önemli canlılar",
+    "farm_animals": "Çiftlik Hayvanları",
+    "farm_animals_desc": "Çiftliklerde yetiştirilen hayvanlar",
+    "jungle_animals": "Orman Hayvanları",
+    "jungle_animals_desc": "Tropik ormanlarda yaşayan hayvanlar",
+    "desert_animals": "Çöl Hayvanları",
+    "desert_animals_desc": "Zorlu çöl koşullarında yaşayan hayvanlar"
 }
