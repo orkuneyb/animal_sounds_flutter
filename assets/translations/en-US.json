@@ -32,5 +32,22 @@
     "fox": "Fox",
     "settings": "Settings",
     "sound_settings": "Sound Settings",
-    "sound_level": "Sound Level"
+    "sound_level": "Sound Level",
+    "all": "All",
+    "domestic_animals": "Domestic Animals",
+    "domestic_animals_desc": "Animals living in homes and farms",
+    "wild_animals": "Wild Animals",
+    "wild_animals_desc": "Animals living in their natural habitats",
+    "sea_animals": "Sea Animals",
+    "sea_animals_desc": "Creatures living in oceans and seas",
+    "birds": "Birds",
+    "birds_desc": "Free creatures of the sky",
+    "insects": "Insects",
+    "insects_desc": "Small but important creatures",
+    "farm_animals": "Farm Animals",
+    "farm_animals_desc": "Animals raised on farms",
+    "jungle_animals": "Jungle Animals",
+    "jungle_animals_desc": "Animals living in tropical forests",
+    "desert_animals": "Desert Animals",
+    "desert_animals_desc": "Animals living in harsh desert conditions"
 }
