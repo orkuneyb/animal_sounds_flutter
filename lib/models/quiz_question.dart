@@ -5,6 +5,7 @@ class QuizQuestion {
   final List<String> options;
   final String? imagePath;
   final String? soundPath;
+  String? userAnswer;
 
   QuizQuestion({
     required this.id,
@@ -13,6 +14,7 @@ class QuizQuestion {
     required List<String> options,
     this.imagePath,
     this.soundPath,
+    this.userAnswer,
   }) : options = List.unmodifiable(options);
 
   int get correctOptionIndex => options.indexOf(correctAnswer);

@@ -226,7 +226,14 @@ class _QuizPageState extends State<QuizPage> {
 
   Color _getProgressDotColor(int index) {
     if (index < _currentQuestionIndex) {
-      return Colors.green;
+      QuizQuestion question = questions[index];
+      if (question.userAnswer != null) {
+        bool wasCorrect =
+            questions[index].options.indexOf(question.userAnswer!) ==
+                questions[index].correctOptionIndex;
+        return wasCorrect ? Colors.green : Colors.red;
+      }
+      return Colors.grey;
     } else if (index == _currentQuestionIndex) {
       return Colors.orangeAccent;
     } else {
@@ -411,6 +418,7 @@ class _QuizPageState extends State<QuizPage> {
     setState(() {
       _isAnswered = true;
       selectedAnswer = answer;
+      questions[_currentQuestionIndex].userAnswer = answer;
     });
 
     final selectedIndex =
