@@ -30,13 +30,6 @@ Animal Sounds is designed to make learning about animals fun and interactive for
 - Test their knowledge through engaging quizzes
 - Develop their listening and recognition skills
 
-## 🛠️ Technical Details
-
-- Built with Flutter
-- Supports Android and iOS
-- Minimum SDK Version: 21 (Android 5.0)
-- Target SDK Version: 33 (Android 13)
-
 ## 📥 Installation
 
 The app is available on:
