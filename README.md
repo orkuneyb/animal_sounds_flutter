@@ -1,16 +1,81 @@
-# animal_sounds_flutter
+# 🦁 Animal Sounds - Children's Learning App
 
-A new Flutter project.
+A delightful educational Flutter application designed to help children discover and learn about animals through interactive experiences.
 
-## Getting Started
+<p align="center">
+  <img src="assets/icon/icon.png" width="200" alt="App Icon">
+</p>
 
-This project is a starting point for a Flutter application.
+## ✨ Features
 
-A few resources to get you started if this is your first Flutter project:
+- 🎵 **Animal Sounds**: Listen to authentic sounds of various animals
+- 📚 **Educational Content**: Learn interesting facts about each animal
+- 🎮 **Quiz System**: Test knowledge through fun quizzes
+- ⭐ **Favorites**: Save favorite animals for quick access
+- 🔍 **Search**: Easily find specific animals
+- 🗣️ **Text-to-Speech**: Listen to animal descriptions
+- 🌍 **Multi-language Support**: Available in English and Turkish
+- ⚙️ **Customizable Settings**: Adjust app preferences
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 📱 Screenshots
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+[Screenshots would go here]
+
+## 🎯 Purpose
+
+Animal Sounds is designed to make learning about animals fun and interactive for children. Through a combination of visual, audio, and interactive elements, children can:
+
+- Learn about different animals and their sounds
+- Discover interesting facts about animal behavior and habitats
+- Test their knowledge through engaging quizzes
+- Develop their listening and recognition skills
+
+## 🛠️ Technical Details
+
+- Built with Flutter
+- Supports Android and iOS
+- Minimum SDK Version: 21 (Android 5.0)
+- Target SDK Version: 33 (Android 13)
+
+## 📥 Installation
+
+The app is available on:
+
+- https://play.google.com/store/apps/details?id=com.devork.animalsounds
+
+## 🔧 Development Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/orkuneyb/animal_sounds_flutter.git
+```
+
+2. Install dependencies:
+```bash
+flutter pub get
+```
+
+3. Run the app:
+```bash
+flutter run
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 👨‍💻 Developer
+
+Developed by DevOrk
+
+## 📞 Contact
+
+For any queries or suggestions, please reach out to:
+- Email: orkuneyb@gmail.com
+- Website: https://orkuneyuboglu.com
+
+---
+
+<p align="center">
+  Made with ❤️ for children's education
+</p>
