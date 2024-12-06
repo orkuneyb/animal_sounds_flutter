@@ -18,8 +18,7 @@ A delightful educational Flutter application designed to help children discover 
 - ⚙️ **Customizable Settings**: Adjust app preferences
 
 ## 📱 Screenshots
-
-[Screenshots would go here]
+![kolaj](https://github.com/user-attachments/assets/b71ed731-342d-4bd7-9327-b76281b44a14)
 
 ## 🎯 Purpose
 
