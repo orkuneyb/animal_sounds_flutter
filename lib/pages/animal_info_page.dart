@@ -1,6 +1,8 @@
+import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import '../models/animal.dart';
 import '../providers/favorites_provider.dart';
@@ -20,10 +22,19 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   String? currentlyPlayingText;
   ValueNotifier<bool> isSpeakingNotifier = ValueNotifier<bool>(false);
   bool _isInitialized = false;
+  final AdService _adService = AdService();
+  late BannerAd _bannerAd;
+  bool _isBannerAdReady = false;
 
   @override
   void initState() {
     super.initState();
+    _bannerAd = _adService.createBannerAd()
+      ..load().then((_) {
+        setState(() {
+          _isBannerAdReady = true;
+        });
+      });
     _initBasicTts();
   }
 
@@ -68,6 +79,7 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
 
   @override
   void dispose() {
+    _bannerAd.dispose();
     flutterTts.stop();
     isSpeakingNotifier.dispose();
     super.dispose();
@@ -85,6 +97,14 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildInfoSection(context),
+                if (_isBannerAdReady)
+                  Center(
+                    child: SizedBox(
+                      width: _bannerAd.size.width.toDouble(),
+                      height: _bannerAd.size.height.toDouble(),
+                      child: AdWidget(ad: _bannerAd),
+                    ),
+                  ),
                 _buildCharacteristics(),
                 _buildHabitat(),
                 _buildDietSection(),

@@ -12,4 +12,15 @@ class SPManager {
     double value = prefs.getDouble(SPConstants.animalSoundLevel) ?? 1.0;
     return Future.value(value);
   }
+
+  static Future<void> setSoundPlayCount(int value) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setInt(SPConstants.soundPlayCount, value);
+  }
+
+  static Future<int> getSoundPlayCount() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    int value = prefs.getInt(SPConstants.soundPlayCount) ?? 0;
+    return Future.value(value);
+  }
 }

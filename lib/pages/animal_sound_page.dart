@@ -1,5 +1,7 @@
 import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
+import 'package:animal_sounds_flutter/services/ad_service.dart';
+import 'package:animal_sounds_flutter/utils/shared_preferences/sp_manager.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -20,10 +22,13 @@ class _AnimalSoundPageState extends State<AnimalSoundPage> {
   late int currentAnimalIndex;
   final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
   late SettingsProvider _settingsProvider;
+  final AdService _adService = AdService();
 
   @override
   void initState() {
     currentAnimalIndex = widget.animal.index;
+    _adService.createInterstitialAd();
+    _incrementSoundPlayCount();
     playAnimalAudio();
     super.initState();
   }
@@ -32,6 +37,20 @@ class _AnimalSoundPageState extends State<AnimalSoundPage> {
   void dispose() {
     audioPlayer.dispose();
     super.dispose();
+  }
+
+  Future<void> _incrementSoundPlayCount() async {
+    int currentCount = await SPManager.getSoundPlayCount();
+    currentCount++;
+
+    if (currentCount >= 15) {
+      if (_adService.isInterstitialAdReady) {
+        _adService.showInterstitialAd();
+      }
+      currentCount = 0;
+    }
+
+    await SPManager.setSoundPlayCount(currentCount);
   }
 
   playAnimalAudio() async {

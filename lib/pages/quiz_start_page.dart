@@ -1,8 +1,10 @@
+import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:animal_sounds_flutter/pages/quiz_page.dart';
 
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class QuizStartPage extends StatefulWidget {
   const QuizStartPage({Key? key}) : super(key: key);
@@ -14,6 +16,21 @@ class QuizStartPage extends StatefulWidget {
 class _QuizStartPageState extends State<QuizStartPage> {
   final FlutterTts flutterTts = FlutterTts();
   bool _isTtsInitialized = false;
+  final AdService _adService = AdService();
+  late BannerAd _bannerAd;
+  bool _isBannerAdReady = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _adService.createInterstitialAd();
+    _bannerAd = _adService.createBannerAd()
+      ..load().then((_) {
+        setState(() {
+          _isBannerAdReady = true;
+        });
+      });
+  }
 
   @override
   void didChangeDependencies() {
@@ -38,6 +55,7 @@ class _QuizStartPageState extends State<QuizStartPage> {
 
   @override
   void dispose() {
+    _bannerAd.dispose();
     flutterTts.stop();
     super.dispose();
   }
@@ -61,128 +79,153 @@ class _QuizStartPageState extends State<QuizStartPage> {
         ),
         backgroundColor: Colors.orangeAccent,
       ),
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.amber[50]!,
-              Colors.amber[100]!,
-            ],
-          ),
-        ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.1),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: const Icon(
-                    Icons.extension,
-                    size: 80,
-                    color: Colors.orangeAccent,
-                  ),
-                ),
-                const SizedBox(height: 40),
-                Column(
-                  children: [
-                    Text(
-                      'quiz_welcome'.tr(),
-                      style: const TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    IconButton(
-                      onPressed: () => _speak('quiz_welcome'.tr()),
-                      icon: const Icon(
-                        Icons.volume_up,
-                        color: Colors.orangeAccent,
-                        size: 30,
-                      ),
-                    ),
-                    const SizedBox(height: 20),
-                    Text(
-                      'quiz_description'.tr(),
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.black54,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    IconButton(
-                      onPressed: () => _speak('quiz_description'.tr()),
-                      icon: const Icon(
-                        Icons.volume_up,
-                        color: Colors.orangeAccent,
-                        size: 30,
-                      ),
-                    ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    Colors.amber[50]!,
+                    Colors.amber[100]!,
                   ],
                 ),
-                const SizedBox(height: 40),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const QuizPage(),
-                      ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orangeAccent,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 50,
-                      vertical: 15,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
+              ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'start_quiz'.tr(),
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      IconButton(
-                        onPressed: () => _speak('start_quiz'.tr()),
-                        icon: const Icon(
-                          Icons.volume_up,
+                      Container(
+                        padding: const EdgeInsets.all(20),
+                        decoration: BoxDecoration(
                           color: Colors.white,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.1),
+                              spreadRadius: 5,
+                              blurRadius: 7,
+                              offset: const Offset(0, 3),
+                            ),
+                          ],
+                        ),
+                        child: const Icon(
+                          Icons.extension,
+                          size: 80,
+                          color: Colors.orangeAccent,
                         ),
                       ),
+                      const SizedBox(height: 40),
+                      Column(
+                        children: [
+                          Text(
+                            'quiz_welcome'.tr(),
+                            style: const TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black87,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          IconButton(
+                            onPressed: () => _speak('quiz_welcome'.tr()),
+                            icon: const Icon(
+                              Icons.volume_up,
+                              color: Colors.orangeAccent,
+                              size: 30,
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+                          Text(
+                            'quiz_description'.tr(),
+                            style: const TextStyle(
+                              fontSize: 16,
+                              color: Colors.black54,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          IconButton(
+                            onPressed: () => _speak('quiz_description'.tr()),
+                            icon: const Icon(
+                              Icons.volume_up,
+                              color: Colors.orangeAccent,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 40),
+                      ElevatedButton(
+                        onPressed: () {
+                          if (_adService.isInterstitialAdReady) {
+                            _adService.showInterstitialAd(
+                              onAdClosed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const QuizPage(),
+                                  ),
+                                );
+                              },
+                            );
+                          } else {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const QuizPage(),
+                              ),
+                            );
+                          }
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.orangeAccent,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 50,
+                            vertical: 15,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'start_quiz'.tr(),
+                              style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            IconButton(
+                              onPressed: () => _speak('start_quiz'.tr()),
+                              icon: const Icon(
+                                Icons.volume_up,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 20),
                     ],
                   ),
                 ),
-                const SizedBox(height: 20),
-              ],
+              ),
             ),
           ),
-        ),
+          if (_isBannerAdReady)
+            SizedBox(
+              width: _bannerAd.size.width.toDouble(),
+              height: _bannerAd.size.height.toDouble(),
+              child: AdWidget(ad: _bannerAd),
+            ),
+        ],
       ),
     );
   }

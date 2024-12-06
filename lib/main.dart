@@ -8,11 +8,13 @@ import 'package:animal_sounds_flutter/providers/settings_provider.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await MobileAds.instance.initialize();
 
   runApp(EasyLocalization(
     supportedLocales: const [Locale('en', 'US'), Locale('tr', 'TR')],
