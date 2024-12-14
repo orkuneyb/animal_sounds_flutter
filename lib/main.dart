@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
         supportedLocales: context.supportedLocales,
         locale: context.locale,
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        onGenerateTitle: (context) => "app_name".tr(),
         theme: ThemeData(
           primarySwatch: themeColor,
         ),
@@ -51,7 +51,6 @@ class MyApp extends StatelessWidget {
           // '/animalDetails': (context) => const AnimalDetailsPage(),
           '/settingsPage': (context) => const SettingsPage(),
         },
-        home: const HomePage(),
       ),
     );
   }
