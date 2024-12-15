@@ -1,5 +1,8 @@
 {
     "app_name": "Animal Sounds",
+    "parent_alert_title": "Important Information for Parents",
+    "parent_alert_content": "Dear Parents,\n\nThis application is designed for children aged 5 and under. Please supervise your child's usage.\n\nThe app:\n- May contain child-friendly ads\n- Contains sounds and images\n- Requires internet connection\n\nWe wish you safe and fun usage!",
+    "parent_alert_button": "I Understand",
     "lion": "Lion",
     "elephant": "Elephant",
     "tiger": "Tiger",

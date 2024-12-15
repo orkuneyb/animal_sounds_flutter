@@ -1,5 +1,8 @@
 {
     "app_name": "Hayvan Sesleri",
+    "parent_alert_title": "Ebeveynlere Önemli Bilgi",
+    "parent_alert_content": "Sevgili Ebeveynler,\n\nBu uygulama 5 yaş ve altı çocuklar için tasarlanmıştır. Lütfen çocuğunuzun kullanımını gözetim altında tutunuz.\n\nUygulama:\n- Çocuk dostu reklamlar içerebilir\n- Ses ve görüntüler barındırır\n- İnternet bağlantısı gerektirir\n\nGüvenli ve eğlenceli kullanımlar dileriz!",
+    "parent_alert_button": "Anladım",
     "lion": "Aslan",
     "elephant": "Fil",
     "tiger": "Kaplan",
