@@ -4,7 +4,7 @@ import 'package:animal_sounds_flutter/models/quiz_question.dart';
 import 'package:animal_sounds_flutter/models/quiz_score.dart';
 import 'package:animal_sounds_flutter/providers/quiz_provider.dart';
 import 'package:animal_sounds_flutter/repositories/quiz_repository.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -23,7 +23,7 @@ class _QuizPageState extends State<QuizPage> {
   bool _isAnswered = false;
   late List<QuizQuestion> questions;
   String? selectedAnswer;
-  final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
+  final AudioPlayer audioPlayer = AudioPlayer();
   final FlutterTts flutterTts = FlutterTts();
   bool _isTtsInitialized = false;
 
@@ -330,11 +330,11 @@ class _QuizPageState extends State<QuizPage> {
   void _playSound(String soundPath) async {
     try {
       await audioPlayer.stop();
-      await audioPlayer.open(
-        Audio(soundPath),
-      );
+      String cleanPath =
+          soundPath.startsWith('assets/') ? soundPath.substring(7) : soundPath;
+      await audioPlayer.play(AssetSource(cleanPath));
 
-      audioPlayer.playlistAudioFinished.listen((event) {});
+      audioPlayer.onPlayerComplete.listen((event) {});
     } catch (e) {
       print('Error playing sound: $e');
     }

@@ -3,7 +3,7 @@ import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/utils/shared_preferences/sp_manager.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
-import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:audioplayers/audioplayers.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -20,7 +20,7 @@ class AnimalSoundPage extends StatefulWidget {
 
 class _AnimalSoundPageState extends State<AnimalSoundPage> {
   late int currentAnimalIndex;
-  final AssetsAudioPlayer audioPlayer = AssetsAudioPlayer();
+  final AudioPlayer audioPlayer = AudioPlayer();
   late SettingsProvider _settingsProvider;
   final AdService _adService = AdService();
 
@@ -56,12 +56,12 @@ class _AnimalSoundPageState extends State<AnimalSoundPage> {
   playAnimalAudio() async {
     try {
       String audioPath = widget.animal.soundPath;
-      await audioPlayer.open(
-        Audio(audioPath),
-      );
+      String cleanPath =
+          audioPath.startsWith('assets/') ? audioPath.substring(7) : audioPath;
+      await audioPlayer.play(AssetSource(cleanPath));
 
-      audioPlayer.setVolume(_settingsProvider.getAnimalSoundLevel);
-      audioPlayer.playlistAudioFinished.listen((event) {
+      await audioPlayer.setVolume(_settingsProvider.getAnimalSoundLevel);
+      audioPlayer.onPlayerComplete.listen((event) {
         Navigator.pop(context);
       });
     } catch (e) {

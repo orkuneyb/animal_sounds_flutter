@@ -9,23 +9,23 @@ environment:
   sdk: '>=3.0.3 <4.0.0'
 
 dependencies:
-  app_settings: ^5.0.0
-  assets_audio_player: ^3.0.6
+  app_settings: ^6.1.1
+  audioplayers: ^6.1.0
   cupertino_icons: ^1.0.2
   easy_localization: ^3.0.7
   flutter:
     sdk: flutter
-  flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.14.4
   flutter_native_splash: ^2.2.19
   flutter_tts: ^4.2.0
-  google_mobile_ads: ^3.1.0
-  package_info_plus: ^8.1.1
+  google_mobile_ads: ^6.0.0
+  package_info_plus: ^9.0.0
   provider: ^6.1.1
   shared_preferences: ^2.2.2
 
 dev_dependencies:
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^6.0.0
   flutter_test:
     sdk: flutter
 
