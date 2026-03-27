@@ -6,6 +6,7 @@ import 'package:animal_sounds_flutter/providers/quiz_provider.dart';
 import 'package:animal_sounds_flutter/providers/search_provider.dart';
 import 'package:animal_sounds_flutter/providers/settings_provider.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
+import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -70,9 +71,7 @@ class MyApp extends StatelessWidget {
         locale: context.locale,
         debugShowCheckedModeBanner: false,
         onGenerateTitle: (context) => "app_name".tr(),
-        theme: ThemeData(
-          primarySwatch: themeColor,
-        ),
+        theme: _buildTheme(),
         initialRoute: "/homePage",
         routes: {
           '/homePage': (context) {
@@ -83,6 +82,94 @@ class MyApp extends StatelessWidget {
           },
           '/settingsPage': (context) => const SettingsPage(),
         },
+      ),
+    );
+  }
+
+  /// Builds the Material 3 [ThemeData] from the app color system.
+  ThemeData _buildTheme() {
+    return ThemeData(
+      useMaterial3: true,
+      colorScheme: AppColors.lightColorScheme,
+      textTheme: AppTextStyles.textTheme,
+
+      // Scaffold
+      scaffoldBackgroundColor: AppColors.surface,
+
+      // AppBar
+      appBarTheme: AppBarTheme(
+        centerTitle: true,
+        backgroundColor: AppColors.primary,
+        foregroundColor: AppColors.onPrimary,
+        elevation: 0,
+        titleTextStyle: AppTextStyles.headingSmall.copyWith(
+          color: AppColors.onPrimary,
+        ),
+      ),
+
+      // Bottom Navigation Bar
+      bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+        backgroundColor: AppColors.surfaceContainerLow,
+        selectedItemColor: AppColors.primary,
+        unselectedItemColor: AppColors.onSurfaceVariant,
+        type: BottomNavigationBarType.fixed,
+        elevation: 2,
+      ),
+
+      // Cards
+      cardTheme: CardThemeData(
+        color: AppColors.surfaceContainerLowest,
+        elevation: 1,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
+        clipBehavior: Clip.antiAlias,
+      ),
+
+      // Elevated Buttons
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: AppColors.primary,
+          foregroundColor: AppColors.onPrimary,
+          elevation: 2,
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          textStyle: AppTextStyles.bodyLarge.copyWith(
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+
+      // Floating Action Button
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: AppColors.secondary,
+        foregroundColor: AppColors.onSecondary,
+        elevation: 4,
+      ),
+
+      // Icon theme
+      iconTheme: const IconThemeData(
+        color: AppColors.onSurfaceVariant,
+        size: 24,
+      ),
+
+      // Dialog
+      dialogTheme: DialogThemeData(
+        backgroundColor: AppColors.surfaceContainerLowest,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+        ),
+        titleTextStyle: AppTextStyles.headingSmall.copyWith(
+          color: AppColors.onSurface,
+        ),
+      ),
+
+      // Divider
+      dividerTheme: const DividerThemeData(
+        color: AppColors.outlineVariant,
+        thickness: 1,
       ),
     );
   }

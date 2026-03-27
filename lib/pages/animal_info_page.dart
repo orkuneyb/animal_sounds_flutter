@@ -1,4 +1,5 @@
 import 'package:animal_sounds_flutter/services/ad_service.dart';
+import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -25,6 +26,15 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   final AdService _adService = AdService();
   late BannerAd _bannerAd;
   bool _isBannerAdReady = false;
+
+  // Pastel colors for characteristic cards
+  static const List<Color> _pastelColors = [
+    Color(0xFFE8F5E9), // soft green
+    Color(0xFFE3F2FD), // soft blue
+    Color(0xFFFFF3E0), // soft orange
+    Color(0xFFF3E5F5), // soft purple
+    Color(0xFFE0F7FA), // soft cyan
+  ];
 
   @override
   void initState() {
@@ -88,7 +98,7 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[50],
+      backgroundColor: AppColors.surface,
       body: CustomScrollView(
         slivers: [
           _buildSliverAppBar(context),
@@ -122,13 +132,14 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
     return SliverAppBar(
       expandedHeight: 300,
       pinned: true,
-      backgroundColor: Colors.orangeAccent,
+      backgroundColor: AppColors.primary,
       flexibleSpace: FlexibleSpaceBar(
         title: Text(
           widget.animal.name.tr(),
           style: const TextStyle(
             color: Colors.white,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w700,
+            fontSize: 20,
           ),
         ),
         background: Stack(
@@ -159,10 +170,10 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
             return IconButton(
               icon: Icon(
                 favoritesProvider.isFavorite(widget.animal.index)
-                    ? Icons.favorite
-                    : Icons.favorite_border,
+                    ? Icons.favorite_rounded
+                    : Icons.favorite_border_rounded,
                 color: favoritesProvider.isFavorite(widget.animal.index)
-                    ? Colors.red
+                    ? Colors.redAccent
                     : Colors.white,
               ),
               onPressed: () =>
@@ -174,34 +185,57 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
     );
   }
 
-  Widget _buildTextWithSpeech(String text) {
+  Widget _buildSmallTtsIcon(String text) {
     return ValueListenableBuilder<bool>(
       valueListenable: isSpeakingNotifier,
       builder: (context, isSpeaking, child) {
-        bool isThisTextPlaying = currentlyPlayingText == text && isSpeaking;
-        return Row(
-          children: [
-            Expanded(
-              child: Text(
-                text,
-                style: const TextStyle(
-                  fontSize: 16,
-                  color: Colors.black87,
-                  height: 1.5,
-                ),
-              ),
+        bool isThisPlaying = currentlyPlayingText == text && isSpeaking;
+        return GestureDetector(
+          onTap: () => _speak(text),
+          child: Container(
+            width: 30,
+            height: 30,
+            decoration: BoxDecoration(
+              color: isThisPlaying
+                  ? AppColors.primaryContainer
+                  : AppColors.surfaceContainerHigh,
+              shape: BoxShape.circle,
             ),
-            IconButton(
-              icon: Icon(
-                isThisTextPlaying ? Icons.stop_circle : Icons.play_circle,
-                color: Colors.orangeAccent,
-                size: 30,
-              ),
-              onPressed: () => _speak(text),
+            child: Icon(
+              isThisPlaying
+                  ? Icons.stop_rounded
+                  : Icons.volume_up_rounded,
+              color: isThisPlaying
+                  ? AppColors.primaryDark
+                  : AppColors.onSurfaceVariant,
+              size: 15,
             ),
-          ],
+          ),
         );
       },
+    );
+  }
+
+  Widget _buildTextWithSpeech(String text) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Expanded(
+          child: Text(
+            text,
+            style: const TextStyle(
+              fontSize: 15,
+              color: AppColors.onSurface,
+              height: 1.6,
+            ),
+          ),
+        ),
+        const SizedBox(width: 8),
+        Padding(
+          padding: const EdgeInsets.only(top: 2),
+          child: _buildSmallTtsIcon(text),
+        ),
+      ],
     );
   }
 
@@ -210,16 +244,15 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
     required List<Widget> content,
   }) {
     return Container(
-      margin: const EdgeInsets.all(16.0),
-      padding: const EdgeInsets.all(16.0),
+      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: const EdgeInsets.all(18.0),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey.withOpacity(0.2),
-            spreadRadius: 2,
-            blurRadius: 5,
+            color: Colors.black.withOpacity(0.04),
+            blurRadius: 12,
             offset: const Offset(0, 3),
           ),
         ],
@@ -231,113 +264,28 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
             children: [
               Container(
                 width: 4,
-                height: 24,
-                decoration: const BoxDecoration(
-                  color: Colors.orangeAccent,
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                height: 22,
+                decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(2),
                 ),
               ),
-              const SizedBox(width: 8),
-              Row(
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
-                    ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.onSurface,
                   ),
-                  IconButton(
-                    onPressed: () => _speak(title),
-                    icon: const Icon(
-                      Icons.volume_up,
-                      color: Colors.orangeAccent,
-                    ),
-                  ),
-                ],
+                ),
               ),
+              _buildSmallTtsIcon(title),
             ],
           ),
-          const SizedBox(height: 16),
+          const SizedBox(height: 14),
           ...content,
-        ],
-      ),
-    );
-  }
-
-  Widget _buildCharacteristicItem({
-    required IconData icon,
-    required String label,
-    required String value,
-  }) {
-    String fullText = '$label: $value';
-
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8.0),
-      padding: const EdgeInsets.all(12.0),
-      decoration: BoxDecoration(
-        color: Colors.amber[50],
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: const BoxDecoration(
-              color: Colors.orangeAccent,
-              shape: BoxShape.circle,
-            ),
-            child: Icon(icon, color: Colors.white, size: 20),
-          ),
-          const SizedBox(width: 16),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  label,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black87,
-                  ),
-                ),
-                const SizedBox(height: 4),
-                ValueListenableBuilder<bool>(
-                  valueListenable: isSpeakingNotifier,
-                  builder: (context, isSpeaking, child) {
-                    bool isThisTextPlaying =
-                        currentlyPlayingText == fullText && isSpeaking;
-                    return Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            value,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              color: Colors.black87,
-                              height: 1.5,
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          icon: Icon(
-                            isThisTextPlaying
-                                ? Icons.stop_circle
-                                : Icons.play_circle,
-                            color: Colors.orangeAccent,
-                            size: 30,
-                          ),
-                          onPressed: () => _speak(fullText),
-                        ),
-                      ],
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
         ],
       ),
     );
@@ -353,27 +301,131 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   }
 
   Widget _buildCharacteristics() {
-    return _buildSection(
-      title: 'characteristics'.tr(),
-      content: [
-        _buildCharacteristicItem(
-          icon: Icons.height,
-          label: 'size'.tr(),
-          value: '${widget.animal.name}_size'.tr(),
-        ),
-        const SizedBox(height: 8),
-        _buildCharacteristicItem(
-          icon: Icons.scale,
-          label: 'weight'.tr(),
-          value: '${widget.animal.name}_weight'.tr(),
-        ),
-        const SizedBox(height: 8),
-        _buildCharacteristicItem(
-          icon: Icons.timer,
-          label: 'lifespan'.tr(),
-          value: '${widget.animal.name}_lifespan'.tr(),
-        ),
-      ],
+    final items = [
+      _CharacteristicData(
+        icon: Icons.height_rounded,
+        label: 'size'.tr(),
+        value: '${widget.animal.name}_size'.tr(),
+        color: _pastelColors[0],
+      ),
+      _CharacteristicData(
+        icon: Icons.scale_rounded,
+        label: 'weight'.tr(),
+        value: '${widget.animal.name}_weight'.tr(),
+        color: _pastelColors[1],
+      ),
+      _CharacteristicData(
+        icon: Icons.timer_rounded,
+        label: 'lifespan'.tr(),
+        value: '${widget.animal.name}_lifespan'.tr(),
+        color: _pastelColors[2],
+      ),
+    ];
+
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 4, bottom: 10),
+            child: Row(
+              children: [
+                Container(
+                  width: 4,
+                  height: 22,
+                  decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Text(
+                    'characteristics'.tr(),
+                    style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.onSurface,
+                    ),
+                  ),
+                ),
+                _buildSmallTtsIcon('characteristics'.tr()),
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 140,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 2),
+              itemCount: items.length,
+              separatorBuilder: (_, __) => const SizedBox(width: 12),
+              itemBuilder: (context, index) {
+                final item = items[index];
+                final fullText = '${item.label}: ${item.value}';
+                return Container(
+                  width: 160,
+                  padding: const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    color: item.color,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.03),
+                        blurRadius: 8,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.7),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Icon(item.icon,
+                                color: AppColors.primaryDark, size: 20),
+                          ),
+                          _buildSmallTtsIcon(fullText),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Text(
+                        item.label,
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: AppColors.onSurfaceVariant,
+                        ),
+                      ),
+                      const SizedBox(height: 3),
+                      Expanded(
+                        child: Text(
+                          item.value,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700,
+                            color: AppColors.onSurface,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 
@@ -396,32 +448,108 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   }
 
   Widget _buildFunFacts() {
-    return _buildSection(
-      title: 'fun_facts'.tr(),
-      content: [
-        _buildFunFactItem('${widget.animal.name}_fun_fact_1'.tr()),
-        const SizedBox(height: 12),
-        _buildFunFactItem('${widget.animal.name}_fun_fact_2'.tr()),
-        const SizedBox(height: 12),
-        _buildFunFactItem('${widget.animal.name}_fun_fact_3'.tr()),
-      ],
-    );
-  }
+    final facts = [
+      '${widget.animal.name}_fun_fact_1'.tr(),
+      '${widget.animal.name}_fun_fact_2'.tr(),
+      '${widget.animal.name}_fun_fact_3'.tr(),
+    ];
 
-  Widget _buildFunFactItem(String fact) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Icon(
-          Icons.star,
-          color: Colors.orangeAccent,
-          size: 20,
-        ),
-        const SizedBox(width: 8),
-        Expanded(
-          child: _buildTextWithSpeech(fact),
-        ),
-      ],
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      padding: const EdgeInsets.all(18.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.04),
+            blurRadius: 12,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                width: 4,
+                height: 22,
+                decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: Text(
+                  'fun_facts'.tr(),
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w700,
+                    color: AppColors.onSurface,
+                  ),
+                ),
+              ),
+              _buildSmallTtsIcon('fun_facts'.tr()),
+            ],
+          ),
+          const SizedBox(height: 14),
+          ...List.generate(facts.length, (index) {
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Number badge
+                  Container(
+                    width: 28,
+                    height: 28,
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [
+                          AppColors.primaryLight,
+                          AppColors.primary,
+                        ],
+                      ),
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Text(
+                        '${index + 1}',
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 13,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: _buildTextWithSpeech(facts[index]),
+                  ),
+                ],
+              ),
+            );
+          }),
+        ],
+      ),
     );
   }
+}
+
+class _CharacteristicData {
+  final IconData icon;
+  final String label;
+  final String value;
+  final Color color;
+
+  const _CharacteristicData({
+    required this.icon,
+    required this.label,
+    required this.value,
+    required this.color,
+  });
 }
