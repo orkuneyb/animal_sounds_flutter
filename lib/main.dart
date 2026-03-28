@@ -35,7 +35,16 @@ void main() async {
   await NotificationService().initialize();
 
   runApp(EasyLocalization(
-    supportedLocales: const [Locale('en', 'US'), Locale('tr', 'TR')],
+    supportedLocales: const [
+      Locale('en', 'US'),
+      Locale('tr', 'TR'),
+      Locale('ru', 'RU'),
+      Locale('pt', 'BR'),
+      Locale('hi', 'IN'),
+      Locale('es', 'ES'),
+      Locale('ar', 'SA'),
+      Locale('de', 'DE'),
+    ],
     path: 'assets/translations',
     child: const MyApp(),
   ));
