@@ -1,4 +1,5 @@
 import 'package:animal_sounds_flutter/providers/settings_provider.dart';
+import 'package:animal_sounds_flutter/services/notification_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -17,10 +18,17 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   String _version = '';
 
+  // Notification state
+  bool _dailyReminderEnabled = false;
+  TimeOfDay _dailyReminderTime = const TimeOfDay(hour: 10, minute: 0);
+  bool _streakReminderEnabled = false;
+  final NotificationService _notificationService = NotificationService();
+
   @override
   void initState() {
     super.initState();
     _getAppVersion();
+    _loadNotificationPrefs();
   }
 
   Future<void> _getAppVersion() async {
@@ -28,6 +36,58 @@ class _SettingsPageState extends State<SettingsPage> {
     setState(() {
       _version = '${packageInfo.version} (${packageInfo.buildNumber})';
     });
+  }
+
+  Future<void> _loadNotificationPrefs() async {
+    final dailyEnabled = await _notificationService.isDailyReminderEnabled();
+    final dailyTime = await _notificationService.getDailyReminderTime();
+    final streakEnabled = await _notificationService.isStreakReminderEnabled();
+    setState(() {
+      _dailyReminderEnabled = dailyEnabled;
+      _dailyReminderTime = dailyTime;
+      _streakReminderEnabled = streakEnabled;
+    });
+  }
+
+  Future<void> _onDailyReminderToggled(bool value) async {
+    setState(() => _dailyReminderEnabled = value);
+    if (value) {
+      await _notificationService.requestPermission();
+      await _notificationService.scheduleDailyReminder(_dailyReminderTime);
+    } else {
+      await _notificationService.cancelDailyReminder();
+    }
+  }
+
+  Future<void> _onStreakReminderToggled(bool value) async {
+    setState(() => _streakReminderEnabled = value);
+    if (value) {
+      await _notificationService.requestPermission();
+      await _notificationService.scheduleStreakReminder();
+    } else {
+      await _notificationService.cancelStreakReminder();
+    }
+  }
+
+  Future<void> _pickReminderTime() async {
+    final picked = await showTimePicker(
+      context: context,
+      initialTime: _dailyReminderTime,
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme: AppColors.lightColorScheme,
+          ),
+          child: child!,
+        );
+      },
+    );
+    if (picked != null) {
+      setState(() => _dailyReminderTime = picked);
+      if (_dailyReminderEnabled) {
+        await _notificationService.scheduleDailyReminder(picked);
+      }
+    }
   }
 
   void onTap() {
@@ -203,6 +263,197 @@ class _SettingsPageState extends State<SettingsPage> {
                               size: 22,
                             ),
                           ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 28),
+
+              // --- Notifications Section ---
+              _SectionHeader(title: 'notifications'.tr()),
+              const SizedBox(height: 10),
+              _SettingsCard(
+                children: [
+                  // Daily reminder toggle
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 10,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 44,
+                          height: 44,
+                          decoration: BoxDecoration(
+                            color: AppColors.secondaryContainer,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: const Icon(
+                            Icons.notifications_active_rounded,
+                            color: AppColors.secondaryDark,
+                            size: 22,
+                          ),
+                        ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'daily_reminder'.tr(),
+                                style: AppTextStyles.bodyLarge.copyWith(
+                                  fontWeight: FontWeight.w700,
+                                  color: AppColors.onSurface,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                'daily_reminder_desc'.tr(),
+                                style: AppTextStyles.bodySmall.copyWith(
+                                  color: AppColors.onSurfaceVariant,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Switch(
+                          value: _dailyReminderEnabled,
+                          onChanged: _onDailyReminderToggled,
+                          activeColor: AppColors.primary,
+                        ),
+                      ],
+                    ),
+                  ),
+
+                  Divider(
+                    height: 1,
+                    indent: 16,
+                    endIndent: 16,
+                    color: AppColors.outlineVariant.withOpacity(0.4),
+                  ),
+
+                  // Reminder time picker
+                  InkWell(
+                    onTap: _dailyReminderEnabled ? _pickReminderTime : null,
+                    borderRadius: BorderRadius.circular(12),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 14,
+                      ),
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 44,
+                            height: 44,
+                            decoration: BoxDecoration(
+                              color: AppColors.tertiaryContainer,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: const Icon(
+                              Icons.access_time_rounded,
+                              color: AppColors.tertiaryDark,
+                              size: 22,
+                            ),
+                          ),
+                          const SizedBox(width: 14),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'reminder_time'.tr(),
+                                  style: AppTextStyles.bodyLarge.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                    color: _dailyReminderEnabled
+                                        ? AppColors.onSurface
+                                        : AppColors.outline,
+                                  ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  'reminder_time_desc'.tr(),
+                                  style: AppTextStyles.bodySmall.copyWith(
+                                    color: _dailyReminderEnabled
+                                        ? AppColors.onSurfaceVariant
+                                        : AppColors.outline,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Text(
+                            _dailyReminderTime.format(context),
+                            style: AppTextStyles.bodyMedium.copyWith(
+                              fontWeight: FontWeight.w700,
+                              color: _dailyReminderEnabled
+                                  ? AppColors.primary
+                                  : AppColors.outline,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  Divider(
+                    height: 1,
+                    indent: 16,
+                    endIndent: 16,
+                    color: AppColors.outlineVariant.withOpacity(0.4),
+                  ),
+
+                  // Streak reminder toggle
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16,
+                      vertical: 10,
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 44,
+                          height: 44,
+                          decoration: BoxDecoration(
+                            color: AppColors.warningContainer,
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Icon(
+                            Icons.local_fire_department_rounded,
+                            color: AppColors.warning,
+                            size: 22,
+                          ),
+                        ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'streak_reminder'.tr(),
+                                style: AppTextStyles.bodyLarge.copyWith(
+                                  fontWeight: FontWeight.w700,
+                                  color: AppColors.onSurface,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                'streak_reminder_desc'.tr(),
+                                style: AppTextStyles.bodySmall.copyWith(
+                                  color: AppColors.onSurfaceVariant,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Switch(
+                          value: _streakReminderEnabled,
+                          onChanged: _onStreakReminderToggled,
+                          activeColor: AppColors.primary,
                         ),
                       ],
                     ),

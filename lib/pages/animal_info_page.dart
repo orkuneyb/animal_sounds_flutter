@@ -1,3 +1,8 @@
+import 'package:animal_sounds_flutter/pages/coloring_page.dart';
+import 'package:animal_sounds_flutter/pages/compare_page.dart';
+import 'package:animal_sounds_flutter/providers/achievement_provider.dart';
+import 'package:animal_sounds_flutter/providers/discovery_provider.dart';
+import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
@@ -23,6 +28,7 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   String? currentlyPlayingText;
   ValueNotifier<bool> isSpeakingNotifier = ValueNotifier<bool>(false);
   bool _isInitialized = false;
+  bool _hasTrackedVisit = false;
   final AdService _adService = AdService();
   late BannerAd _bannerAd;
   bool _isBannerAdReady = false;
@@ -55,6 +61,31 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
       _initLanguage();
       _isInitialized = true;
     }
+
+    // Track info visit once for discovery and stats (deferred to avoid setState during build)
+    if (!_hasTrackedVisit) {
+      _hasTrackedVisit = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _trackInfoVisit();
+      });
+    }
+  }
+
+  /// Tracks the info page visit across discovery, usage stats, and achievements.
+  void _trackInfoVisit() {
+    final discoveryProvider =
+        Provider.of<DiscoveryProvider>(context, listen: false);
+    final usageStatsProvider =
+        Provider.of<UsageStatsProvider>(context, listen: false);
+    final achievementProvider =
+        Provider.of<AchievementProvider>(context, listen: false);
+
+    discoveryProvider.markInfoVisited(widget.animal.index);
+    usageStatsProvider.incrementInfoVisited(widget.animal.index);
+    achievementProvider.incrementProgress('first_info', 1);
+    achievementProvider.incrementProgress('curious_mind', 1);
+    achievementProvider.incrementProgress('animal_expert', 1);
+    achievementProvider.incrementProgress('fact_lover', 1);
   }
 
   Future<void> _initBasicTts() async {
@@ -119,6 +150,8 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
                 _buildHabitat(),
                 _buildDietSection(),
                 _buildFunFacts(),
+                // Action buttons for Compare and Coloring
+                _buildActionButtons(),
                 const SizedBox(height: 20),
               ],
             ),
@@ -165,6 +198,18 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
         ),
       ),
       actions: [
+        // Compare button
+        IconButton(
+          icon: const Icon(Icons.compare_arrows_rounded, color: Colors.white),
+          tooltip: 'compare'.tr(),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const ComparePage()),
+            );
+          },
+        ),
+        // Favorite button
         Consumer<FavoritesProvider>(
           builder: (context, favoritesProvider, child) {
             return IconButton(
@@ -535,6 +580,100 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
             );
           }),
         ],
+      ),
+    );
+  }
+
+  /// Action buttons for Compare and Coloring features.
+  Widget _buildActionButtons() {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      child: Row(
+        children: [
+          // Compare button
+          Expanded(
+            child: _ActionButton(
+              icon: Icons.compare_arrows_rounded,
+              label: 'compare'.tr(),
+              color: AppColors.secondary,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => const ComparePage()),
+                );
+              },
+            ),
+          ),
+          const SizedBox(width: 12),
+          // Coloring button
+          Expanded(
+            child: _ActionButton(
+              icon: Icons.palette_rounded,
+              label: 'coloring'.tr(),
+              color: AppColors.tertiary,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => ColoringPage(animal: widget.animal),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// A styled action button for the info page.
+class _ActionButton extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final Color color;
+  final VoidCallback onTap;
+
+  const _ActionButton({
+    required this.icon,
+    required this.label,
+    required this.color,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(14),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+          decoration: BoxDecoration(
+            color: color.withOpacity(0.1),
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: color.withOpacity(0.3),
+              width: 1.5,
+            ),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, color: color, size: 22),
+              const SizedBox(width: 8),
+              Text(
+                label,
+                style: TextStyle(
+                  color: color,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 14,
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

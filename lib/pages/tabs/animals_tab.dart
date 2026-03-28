@@ -1,42 +1,22 @@
 import 'dart:ui';
 
+import 'package:animal_sounds_flutter/models/animal.dart';
+import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/pages/animal_info_page.dart';
-import 'package:animal_sounds_flutter/pages/compare_page.dart';
-import 'package:animal_sounds_flutter/pages/daily_discovery_page.dart';
-import 'package:animal_sounds_flutter/pages/favorites_page.dart';
-import 'package:animal_sounds_flutter/pages/gallery_page.dart';
-import 'package:animal_sounds_flutter/pages/quiz_start_page.dart';
-import 'package:animal_sounds_flutter/pages/sound_guess_game_page.dart';
-import 'package:animal_sounds_flutter/providers/daily_provider.dart';
+import 'package:animal_sounds_flutter/pages/animal_sound_page.dart';
+import 'package:animal_sounds_flutter/providers/category_provider.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
+import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
+import 'package:animal_sounds_flutter/transitions/page_transitions.dart';
 import 'package:animal_sounds_flutter/widgets/banner_ad_widget.dart';
-import 'package:animal_sounds_flutter/widgets/challenge_progress_widget.dart';
-import 'package:animal_sounds_flutter/widgets/discovery_progress_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:animal_sounds_flutter/models/animal.dart';
-import 'package:animal_sounds_flutter/pages/animal_sound_page.dart';
-import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
-import 'package:animal_sounds_flutter/providers/category_provider.dart';
-import 'package:animal_sounds_flutter/transitions/page_transitions.dart';
 
-// Soft pastel color palette for animal cards
-const List<Color> _kPastelColors = [
-  Color(0xFFFFE0B2), // Soft orange
-  Color(0xFFB3E5FC), // Soft blue
-  Color(0xFFC8E6C9), // Soft green
-  Color(0xFFF8BBD0), // Soft pink
-  Color(0xFFD1C4E9), // Soft purple
-  Color(0xFFFFF9C4), // Soft yellow
-  Color(0xFFB2DFDB), // Soft teal
-  Color(0xFFFFCCBC), // Soft deep orange
-  Color(0xFFE1BEE7), // Soft violet
-  Color(0xFFDCEDC8), // Soft lime
-];
-
-// Accent shades matching each pastel for icon tints
+// ---------------------------------------------------------------------------
+// Accent color palette for animal card text and highlights
+// ---------------------------------------------------------------------------
 const List<Color> _kAccentColors = [
   Color(0xFFFF9800), // Orange
   Color(0xFF03A9F4), // Blue
@@ -50,14 +30,16 @@ const List<Color> _kAccentColors = [
   Color(0xFF8BC34A), // Lime
 ];
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+/// Clean animal browsing tab — search, categories, and animal grid only.
+class AnimalsTab extends StatefulWidget {
+  const AnimalsTab({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<AnimalsTab> createState() => _AnimalsTabState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
+class _AnimalsTabState extends State<AnimalsTab>
+    with SingleTickerProviderStateMixin, AutomaticKeepAliveClientMixin {
   bool _isSearchOpen = false;
   final TextEditingController _searchController = TextEditingController();
   final FocusNode _searchFocusNode = FocusNode();
@@ -71,6 +53,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     parent: _searchAnimController,
     curve: Curves.easeOutCubic,
   );
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void dispose() {
@@ -95,28 +80,27 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     });
   }
 
+  // ---------------------------------------------------------------------------
+  // Build
+  // ---------------------------------------------------------------------------
+
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: const Color(0xFFF5F0EB),
-      appBar: _buildModernAppBar(),
+      appBar: _buildAppBar(),
       body: SafeArea(
         top: false,
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).padding.top + kToolbarHeight + 8),
+            SizedBox(
+              height: MediaQuery.of(context).padding.top + kToolbarHeight + 8,
+            ),
             const BannerAdWidget(),
-            // Daily Discovery Banner
-            _buildDailyDiscoveryBanner(),
-            // Discovery Progress + Weekly Challenge row
-            _buildProgressRow(),
-            // Feature shortcut bar
-            _buildFeatureBar(),
             _buildCategoryChips(),
-            Expanded(
-              child: _buildAnimalGrid(),
-            ),
+            Expanded(child: _buildAnimalGrid()),
           ],
         ),
       ),
@@ -124,199 +108,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 
   // ---------------------------------------------------------------------------
-  // Daily Discovery Banner
+  // Frosted-glass AppBar
   // ---------------------------------------------------------------------------
-  Widget _buildDailyDiscoveryBanner() {
-    return Consumer<DailyProvider>(
-      builder: (context, dailyProvider, _) {
-        final dailyAnimal = dailyProvider.getDailyAnimal();
-        final streak = dailyProvider.currentStreak;
 
-        return GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => const DailyDiscoveryPage()),
-            );
-          },
-          child: Container(
-            margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [Color(0xFFFFF8E1), Color(0xFFFFECB3)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(16),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.amber.withOpacity(0.15),
-                  blurRadius: 10,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-            ),
-            child: Row(
-              children: [
-                // Animal image
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.asset(
-                    dailyAnimal.imagePath,
-                    width: 48,
-                    height: 48,
-                    fit: BoxFit.contain,
-                  ),
-                ),
-                const SizedBox(width: 12),
-                // Text info
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Text(
-                        'daily_animal'.tr(),
-                        style: const TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w600,
-                          color: Color(0xFFAA8800),
-                          letterSpacing: 0.5,
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        dailyAnimal.name.tr(),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w800,
-                          color: Color(0xFF5D4E3C),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                // Streak indicator
-                if (streak > 0)
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                      vertical: 4,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.orange.withOpacity(0.15),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const Icon(
-                          Icons.local_fire_department_rounded,
-                          size: 16,
-                          color: Colors.deepOrange,
-                        ),
-                        const SizedBox(width: 4),
-                        Text(
-                          '$streak',
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w800,
-                            color: Colors.deepOrange,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                const SizedBox(width: 6),
-                const Icon(
-                  Icons.chevron_right_rounded,
-                  size: 20,
-                  color: Color(0xFFAA8800),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // Progress Row (Discovery + Weekly Challenge)
-  // ---------------------------------------------------------------------------
-  Widget _buildProgressRow() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 2),
-      child: Column(
-        children: [
-          const DiscoveryProgressWidget(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-            child: Row(
-              children: const [
-                Expanded(child: ChallengeProgressWidget()),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // Feature shortcut bar
-  // ---------------------------------------------------------------------------
-  Widget _buildFeatureBar() {
-    return SizedBox(
-      height: 44,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: Row(
-          children: [
-            _FeatureShortcut(
-              icon: Icons.compare_arrows_rounded,
-              label: 'compare'.tr(),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const ComparePage()),
-                );
-              },
-            ),
-            const SizedBox(width: 8),
-            _FeatureShortcut(
-              icon: Icons.palette_rounded,
-              label: 'gallery'.tr(),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (_) => const GalleryPage()),
-                );
-              },
-            ),
-            const SizedBox(width: 8),
-            _FeatureShortcut(
-              icon: Icons.headphones_rounded,
-              label: 'sound_game'.tr(),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (_) => const SoundGuessGamePage()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // Modern frosted-glass AppBar
-  // ---------------------------------------------------------------------------
-  PreferredSizeWidget _buildModernAppBar() {
+  PreferredSizeWidget _buildAppBar() {
     return PreferredSize(
       preferredSize: const Size.fromHeight(kToolbarHeight),
       child: ClipRRect(
@@ -341,14 +136,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   padding: const EdgeInsets.symmetric(horizontal: 8),
                   child: Row(
                     children: [
-                      // Title area (collapses when search is open)
+                      // Title area (hidden when searching)
                       if (!_isSearchOpen) ...[
                         const SizedBox(width: 8),
-                        const Icon(
-                          Icons.pets,
-                          color: Colors.white,
-                          size: 26,
-                        ),
+                        const Icon(Icons.pets, color: Colors.white, size: 26),
                         const SizedBox(width: 8),
                         Expanded(
                           child: Text(
@@ -363,6 +154,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           ),
                         ),
                       ],
+
                       // Expandable search field
                       if (_isSearchOpen)
                         Expanded(
@@ -379,28 +171,40 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                               child: TextField(
                                 controller: _searchController,
                                 focusNode: _searchFocusNode,
-                                onChanged: (value) {
-                                  setState(() => _searchQuery = value);
-                                },
-                                style: const TextStyle(fontSize: 15, color: Colors.black87),
+                                onChanged: (v) =>
+                                    setState(() => _searchQuery = v),
+                                style: const TextStyle(
+                                  fontSize: 15,
+                                  color: Colors.black87,
+                                ),
                                 decoration: InputDecoration(
                                   hintText: 'search'.tr(),
                                   hintStyle: TextStyle(
                                     color: Colors.grey.shade500,
                                     fontSize: 15,
                                   ),
-                                  prefixIcon: const Icon(Icons.search, size: 20, color: Colors.grey),
+                                  prefixIcon: const Icon(
+                                    Icons.search,
+                                    size: 20,
+                                    color: Colors.grey,
+                                  ),
                                   suffixIcon: IconButton(
-                                    icon: const Icon(Icons.close, size: 18, color: Colors.grey),
+                                    icon: const Icon(
+                                      Icons.close,
+                                      size: 18,
+                                      color: Colors.grey,
+                                    ),
                                     onPressed: _toggleSearch,
                                   ),
                                   border: InputBorder.none,
-                                  contentPadding: const EdgeInsets.symmetric(vertical: 10),
+                                  contentPadding:
+                                      const EdgeInsets.symmetric(vertical: 10),
                                 ),
                               ),
                             ),
                           ),
                         ),
+
                       // Action icons
                       if (!_isSearchOpen) ...[
                         _AppBarCircleButton(
@@ -408,28 +212,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                           onTap: _toggleSearch,
                         ),
                         _AppBarCircleButton(
-                          icon: Icons.extension,
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (_) => const QuizStartPage()),
-                            );
-                          },
-                        ),
-                        _AppBarCircleButton(
-                          icon: Icons.favorite_rounded,
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (_) => const FavoritesPage()),
-                            );
-                          },
-                        ),
-                        _AppBarCircleButton(
                           icon: Icons.settings_rounded,
-                          onTap: () {
-                            Navigator.pushNamed(context, '/settingsPage');
-                          },
+                          onTap: () =>
+                              Navigator.pushNamed(context, '/settingsPage'),
                         ),
                       ],
                     ],
@@ -446,6 +231,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   // ---------------------------------------------------------------------------
   // Category chip bar
   // ---------------------------------------------------------------------------
+
   Widget _buildCategoryChips() {
     return Consumer<CategoryProvider>(
       builder: (context, categoryProvider, _) {
@@ -463,10 +249,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   : categoryProvider.categories[index - 1].id ==
                       categoryProvider.selectedCategoryId;
 
-              final String label =
-                  isAll ? 'all'.tr() : categoryProvider.categories[index - 1].name.tr();
-              final IconData icon =
-                  isAll ? Icons.apps_rounded : categoryProvider.categories[index - 1].icon;
+              final String label = isAll
+                  ? 'all'.tr()
+                  : categoryProvider.categories[index - 1].name.tr();
+              final IconData icon = isAll
+                  ? Icons.apps_rounded
+                  : categoryProvider.categories[index - 1].icon;
 
               return Padding(
                 padding: const EdgeInsets.only(right: 8),
@@ -475,17 +263,16 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   icon: icon,
                   isSelected: isSelected,
                   onTap: () {
-                    final selectedId =
-                        isAll ? null : categoryProvider.categories[index - 1].id;
+                    final selectedId = isAll
+                        ? null
+                        : categoryProvider.categories[index - 1].id;
                     categoryProvider.selectCategory(selectedId);
 
-                    // Track category navigation for usage stats
                     if (!isAll) {
                       final usageStats = Provider.of<UsageStatsProvider>(
                         context,
                         listen: false,
                       );
-                      // Increment daily activity on category browsing
                       usageStats.incrementAppOpens();
                     }
                   },
@@ -501,6 +288,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   // ---------------------------------------------------------------------------
   // Animal grid
   // ---------------------------------------------------------------------------
+
   Widget _buildAnimalGrid() {
     return Consumer2<CategoryProvider, FavoritesProvider>(
       builder: (context, categoryProvider, favoritesProvider, _) {
@@ -527,10 +315,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Icon(Icons.search_off_rounded, size: 64, color: Colors.grey.shade300),
+                Icon(Icons.search_off_rounded,
+                    size: 64, color: Colors.grey.shade300),
                 const SizedBox(height: 12),
                 Text(
-                  'No animals found',
+                  'no_results_found'.tr(),
                   style: TextStyle(
                     fontSize: 16,
                     color: Colors.grey.shade400,
@@ -554,8 +343,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           itemCount: filteredAnimals.length,
           itemBuilder: (context, index) {
             final Animal animal = filteredAnimals[index];
-            final Color cardColor = _kPastelColors[index % _kPastelColors.length];
-            final Color accentColor = _kAccentColors[index % _kAccentColors.length];
+            final Color cardColor =
+                AppColors.cardColors[index % AppColors.cardColors.length];
+            final Color accentColor =
+                _kAccentColors[index % _kAccentColors.length];
             final bool isFav = favoritesProvider.isFavorite(animal.index);
 
             return _AnimalCard(
@@ -594,58 +385,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 // Private widgets
 // =============================================================================
 
-/// Small feature shortcut button for the horizontal bar.
-class _FeatureShortcut extends StatelessWidget {
-  const _FeatureShortcut({
-    required this.icon,
-    required this.label,
-    required this.onTap,
-  });
-
-  final IconData icon;
-  final String label;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: const Color(0xFFE0D6CC),
-            width: 1,
-          ),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(icon, size: 16, color: const Color(0xFF8D7B6A)),
-            const SizedBox(width: 6),
-            Text(
-              label,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF5D4E3C),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
 /// Circular icon button used in the app bar.
 class _AppBarCircleButton extends StatelessWidget {
-  const _AppBarCircleButton({
-    required this.icon,
-    required this.onTap,
-  });
+  const _AppBarCircleButton({required this.icon, required this.onTap});
 
   final IconData icon;
   final VoidCallback onTap;
@@ -660,9 +402,10 @@ class _AppBarCircleButton extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         child: InkWell(
           onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.all(8),
-            child: Icon(icon, color: Colors.white, size: 20),
+          child: SizedBox(
+            width: 48,
+            height: 48,
+            child: Icon(icon, color: Colors.white, size: 22),
           ),
         ),
       ),
@@ -700,7 +443,9 @@ class _CategoryChip extends StatelessWidget {
             color: isSelected ? const Color(0xFFFF9E80) : Colors.white,
             borderRadius: BorderRadius.circular(24),
             border: Border.all(
-              color: isSelected ? const Color(0xFFFF9E80) : const Color(0xFFE0D6CC),
+              color: isSelected
+                  ? const Color(0xFFFF9E80)
+                  : const Color(0xFFE0D6CC),
               width: 1.5,
             ),
             boxShadow: isSelected
@@ -719,7 +464,8 @@ class _CategoryChip extends StatelessWidget {
               Icon(
                 icon,
                 size: 18,
-                color: isSelected ? Colors.white : const Color(0xFF8D7B6A),
+                color:
+                    isSelected ? Colors.white : const Color(0xFF8D7B6A),
               ),
               const SizedBox(width: 6),
               Text(
@@ -727,7 +473,8 @@ class _CategoryChip extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: isSelected ? FontWeight.w700 : FontWeight.w500,
-                  color: isSelected ? Colors.white : const Color(0xFF5D4E3C),
+                  color:
+                      isSelected ? Colors.white : const Color(0xFF5D4E3C),
                 ),
               ),
             ],
@@ -738,7 +485,7 @@ class _CategoryChip extends StatelessWidget {
   }
 }
 
-/// Modern animal card with soft pastel background, overlays, and hero animation.
+/// Modern animal card with soft pastel background and hero animation.
 class _AnimalCard extends StatelessWidget {
   const _AnimalCard({
     required this.animal,
@@ -783,7 +530,6 @@ class _AnimalCard extends StatelessWidget {
           highlightColor: accentColor.withValues(alpha: 0.08),
           child: Stack(
             children: [
-              // Main content
               Column(
                 children: [
                   Expanded(
@@ -821,14 +567,16 @@ class _AnimalCard extends StatelessWidget {
                 right: 6,
                 child: Column(
                   children: [
-                    // Favorite heart
                     _OverlayIconButton(
-                      icon: isFavorite ? Icons.favorite_rounded : Icons.favorite_border_rounded,
-                      color: isFavorite ? const Color(0xFFE91E63) : Colors.grey.shade400,
+                      icon: isFavorite
+                          ? Icons.favorite_rounded
+                          : Icons.favorite_border_rounded,
+                      color: isFavorite
+                          ? const Color(0xFFE91E63)
+                          : Colors.grey.shade400,
                       onTap: onFavoriteTap,
                     ),
                     const SizedBox(height: 4),
-                    // Info icon
                     _OverlayIconButton(
                       icon: Icons.info_outline_rounded,
                       color: accentColor.withValues(alpha: 0.7),
@@ -862,20 +610,26 @@ class _OverlayIconButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       behavior: HitTestBehavior.opaque,
-      child: Container(
-        padding: const EdgeInsets.all(6),
-        decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.85),
-          shape: BoxShape.circle,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: 0.06),
-              blurRadius: 4,
-              offset: const Offset(0, 1),
+      child: SizedBox(
+        width: 48,
+        height: 48,
+        child: Center(
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: 0.85),
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.06),
+                  blurRadius: 4,
+                  offset: const Offset(0, 1),
+                ),
+              ],
             ),
-          ],
+            child: Icon(icon, size: 18, color: color),
+          ),
         ),
-        child: Icon(icon, size: 18, color: color),
       ),
     );
   }

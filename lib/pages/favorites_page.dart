@@ -1,3 +1,4 @@
+import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/pages/animal_info_page.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
@@ -227,7 +228,7 @@ class _EmptyFavoritesView extends StatelessWidget {
 }
 
 class _FavoriteAnimalCard extends StatelessWidget {
-  final dynamic animal;
+  final Animal animal;
   final VoidCallback onRemove;
   final VoidCallback onTap;
 

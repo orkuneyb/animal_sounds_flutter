@@ -3,7 +3,9 @@ import 'package:animal_sounds_flutter/models/quiz_question.dart';
 import 'package:animal_sounds_flutter/models/quiz_score.dart';
 import 'package:animal_sounds_flutter/providers/quiz_provider.dart';
 import 'package:animal_sounds_flutter/repositories/quiz_repository.dart';
+import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
+import 'package:animal_sounds_flutter/widgets/rewarded_ad_button.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +28,13 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
   final AudioPlayer audioPlayer = AudioPlayer();
   final FlutterTts flutterTts = FlutterTts();
   bool _isTtsInitialized = false;
+  final AdService _adService = AdService();
+
+  // Rewarded ad state
+  bool _hintUsed = false;
+  Set<int> _eliminatedOptions = {};
+  bool _extraLifeUsed = false;
+  bool _showExtraLifeOption = false;
 
   late AnimationController _soundBtnController;
   late Animation<double> _soundBtnAnimation;
@@ -52,6 +61,9 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
     _soundBtnAnimation = Tween<double>(begin: 1.0, end: 1.12).animate(
       CurvedAnimation(parent: _soundBtnController, curve: Curves.easeInOut),
     );
+
+    // Pre-load rewarded ad
+    _adService.loadRewardedAd();
   }
 
   @override
@@ -121,14 +133,117 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
                 child: Column(
                   children: [
                     _buildQuestionCard(),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 10),
+                    // Hint button row (only before answering)
+                    if (!_isAnswered && !_hintUsed)
+                      _buildHintRow(),
+                    const SizedBox(height: 6),
                     _buildAnswerOptions(),
+                    // Extra life option (after wrong answer)
+                    if (_showExtraLifeOption) _buildExtraLifeRow(),
                   ],
                 ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _buildHintRow() {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: RewardedAdButton(
+        rewardDescription: 'watch_ad_hint'.tr(),
+        gradientColors: const [Color(0xFF42A5F5), Color(0xFF1565C0)],
+        icon: Icons.lightbulb_rounded,
+        onRewardEarned: (amount) {
+          _applyHint();
+        },
+      ),
+    );
+  }
+
+  void _applyHint() {
+    final question = questions[_currentQuestionIndex];
+    final correctIndex = question.correctOptionIndex;
+    final wrongIndices = <int>[];
+    for (int i = 0; i < question.options.length; i++) {
+      if (i != correctIndex) {
+        wrongIndices.add(i);
+      }
+    }
+    wrongIndices.shuffle();
+    // Eliminate up to 2 wrong answers
+    final toEliminate = wrongIndices.take(2).toSet();
+
+    setState(() {
+      _hintUsed = true;
+      _eliminatedOptions = toEliminate;
+    });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            const Icon(Icons.lightbulb_rounded, color: Colors.white),
+            const SizedBox(width: 8),
+            Text(
+              'hint_used'.tr(),
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+          ],
+        ),
+        backgroundColor: AppColors.info,
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        duration: const Duration(seconds: 2),
+      ),
+    );
+  }
+
+  Widget _buildExtraLifeRow() {
+    return Padding(
+      padding: const EdgeInsets.only(top: 8, bottom: 4),
+      child: RewardedAdButton(
+        rewardDescription: 'watch_ad_extra_life'.tr(),
+        gradientColors: const [Color(0xFFEF5350), Color(0xFFC62828)],
+        icon: Icons.favorite_rounded,
+        onRewardEarned: (amount) {
+          _applyExtraLife();
+        },
+      ),
+    );
+  }
+
+  void _applyExtraLife() {
+    setState(() {
+      _extraLifeUsed = true;
+      _showExtraLifeOption = false;
+      _isAnswered = false;
+      selectedAnswer = null;
+      // Reset hint state for the retry
+      _hintUsed = false;
+      _eliminatedOptions = {};
+    });
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Row(
+          children: [
+            const Icon(Icons.favorite_rounded, color: Colors.white),
+            const SizedBox(width: 8),
+            Text(
+              'extra_life_used'.tr(),
+              style: const TextStyle(fontWeight: FontWeight.w600),
+            ),
+          ],
+        ),
+        backgroundColor: AppColors.error,
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        duration: const Duration(seconds: 2),
       ),
     );
   }
@@ -347,6 +462,11 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
         padding: const EdgeInsets.only(bottom: 8),
         itemCount: questions[_currentQuestionIndex].options.length,
         itemBuilder: (context, index) {
+          // If this option was eliminated by hint, show it disabled/hidden
+          if (_eliminatedOptions.contains(index)) {
+            return _buildEliminatedOption(index);
+          }
+
           final option = questions[_currentQuestionIndex].options[index];
           final isCorrectOption =
               index == questions[_currentQuestionIndex].correctOptionIndex;
@@ -457,6 +577,68 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
     );
   }
 
+  /// Builds a faded/crossed-out option for eliminated answers.
+  Widget _buildEliminatedOption(int index) {
+    final option = questions[_currentQuestionIndex].options[index];
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.easeInOut,
+        decoration: BoxDecoration(
+          color: AppColors.surfaceContainerHigh.withOpacity(0.4),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: AppColors.outlineVariant.withOpacity(0.2),
+            width: 1.5,
+          ),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+          child: Row(
+            children: [
+              Container(
+                width: 32,
+                height: 32,
+                decoration: BoxDecoration(
+                  color: AppColors.surfaceContainerHigh.withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Center(
+                  child: Text(
+                    String.fromCharCode(65 + index),
+                    style: TextStyle(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 14,
+                      color: AppColors.onSurfaceVariant.withOpacity(0.3),
+                    ),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Text(
+                  option,
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.onSurfaceVariant.withOpacity(0.3),
+                    decoration: TextDecoration.lineThrough,
+                  ),
+                ),
+              ),
+              Icon(
+                Icons.close_rounded,
+                color: AppColors.error.withOpacity(0.4),
+                size: 20,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   void _checkAnswer(String answer) {
     setState(() {
       _isAnswered = true;
@@ -473,32 +655,48 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
       _score++;
     }
 
-    Future.delayed(const Duration(seconds: 2), () {
-      audioPlayer.stop();
+    // Show extra life option on wrong answer (only once per quiz)
+    if (!isCorrect && !_extraLifeUsed) {
+      setState(() {
+        _showExtraLifeOption = true;
+      });
 
-      if (_currentQuestionIndex < questions.length - 1) {
-        setState(() {
-          _currentQuestionIndex++;
-          _isAnswered = false;
-          selectedAnswer = null;
-        });
-      } else {
-        _showResults();
-      }
-    });
+      // Auto-advance after delay if user doesn't use extra life
+      Future.delayed(const Duration(seconds: 4), () {
+        if (mounted && _showExtraLifeOption) {
+          _advanceToNextQuestion();
+        }
+      });
+    } else {
+      Future.delayed(const Duration(seconds: 2), () {
+        _advanceToNextQuestion();
+      });
+    }
+  }
+
+  void _advanceToNextQuestion() {
+    audioPlayer.stop();
+
+    if (_currentQuestionIndex < questions.length - 1) {
+      setState(() {
+        _currentQuestionIndex++;
+        _isAnswered = false;
+        selectedAnswer = null;
+        _showExtraLifeOption = false;
+        _hintUsed = false;
+        _eliminatedOptions = {};
+      });
+    } else {
+      setState(() {
+        _showExtraLifeOption = false;
+      });
+      _showResults();
+    }
   }
 
   void _showResults() {
-    final score = QuizScore(
-      correctAnswers: _score,
-      totalQuestions: questions.length,
-      dateTime: DateTime.now(),
-    );
-
     final successPercent =
         ((_score / questions.length) * 100).toStringAsFixed(0);
-    final percentage = _score / questions.length;
-    final isGreatScore = percentage >= 0.7;
 
     final textsToRead = [
       'quiz_completed'.tr(),
@@ -508,6 +706,8 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
       }),
       'result_success_rate'.tr(namedArgs: {'percent': successPercent}),
     ];
+
+    bool scoreDoubled = false;
 
     showModalBottomSheet(
       context: context,
@@ -520,197 +720,278 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
           _speakResultTexts(textsToRead);
         });
 
-        return Container(
-          padding: const EdgeInsets.fromLTRB(28, 28, 28, 36),
-          decoration: const BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              // Handle bar
-              Container(
-                width: 40,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: AppColors.outlineVariant,
-                  borderRadius: BorderRadius.circular(2),
-                ),
+        return StatefulBuilder(
+          builder: (sheetContext, setSheetState) {
+            final displayScore = scoreDoubled ? _score * 2 : _score;
+            final displayPercent =
+                ((displayScore / questions.length) * 100).toStringAsFixed(0);
+            final displayPercentage = displayScore / questions.length;
+            final displayIsGreat = displayPercentage >= 0.7;
+
+            return Container(
+              padding: const EdgeInsets.fromLTRB(28, 28, 28, 36),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
               ),
-              const SizedBox(height: 24),
-              // Title
-              Text(
-                'quiz_result.completed'.tr(),
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.w800,
-                  color: AppColors.onSurface,
-                ),
-              ),
-              const SizedBox(height: 24),
-              // Circular progress
-              SizedBox(
-                width: 120,
-                height: 120,
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    SizedBox(
-                      width: 120,
-                      height: 120,
-                      child: CircularProgressIndicator(
-                        value: percentage,
-                        strokeWidth: 10,
-                        backgroundColor: AppColors.surfaceContainerHigh,
-                        valueColor: AlwaysStoppedAnimation<Color>(
-                          isGreatScore
-                              ? AppColors.success
-                              : AppColors.secondary,
-                        ),
-                        strokeCap: StrokeCap.round,
-                      ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Handle bar
+                  Container(
+                    width: 40,
+                    height: 4,
+                    decoration: BoxDecoration(
+                      color: AppColors.outlineVariant,
+                      borderRadius: BorderRadius.circular(2),
                     ),
-                    Column(
-                      mainAxisSize: MainAxisSize.min,
+                  ),
+                  const SizedBox(height: 24),
+                  // Title
+                  Text(
+                    'quiz_result.completed'.tr(),
+                    style: const TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.w800,
+                      color: AppColors.onSurface,
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  // Circular progress
+                  SizedBox(
+                    width: 120,
+                    height: 120,
+                    child: Stack(
+                      alignment: Alignment.center,
                       children: [
-                        Text(
-                          '$_score/${questions.length}',
-                          style: const TextStyle(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w800,
-                            color: AppColors.onSurface,
+                        SizedBox(
+                          width: 120,
+                          height: 120,
+                          child: CircularProgressIndicator(
+                            value: displayPercentage.clamp(0.0, 1.0),
+                            strokeWidth: 10,
+                            backgroundColor: AppColors.surfaceContainerHigh,
+                            valueColor: AlwaysStoppedAnimation<Color>(
+                              displayIsGreat
+                                  ? AppColors.success
+                                  : AppColors.secondary,
+                            ),
+                            strokeCap: StrokeCap.round,
                           ),
                         ),
-                        Text(
-                          '$successPercent%',
-                          style: const TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppColors.onSurfaceVariant,
-                          ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              '$displayScore/${questions.length}',
+                              style: const TextStyle(
+                                fontSize: 26,
+                                fontWeight: FontWeight.w800,
+                                color: AppColors.onSurface,
+                              ),
+                            ),
+                            Text(
+                              '$displayPercent%',
+                              style: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color: AppColors.onSurfaceVariant,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 20),
-              // Stars row
-              if (isGreatScore)
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(
-                    3,
-                    (i) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 4),
-                      child: Icon(
-                        i < (_score / questions.length * 3).ceil()
-                            ? Icons.star_rounded
-                            : Icons.star_outline_rounded,
-                        color: const Color(0xFFFFC107),
-                        size: 36,
-                      ),
-                    ),
                   ),
-                ),
-              if (isGreatScore) const SizedBox(height: 8),
-              Text(
-                'quiz_result.success_rate'.tr(namedArgs: {
-                  'percent': successPercent,
-                }),
-                style: const TextStyle(
-                  fontSize: 16,
-                  color: AppColors.onSurfaceVariant,
-                ),
-              ),
-              const SizedBox(height: 28),
-              // Action buttons
-              Row(
-                children: [
-                  // Go Home
-                  Expanded(
-                    child: OutlinedButton(
-                      onPressed: () {
-                        flutterTts.stop();
-                        sheetContext.read<QuizProvider>().saveScore(score);
-                        Navigator.of(sheetContext).pop();
-                        Navigator.of(context).pop();
-                      },
-                      style: OutlinedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 14),
-                        side: const BorderSide(
-                            color: AppColors.outlineVariant, width: 1.5),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(16),
-                        ),
-                      ),
-                      child: Text(
-                        'finish'.tr(),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: AppColors.onSurfaceVariant,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 12),
-                  // Try Again
-                  Expanded(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [Color(0xFF66BB6A), Color(0xFF43A047)],
-                        ),
-                        borderRadius: BorderRadius.circular(16),
-                        boxShadow: [
-                          BoxShadow(
-                            color: AppColors.primary.withOpacity(0.3),
-                            blurRadius: 8,
-                            offset: const Offset(0, 3),
+                  const SizedBox(height: 20),
+                  // Stars row
+                  if (displayIsGreat)
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        3,
+                        (i) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 4),
+                          child: Icon(
+                            i < (displayScore / questions.length * 3).ceil()
+                                ? Icons.star_rounded
+                                : Icons.star_outline_rounded,
+                            color: const Color(0xFFFFC107),
+                            size: 36,
                           ),
-                        ],
+                        ),
                       ),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          flutterTts.stop();
-                          sheetContext.read<QuizProvider>().saveScore(score);
-                          Navigator.of(sheetContext).pop();
+                    ),
+                  if (displayIsGreat) const SizedBox(height: 8),
+                  Text(
+                    'quiz_result.success_rate'.tr(namedArgs: {
+                      'percent': displayPercent,
+                    }),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      color: AppColors.onSurfaceVariant,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  // Double Score rewarded ad button
+                  if (!scoreDoubled)
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 12),
+                      child: RewardedAdButton(
+                        rewardDescription: 'watch_ad_double_score'.tr(),
+                        gradientColors: const [
+                          Color(0xFFFFC107),
+                          Color(0xFFFF8F00),
+                        ],
+                        icon: Icons.star_rounded,
+                        onRewardEarned: (amount) {
+                          setSheetState(() {
+                            scoreDoubled = true;
+                          });
+                          // Also update parent state score for saving
                           setState(() {
-                            _currentQuestionIndex = 0;
-                            _score = 0;
-                            _isAnswered = false;
-                            selectedAnswer = null;
-                            questions =
-                                QuizRepository.getQuestions(context);
-                            questions.shuffle();
-                            questions = questions.take(5).toList();
+                            _score = _score * 2;
                           });
                         },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.transparent,
-                          shadowColor: Colors.transparent,
-                          padding: const EdgeInsets.symmetric(vertical: 14),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                  if (scoreDoubled)
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 12),
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 16, vertical: 10),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFFFF8E1),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: const Color(0xFFFFC107).withOpacity(0.5),
                           ),
                         ),
-                        child: Text(
-                          'quiz_result.completed'.tr(),
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w700,
-                            color: Colors.white,
-                          ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(Icons.check_circle_rounded,
+                                color: Color(0xFFF57F17), size: 20),
+                            const SizedBox(width: 8),
+                            Text(
+                              'score_doubled'.tr(),
+                              style: const TextStyle(
+                                color: Color(0xFFF57F17),
+                                fontWeight: FontWeight.w700,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
+                  const SizedBox(height: 8),
+                  // Action buttons
+                  Row(
+                    children: [
+                      // Go Home
+                      Expanded(
+                        child: OutlinedButton(
+                          onPressed: () {
+                            flutterTts.stop();
+                            final saveScore = QuizScore(
+                              correctAnswers: scoreDoubled ? _score : _score,
+                              totalQuestions: questions.length,
+                              dateTime: DateTime.now(),
+                            );
+                            sheetContext.read<QuizProvider>().saveScore(saveScore);
+                            Navigator.of(sheetContext).pop();
+                            Navigator.of(context).pop();
+                          },
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 14),
+                            side: const BorderSide(
+                                color: AppColors.outlineVariant, width: 1.5),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(16),
+                            ),
+                          ),
+                          child: Text(
+                            'finish'.tr(),
+                            style: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.onSurfaceVariant,
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      // Try Again
+                      Expanded(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                              colors: [Color(0xFF66BB6A), Color(0xFF43A047)],
+                            ),
+                            borderRadius: BorderRadius.circular(16),
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColors.primary.withOpacity(0.3),
+                                blurRadius: 8,
+                                offset: const Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: ElevatedButton(
+                            onPressed: () {
+                              flutterTts.stop();
+                              final saveScore = QuizScore(
+                                correctAnswers: scoreDoubled ? _score : _score,
+                                totalQuestions: questions.length,
+                                dateTime: DateTime.now(),
+                              );
+                              sheetContext
+                                  .read<QuizProvider>()
+                                  .saveScore(saveScore);
+                              Navigator.of(sheetContext).pop();
+                              setState(() {
+                                _currentQuestionIndex = 0;
+                                _score = 0;
+                                _isAnswered = false;
+                                selectedAnswer = null;
+                                _hintUsed = false;
+                                _eliminatedOptions = {};
+                                _extraLifeUsed = false;
+                                _showExtraLifeOption = false;
+                                questions =
+                                    QuizRepository.getQuestions(context);
+                                questions.shuffle();
+                                questions = questions.take(5).toList();
+                              });
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.transparent,
+                              shadowColor: Colors.transparent,
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 14),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
+                            ),
+                            child: Text(
+                              'play_again'.tr(),
+                              style: const TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-            ],
-          ),
+            );
+          },
         );
       },
     );

@@ -1,3 +1,4 @@
+import 'package:animal_sounds_flutter/pages/sound_guess_game_page.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +7,8 @@ import 'package:animal_sounds_flutter/pages/quiz_page.dart';
 
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+
+enum GameMode { quiz, soundGuess }
 
 class QuizStartPage extends StatefulWidget {
   const QuizStartPage({Key? key}) : super(key: key);
@@ -23,6 +26,8 @@ class _QuizStartPageState extends State<QuizStartPage>
   bool _isBannerAdReady = false;
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
+
+  GameMode _selectedMode = GameMode.quiz;
 
   @override
   void initState() {
@@ -74,14 +79,18 @@ class _QuizStartPageState extends State<QuizStartPage>
     super.dispose();
   }
 
-  void _navigateToQuiz() {
+  void _navigateToSelectedMode() {
+    final Widget destination = _selectedMode == GameMode.quiz
+        ? const QuizPage()
+        : const SoundGuessGamePage();
+
     if (_adService.isInterstitialAdReady) {
       _adService.showInterstitialAd(
         onAdClosed: () {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const QuizPage(),
+              builder: (context) => destination,
             ),
           );
         },
@@ -90,7 +99,7 @@ class _QuizStartPageState extends State<QuizStartPage>
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => const QuizPage(),
+          builder: (context) => destination,
         ),
       );
     }
@@ -141,39 +150,49 @@ class _QuizStartPageState extends State<QuizStartPage>
                         ),
                       ),
                       const Spacer(flex: 1),
-                      // Animated quiz icon
+                      // Animated icon
                       ScaleTransition(
                         scale: _pulseAnimation,
                         child: Container(
                           width: 140,
                           height: 140,
                           decoration: BoxDecoration(
-                            gradient: const LinearGradient(
+                            gradient: LinearGradient(
                               begin: Alignment.topLeft,
                               end: Alignment.bottomRight,
-                              colors: [
-                                Color(0xFF66BB6A),
-                                Color(0xFF43A047),
-                              ],
+                              colors: _selectedMode == GameMode.quiz
+                                  ? [
+                                      const Color(0xFF66BB6A),
+                                      const Color(0xFF43A047),
+                                    ]
+                                  : [
+                                      const Color(0xFF42A5F5),
+                                      const Color(0xFF1565C0),
+                                    ],
                             ),
                             shape: BoxShape.circle,
                             boxShadow: [
                               BoxShadow(
-                                color: AppColors.primary.withOpacity(0.3),
+                                color: (_selectedMode == GameMode.quiz
+                                        ? AppColors.primary
+                                        : AppColors.tertiary)
+                                    .withOpacity(0.3),
                                 spreadRadius: 4,
                                 blurRadius: 20,
                                 offset: const Offset(0, 6),
                               ),
                             ],
                           ),
-                          child: const Icon(
-                            Icons.extension_rounded,
+                          child: Icon(
+                            _selectedMode == GameMode.quiz
+                                ? Icons.extension_rounded
+                                : Icons.headphones_rounded,
                             size: 70,
                             color: Colors.white,
                           ),
                         ),
                       ),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 32),
                       // Title with TTS
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -181,7 +200,9 @@ class _QuizStartPageState extends State<QuizStartPage>
                         children: [
                           Flexible(
                             child: Text(
-                              'quiz_welcome'.tr(),
+                              _selectedMode == GameMode.quiz
+                                  ? 'quiz_welcome'.tr()
+                                  : 'sound_guess_title'.tr(),
                               style: const TextStyle(
                                 fontSize: 30,
                                 fontWeight: FontWeight.w800,
@@ -193,10 +214,13 @@ class _QuizStartPageState extends State<QuizStartPage>
                             ),
                           ),
                           const SizedBox(width: 4),
-                          _buildSmallTtsButton(() => _speak('quiz_welcome'.tr())),
+                          _buildSmallTtsButton(() => _speak(
+                              _selectedMode == GameMode.quiz
+                                  ? 'quiz_welcome'.tr()
+                                  : 'sound_guess_title'.tr())),
                         ],
                       ),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 12),
                       // Description with TTS
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -204,7 +228,9 @@ class _QuizStartPageState extends State<QuizStartPage>
                         children: [
                           Flexible(
                             child: Text(
-                              'quiz_description'.tr(),
+                              _selectedMode == GameMode.quiz
+                                  ? 'quiz_description'.tr()
+                                  : 'sound_guess_description'.tr(),
                               style: TextStyle(
                                 fontSize: 16,
                                 color: AppColors.onSurfaceVariant,
@@ -214,31 +240,47 @@ class _QuizStartPageState extends State<QuizStartPage>
                             ),
                           ),
                           const SizedBox(width: 4),
-                          _buildSmallTtsButton(
-                              () => _speak('quiz_description'.tr())),
+                          _buildSmallTtsButton(() => _speak(
+                              _selectedMode == GameMode.quiz
+                                  ? 'quiz_description'.tr()
+                                  : 'sound_guess_description'.tr())),
                         ],
                       ),
+                      const SizedBox(height: 24),
+                      // Mode Selection Cards
+                      _buildModeSelection(),
                       const Spacer(flex: 2),
-                      // Start Quiz button
+                      // Start button
                       SizedBox(
                         width: double.infinity,
                         height: 58,
                         child: DecoratedBox(
                           decoration: BoxDecoration(
-                            gradient: const LinearGradient(
-                              colors: [Color(0xFF66BB6A), Color(0xFF43A047)],
+                            gradient: LinearGradient(
+                              colors: _selectedMode == GameMode.quiz
+                                  ? [
+                                      const Color(0xFF66BB6A),
+                                      const Color(0xFF43A047),
+                                    ]
+                                  : [
+                                      const Color(0xFF42A5F5),
+                                      const Color(0xFF1565C0),
+                                    ],
                             ),
                             borderRadius: BorderRadius.circular(29),
                             boxShadow: [
                               BoxShadow(
-                                color: AppColors.primary.withOpacity(0.35),
+                                color: (_selectedMode == GameMode.quiz
+                                        ? AppColors.primary
+                                        : AppColors.tertiary)
+                                    .withOpacity(0.35),
                                 blurRadius: 12,
                                 offset: const Offset(0, 5),
                               ),
                             ],
                           ),
                           child: ElevatedButton(
-                            onPressed: _navigateToQuiz,
+                            onPressed: _navigateToSelectedMode,
                             style: ElevatedButton.styleFrom(
                               backgroundColor: Colors.transparent,
                               shadowColor: Colors.transparent,
@@ -256,7 +298,9 @@ class _QuizStartPageState extends State<QuizStartPage>
                                 ),
                                 const SizedBox(width: 8),
                                 Text(
-                                  'start_quiz'.tr(),
+                                  _selectedMode == GameMode.quiz
+                                      ? 'start_quiz'.tr()
+                                      : 'sound_guess_start'.tr(),
                                   style: const TextStyle(
                                     fontSize: 20,
                                     fontWeight: FontWeight.w700,
@@ -283,6 +327,126 @@ class _QuizStartPageState extends State<QuizStartPage>
               child: AdWidget(ad: _bannerAd),
             ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildModeSelection() {
+    return Row(
+      children: [
+        Expanded(
+          child: _buildModeCard(
+            mode: GameMode.quiz,
+            icon: Icons.extension_rounded,
+            title: 'mode_quiz_title'.tr(),
+            description: 'mode_quiz_desc'.tr(),
+            gradientColors: [const Color(0xFF66BB6A), const Color(0xFF43A047)],
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: _buildModeCard(
+            mode: GameMode.soundGuess,
+            icon: Icons.headphones_rounded,
+            title: 'mode_sound_guess_title'.tr(),
+            description: 'mode_sound_guess_desc'.tr(),
+            gradientColors: [const Color(0xFF42A5F5), const Color(0xFF1565C0)],
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildModeCard({
+    required GameMode mode,
+    required IconData icon,
+    required String title,
+    required String description,
+    required List<Color> gradientColors,
+  }) {
+    final isSelected = _selectedMode == mode;
+
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          _selectedMode = mode;
+        });
+      },
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+        curve: Curves.easeInOut,
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? gradientColors.first.withOpacity(0.1)
+              : Colors.white.withOpacity(0.8),
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(
+            color: isSelected
+                ? gradientColors.first
+                : AppColors.outlineVariant.withOpacity(0.3),
+            width: isSelected ? 2.5 : 1.5,
+          ),
+          boxShadow: isSelected
+              ? [
+                  BoxShadow(
+                    color: gradientColors.first.withOpacity(0.2),
+                    blurRadius: 12,
+                    offset: const Offset(0, 4),
+                  ),
+                ]
+              : [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.04),
+                    blurRadius: 8,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+        ),
+        child: Column(
+          children: [
+            Container(
+              width: 44,
+              height: 44,
+              decoration: BoxDecoration(
+                gradient: isSelected
+                    ? LinearGradient(colors: gradientColors)
+                    : null,
+                color: isSelected ? null : AppColors.surfaceContainerHigh,
+                borderRadius: BorderRadius.circular(14),
+              ),
+              child: Icon(
+                icon,
+                size: 24,
+                color: isSelected ? Colors.white : AppColors.onSurfaceVariant,
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: isSelected
+                    ? gradientColors.first
+                    : AppColors.onSurface,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 4),
+            Text(
+              description,
+              style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w500,
+                color: AppColors.onSurfaceVariant,
+              ),
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,13 +1,20 @@
 import 'dart:math' as math;
 
 import 'package:animal_sounds_flutter/models/animal.dart';
+import 'package:animal_sounds_flutter/pages/coloring_page.dart';
+import 'package:animal_sounds_flutter/providers/achievement_provider.dart';
+import 'package:animal_sounds_flutter/providers/discovery_provider.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
+import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/utils/shared_preferences/sp_manager.dart';
+import 'package:animal_sounds_flutter/widgets/rewarded_ad_button.dart';
+import 'package:animal_sounds_flutter/widgets/voice_recorder_widget.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/settings_provider.dart';
@@ -32,8 +39,12 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
   final AudioPlayer audioPlayer = AudioPlayer();
   late SettingsProvider _settingsProvider;
   final AdService _adService = AdService();
+  final FlutterTts _flutterTts = FlutterTts();
+  bool _ttsInitialized = false;
 
   bool _isPlaying = false;
+  bool _funFactRevealed = false;
+  bool _voiceRecorderExpanded = false;
 
   // Animation controllers
   late AnimationController _fadeController;
@@ -101,6 +112,7 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
     _fadeController.forward();
 
     _adService.createInterstitialAd();
+    _adService.loadRewardedAd();
     _incrementSoundPlayCount();
     // Delay playback slightly so the provider is available via didChangeDependencies
   }
@@ -109,6 +121,29 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
   void didChangeDependencies() {
     super.didChangeDependencies();
     _settingsProvider = Provider.of<SettingsProvider>(context);
+    if (!_ttsInitialized) {
+      _ttsInitialized = true;
+      _initTts();
+    }
+  }
+
+  Future<void> _initTts() async {
+    await _flutterTts.setLanguage(context.locale.languageCode);
+    await _flutterTts.setSpeechRate(0.5);
+    await _flutterTts.setVolume(1.0);
+    await _flutterTts.setPitch(1.0);
+  }
+
+  Future<void> _speakFunFact() async {
+    // Pick a random fun fact for this animal
+    final facts = [
+      '${widget.animal.name}_fun_fact_1'.tr(),
+      '${widget.animal.name}_fun_fact_2'.tr(),
+      '${widget.animal.name}_fun_fact_3'.tr(),
+    ];
+    final randomFact = facts[math.Random().nextInt(facts.length)];
+    await _flutterTts.stop();
+    await _flutterTts.speak(randomFact);
   }
 
   bool _hasAutoPlayed = false;
@@ -123,6 +158,7 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
   @override
   void dispose() {
     audioPlayer.dispose();
+    _flutterTts.stop();
     _fadeController.dispose();
     _imageScaleController.dispose();
     _playButtonPulseController.dispose();
@@ -144,6 +180,24 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
     await SPManager.setSoundPlayCount(currentCount);
   }
 
+  /// Tracks sound play across discovery, usage stats, and achievements.
+  void _trackSoundPlay() {
+    final discoveryProvider =
+        Provider.of<DiscoveryProvider>(context, listen: false);
+    final usageStatsProvider =
+        Provider.of<UsageStatsProvider>(context, listen: false);
+    final achievementProvider =
+        Provider.of<AchievementProvider>(context, listen: false);
+
+    discoveryProvider.markSoundListened(widget.animal.index);
+    usageStatsProvider.incrementSoundsListened(widget.animal.index);
+    achievementProvider.incrementProgress('first_sound', 1);
+    achievementProvider.incrementProgress('sound_explorer', 1);
+    achievementProvider.incrementProgress('sound_master', 1);
+    achievementProvider.incrementProgress('repeat_listener', 1);
+    achievementProvider.incrementProgress('sound_marathon', 1);
+  }
+
   Future<void> _playAnimalAudio() async {
     try {
       String audioPath = widget.animal.soundPath;
@@ -154,6 +208,9 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
 
       setState(() => _isPlaying = true);
       _startPlayingAnimations();
+
+      // Track sound play for new features
+      _trackSoundPlay();
 
       audioPlayer.onPlayerComplete.listen((event) {
         if (mounted) {
@@ -250,6 +307,15 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
                         const SizedBox(height: 28),
                         // Playback controls
                         _buildPlaybackControls(),
+                        const SizedBox(height: 28),
+                        // Fun Fact rewarded ad button
+                        _buildFunFactButton(),
+                        const SizedBox(height: 20),
+                        // Coloring button
+                        _buildColoringButton(),
+                        const SizedBox(height: 20),
+                        // Voice Recorder Widget (expandable)
+                        _buildVoiceRecorderSection(),
                         const SizedBox(height: 40),
                       ],
                     ),
@@ -388,6 +454,175 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
           ),
         );
       },
+    );
+  }
+
+  Widget _buildFunFactButton() {
+    if (_funFactRevealed) {
+      // After reward earned, show a "play fun fact" button
+      return GestureDetector(
+        onTap: _speakFunFact,
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                _darken(_baseColor, 0.05),
+                _darken(_baseColor, 0.2),
+              ],
+            ),
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: _baseColor.withOpacity(0.3),
+                blurRadius: 8,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.record_voice_over_rounded,
+                  color: Colors.white, size: 22),
+              const SizedBox(width: 10),
+              Text(
+                'fun_facts'.tr(),
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    return RewardedAdButton(
+      rewardDescription: 'watch_ad_fun_fact'.tr(),
+      gradientColors: [
+        _darken(_baseColor, 0.1),
+        _darken(_baseColor, 0.3),
+      ],
+      icon: Icons.record_voice_over_rounded,
+      onRewardEarned: (amount) {
+        setState(() {
+          _funFactRevealed = true;
+        });
+        _speakFunFact();
+      },
+    );
+  }
+
+  Widget _buildColoringButton() {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (_) => ColoringPage(animal: widget.animal),
+          ),
+        );
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              _darken(_baseColor, 0.0),
+              _darken(_baseColor, 0.15),
+            ],
+          ),
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: _baseColor.withOpacity(0.25),
+              blurRadius: 8,
+              offset: const Offset(0, 3),
+            ),
+          ],
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Icon(Icons.palette_rounded, color: Colors.white, size: 22),
+            const SizedBox(width: 10),
+            Text(
+              'coloring'.tr(),
+              style: const TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: 15,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildVoiceRecorderSection() {
+    return Column(
+      children: [
+        // Toggle button
+        GestureDetector(
+          onTap: () {
+            setState(() {
+              _voiceRecorderExpanded = !_voiceRecorderExpanded;
+            });
+          },
+          child: Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.5),
+              borderRadius: BorderRadius.circular(14),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.mic_rounded,
+                  size: 20,
+                  color: _darken(_baseColor, 0.35),
+                ),
+                const SizedBox(width: 8),
+                Text(
+                  'you_try'.tr(),
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w700,
+                    color: _darken(_baseColor, 0.35),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Icon(
+                  _voiceRecorderExpanded
+                      ? Icons.expand_less_rounded
+                      : Icons.expand_more_rounded,
+                  size: 20,
+                  color: _darken(_baseColor, 0.35),
+                ),
+              ],
+            ),
+          ),
+        ),
+        // Expandable voice recorder
+        AnimatedCrossFade(
+          firstChild: const SizedBox.shrink(),
+          secondChild: VoiceRecorderWidget(
+            animalSoundPath: widget.animal.soundPath,
+            animalName: widget.animal.name.tr(),
+          ),
+          crossFadeState: _voiceRecorderExpanded
+              ? CrossFadeState.showSecond
+              : CrossFadeState.showFirst,
+          duration: const Duration(milliseconds: 300),
+        ),
+      ],
     );
   }
 

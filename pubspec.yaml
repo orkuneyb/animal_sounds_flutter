@@ -16,11 +16,14 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_launcher_icons: ^0.14.4
+  flutter_local_notifications: ^18.0.0
   flutter_native_splash: ^2.2.19
   flutter_tts: ^4.2.0
+  timezone: ^0.10.0
   google_fonts: ^6.2.1
   google_mobile_ads: ^6.0.0
   package_info_plus: ^9.0.0
+  path_provider: ^2.1.1
   provider: ^6.1.1
   shared_preferences: ^2.2.2
 
