@@ -95,11 +95,15 @@ class _ComparePageState extends State<ComparePage> {
       appBar: AppBar(
         title: Text(
           'compare_title'.tr(),
-          style: AppTextStyles.headingSmall,
+          style: AppTextStyles.headingMedium.copyWith(
+            color: AppColors.onSurface,
+          ),
         ),
-        backgroundColor: Colors.transparent,
+        centerTitle: true,
+        backgroundColor: AppColors.surface,
+        foregroundColor: AppColors.onSurface,
         elevation: 0,
-        scrolledUnderElevation: 1,
+        scrolledUnderElevation: 0,
         actions: [
           if (bothSelected)
             IconButton(

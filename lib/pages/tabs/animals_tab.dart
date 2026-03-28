@@ -178,7 +178,7 @@ class _AnimalsTabState extends State<AnimalsTab>
                                   color: Colors.black87,
                                 ),
                                 decoration: InputDecoration(
-                                  hintText: 'search'.tr(),
+                                  hintText: 'search_hint'.tr(),
                                   hintStyle: TextStyle(
                                     color: Colors.grey.shade500,
                                     fontSize: 15,

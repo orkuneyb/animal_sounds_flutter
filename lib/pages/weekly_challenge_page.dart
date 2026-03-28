@@ -1,4 +1,5 @@
 import 'package:animal_sounds_flutter/providers/challenge_provider.dart';
+import 'package:animal_sounds_flutter/utils/icon_helper.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -216,7 +217,7 @@ class WeeklyChallengePage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(14),
                 ),
                 child: Icon(
-                  challenge.icon,
+                  challengeIconFromCodePoint(challenge.iconCodePoint),
                   color: isCompleted ? Colors.white : AppColors.tertiary,
                   size: 22,
                 ),

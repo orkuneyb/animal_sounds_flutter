@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 .claude/
+*.keystore
+*.jks
+android/key.properties
 
 # IntelliJ related
 *.iml

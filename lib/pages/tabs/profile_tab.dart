@@ -8,6 +8,7 @@ import 'package:animal_sounds_flutter/providers/challenge_provider.dart';
 import 'package:animal_sounds_flutter/providers/coloring_provider.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
+import 'package:animal_sounds_flutter/utils/icon_helper.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:animal_sounds_flutter/widgets/parent_gate_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -247,7 +248,7 @@ class _ProfileTabState extends State<ProfileTab>
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Icon(
-                            challenge.icon,
+                            challengeIconFromCodePoint(challenge.iconCodePoint),
                             size: 16,
                             color: isComplete
                                 ? AppColors.success

@@ -81,7 +81,7 @@ class ChallengeProvider with ChangeNotifier {
         type: t['type'] as String,
         target: t['target'] as int,
         progress: 0,
-        icon: t['icon'] as IconData,
+        iconCodePoint: t['iconCodePoint'] as int,
       );
     }).toList();
   }
@@ -94,7 +94,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_listen_farm_desc',
         'type': 'listen',
         'target': 5,
-        'icon': Icons.headphones_rounded,
+        'iconCodePoint': Icons.headphones_rounded.codePoint,
       },
       {
         'id': 'complete_quiz_3',
@@ -102,7 +102,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_complete_quiz_desc',
         'type': 'quiz',
         'target': 3,
-        'icon': Icons.quiz_rounded,
+        'iconCodePoint': Icons.quiz_rounded.codePoint,
       },
       {
         'id': 'perfect_quiz',
@@ -110,7 +110,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_perfect_quiz_desc',
         'type': 'quiz_perfect',
         'target': 1,
-        'icon': Icons.star_rounded,
+        'iconCodePoint': Icons.star_rounded.codePoint,
       },
       {
         'id': 'visit_info_wild_5',
@@ -118,7 +118,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_visit_info_wild_desc',
         'type': 'info',
         'target': 5,
-        'icon': Icons.info_rounded,
+        'iconCodePoint': Icons.info_rounded.codePoint,
       },
       {
         'id': 'add_fav_3',
@@ -126,7 +126,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_add_fav_desc',
         'type': 'favorite',
         'target': 3,
-        'icon': Icons.favorite_rounded,
+        'iconCodePoint': Icons.favorite_rounded.codePoint,
       },
       {
         'id': 'listen_10_diff',
@@ -134,7 +134,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_listen_10_diff_desc',
         'type': 'listen',
         'target': 10,
-        'icon': Icons.music_note_rounded,
+        'iconCodePoint': Icons.music_note_rounded.codePoint,
       },
       {
         'id': 'discover_5_new',
@@ -142,7 +142,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_discover_5_desc',
         'type': 'discover',
         'target': 5,
-        'icon': Icons.explore_rounded,
+        'iconCodePoint': Icons.explore_rounded.codePoint,
       },
       {
         'id': 'play_game_3',
@@ -150,7 +150,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_play_game_desc',
         'type': 'game',
         'target': 3,
-        'icon': Icons.gamepad_rounded,
+        'iconCodePoint': Icons.gamepad_rounded.codePoint,
       },
       {
         'id': 'read_facts_5',
@@ -158,7 +158,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_read_facts_desc',
         'type': 'info',
         'target': 5,
-        'icon': Icons.auto_stories_rounded,
+        'iconCodePoint': Icons.auto_stories_rounded.codePoint,
       },
       {
         'id': 'listen_sea_all',
@@ -166,7 +166,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_listen_sea_desc',
         'type': 'listen',
         'target': 3,
-        'icon': Icons.waves_rounded,
+        'iconCodePoint': Icons.waves_rounded.codePoint,
       },
       {
         'id': 'quiz_no_hint',
@@ -174,7 +174,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_quiz_no_hint_desc',
         'type': 'quiz',
         'target': 1,
-        'icon': Icons.psychology_rounded,
+        'iconCodePoint': Icons.psychology_rounded.codePoint,
       },
       {
         'id': 'visit_info_8',
@@ -182,7 +182,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_visit_info_8_desc',
         'type': 'info',
         'target': 8,
-        'icon': Icons.menu_book_rounded,
+        'iconCodePoint': Icons.menu_book_rounded.codePoint,
       },
       {
         'id': 'listen_15_total',
@@ -190,7 +190,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_listen_15_desc',
         'type': 'listen',
         'target': 15,
-        'icon': Icons.volume_up_rounded,
+        'iconCodePoint': Icons.volume_up_rounded.codePoint,
       },
       {
         'id': 'fav_bird',
@@ -198,7 +198,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_fav_bird_desc',
         'type': 'favorite',
         'target': 1,
-        'icon': Icons.flutter_dash_rounded,
+        'iconCodePoint': Icons.flutter_dash_rounded.codePoint,
       },
       {
         'id': 'quiz_good_2',
@@ -206,7 +206,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_quiz_good_desc',
         'type': 'quiz',
         'target': 2,
-        'icon': Icons.emoji_events_rounded,
+        'iconCodePoint': Icons.emoji_events_rounded.codePoint,
       },
       {
         'id': 'game_score_10',
@@ -214,7 +214,7 @@ class ChallengeProvider with ChangeNotifier {
         'descriptionKey': 'challenge_game_score_10_desc',
         'type': 'game',
         'target': 1,
-        'icon': Icons.leaderboard_rounded,
+        'iconCodePoint': Icons.leaderboard_rounded.codePoint,
       },
     ];
   }

@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class WeeklyChallenge {
   final String id;
   final String titleKey;
@@ -7,7 +5,7 @@ class WeeklyChallenge {
   final String type;
   final int target;
   int progress;
-  final IconData icon;
+  final int iconCodePoint;
 
   WeeklyChallenge({
     required this.id,
@@ -16,7 +14,7 @@ class WeeklyChallenge {
     required this.type,
     required this.target,
     this.progress = 0,
-    required this.icon,
+    required this.iconCodePoint,
   });
 
   bool get isCompleted => progress >= target;
@@ -30,10 +28,7 @@ class WeeklyChallenge {
       type: json['type'] as String,
       target: json['target'] as int,
       progress: json['progress'] as int? ?? 0,
-      icon: IconData(
-        json['iconCodePoint'] as int,
-        fontFamily: 'MaterialIcons',
-      ),
+      iconCodePoint: json['iconCodePoint'] as int,
     );
   }
 
@@ -45,7 +40,7 @@ class WeeklyChallenge {
       'type': type,
       'target': target,
       'progress': progress,
-      'iconCodePoint': icon.codePoint,
+      'iconCodePoint': iconCodePoint,
     };
   }
 }
