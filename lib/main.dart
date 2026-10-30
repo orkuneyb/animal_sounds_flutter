@@ -48,11 +48,20 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  /// Set once the first-launch parent dialog has been requested in this
+  /// process, so a navigator rebuild cannot stack a second copy.
+  static bool _parentAlertRequested = false;
+
+  @visibleForTesting
+  static void resetParentAlertForTesting() => _parentAlertRequested = false;
+
   /// First-launch information for parents, with the daily-reminder offer.
   ///
   /// Shown once per install to anyone who has not already enabled reminders
   /// (see [shouldShowReminderOffer]).
   Future<void> showParentAlert(BuildContext context) async {
+    if (_parentAlertRequested) return;
+    _parentAlertRequested = true;
     final prefs = await SharedPreferences.getInstance();
     final notifications = NotificationService();
     final show = shouldShowReminderOffer(
