@@ -32,13 +32,14 @@ class _QuizStartPageState extends State<QuizStartPage>
   @override
   void initState() {
     super.initState();
-    _adService.createInterstitialAd();
-    _bannerAd = _adService.createBannerAd()
-      ..load().then((_) {
+    _bannerAd = _adService.createBannerAd();
+    _adService.initialize().then((_) => _bannerAd.load()).then((_) {
+      if (mounted) {
         setState(() {
           _isBannerAdReady = true;
         });
-      });
+      }
+    });
 
     _pulseController = AnimationController(
       vsync: this,
@@ -84,25 +85,12 @@ class _QuizStartPageState extends State<QuizStartPage>
         ? const QuizPage()
         : const SoundGuessGamePage();
 
-    if (_adService.isInterstitialAdReady) {
-      _adService.showInterstitialAd(
-        onAdClosed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => destination,
-            ),
-          );
-        },
-      );
-    } else {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => destination,
-        ),
-      );
-    }
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => destination,
+      ),
+    );
   }
 
   @override

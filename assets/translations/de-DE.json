@@ -1,7 +1,7 @@
 {
     "app_name": "Tiergeräusche",
     "parent_alert_title": "Wichtige Informationen für Eltern",
-    "parent_alert_content": "Liebe Eltern,\n\nDiese App ist für Kinder bis 5 Jahre gedacht. Bitte beaufsichtigen Sie die Nutzung durch Ihr Kind.\n\nDie App:\n- Kann kindgerechte Werbung enthalten\n- Enthält Geräusche und Bilder\n- Benötigt eine Internetverbindung\n\nWir wünschen Ihnen viel Spaß und eine sichere Nutzung!",
+    "parent_alert_content": "Liebe Eltern,\n\nDiese App ist für kleine Kinder gedacht. Bitte beaufsichtigen Sie die Nutzung durch Ihr Kind.\n\nDie App:\n- Kann kindgerechte Werbung enthalten\n- Enthält Geräusche und Bilder\n- Funktioniert offline; das Internet wird nur zum Laden von Werbung genutzt\n\nWir wünschen Ihnen viel Spaß und eine sichere Nutzung!",
     "parent_alert_button": "Ich verstehe",
     "lion": "Löwe",
     "elephant": "Elefant",

@@ -1,13 +1,21 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
+
+/// Returns the next time the clock shows [hour]:[minute] on this device,
+/// strictly after [now].
+DateTime nextLocalInstanceOf(DateTime now, int hour, int minute) {
+  final today = DateTime(now.year, now.month, now.day, hour, minute);
+  if (today.isAfter(now)) return today;
+  return DateTime(now.year, now.month, now.day + 1, hour, minute);
+}
 
 /// Singleton service for managing local notifications.
 ///
 /// Handles daily reminders ("Gunun hayvani seni bekliyor!") and streak
-/// reminders with timezone-aware scheduling.
+/// reminders, scheduled against the device's local clock.
 class NotificationService {
   NotificationService._internal();
 
@@ -34,8 +42,6 @@ class NotificationService {
 
   Future<void> initialize() async {
     if (_initialized) return;
-
-    tz.initializeTimeZones();
 
     const androidSettings =
         AndroidInitializationSettings('@mipmap/ic_launcher');
@@ -77,26 +83,11 @@ class NotificationService {
   Future<void> scheduleDailyReminder(TimeOfDay time) async {
     await _ensureInitialized();
 
-    final now = tz.TZDateTime.now(tz.local);
-    var scheduledDate = tz.TZDateTime(
-      tz.local,
-      now.year,
-      now.month,
-      now.day,
-      time.hour,
-      time.minute,
-    );
-
-    // If the time has already passed today, schedule for tomorrow
-    if (scheduledDate.isBefore(now)) {
-      scheduledDate = scheduledDate.add(const Duration(days: 1));
-    }
-
     await _plugin.zonedSchedule(
       _dailyReminderId,
-      'Animal Sounds',
-      'daily_reminder_body', // Will be localized at display time on supported platforms
-      scheduledDate,
+      'app_name'.tr(),
+      'daily_reminder_body'.tr(),
+      _nextInstanceOf(time.hour, time.minute),
       NotificationDetails(
         android: AndroidNotificationDetails(
           'daily_reminder',
@@ -141,25 +132,11 @@ class NotificationService {
   Future<void> scheduleStreakReminder() async {
     await _ensureInitialized();
 
-    final now = tz.TZDateTime.now(tz.local);
-    var scheduledDate = tz.TZDateTime(
-      tz.local,
-      now.year,
-      now.month,
-      now.day,
-      20, // 8 PM — evening reminder
-      0,
-    );
-
-    if (scheduledDate.isBefore(now)) {
-      scheduledDate = scheduledDate.add(const Duration(days: 1));
-    }
-
     await _plugin.zonedSchedule(
       _streakReminderId,
-      'Animal Sounds',
-      'streak_reminder_body',
-      scheduledDate,
+      'app_name'.tr(),
+      'streak_reminder_body'.tr(),
+      _nextInstanceOf(20, 0), // 8 PM — evening reminder
       NotificationDetails(
         android: AndroidNotificationDetails(
           'streak_reminder',
@@ -192,6 +169,23 @@ class NotificationService {
 
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool(_prefStreakEnabled, false);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Reschedule on app start
+  // ---------------------------------------------------------------------------
+
+  /// Re-schedules the reminders the user has enabled so their text follows
+  /// the current language and their time follows the device clock.
+  ///
+  /// Must be called after translations are loaded.
+  Future<void> rescheduleEnabledReminders() async {
+    if (await isDailyReminderEnabled()) {
+      await scheduleDailyReminder(await getDailyReminderTime());
+    }
+    if (await isStreakReminderEnabled()) {
+      await scheduleStreakReminder();
+    }
   }
 
   // ---------------------------------------------------------------------------
@@ -234,5 +228,14 @@ class NotificationService {
 
   Future<void> _ensureInitialized() async {
     if (!_initialized) await initialize();
+  }
+
+  /// The plugin needs a zoned time; the instant is taken from the device's
+  /// local clock, so no timezone database has to be loaded.
+  tz.TZDateTime _nextInstanceOf(int hour, int minute) {
+    return tz.TZDateTime.from(
+      nextLocalInstanceOf(DateTime.now(), hour, minute),
+      tz.UTC,
+    );
   }
 }

@@ -1,7 +1,7 @@
 {
     "app_name": "Sonidos de Animales",
     "parent_alert_title": "Información Importante para Padres",
-    "parent_alert_content": "Queridos Padres,\n\nEsta aplicación está diseñada para niños de 5 años o menos. Por favor, supervise el uso por parte de su hijo.\n\nLa aplicación:\n- Puede contener anuncios aptos para niños\n- Contiene sonidos e imágenes\n- Requiere conexión a internet\n\n¡Les deseamos un uso seguro y divertido!",
+    "parent_alert_content": "Queridos Padres,\n\nEsta aplicación está diseñada para niños pequeños. Por favor, supervise el uso por parte de su hijo.\n\nLa aplicación:\n- Puede contener anuncios aptos para niños\n- Contiene sonidos e imágenes\n- Funciona sin conexión; internet solo se usa para cargar anuncios\n\n¡Les deseamos un uso seguro y divertido!",
     "parent_alert_button": "Entendido",
     "lion": "León",
     "elephant": "Elefante",

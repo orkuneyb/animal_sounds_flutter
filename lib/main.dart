@@ -19,21 +19,15 @@ import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:animal_sounds_flutter/widgets/achievement_unlock_dialog.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  await MobileAds.instance.initialize();
 
-  // Pre-load rewarded ad so it is ready when first needed
-  AdService().loadRewardedAd();
-
-  // Initialize notification service
-  await NotificationService().initialize();
-
+  // Ads and notifications start after the first frame (see
+  // _AppWithDependenciesState) so a slow SDK start never delays the UI.
   runApp(EasyLocalization(
     supportedLocales: const [
       Locale('en', 'US'),
@@ -205,6 +199,15 @@ class _AppWithDependenciesState extends State<_AppWithDependencies> {
   bool _dependenciesWired = false;
 
   @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      // Pre-load rewarded ad so it is ready when first needed
+      AdService().loadRewardedAd();
+    });
+  }
+
+  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     if (!_dependenciesWired) {
@@ -239,6 +242,16 @@ class _AppWithDependenciesState extends State<_AppWithDependencies> {
     usageStatsProvider.incrementAppOpens();
   }
 
+  bool _remindersRefreshed = false;
+
+  /// Re-schedules enabled reminders once per launch. Runs from the home
+  /// route, where translations are guaranteed to be loaded.
+  void _refreshReminders() {
+    if (_remindersRefreshed) return;
+    _remindersRefreshed = true;
+    NotificationService().rescheduleEnabledReminders();
+  }
+
   // Global navigator key for showing dialogs from provider callbacks
   static final GlobalKey<NavigatorState> _navigatorKey =
       GlobalKey<NavigatorState>();
@@ -258,6 +271,7 @@ class _AppWithDependenciesState extends State<_AppWithDependencies> {
         '/homePage': (context) {
           WidgetsBinding.instance.addPostFrameCallback((_) {
             widget.showParentAlert(context);
+            _refreshReminders();
           });
           return const MainNavigationPage();
         },

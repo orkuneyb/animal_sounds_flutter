@@ -35,7 +35,31 @@ class AdService {
   bool get isInterstitialAdReady => _isInterstitialAdReady;
   bool get isRewardedAdReady => _isRewardedAdReady;
 
-  void createInterstitialAd() {
+  /// The app is made for children, so every ad request is tagged as
+  /// child-directed and limited to G-rated content (Google Play Families
+  /// policy).
+  static final RequestConfiguration childDirectedConfiguration =
+      RequestConfiguration(
+    tagForChildDirectedTreatment: TagForChildDirectedTreatment.yes,
+    maxAdContentRating: MaxAdContentRating.g,
+  );
+
+  Future<void>? _initialization;
+
+  /// Applies [childDirectedConfiguration] and starts the Mobile Ads SDK.
+  ///
+  /// Safe to call repeatedly; every ad load awaits it so that no request
+  /// goes out before the child-directed configuration is in place.
+  Future<void> initialize() => _initialization ??= _initialize();
+
+  Future<void> _initialize() async {
+    await MobileAds.instance
+        .updateRequestConfiguration(childDirectedConfiguration);
+    await MobileAds.instance.initialize();
+  }
+
+  Future<void> createInterstitialAd() async {
+    await initialize();
     InterstitialAd.load(
       adUnitId: interstitialAdUnitId,
       request: const AdRequest(),
@@ -86,7 +110,8 @@ class AdService {
   // -------------------------------------------------------------------------
 
   /// Loads a rewarded ad. Call this early so the ad is ready when needed.
-  void loadRewardedAd() {
+  Future<void> loadRewardedAd() async {
+    await initialize();
     RewardedAd.load(
       adUnitId: rewardedAdUnitId,
       request: const AdRequest(),
