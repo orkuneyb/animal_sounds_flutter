@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 
 import '../providers/usage_stats_provider.dart';
 import '../repositories/animal_repository.dart';
+import '../services/analytics_service.dart';
+import '../services/review_service.dart';
 import '../utils/colors/colors.dart';
 import '../utils/styles.dart';
 
@@ -11,8 +13,25 @@ import '../utils/styles.dart';
 ///
 /// Shows usage statistics, learning progress, popular animals, and weekly
 /// activity. Accessed only after passing the parent gate.
-class ParentDashboardPage extends StatelessWidget {
+class ParentDashboardPage extends StatefulWidget {
   const ParentDashboardPage({super.key});
+
+  @override
+  State<ParentDashboardPage> createState() => _ParentDashboardPageState();
+}
+
+class _ParentDashboardPageState extends State<ParentDashboardPage> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      AnalyticsService().parentDashboardOpened();
+      ReviewService().maybeAutoPrompt(
+        context.read<UsageStatsProvider>().appOpens,
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -522,16 +541,29 @@ class _QuickActionsCard extends StatelessWidget {
       child: Column(
         children: [
           ListTile(
-            leading: const Icon(Icons.delete_outline_rounded,
-                color: AppColors.error),
+            leading: const Icon(Icons.star_outline_rounded,
+                color: Color(0xFFF9A825)),
             title: Text(
-              'dashboard_reset_stats'.tr(),
+              'rate_app'.tr(),
               style: AppTextStyles.bodyMedium.copyWith(
-                color: AppColors.error,
+                color: AppColors.onSurface,
               ),
             ),
             trailing: const Icon(Icons.chevron_right, color: AppColors.outline),
-            onTap: () => _confirmReset(context),
+            onTap: () => ReviewService().requestReview(automatic: false),
+          ),
+          const Divider(height: 1),
+          ListTile(
+            leading: const Icon(Icons.share_outlined,
+                color: AppColors.onSurfaceVariant),
+            title: Text(
+              'share_app'.tr(),
+              style: AppTextStyles.bodyMedium.copyWith(
+                color: AppColors.onSurface,
+              ),
+            ),
+            trailing: const Icon(Icons.chevron_right, color: AppColors.outline),
+            onTap: () => ReviewService().share(),
           ),
           const Divider(height: 1),
           ListTile(
@@ -544,9 +576,20 @@ class _QuickActionsCard extends StatelessWidget {
               ),
             ),
             trailing: const Icon(Icons.chevron_right, color: AppColors.outline),
-            onTap: () {
-              // Placeholder — will be wired during integration
-            },
+            onTap: () => Navigator.pushNamed(context, '/settingsPage'),
+          ),
+          const Divider(height: 1),
+          ListTile(
+            leading: const Icon(Icons.delete_outline_rounded,
+                color: AppColors.error),
+            title: Text(
+              'dashboard_reset_stats'.tr(),
+              style: AppTextStyles.bodyMedium.copyWith(
+                color: AppColors.error,
+              ),
+            ),
+            trailing: const Icon(Icons.chevron_right, color: AppColors.outline),
+            onTap: () => _confirmReset(context),
           ),
         ],
       ),

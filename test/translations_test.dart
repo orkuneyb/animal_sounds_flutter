@@ -40,4 +40,10 @@ void main() {
     expect(reference, containsPair('reminder_offer_decline', isNotEmpty));
     expect(reference['parent_alert_content'], contains('daily reminder'));
   });
+
+  test('rate and share keys exist and share_text carries the url placeholder', () {
+    expect(reference, containsPair('rate_app', isNotEmpty));
+    expect(reference, containsPair('share_app', isNotEmpty));
+    expect(reference['share_text'], contains('{url}'));
+  });
 }

@@ -627,6 +627,9 @@
     "dashboard_quick_actions": "Ações Rápidas",
     "dashboard_reset_stats": "Redefinir Estatísticas",
     "dashboard_manage_notifications": "Gerenciar Notificações",
+    "rate_app": "Avaliar o app",
+    "share_app": "Compartilhar com amigos",
+    "share_text": "Meu filho adora aprender sons de animais com este app. Experimente: {url}",
     "dashboard_reset_confirm_title": "Redefinir Estatísticas",
     "dashboard_reset_confirm_message": "Todas as estatísticas de uso serão apagadas. Tem certeza?",
 

@@ -627,6 +627,9 @@
     "dashboard_quick_actions": "Быстрые действия",
     "dashboard_reset_stats": "Сбросить статистику",
     "dashboard_manage_notifications": "Управление уведомлениями",
+    "rate_app": "Оценить приложение",
+    "share_app": "Поделиться с друзьями",
+    "share_text": "Мой ребёнок с удовольствием учит звуки животных в этом приложении. Попробуйте: {url}",
     "dashboard_reset_confirm_title": "Сбросить статистику",
     "dashboard_reset_confirm_message": "Вся статистика использования будет удалена. Вы уверены?",
 

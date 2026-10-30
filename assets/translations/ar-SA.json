@@ -628,6 +628,9 @@
     "dashboard_quick_actions": "إجراءات سريعة",
     "dashboard_reset_stats": "إعادة تعيين الإحصائيات",
     "dashboard_manage_notifications": "إدارة الإشعارات",
+    "rate_app": "قيّم التطبيق",
+    "share_app": "شارك مع الأصدقاء",
+    "share_text": "طفلي يحب تعلّم أصوات الحيوانات مع هذا التطبيق. جرّبه: {url}",
     "dashboard_reset_confirm_title": "إعادة تعيين الإحصائيات",
     "dashboard_reset_confirm_message": "سيتم حذف جميع إحصائيات الاستخدام. هل أنت متأكد؟",
 

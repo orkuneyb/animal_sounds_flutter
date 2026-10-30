@@ -628,6 +628,9 @@
     "dashboard_quick_actions": "त्वरित कार्य",
     "dashboard_reset_stats": "आँकड़े रीसेट करें",
     "dashboard_manage_notifications": "सूचनाएँ प्रबंधित करें",
+    "rate_app": "ऐप को रेट करें",
+    "share_app": "दोस्तों के साथ साझा करें",
+    "share_text": "मेरे बच्चे को इस ऐप से जानवरों की आवाज़ें सीखना बहुत पसंद है। आप भी आज़माएँ: {url}",
     "dashboard_reset_confirm_title": "आँकड़े रीसेट करें",
     "dashboard_reset_confirm_message": "सारे उपयोग के आँकड़े हटा दिए जाएँगे। क्या आप पक्के हैं?",
 
