@@ -55,7 +55,7 @@ void main() {
   });
 
   test('a throwing backend does not propagate', () async {
-    AnalyticsService().setBackend((_, __) => Future.error(StateError('down')));
+    AnalyticsService().setBackend((_, _) => Future.error(StateError('down')));
 
     expect(() => AnalyticsService().logEvent('sound_played'), returnsNormally);
     await Future<void>.delayed(Duration.zero); // let the error surface if it was going to

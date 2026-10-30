@@ -31,10 +31,11 @@ class ReviewService {
       final review = InAppReview.instance;
       if (await review.isAvailable()) {
         await review.requestReview();
+        AnalyticsService().reviewPrompted(automatic: automatic);
       } else if (!automatic) {
         await review.openStoreListing();
+        AnalyticsService().reviewPrompted(automatic: automatic);
       }
-      AnalyticsService().reviewPrompted(automatic: automatic);
     } catch (error) {
       debugPrint('Review request failed: $error');
     }

@@ -44,7 +44,8 @@ class DailyProvider with ChangeNotifier {
   // ---------------------------------------------------------------------------
 
   /// Returns today's animal from a shuffled cycle so that every animal
-  /// appears once per 30 days and no animal repeats on consecutive days.
+  /// appears once per cycle (one cycle = as many days as there are animals)
+  /// and no animal repeats on consecutive days.
   Animal getDailyAnimal() {
     final animals = AnimalRepository.animals;
     final index = DailyAnimalCycle(animals.length)

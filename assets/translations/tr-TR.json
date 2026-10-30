@@ -629,9 +629,9 @@
     "dashboard_quick_actions": "Hızlı İşlemler",
     "dashboard_reset_stats": "İstatistikleri Sıfırla",
     "dashboard_manage_notifications": "Bildirimleri Yönet",
-    "rate_app": "Uygulamayı değerlendir",
-    "share_app": "Arkadaşlarınla paylaş",
-    "share_text": "Çocuğum bu uygulamayla hayvan seslerini öğrenmeye bayılıyor. Sen de dene: {url}",
+    "rate_app": "Uygulamayı Değerlendir",
+    "share_app": "Arkadaşlarınızla Paylaşın",
+    "share_text": "Çocuğum bu uygulamayla hayvan seslerini öğrenmeye bayılıyor. Siz de deneyin: {url}",
     "dashboard_reset_confirm_title": "İstatistikleri Sıfırla",
     "dashboard_reset_confirm_message": "Tüm kullanım istatistikleri silinecek. Emin misiniz?",
 

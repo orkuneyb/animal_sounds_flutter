@@ -31,4 +31,27 @@ void main() {
     await second;
     expect(find.byType(AlertDialog), findsNothing);
   });
+
+  testWidgets('accepting the offer never throws when the notification plugin is missing',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    MyApp.resetParentAlertForTesting();
+    late BuildContext context;
+    await tester.pumpWidget(MaterialApp(
+      home: Builder(builder: (c) {
+        context = c;
+        return const SizedBox();
+      }),
+    ));
+
+    final shown = const MyApp().showParentAlert(context);
+    await tester.pump();
+    await tester.pump();
+    await tester.tap(find.byType(FilledButton));
+    await tester.pumpAndSettle();
+
+    await expectLater(shown, completes);
+    final prefs = await SharedPreferences.getInstance();
+    expect(prefs.getBool('reminder_offer_shown'), isTrue);
+  });
 }

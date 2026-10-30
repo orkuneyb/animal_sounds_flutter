@@ -9,6 +9,7 @@ import 'package:animal_sounds_flutter/providers/coloring_provider.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/icon_helper.dart';
+import 'package:animal_sounds_flutter/utils/app_version.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:animal_sounds_flutter/widgets/parent_gate_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -647,12 +648,13 @@ class _ProfileTabState extends State<ProfileTab>
             icon: Icons.info_outline_rounded,
             iconColor: AppColors.onSurfaceVariant,
             title: 'about_app'.tr(),
-            onTap: () {
+            onTap: () async {
+              final version = await appVersionLabel();
+              if (!context.mounted) return;
               showAboutDialog(
                 context: context,
                 applicationName: 'app_name'.tr(),
-                // TODO: Replace with PackageInfo.fromPlatform() for dynamic versioning.
-                applicationVersion: '1.1.0+4',
+                applicationVersion: version,
                 applicationIcon: const Padding(
                   padding: EdgeInsets.all(8),
                   child: Icon(Icons.pets, size: 40, color: AppColors.primary),

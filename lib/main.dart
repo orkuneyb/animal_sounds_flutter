@@ -98,12 +98,18 @@ class MyApp extends StatelessWidget {
       return;
     }
     AnalyticsService().reminderOfferAccepted();
-    final granted = await notifications.requestPermission();
-    AnalyticsService().notificationPermission(granted);
-    if (granted) {
-      await notifications.scheduleDailyReminder(
-        const TimeOfDay(hour: 18, minute: 0),
-      );
+    try {
+      final granted = await notifications.requestPermission();
+      AnalyticsService().notificationPermission(granted);
+      if (granted) {
+        await notifications.scheduleDailyReminder(
+          const TimeOfDay(hour: 18, minute: 0),
+        );
+      }
+    } catch (error) {
+      // A missing or failing notification plugin must never surface to the
+      // parent; the offer is already marked shown, Settings remains available.
+      debugPrint('Enabling the daily reminder failed: $error');
     }
   }
 
