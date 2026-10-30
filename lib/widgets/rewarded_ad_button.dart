@@ -1,4 +1,5 @@
 import 'package:animal_sounds_flutter/services/ad_service.dart';
+import 'package:animal_sounds_flutter/services/analytics_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,10 @@ class RewardedAdButton extends StatefulWidget {
   /// Optional icon to show. Defaults to a play-circle icon.
   final IconData icon;
 
+  /// Stable identifier of where this button lives, for analytics
+  /// (e.g. 'quiz_hint'). Never localized.
+  final String placement;
+
   /// Optional gradient colors. Defaults to a warm orange-amber gradient.
   final List<Color>? gradientColors;
 
@@ -27,6 +32,7 @@ class RewardedAdButton extends StatefulWidget {
   const RewardedAdButton({
     Key? key,
     required this.rewardDescription,
+    required this.placement,
     required this.onRewardEarned,
     this.icon = Icons.play_circle_filled_rounded,
     this.gradientColors,
@@ -77,6 +83,7 @@ class _RewardedAdButtonState extends State<RewardedAdButton>
       onReward: (amount) {
         if (mounted) {
           setState(() => _isLoading = false);
+          AnalyticsService().rewardedAdWatched(widget.placement);
           widget.onRewardEarned(amount);
           _showRewardSnackBar();
         }

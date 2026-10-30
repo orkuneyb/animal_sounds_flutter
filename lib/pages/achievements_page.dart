@@ -398,6 +398,7 @@ class _AchievementCard extends StatelessWidget {
                     child: RewardedAdButton(
                       compact: true,
                       rewardDescription: 'watch_ad_achievement_hint'.tr(),
+                      placement: 'achievement_hint',
                       gradientColors: const [
                         Color(0xFF7E57C2),
                         Color(0xFF512DA8),

@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:animal_sounds_flutter/models/quiz_score.dart';
 import 'package:animal_sounds_flutter/providers/achievement_provider.dart';
+import 'package:animal_sounds_flutter/services/analytics_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -31,6 +32,7 @@ class QuizProvider with ChangeNotifier {
   }
 
   Future<void> saveScore(QuizScore score) async {
+    AnalyticsService().quizCompleted(score.correctAnswers);
     _scores.add(score);
     _totalQuizzes++;
 

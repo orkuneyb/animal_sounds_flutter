@@ -8,6 +8,7 @@ import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
+import 'package:animal_sounds_flutter/services/analytics_service.dart';
 import 'package:animal_sounds_flutter/utils/shared_preferences/sp_manager.dart';
 import 'package:animal_sounds_flutter/widgets/rewarded_ad_button.dart';
 import 'package:animal_sounds_flutter/widgets/voice_recorder_widget.dart';
@@ -204,6 +205,7 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
       String cleanPath =
           audioPath.startsWith('assets/') ? audioPath.substring(7) : audioPath;
       await audioPlayer.play(AssetSource(cleanPath));
+      AnalyticsService().soundPlayed(widget.animal.name);
       await audioPlayer.setVolume(_settingsProvider.getAnimalSoundLevel);
 
       setState(() => _isPlaying = true);
@@ -502,6 +504,7 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
 
     return RewardedAdButton(
       rewardDescription: 'watch_ad_fun_fact'.tr(),
+      placement: 'fun_fact',
       gradientColors: [
         _darken(_baseColor, 0.1),
         _darken(_baseColor, 0.3),

@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:animal_sounds_flutter/services/analytics_service.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -107,6 +108,7 @@ class GameProvider with ChangeNotifier {
       _isGameOver = true;
       _lastAnswerCorrect = false;
       saveHighScore();
+      AnalyticsService().soundGameOver(_currentScore);
     }
 
     notifyListeners();

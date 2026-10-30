@@ -156,6 +156,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
       padding: const EdgeInsets.only(bottom: 4),
       child: RewardedAdButton(
         rewardDescription: 'watch_ad_hint'.tr(),
+        placement: 'quiz_hint',
         gradientColors: const [Color(0xFF42A5F5), Color(0xFF1565C0)],
         icon: Icons.lightbulb_rounded,
         onRewardEarned: (amount) {
@@ -208,6 +209,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
       padding: const EdgeInsets.only(top: 8, bottom: 4),
       child: RewardedAdButton(
         rewardDescription: 'watch_ad_extra_life'.tr(),
+        placement: 'quiz_extra_life',
         gradientColors: const [Color(0xFFEF5350), Color(0xFFC62828)],
         icon: Icons.favorite_rounded,
         onRewardEarned: (amount) {
@@ -839,6 +841,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
                       padding: const EdgeInsets.only(bottom: 12),
                       child: RewardedAdButton(
                         rewardDescription: 'watch_ad_double_score'.tr(),
+                        placement: 'quiz_double_score',
                         gradientColors: const [
                           Color(0xFFFFC107),
                           Color(0xFFFF8F00),
