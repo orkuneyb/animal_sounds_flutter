@@ -12,6 +12,16 @@ DateTime nextLocalInstanceOf(DateTime now, int hour, int minute) {
   return DateTime(now.year, now.month, now.day + 1, hour, minute);
 }
 
+/// Whether the first-launch parent dialog should offer the daily reminder.
+///
+/// Shown once per install (tracked by [offerShown]) and skipped entirely for
+/// users who already turned reminders on in Settings.
+bool shouldShowReminderOffer({
+  required bool offerShown,
+  required bool dailyReminderEnabled,
+}) =>
+    !offerShown && !dailyReminderEnabled;
+
 /// Singleton service for managing local notifications.
 ///
 /// Handles daily reminders ("Gunun hayvani seni bekliyor!") and streak

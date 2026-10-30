@@ -1,8 +1,10 @@
 {
     "app_name": "Tiergeräusche",
     "parent_alert_title": "Wichtige Informationen für Eltern",
-    "parent_alert_content": "Liebe Eltern,\n\nDiese App ist für kleine Kinder gedacht. Bitte beaufsichtigen Sie die Nutzung durch Ihr Kind.\n\nDie App:\n- Kann kindgerechte Werbung enthalten\n- Enthält Geräusche und Bilder\n- Funktioniert offline; das Internet wird nur zum Laden von Werbung genutzt\n\nWir wünschen Ihnen viel Spaß und eine sichere Nutzung!",
+    "parent_alert_content": "Liebe Eltern,\n\nDiese App ist für kleine Kinder gedacht. Bitte beaufsichtigen Sie die Nutzung durch Ihr Kind.\n\nDie App:\n- Kann kindgerechte Werbung enthalten\n- Enthält Geräusche und Bilder\n- Funktioniert offline; das Internet wird nur zum Laden von Werbung genutzt\n\nEine kurze tägliche Erinnerung hilft beim Aufbau der Gewohnheit; die Uhrzeit können Sie in den Einstellungen ändern.\n\nWir wünschen Ihnen viel Spaß und eine sichere Nutzung!",
     "parent_alert_button": "Ich verstehe",
+    "reminder_offer_accept": "Tägliche Erinnerung einschalten",
+    "reminder_offer_decline": "Jetzt nicht",
     "lion": "Löwe",
     "elephant": "Elefant",
     "tiger": "Tiger",

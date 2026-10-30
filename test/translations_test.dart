@@ -34,4 +34,10 @@ void main() {
       isNot(contains('Requires internet connection')),
     );
   });
+
+  test('reminder offer keys exist', () {
+    expect(reference, containsPair('reminder_offer_accept', isNotEmpty));
+    expect(reference, containsPair('reminder_offer_decline', isNotEmpty));
+    expect(reference['parent_alert_content'], contains('daily reminder'));
+  });
 }

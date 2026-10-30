@@ -13,6 +13,7 @@ import 'package:animal_sounds_flutter/providers/game_provider.dart';
 import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/providers/coloring_provider.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
+import 'package:animal_sounds_flutter/services/analytics_service.dart';
 import 'package:animal_sounds_flutter/services/notification_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
@@ -47,30 +48,53 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  /// First-launch information for parents, with the daily-reminder offer.
+  ///
+  /// Shown once per install to anyone who has not already enabled reminders
+  /// (see [shouldShowReminderOffer]).
   Future<void> showParentAlert(BuildContext context) async {
     final prefs = await SharedPreferences.getInstance();
-    final hasShownAlert = prefs.getBool('has_shown_parent_alert') ?? false;
+    final notifications = NotificationService();
+    final show = shouldShowReminderOffer(
+      offerShown: prefs.getBool('reminder_offer_shown') ?? false,
+      dailyReminderEnabled: await notifications.isDailyReminderEnabled(),
+    );
+    if (!show || !context.mounted) return;
 
-    if (!hasShownAlert) {
-      if (context.mounted) {
-        await showDialog(
-          context: context,
-          barrierDismissible: false,
-          builder: (context) => AlertDialog(
-            title: Text('parent_alert_title'.tr()),
-            content: Text('parent_alert_content'.tr()),
-            actions: [
-              TextButton(
-                child: Text('parent_alert_button'.tr()),
-                onPressed: () {
-                  Navigator.pop(context);
-                  prefs.setBool('has_shown_parent_alert', true);
-                },
-              ),
-            ],
+    AnalyticsService().reminderOfferShown();
+    final accepted = await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => AlertDialog(
+        title: Text('parent_alert_title'.tr()),
+        content: SingleChildScrollView(
+          child: Text('parent_alert_content'.tr()),
+        ),
+        actions: [
+          TextButton(
+            child: Text('reminder_offer_decline'.tr()),
+            onPressed: () => Navigator.pop(context, false),
           ),
-        );
-      }
+          FilledButton(
+            child: Text('reminder_offer_accept'.tr()),
+            onPressed: () => Navigator.pop(context, true),
+          ),
+        ],
+      ),
+    );
+    await prefs.setBool('reminder_offer_shown', true);
+
+    if (accepted != true) {
+      AnalyticsService().reminderOfferDeclined();
+      return;
+    }
+    AnalyticsService().reminderOfferAccepted();
+    final granted = await notifications.requestPermission();
+    AnalyticsService().notificationPermission(granted);
+    if (granted) {
+      await notifications.scheduleDailyReminder(
+        const TimeOfDay(hour: 18, minute: 0),
+      );
     }
   }
 

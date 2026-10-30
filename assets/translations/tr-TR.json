@@ -1,8 +1,10 @@
 {
     "app_name": "Hayvan Sesleri",
     "parent_alert_title": "Ebeveynlere Önemli Bilgi",
-    "parent_alert_content": "Sevgili Ebeveynler,\n\nBu uygulama küçük çocuklar için tasarlanmıştır. Lütfen çocuğunuzun kullanımını gözetim altında tutunuz.\n\nUygulama:\n- Çocuk dostu reklamlar içerebilir\n- Ses ve görüntüler barındırır\n- İnternet olmadan çalışır; internet yalnızca reklamları yüklemek için kullanılır\n\nGüvenli ve eğlenceli kullanımlar dileriz!",
+    "parent_alert_content": "Sevgili Ebeveynler,\n\nBu uygulama küçük çocuklar için tasarlanmıştır. Lütfen çocuğunuzun kullanımını gözetim altında tutunuz.\n\nUygulama:\n- Çocuk dostu reklamlar içerebilir\n- Ses ve görüntüler barındırır\n- İnternet olmadan çalışır; internet yalnızca reklamları yüklemek için kullanılır\n\nKısa bir günlük hatırlatma alışkanlık kazandırır; saatini Ayarlar'dan değiştirebilirsiniz.\n\nGüvenli ve eğlenceli kullanımlar dileriz!",
     "parent_alert_button": "Anladım",
+    "reminder_offer_accept": "Günlük hatırlatmayı aç",
+    "reminder_offer_decline": "Şimdi değil",
     "lion": "Aslan",
     "elephant": "Fil",
     "tiger": "Kaplan",
