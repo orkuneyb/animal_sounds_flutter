@@ -5,6 +5,8 @@ import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/models/daily_streak.dart';
 import 'package:animal_sounds_flutter/providers/achievement_provider.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
+import 'package:animal_sounds_flutter/services/analytics_service.dart';
+import 'package:animal_sounds_flutter/utils/daily_animal_cycle.dart';
 import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -41,14 +43,13 @@ class DailyProvider with ChangeNotifier {
   // Daily animal (deterministic based on date)
   // ---------------------------------------------------------------------------
 
-  /// Returns today's animal using a date-based seed so the same day
-  /// always returns the same animal.
+  /// Returns today's animal from a shuffled cycle so that every animal
+  /// appears once per 30 days and no animal repeats on consecutive days.
   Animal getDailyAnimal() {
-    final now = DateTime.now();
-    final seed = now.year * 10000 + now.month * 100 + now.day;
-    final random = Random(seed);
-    final index = random.nextInt(AnimalRepository.animals.length);
-    return AnimalRepository.animals[index];
+    final animals = AnimalRepository.animals;
+    final index = DailyAnimalCycle(animals.length)
+        .indexForDay(DailyAnimalCycle.dayNumber(DateTime.now()));
+    return animals[index];
   }
 
   /// Returns a random fun fact for today's animal using the same date seed.
@@ -88,6 +89,7 @@ class DailyProvider with ChangeNotifier {
 
     // Trigger streak achievements
     _checkStreakAchievements();
+    AnalyticsService().dailyDiscoveryCompleted(_streak.currentStreak);
   }
 
   /// Returns the completion status of the last [days] days.
