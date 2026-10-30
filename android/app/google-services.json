@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "685100759563",
+    "project_id": "animal-sounds-devork",
+    "storage_bucket": "animal-sounds-devork.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685100759563:android:6edced53e7b81a9cc3e50e",
+        "android_client_info": {
+          "package_name": "com.devork.animalsounds"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBi7zD5ro5Quex_3P2I86WcMQKiL6YXKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

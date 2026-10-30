@@ -34,5 +34,20 @@ void main() {
       expect(adIdPermission, isNotNull);
       expect(adIdPermission!.group(0), contains('tools:node="remove"'));
     });
+
+    test('disables advertising-ID collection and ad personalization for Analytics', () {
+      expect(
+        manifest,
+        contains(
+          '<meta-data android:name="google_analytics_adid_collection_enabled" android:value="false" />',
+        ),
+      );
+      expect(
+        manifest,
+        contains(
+          '<meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="false" />',
+        ),
+      );
+    });
   });
 }

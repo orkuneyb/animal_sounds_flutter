@@ -1,3 +1,5 @@
+import 'dart:ui' show PlatformDispatcher;
+
 import 'package:animal_sounds_flutter/pages/main_navigation_page.dart';
 import 'package:animal_sounds_flutter/pages/settings.dart';
 import 'package:animal_sounds_flutter/providers/category_provider.dart';
@@ -19,6 +21,10 @@ import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:animal_sounds_flutter/widgets/achievement_unlock_dialog.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -26,6 +32,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await _initFirebase();
 
   // Ads and notifications start after the first frame (see
   // _AppWithDependenciesState) so a slow SDK start never delays the UI.
@@ -43,6 +50,30 @@ void main() async {
     path: 'assets/translations',
     child: const MyApp(),
   ));
+}
+
+
+/// Starts Analytics and Crashlytics. Failure is logged and the app runs
+/// without measurement; nothing here may block or crash startup.
+Future<void> _initFirebase() async {
+  try {
+    await Firebase.initializeApp();
+    AnalyticsService().setBackend(
+      (name, parameters) =>
+          FirebaseAnalytics.instance.logEvent(name: name, parameters: parameters),
+    );
+    final crashlytics = FirebaseCrashlytics.instance;
+    await crashlytics.setCrashlyticsCollectionEnabled(kReleaseMode);
+    if (kReleaseMode) {
+      FlutterError.onError = crashlytics.recordFlutterFatalError;
+      PlatformDispatcher.instance.onError = (error, stack) {
+        crashlytics.recordError(error, stack, fatal: true);
+        return true;
+      };
+    }
+  } catch (error) {
+    debugPrint('Firebase initialisation failed: $error');
+  }
 }
 
 class MyApp extends StatelessWidget {
