@@ -186,15 +186,22 @@ class NotificationService {
   // ---------------------------------------------------------------------------
 
   /// Re-schedules the reminders the user has enabled so their text follows
-  /// the current language and their time follows the device clock.
+  /// the current language and their time follows the device clock, and
+  /// cancels the ones that are off so no stray alarm from an older version
+  /// can fire with data the plugin can no longer read.
   ///
   /// Must be called after translations are loaded.
   Future<void> rescheduleEnabledReminders() async {
+    await _ensureInitialized();
     if (await isDailyReminderEnabled()) {
       await scheduleDailyReminder(await getDailyReminderTime());
+    } else {
+      await _plugin.cancel(_dailyReminderId);
     }
     if (await isStreakReminderEnabled()) {
       await scheduleStreakReminder();
+    } else {
+      await _plugin.cancel(_streakReminderId);
     }
   }
 

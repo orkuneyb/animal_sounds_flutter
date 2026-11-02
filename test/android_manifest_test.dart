@@ -26,6 +26,11 @@ void main() {
       expect(manifest, contains('android.permission.RECEIVE_BOOT_COMPLETED'));
     });
 
+    test('declares the application class that repairs the reminder cache', () {
+      expect(manifest, contains('android:name=".AnimalSoundsApplication"'));
+      expect(manifest, isNot(contains(r'${applicationName}')));
+    });
+
     test('does not request the advertising ID permission', () {
       final adIdPermission = RegExp(
         r'<uses-permission[^>]*com\.google\.android\.gms\.permission\.AD_ID[^>]*>',

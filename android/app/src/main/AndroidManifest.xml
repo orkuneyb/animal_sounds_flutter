@@ -16,7 +16,7 @@
     
     <application
         android:label="@string/appName"
-        android:name="${applicationName}"
+        android:name=".AnimalSoundsApplication"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
