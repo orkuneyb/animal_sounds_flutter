@@ -671,7 +671,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
       });
     } else {
       Future.delayed(const Duration(seconds: 2), () {
-        _advanceToNextQuestion();
+        if (mounted) _advanceToNextQuestion();
       });
     }
   }
