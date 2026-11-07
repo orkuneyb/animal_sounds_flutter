@@ -46,4 +46,19 @@ void main() {
     expect(reference, containsPair('share_app', isNotEmpty));
     expect(reference['share_text'], contains('{url}'));
   });
+
+  test('remove-ads keys exist in every locale', () {
+    for (final key in [
+      'remove_ads', 'remove_ads_short', 'remove_ads_title', 'benefit_no_banners',
+      'benefit_no_interstitials', 'benefit_free_rewards',
+      'one_time_note', 'restore_purchases', 'restore_success',
+      'restore_nothing_found', 'store_unavailable', 'purchase_pending',
+      'purchase_failed', 'ads_removed_thanks', 'purchases', 'promo_title',
+      'promo_body', 'retry', 'premium_hint', 'premium_extra_life',
+      'premium_double_score', 'premium_fun_fact', 'premium_achievement_hint',
+      'premium_reward',
+    ]) {
+      expect(reference, containsPair(key, isNotEmpty), reason: key);
+    }
+  });
 }
