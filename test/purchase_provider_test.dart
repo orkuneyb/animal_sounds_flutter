@@ -286,6 +286,84 @@ void main() {
     });
   });
 
+  group('ad service wiring (real PurchaseProvider → AdService)', () {
+    test('cached false → ads enabled at once', () async {
+      await build({'ads_removed': false});
+
+      expect(await AdService().ensureAdsEnabled(), isTrue);
+    });
+
+    test('cached true → ads disabled at once', () async {
+      await build({'ads_removed': true});
+
+      expect(await AdService().ensureAdsEnabled(), isFalse);
+    });
+
+    test('fresh install, restore finds nothing → ads enabled', () async {
+      final p = await build({});
+      final gate = AdService().ensureAdsEnabled();
+      await p.initialize();
+
+      expect(await gate, isTrue);
+    });
+
+    test('fresh install, restore finds purchase → ads disabled', () async {
+      store.restoreResults = [ownedPurchase()];
+      final p = await build({});
+      final gate = AdService().ensureAdsEnabled();
+      await p.initialize();
+
+      expect(await gate, isFalse);
+    });
+
+    test('fresh install, restore never completes → ads enabled after timeout',
+        () async {
+      store.neverCompleteRestore = true;
+      final p = await build({});
+      unawaited(p.initialize());
+
+      expect(await AdService().ensureAdsEnabled(), isTrue);
+    });
+  });
+
+  group('retry after an offline start', () {
+    test('reloadProduct re-checks availability and runs the store sync once',
+        () async {
+      store.available = false;
+      final p = await build({});
+      await p.initialize();
+      expect(p.storeAvailable, isFalse);
+      expect(store.restoreCalls, 0);
+
+      store.available = true;
+      store.product = removeAdsProduct();
+      store.restoreResults = [ownedPurchase()];
+      await p.reloadProduct();
+
+      expect(p.storeAvailable, isTrue);
+      expect(p.product, isNotNull);
+      expect(p.productLoadFailed, isFalse);
+      expect(store.restoreCalls, 1);
+      expect(p.adsRemoved, isTrue);
+
+      await p.reloadProduct();
+      expect(store.restoreCalls, 1, reason: 'cold sync runs once');
+    });
+
+    test('reloadProduct while still offline keeps store_unavailable state',
+        () async {
+      store.available = false;
+      final p = await build({});
+      await p.initialize();
+
+      await p.reloadProduct();
+
+      expect(p.storeAvailable, isFalse);
+      expect(p.productLoadFailed, isTrue);
+      expect(store.queryCalls, 0);
+    });
+  });
+
   group('product', () {
     test('not found → product null and productLoadFailed true', () async {
       final p = await build({});

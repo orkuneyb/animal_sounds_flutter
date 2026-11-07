@@ -24,7 +24,7 @@ void main() {
     test('ensureAdsEnabled is false and loads return without platform calls', () async {
       final ads = AdService()
         ..adsDisabled = true
-        ..adsAllowed = () async => false;
+        ..adsRemovedDecision = () async => true;
       expect(await ads.ensureAdsEnabled(), isFalse);
       // Reaching MobileAds here would throw MissingPluginException.
       await expectLater(ads.createInterstitialAd(), completes);

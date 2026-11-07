@@ -51,25 +51,26 @@ class AdService {
   /// it and becomes a no-op.
   bool adsDisabled = false;
 
-  /// Answers "may ads start this launch?". PurchaseProvider replaces it with
-  /// its first-launch decision so a reinstalling parent never sees a banner
-  /// before the store has answered.
-  Future<bool> Function() adsAllowed = () async => true;
+  /// Answers "are ads removed?" (true = the purchase is owned, no ads).
+  /// PurchaseProvider replaces it with its first-launch decision so a
+  /// reinstalling parent never sees a banner before the store has answered.
+  /// The default (false) means ads are on.
+  Future<bool> Function() adsRemovedDecision = () async => false;
 
-  Future<bool>? _adsAllowedFuture;
+  Future<bool>? _adsRemovedFuture;
 
   /// Awaits the entitlement decision once per launch, then reports whether
-  /// ads may be requested right now.
+  /// ads may be requested right now (true = ads on).
   Future<bool> ensureAdsEnabled() async {
-    final allowed = await (_adsAllowedFuture ??= adsAllowed());
-    return allowed && !adsDisabled;
+    final removed = await (_adsRemovedFuture ??= adsRemovedDecision());
+    return !removed && !adsDisabled;
   }
 
   @visibleForTesting
   void resetEntitlementForTesting() {
     adsDisabled = false;
-    adsAllowed = () async => true;
-    _adsAllowedFuture = null;
+    adsRemovedDecision = () async => false;
+    _adsRemovedFuture = null;
   }
 
   Future<void>? _initialization;

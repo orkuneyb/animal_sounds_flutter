@@ -39,7 +39,7 @@ class PurchaseProvider extends ChangeNotifier {
         _prefs = prefs,
         _adService = adService ?? AdService() {
     _readCache();
-    _adService.adsAllowed = waitForAdsDecision;
+    _adService.adsRemovedDecision = waitForAdsDecision;
     _syncAdService();
   }
 
@@ -55,6 +55,7 @@ class PurchaseProvider extends ChangeNotifier {
   AdsEntitlement _entitlement = AdsEntitlement.unknown;
   int _missCount = 0;
   bool _initialized = false;
+  bool _coldSyncDone = false;
   bool _storeAvailable = false;
   bool _sawEntitlement = false;
   bool _buying = false;
@@ -116,22 +117,32 @@ class PurchaseProvider extends ChangeNotifier {
         _syncAdService();
       }
       _completeDecision();
+      _productLoadFailed = true;
       notifyListeners();
       return;
     }
 
+    await _syncWithStore();
+    _completeDecision();
+    notifyListeners();
+
+    await reloadProduct();
+  }
+
+  /// The once-per-launch sync with the account's purchases (the "cold
+  /// restore"). Runs on startup when the store is reachable, or later from
+  /// [reloadProduct] when the app started offline.
+  Future<void> _syncWithStore() async {
+    if (_coldSyncDone) return;
     _sawEntitlement = false;
     try {
       await _store.restorePurchases();
       await Future<void>.delayed(restoreSettleDelay);
       await _evaluateColdRestore();
+      _coldSyncDone = true;
     } catch (error) {
       debugPrint('Restoring purchases failed: $error');
     }
-    _completeDecision();
-    notifyListeners();
-
-    await reloadProduct();
   }
 
   Future<void> _evaluateColdRestore() async {
@@ -269,10 +280,20 @@ class PurchaseProvider extends ChangeNotifier {
     }
   }
 
-  /// Loads the product for sale (price in the user's currency).
+  /// Loads the product for sale (price in the user's currency). Re-checks
+  /// store availability first, and runs the once-per-launch purchase sync if
+  /// the app started offline, so the Retry button is never a dead end.
   Future<void> reloadProduct() async {
     _productLoadFailed = false;
     notifyListeners();
+    _storeAvailable = await _store.isAvailable();
+    if (!_storeAvailable) {
+      _productLoadFailed = true;
+      notifyListeners();
+      return;
+    }
+    await _syncWithStore();
+    _completeDecision();
     try {
       final response = await _store.queryProductDetails({productId});
       _product = response.productDetails

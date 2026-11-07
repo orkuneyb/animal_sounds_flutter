@@ -27,7 +27,7 @@
 1. Play returns `remove_ads` in `notFoundIDs` (product not yet activated in Console): the page must show `store_unavailable` with a retry, never a null-price crash. Test in Task 4.
 2. `purchaseStream` delivers a purchase for some other product ID: it must be ignored, not grant the entitlement. Test in Task 4.
 3. `restorePurchases()` throws (`InAppPurchaseException`) on a device with the cached flag true: the flag and the miss counter must not change. Test in Task 4.
-4. Cached flag already true on a cold start: `waitForAdsDecision()` must resolve immediately with `true`, not after the 3-second timeout, so a paying parent's startup is not delayed and no ad loads. Test in Task 4.
+4. Cached flag already true on a cold start: `waitForAdsDecision()` must resolve immediately with `true` and `AdService.ensureAdsEnabled()` with `false`, so a paying parent's startup is not delayed and no ad loads; the complement (cached or decided false → `ensureAdsEnabled()` true) must hold for every free user. Test both through the real wiring in Task 4.
 5. `buy()` called while the product is still loading, or twice in a row: no exception, at most one store call per completed purchase attempt. Test in Task 4.
 
 ---
@@ -213,8 +213,8 @@ git commit -m "fix: Record framework-caught Flutter errors as non-fatal in Crash
 - Produces (`lib/services/ad_service.dart` additions):
   ```dart
   bool adsDisabled = false;                          // set by PurchaseProvider on every entitlement change
-  Future<bool> Function() adsAllowed = () async => true; // replaced by PurchaseProvider with waitForAdsDecision
-  Future<bool> ensureAdsEnabled();                   // awaits adsAllowed() once per launch (cached), then returns !adsDisabled
+  Future<bool> Function() adsRemovedDecision = () async => false; // true = ads removed; PurchaseProvider replaces it with waitForAdsDecision
+  Future<bool> ensureAdsEnabled();                   // awaits adsRemovedDecision() once per launch (cached); returns !removed && !adsDisabled (true = ads on)
   ```
   `initialize()`, `createInterstitialAd()`, `loadRewardedAd()` return early when `!await ensureAdsEnabled()`; `showInterstitialAd` calls `onAdClosed` and returns when `adsDisabled`; `showRewardedAd` calls `onAdNotReady` and returns when `adsDisabled`.
 - Produces (`lib/services/analytics_service.dart` additions):
