@@ -14,9 +14,11 @@ import 'package:animal_sounds_flutter/providers/challenge_provider.dart';
 import 'package:animal_sounds_flutter/providers/game_provider.dart';
 import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/providers/coloring_provider.dart';
+import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/services/analytics_service.dart';
 import 'package:animal_sounds_flutter/services/notification_service.dart';
+import 'package:animal_sounds_flutter/services/purchase_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:animal_sounds_flutter/widgets/achievement_unlock_dialog.dart';
@@ -37,6 +39,11 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   await _initFirebase();
 
+  // The remove-ads entitlement is read from the cache before the first frame
+  // so a paying parent never sees an ad; the store sync runs after it.
+  final prefs = await SharedPreferences.getInstance();
+  final purchases = PurchaseProvider(store: InAppPurchaseStore(), prefs: prefs);
+
   // Ads and notifications start after the first frame (see
   // _AppWithDependenciesState) so a slow SDK start never delays the UI.
   runApp(EasyLocalization(
@@ -51,7 +58,7 @@ void main() async {
       Locale('de', 'DE'),
     ],
     path: 'assets/translations',
-    child: const MyApp(),
+    child: MyApp(purchaseProvider: purchases),
   ));
 }
 
@@ -86,7 +93,11 @@ Future<void> _initFirebase() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({super.key, this.purchaseProvider});
+
+  /// The entitlement provider created in [main]; tests leave it null and get
+  /// a provider backed by [NoopPurchaseStore] (ads on, store unavailable).
+  final PurchaseProvider? purchaseProvider;
 
   /// Set once the first-launch parent dialog has been requested in this
   /// process, so a navigator rebuild cannot stack a second copy.
@@ -169,6 +180,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ChallengeProvider()),
         ChangeNotifierProvider(create: (_) => GameProvider()),
         ChangeNotifierProvider(create: (_) => ColoringProvider()),
+        ChangeNotifierProvider<PurchaseProvider>(
+          create: (_) => purchaseProvider ?? PurchaseProvider(),
+        ),
       ],
       child: _AppWithDependencies(showParentAlert: showParentAlert),
     );
@@ -281,7 +295,9 @@ class _AppWithDependenciesState extends State<_AppWithDependencies> {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      // Pre-load rewarded ad so it is ready when first needed
+      // Sync the remove-ads entitlement with Google Play, then pre-load a
+      // rewarded ad (a no-op once ads are removed).
+      context.read<PurchaseProvider>().initialize();
       AdService().loadRewardedAd();
     });
   }
