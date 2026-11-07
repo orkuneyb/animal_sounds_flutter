@@ -34,6 +34,12 @@ void main() {
     service.parentDashboardOpened();
     service.reviewPrompted(automatic: false);
     service.shareTapped();
+    service.removeAdsOfferShown('profile');
+    service.removeAdsPurchaseStarted();
+    service.removeAdsPurchased();
+    service.removeAdsRestored();
+    service.removeAdsPurchaseFailed('BillingResponse.userCanceled');
+    service.rewardGrantedPremium('quiz_hint');
 
     expect(captured.map((e) => e.$1).toList(), [
       'sound_played',
@@ -48,6 +54,12 @@ void main() {
       'parent_dashboard_opened',
       'review_prompted',
       'share_tapped',
+      'remove_ads_offer_shown',
+      'remove_ads_purchase_started',
+      'remove_ads_purchased',
+      'remove_ads_restored',
+      'remove_ads_purchase_failed',
+      'reward_granted_premium',
     ]);
     expect(captured[1].$2, {'streak': 3});
     expect(captured[7].$2, {'granted': 1});

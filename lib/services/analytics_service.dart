@@ -64,4 +64,23 @@ class AnalyticsService {
       logEvent('review_prompted', {'automatic': automatic ? 1 : 0});
 
   void shareTapped() => logEvent('share_tapped');
+
+  // --- Remove ads (one-time purchase) ---
+
+  /// [source] is one of: profile, profile_card, home_banner, settings.
+  void removeAdsOfferShown(String source) =>
+      logEvent('remove_ads_offer_shown', {'source': source});
+
+  void removeAdsPurchaseStarted() => logEvent('remove_ads_purchase_started');
+
+  void removeAdsPurchased() => logEvent('remove_ads_purchased');
+
+  void removeAdsRestored() => logEvent('remove_ads_restored');
+
+  void removeAdsPurchaseFailed(String code) =>
+      logEvent('remove_ads_purchase_failed', {'code': code});
+
+  /// A rewarded-video perk granted for free because ads are removed.
+  void rewardGrantedPremium(String placement) =>
+      logEvent('reward_granted_premium', {'placement': placement});
 }

@@ -1,4 +1,3 @@
-import 'dart:io';
 
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
@@ -44,13 +43,45 @@ class AdService {
     maxAdContentRating: MaxAdContentRating.g,
   );
 
+  // -------------------------------------------------------------------------
+  // Remove-ads entitlement switches (driven by PurchaseProvider)
+  // -------------------------------------------------------------------------
+
+  /// True once the parent owns the remove-ads purchase. Every ad call checks
+  /// it and becomes a no-op.
+  bool adsDisabled = false;
+
+  /// Answers "may ads start this launch?". PurchaseProvider replaces it with
+  /// its first-launch decision so a reinstalling parent never sees a banner
+  /// before the store has answered.
+  Future<bool> Function() adsAllowed = () async => true;
+
+  Future<bool>? _adsAllowedFuture;
+
+  /// Awaits the entitlement decision once per launch, then reports whether
+  /// ads may be requested right now.
+  Future<bool> ensureAdsEnabled() async {
+    final allowed = await (_adsAllowedFuture ??= adsAllowed());
+    return allowed && !adsDisabled;
+  }
+
+  @visibleForTesting
+  void resetEntitlementForTesting() {
+    adsDisabled = false;
+    adsAllowed = () async => true;
+    _adsAllowedFuture = null;
+  }
+
   Future<void>? _initialization;
 
   /// Applies [childDirectedConfiguration] and starts the Mobile Ads SDK.
   ///
   /// Safe to call repeatedly; every ad load awaits it so that no request
   /// goes out before the child-directed configuration is in place.
-  Future<void> initialize() => _initialization ??= _initialize();
+  Future<void> initialize() async {
+    if (!await ensureAdsEnabled()) return;
+    return _initialization ??= _initialize();
+  }
 
   Future<void> _initialize() async {
     await MobileAds.instance
@@ -59,6 +90,7 @@ class AdService {
   }
 
   Future<void> createInterstitialAd() async {
+    if (!await ensureAdsEnabled()) return;
     await initialize();
     InterstitialAd.load(
       adUnitId: interstitialAdUnitId,
@@ -76,6 +108,10 @@ class AdService {
   }
 
   void showInterstitialAd({Function? onAdClosed}) {
+    if (adsDisabled) {
+      onAdClosed?.call();
+      return;
+    }
     if (_isInterstitialAdReady && _interstitialAd != null) {
       _interstitialAd!.fullScreenContentCallback = FullScreenContentCallback(
         onAdDismissedFullScreenContent: (ad) {
@@ -111,6 +147,7 @@ class AdService {
 
   /// Loads a rewarded ad. Call this early so the ad is ready when needed.
   Future<void> loadRewardedAd() async {
+    if (!await ensureAdsEnabled()) return;
     await initialize();
     RewardedAd.load(
       adUnitId: rewardedAdUnitId,
@@ -155,6 +192,10 @@ class AdService {
     VoidCallback? onAdNotReady,
     VoidCallback? onAdDismissed,
   }) {
+    if (adsDisabled) {
+      onAdNotReady?.call();
+      return;
+    }
     if (_isRewardedAdReady && _rewardedAd != null) {
       _rewardedAd!.fullScreenContentCallback = FullScreenContentCallback(
         onAdDismissedFullScreenContent: (ad) {
