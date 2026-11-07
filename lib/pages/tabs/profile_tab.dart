@@ -3,15 +3,18 @@ import 'dart:io';
 import 'package:animal_sounds_flutter/pages/favorites_page.dart';
 import 'package:animal_sounds_flutter/pages/gallery_page.dart';
 import 'package:animal_sounds_flutter/pages/parent_dashboard_page.dart';
+import 'package:animal_sounds_flutter/pages/remove_ads_page.dart';
 import 'package:animal_sounds_flutter/pages/weekly_challenge_page.dart';
 import 'package:animal_sounds_flutter/providers/challenge_provider.dart';
 import 'package:animal_sounds_flutter/providers/coloring_provider.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
+import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/icon_helper.dart';
 import 'package:animal_sounds_flutter/utils/app_version.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:animal_sounds_flutter/widgets/parent_gate_widget.dart';
+import 'package:animal_sounds_flutter/widgets/remove_ads_promo_card.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -55,6 +58,8 @@ class _ProfileTabState extends State<ProfileTab>
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
             sliver: SliverList(
               delegate: SliverChildListDelegate([
+                const RemoveAdsPromoCard(),
+                const SizedBox(height: 20),
                 _buildChallengesSection(context),
                 const SizedBox(height: 20),
                 _buildFavoritesSection(context),
@@ -605,6 +610,7 @@ class _ProfileTabState extends State<ProfileTab>
   // ---------------------------------------------------------------------------
 
   Widget _buildQuickLinks(BuildContext context) {
+    final adsRemoved = context.watch<PurchaseProvider>().adsRemoved;
     return Container(
       decoration: BoxDecoration(
         color: AppColors.surfaceContainerLowest,
@@ -620,6 +626,24 @@ class _ProfileTabState extends State<ProfileTab>
       clipBehavior: Clip.antiAlias,
       child: Column(
         children: [
+          if (adsRemoved)
+            _QuickLinkTile(
+              icon: Icons.check_circle_rounded,
+              iconColor: AppColors.success,
+              title: 'ads_removed_thanks'.tr(),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const RemoveAdsPage()),
+              ),
+            )
+          else
+            _QuickLinkTile(
+              icon: Icons.block_rounded,
+              iconColor: AppColors.secondary,
+              title: 'remove_ads'.tr(),
+              onTap: () => openRemoveAds(context, source: 'profile'),
+            ),
+          const Divider(height: 1, indent: 56),
           _QuickLinkTile(
             icon: Icons.shield_rounded,
             iconColor: const Color(0xFF1565C0),

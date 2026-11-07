@@ -4,8 +4,10 @@ import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/pages/animal_info_page.dart';
 import 'package:animal_sounds_flutter/pages/animal_sound_page.dart';
+import 'package:animal_sounds_flutter/pages/remove_ads_page.dart';
 import 'package:animal_sounds_flutter/providers/category_provider.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
+import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
 import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
 import 'package:animal_sounds_flutter/transitions/page_transitions.dart';
@@ -99,9 +101,36 @@ class _AnimalsTabState extends State<AnimalsTab>
               height: MediaQuery.of(context).padding.top + kToolbarHeight + 8,
             ),
             const BannerAdWidget(),
+            _buildRemoveAdsCaption(),
             _buildCategoryChips(),
             Expanded(child: _buildAnimalGrid()),
           ],
+        ),
+      ),
+    );
+  }
+
+  /// A discreet, parent-facing link under the banner. Hidden once ads are
+  /// removed. Shown even when no ad is served so a parent can always find it.
+  Widget _buildRemoveAdsCaption() {
+    if (context.watch<PurchaseProvider>().adsRemoved) {
+      return const SizedBox.shrink();
+    }
+    return Align(
+      alignment: AlignmentDirectional.centerEnd,
+      child: Padding(
+        padding: const EdgeInsetsDirectional.only(end: 12),
+        child: TextButton.icon(
+          onPressed: () => openRemoveAds(context, source: 'home_banner'),
+          style: TextButton.styleFrom(
+            foregroundColor: AppColors.onSurfaceVariant,
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            minimumSize: Size.zero,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+            visualDensity: VisualDensity.compact,
+          ),
+          icon: const Icon(Icons.block_rounded, size: 14),
+          label: Text('remove_ads_short'.tr(), style: const TextStyle(fontSize: 12)),
         ),
       ),
     );

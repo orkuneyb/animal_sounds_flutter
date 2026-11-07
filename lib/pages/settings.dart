@@ -1,7 +1,10 @@
+import 'package:animal_sounds_flutter/pages/remove_ads_page.dart';
+import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
 import 'package:animal_sounds_flutter/providers/settings_provider.dart';
 import 'package:animal_sounds_flutter/services/notification_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
+import 'package:animal_sounds_flutter/widgets/parent_gate_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:app_settings/app_settings.dart';
@@ -100,6 +103,63 @@ class _SettingsPageState extends State<SettingsPage> {
     return Icons.volume_up_rounded;
   }
 
+  Widget _buildPurchasesCard(BuildContext context) {
+    final adsRemoved = context.watch<PurchaseProvider>().adsRemoved;
+    final titleStyle = AppTextStyles.bodyMedium.copyWith(
+      fontWeight: FontWeight.w600,
+      color: AppColors.onSurface,
+    );
+    return _SettingsCard(
+      children: [
+        if (!adsRemoved) ...[
+          ListTile(
+            leading: const Icon(Icons.block_rounded, color: AppColors.secondary),
+            title: Text('remove_ads'.tr(), style: titleStyle),
+            trailing: const Icon(
+              Icons.chevron_right_rounded,
+              color: AppColors.onSurfaceVariant,
+              size: 20,
+            ),
+            onTap: () => openRemoveAds(context, source: 'settings'),
+          ),
+          Divider(
+            height: 1,
+            indent: 16,
+            endIndent: 16,
+            color: AppColors.outlineVariant.withValues(alpha: 0.4),
+          ),
+        ],
+        ListTile(
+          leading: const Icon(
+            Icons.restore_rounded,
+            color: AppColors.onSurfaceVariant,
+          ),
+          title: Text('restore_purchases'.tr(), style: titleStyle),
+          onTap: () => _restorePurchases(context),
+        ),
+      ],
+    );
+  }
+
+  /// Parent-gated restore; finding nothing only reports it (never revokes).
+  Future<void> _restorePurchases(BuildContext context) async {
+    final passed = await ParentGateWidget.showAsDialog(context);
+    if (!passed || !context.mounted) return;
+    final result = await context.read<PurchaseProvider>().restoreManually();
+    if (!context.mounted) return;
+    final key = switch (result) {
+      RestoreResult.restored => 'restore_success',
+      RestoreResult.nothingFound => 'restore_nothing_found',
+      RestoreResult.failed => 'purchase_failed',
+    };
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(key.tr()),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      ),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     final settingsProvider = Provider.of<SettingsProvider>(context);
@@ -460,6 +520,13 @@ class _SettingsPageState extends State<SettingsPage> {
                   ),
                 ],
               ),
+
+              const SizedBox(height: 28),
+
+              // --- Purchases Section ---
+              _SectionHeader(title: 'purchases'.tr()),
+              const SizedBox(height: 10),
+              _buildPurchasesCard(context),
 
               const SizedBox(height: 28),
 
