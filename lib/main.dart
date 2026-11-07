@@ -26,11 +26,14 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart' show kReleaseMode;
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Nunito ships in assets/google_fonts; never fetch fonts over the network.
+  GoogleFonts.config.allowRuntimeFetching = false;
   await EasyLocalization.ensureInitialized();
   await _initFirebase();
 

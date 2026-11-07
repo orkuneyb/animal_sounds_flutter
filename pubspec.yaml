@@ -71,4 +71,5 @@ flutter:
     - assets/animal_images/
     - assets/animal_sounds/
     - assets/translations/
+    - assets/google_fonts/
     - assets/
