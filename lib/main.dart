@@ -58,6 +58,9 @@ void main() async {
 
 /// Starts Analytics and Crashlytics. Failure is logged and the app runs
 /// without measurement; nothing here may block or crash startup.
+///
+/// Framework-caught Flutter errors are reported as non-fatal; uncaught async
+/// errors as fatal, so crash-free metrics reflect real crashes.
 Future<void> _initFirebase() async {
   try {
     await Firebase.initializeApp();
@@ -68,7 +71,10 @@ Future<void> _initFirebase() async {
     final crashlytics = FirebaseCrashlytics.instance;
     await crashlytics.setCrashlyticsCollectionEnabled(kReleaseMode);
     if (kReleaseMode) {
-      FlutterError.onError = crashlytics.recordFlutterFatalError;
+      // Errors the framework caught (build/layout/paint, FlutterError.reportError)
+      // did not close the app, so they are recorded as non-fatal. Uncaught
+      // async errors below are real crashes and stay fatal.
+      FlutterError.onError = crashlytics.recordFlutterError;
       PlatformDispatcher.instance.onError = (error, stack) {
         crashlytics.recordError(error, stack, fatal: true);
         return true;
