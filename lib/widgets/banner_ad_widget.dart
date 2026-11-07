@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:provider/provider.dart';
+
+import '../providers/purchase_provider.dart';
 import '../services/ad_service.dart';
 
+/// The shared banner used on the home and explore tabs.
+///
+/// Collapses to nothing while no ad is loaded, and never requests an ad when
+/// the parent owns the remove-ads purchase ([PurchaseProvider.adsRemoved]).
 class BannerAdWidget extends StatefulWidget {
   const BannerAdWidget({Key? key}) : super(key: key);
 
@@ -16,11 +23,17 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   void initState() {
     super.initState();
-    _loadBannerAd();
+    if (!context.read<PurchaseProvider>().adsRemoved) {
+      _loadBannerAd();
+    }
   }
 
   Future<void> _loadBannerAd() async {
-    await AdService().initialize();
+    final ads = AdService();
+    // Waits for the entitlement decision on first launch; false when the
+    // purchase is owned.
+    if (!await ads.ensureAdsEnabled()) return;
+    await ads.initialize();
     if (!mounted) return;
 
     _bannerAd = BannerAd(
@@ -34,10 +47,9 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
               _isBannerAdReady = true;
             });
           }
-          print('Banner ad loaded successfully!');
         },
         onAdFailedToLoad: (ad, error) {
-          print('Banner ad failed to load: ${error.message}');
+          debugPrint('Banner ad failed to load: ${error.message}');
           ad.dispose();
           _isBannerAdReady = false;
         },
@@ -55,13 +67,15 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (_isBannerAdReady && _bannerAd != null) {
-      return Container(
-        width: _bannerAd!.size.width.toDouble(),
-        height: _bannerAd!.size.height.toDouble(),
-        child: AdWidget(ad: _bannerAd!),
-      );
+    final adsRemoved = context.watch<PurchaseProvider>().adsRemoved;
+    final ad = _bannerAd;
+    if (adsRemoved || !_isBannerAdReady || ad == null) {
+      return const SizedBox.shrink();
     }
-    return const SizedBox();
+    return SizedBox(
+      width: ad.size.width.toDouble(),
+      height: ad.size.height.toDouble(),
+      child: AdWidget(ad: ad),
+    );
   }
 }

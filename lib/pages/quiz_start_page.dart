@@ -1,5 +1,7 @@
 import 'package:animal_sounds_flutter/pages/sound_guess_game_page.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
+import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
+import 'package:provider/provider.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -22,7 +24,7 @@ class _QuizStartPageState extends State<QuizStartPage>
   final FlutterTts flutterTts = FlutterTts();
   bool _isTtsInitialized = false;
   final AdService _adService = AdService();
-  late BannerAd _bannerAd;
+  BannerAd? _bannerAd;
   bool _isBannerAdReady = false;
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
@@ -32,14 +34,7 @@ class _QuizStartPageState extends State<QuizStartPage>
   @override
   void initState() {
     super.initState();
-    _bannerAd = _adService.createBannerAd();
-    _adService.initialize().then((_) => _bannerAd.load()).then((_) {
-      if (mounted) {
-        setState(() {
-          _isBannerAdReady = true;
-        });
-      }
-    });
+    _loadBannerAd();
 
     _pulseController = AnimationController(
       vsync: this,
@@ -72,10 +67,25 @@ class _QuizStartPageState extends State<QuizStartPage>
     await flutterTts.speak(text);
   }
 
+  Future<void> _loadBannerAd() async {
+    if (context.read<PurchaseProvider>().adsRemoved) return;
+    if (!await _adService.ensureAdsEnabled()) return;
+    await _adService.initialize();
+    if (!mounted) return;
+    final ad = _adService.createBannerAd();
+    _bannerAd = ad;
+    await ad.load();
+    if (mounted) {
+      setState(() {
+        _isBannerAdReady = true;
+      });
+    }
+  }
+
   @override
   void dispose() {
     _pulseController.dispose();
-    _bannerAd.dispose();
+    _bannerAd?.dispose();
     flutterTts.stop();
     super.dispose();
   }
@@ -308,11 +318,13 @@ class _QuizStartPageState extends State<QuizStartPage>
               ),
             ),
           ),
-          if (_isBannerAdReady)
+          if (_isBannerAdReady &&
+              _bannerAd != null &&
+              !context.watch<PurchaseProvider>().adsRemoved)
             SizedBox(
-              width: _bannerAd.size.width.toDouble(),
-              height: _bannerAd.size.height.toDouble(),
-              child: AdWidget(ad: _bannerAd),
+              width: _bannerAd!.size.width.toDouble(),
+              height: _bannerAd!.size.height.toDouble(),
+              child: AdWidget(ad: _bannerAd!),
             ),
         ],
       ),

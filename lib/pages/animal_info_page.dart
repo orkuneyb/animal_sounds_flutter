@@ -2,6 +2,7 @@ import 'package:animal_sounds_flutter/pages/coloring_page.dart';
 import 'package:animal_sounds_flutter/pages/compare_page.dart';
 import 'package:animal_sounds_flutter/providers/achievement_provider.dart';
 import 'package:animal_sounds_flutter/providers/discovery_provider.dart';
+import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
 import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
@@ -30,7 +31,7 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   bool _isInitialized = false;
   bool _hasTrackedVisit = false;
   final AdService _adService = AdService();
-  late BannerAd _bannerAd;
+  BannerAd? _bannerAd;
   bool _isBannerAdReady = false;
 
   // Pastel colors for characteristic cards
@@ -45,12 +46,7 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
   @override
   void initState() {
     super.initState();
-    _bannerAd = _adService.createBannerAd()
-      ..load().then((_) {
-        setState(() {
-          _isBannerAdReady = true;
-        });
-      });
+    _loadBannerAd();
     _initBasicTts();
   }
 
@@ -118,9 +114,23 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
     }
   }
 
+  Future<void> _loadBannerAd() async {
+    if (context.read<PurchaseProvider>().adsRemoved) return;
+    if (!await _adService.ensureAdsEnabled()) return;
+    if (!mounted) return;
+    final ad = _adService.createBannerAd();
+    _bannerAd = ad;
+    await ad.load();
+    if (mounted) {
+      setState(() {
+        _isBannerAdReady = true;
+      });
+    }
+  }
+
   @override
   void dispose() {
-    _bannerAd.dispose();
+    _bannerAd?.dispose();
     flutterTts.stop();
     isSpeakingNotifier.dispose();
     super.dispose();
@@ -138,12 +148,14 @@ class _AnimalInfoPageState extends State<AnimalInfoPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 _buildInfoSection(context),
-                if (_isBannerAdReady)
+                if (_isBannerAdReady &&
+                    _bannerAd != null &&
+                    !context.watch<PurchaseProvider>().adsRemoved)
                   Center(
                     child: SizedBox(
-                      width: _bannerAd.size.width.toDouble(),
-                      height: _bannerAd.size.height.toDouble(),
-                      child: AdWidget(ad: _bannerAd),
+                      width: _bannerAd!.size.width.toDouble(),
+                      height: _bannerAd!.size.height.toDouble(),
+                      child: AdWidget(ad: _bannerAd!),
                     ),
                   ),
                 _buildCharacteristics(),

@@ -1,6 +1,7 @@
 import 'package:animal_sounds_flutter/models/animal.dart';
 import 'package:animal_sounds_flutter/pages/animal_info_page.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
+import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
 import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/transitions/page_transitions.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
@@ -18,7 +19,7 @@ class FavoritesPage extends StatefulWidget {
 }
 
 class _FavoritesPageState extends State<FavoritesPage> {
-  late BannerAd _bannerAd;
+  BannerAd? _bannerAd;
   bool _isBannerAdReady = false;
   final AdService _adService = AdService();
 
@@ -28,18 +29,23 @@ class _FavoritesPageState extends State<FavoritesPage> {
     _loadBannerAd();
   }
 
-  void _loadBannerAd() {
-    _bannerAd = _adService.createBannerAd()
-      ..load().then((_) {
-        setState(() {
-          _isBannerAdReady = true;
-        });
+  Future<void> _loadBannerAd() async {
+    if (context.read<PurchaseProvider>().adsRemoved) return;
+    if (!await _adService.ensureAdsEnabled()) return;
+    if (!mounted) return;
+    final ad = _adService.createBannerAd();
+    _bannerAd = ad;
+    await ad.load();
+    if (mounted) {
+      setState(() {
+        _isBannerAdReady = true;
       });
+    }
   }
 
   @override
   void dispose() {
-    _bannerAd.dispose();
+    _bannerAd?.dispose();
     super.dispose();
   }
 
@@ -167,13 +173,15 @@ class _FavoritesPageState extends State<FavoritesPage> {
               },
             ),
           ),
-          if (_isBannerAdReady)
+          if (_isBannerAdReady &&
+              _bannerAd != null &&
+              !context.watch<PurchaseProvider>().adsRemoved)
             Container(
               color: AppColors.surface,
               child: SizedBox(
-                width: _bannerAd.size.width.toDouble(),
-                height: _bannerAd.size.height.toDouble(),
-                child: AdWidget(ad: _bannerAd),
+                width: _bannerAd!.size.width.toDouble(),
+                height: _bannerAd!.size.height.toDouble(),
+                child: AdWidget(ad: _bannerAd!),
               ),
             ),
         ],
