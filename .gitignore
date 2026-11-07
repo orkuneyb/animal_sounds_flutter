@@ -50,3 +50,6 @@ app.*.map.json
 # Firebase CLI
 firebase-debug.log
 .firebase/
+
+# Kotlin 2.x compiler session data
+android/.kotlin/
