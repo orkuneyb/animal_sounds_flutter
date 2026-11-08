@@ -53,3 +53,6 @@ firebase-debug.log
 
 # Kotlin 2.x compiler session data
 android/.kotlin/
+
+# Gradle build output
+android/build/
