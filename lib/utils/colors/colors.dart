@@ -80,18 +80,26 @@ class AppColors {
   // ---------------------------------------------------------------------------
   // Card color palette – soft pastels for animal cards
   // ---------------------------------------------------------------------------
-  static const List<Color> cardColors = [
-    Color(0xFFC8E6C9), // soft green
-    Color(0xFFFFE0B2), // soft orange
-    Color(0xFFB3E5FC), // soft blue
-    Color(0xFFF8BBD0), // soft pink
-    Color(0xFFFFF9C4), // soft yellow
-    Color(0xFFD1C4E9), // soft purple
-    Color(0xFFFFCCBC), // soft coral
-    Color(0xFFB2DFDB), // soft teal
-    Color(0xFFFFE082), // soft amber
-    Color(0xFFC5CAE9), // soft indigo
+static const List<Color> cardColors = [
+    Color(0xFFFFE3B8), // peach
+    Color(0xFFDDF0C8), // leaf
+    Color(0xFFCFE6FB), // sky
+    Color(0xFFFFD9D6), // coral
+    Color(0xFFF3E6FA), // lilac
+    Color(0xFFFFF1C9), // butter
+    Color(0xFFD6F0EC), // mint
+    Color(0xFFFADADD), // rose
   ];
+
+  /// Warm dark brown used for text and icons on the soft card colours; the
+  /// same ink as the outlines of the animal drawings.
+  static const Color ink = Color(0xFF3B2A20);
+
+  /// Softer ink for secondary text.
+  static const Color inkSoft = Color(0xFF8A6B55);
+
+  /// The one strong accent: play buttons and selected states.
+  static const Color pop = Color(0xFFE8642C);
 
   // ---------------------------------------------------------------------------
   // Legacy aliases – keep backward compatibility

@@ -147,14 +147,10 @@ class DailyProvider with ChangeNotifier {
   void _checkStreakAchievements() {
     if (_achievementProvider == null) return;
 
-    _achievementProvider!.incrementProgress(
-      'week_streak',
-      _streak.currentStreak >= 7 ? 7 : _streak.currentStreak,
-    );
-    _achievementProvider!.incrementProgress(
-      'month_streak',
-      _streak.currentStreak >= 30 ? 30 : _streak.currentStreak,
-    );
+    // The streak length is the progress; adding it each day would unlock
+    // the 7-day badge on day 4.
+    _achievementProvider!.setProgress('week_streak', _streak.currentStreak);
+    _achievementProvider!.setProgress('month_streak', _streak.currentStreak);
   }
 
   // ---------------------------------------------------------------------------

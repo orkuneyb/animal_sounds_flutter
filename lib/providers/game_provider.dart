@@ -94,6 +94,9 @@ class GameProvider with ChangeNotifier {
     }
   }
 
+  /// Called when a Guess the Sound round ends; weekly challenges listen here.
+  void Function(int score)? onGameOver;
+
   bool checkAnswer(int animalIndex) {
     if (_isGameOver || _correctAnimal == null) return false;
 
@@ -108,6 +111,7 @@ class GameProvider with ChangeNotifier {
       _isGameOver = true;
       _lastAnswerCorrect = false;
       saveHighScore();
+      onGameOver?.call(_currentScore);
       AnalyticsService().soundGameOver(_currentScore);
     }
 

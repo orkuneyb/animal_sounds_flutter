@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:animal_sounds_flutter/models/achievement.dart';
+import '../repositories/animal_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -59,7 +60,7 @@ class AchievementProvider with ChangeNotifier {
           title: 'achievement_sound_master_title',
           description: 'achievement_sound_master_desc',
           category: AchievementCategory.listening,
-          maxProgress: 30,
+          maxProgress: AnimalRepository.animals.length,
           iconData: Icons.stars_rounded,
         ),
         Achievement(
@@ -143,7 +144,7 @@ class AchievementProvider with ChangeNotifier {
           title: 'achievement_animal_expert_title',
           description: 'achievement_animal_expert_desc',
           category: AchievementCategory.discovery,
-          maxProgress: 30,
+          maxProgress: AnimalRepository.animals.length,
           iconData: Icons.school_rounded,
         ),
         Achievement(
@@ -300,6 +301,17 @@ class AchievementProvider with ChangeNotifier {
     }
 
     return justUnlocked;
+  }
+
+  /// Raises progress to [value] (never lowers it) and unlocks at the target.
+  ///
+  /// Use it for achievements that mirror a count kept elsewhere (streak
+  /// length, favourites, distinct animals) so repeating one action cannot
+  /// inflate them. Returns `true` if the achievement was just unlocked.
+  Future<bool> setProgress(String id, int value) async {
+    final current = getProgress(id);
+    if (value <= current) return false;
+    return incrementProgress(id, value - current);
   }
 
   /// Directly checks and unlocks an achievement if the condition is met.

@@ -4,7 +4,9 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../models/animal_traits.dart';
 import '../models/weekly_challenge.dart';
+import '../repositories/animal_repository.dart';
 
 class ChallengeProvider with ChangeNotifier {
   static const String _challengesKey = 'weekly_challenges';
@@ -14,6 +16,10 @@ class ChallengeProvider with ChangeNotifier {
   int _storedWeekNumber = -1;
 
   List<WeeklyChallenge> get challenges => _challenges;
+
+  @visibleForTesting
+  void setChallengesForTesting(List<WeeklyChallenge> challenges) =>
+      _challenges = challenges;
 
   int get completedCount => _challenges.where((c) => c.isCompleted).length;
   int get totalCount => _challenges.length;
@@ -108,7 +114,7 @@ class ChallengeProvider with ChangeNotifier {
         'id': 'perfect_quiz',
         'titleKey': 'challenge_perfect_quiz_title',
         'descriptionKey': 'challenge_perfect_quiz_desc',
-        'type': 'quiz_perfect',
+        'type': 'quiz',
         'target': 1,
         'iconCodePoint': Icons.star_rounded.codePoint,
       },
@@ -219,11 +225,40 @@ class ChallengeProvider with ChangeNotifier {
     ];
   }
 
-  void incrementProgress(String challengeType, {String? category}) {
+  // Animal indexes per group, from the one animal list.
+  static final Set<int> _farmAnimals =
+      AnimalRepository.indexesIn(AnimalGroup.farm);
+  static final Set<int> _seaAnimals =
+      AnimalRepository.indexesIn(AnimalGroup.water);
+  static final Set<int> _wildAnimals =
+      AnimalRepository.indexesIn(AnimalGroup.wild);
+  static final Set<int> _birds = AnimalRepository.indexesIn(AnimalGroup.birds);
+
+  /// Reports something the child did. Each active challenge advances only if
+  /// the event meets what its description promises.
+  ///
+  /// [type] is one of `listen`, `info`, `favorite`, `discover`, `quiz`,
+  /// `game`. [animalId] is needed for listen, info and favorite; [correct],
+  /// [total] and [usedHint] for quiz; [score] for game.
+  void recordEvent(
+    String type, {
+    int? animalId,
+    int? correct,
+    int? total,
+    bool usedHint = false,
+    int? score,
+  }) {
     bool changed = false;
     for (final challenge in _challenges) {
       if (challenge.isCompleted) continue;
-      if (challenge.type == challengeType) {
+      final cut = challenge.id.lastIndexOf('_w');
+      final template = cut == -1 ? challenge.id : challenge.id.substring(0, cut);
+      if (_advances(template, challenge, type,
+          animalId: animalId,
+          correct: correct,
+          total: total,
+          usedHint: usedHint,
+          score: score)) {
         challenge.progress++;
         changed = true;
       }
@@ -232,6 +267,60 @@ class ChallengeProvider with ChangeNotifier {
       _saveChallenges();
       notifyListeners();
     }
+  }
+
+  bool _advances(
+    String template,
+    WeeklyChallenge challenge,
+    String type, {
+    int? animalId,
+    int? correct,
+    int? total,
+    required bool usedHint,
+    int? score,
+  }) {
+    // Counts an animal once per challenge, optionally only from one group.
+    bool newAnimal([Set<int>? group]) {
+      if (animalId == null) return false;
+      if (group != null && !group.contains(animalId)) return false;
+      return challenge.seenAnimals.add(animalId);
+    }
+
+    switch (template) {
+      case 'listen_farm_5':
+        return type == 'listen' && newAnimal(_farmAnimals);
+      case 'listen_sea_all':
+        return type == 'listen' && newAnimal(_seaAnimals);
+      case 'listen_10_diff':
+        return type == 'listen' && newAnimal();
+      case 'listen_15_total':
+        return type == 'listen';
+      case 'visit_info_wild_5':
+        return type == 'info' && newAnimal(_wildAnimals);
+      case 'read_facts_5':
+        return type == 'info' && newAnimal();
+      case 'visit_info_8':
+        return type == 'info';
+      case 'add_fav_3':
+        return type == 'favorite' && newAnimal();
+      case 'fav_bird':
+        return type == 'favorite' && newAnimal(_birds);
+      case 'discover_5_new':
+        return type == 'discover';
+      case 'complete_quiz_3':
+        return type == 'quiz';
+      case 'perfect_quiz':
+        return type == 'quiz' && total != null && total > 0 && correct == total;
+      case 'quiz_no_hint':
+        return type == 'quiz' && !usedHint;
+      case 'quiz_good_2':
+        return type == 'quiz' && (correct ?? 0) >= 4;
+      case 'play_game_3':
+        return type == 'game';
+      case 'game_score_10':
+        return type == 'game' && (score ?? 0) >= 10;
+    }
+    return false;
   }
 
   Future<void> _saveChallenges() async {

@@ -7,6 +7,14 @@
 class AnimalDataParser {
   AnimalDataParser._();
 
+  // Unit words in the app's eight languages. "g" and "m" must follow a digit
+  // or stand alone, so the "g" in "Length" or the "m" in "cm" do not count.
+  static final _kilogram = RegExp(r'kg|кг|किलो|كغ|كجم');
+  static final _gram = RegExp(r'gram|(\d|\s)(g|gr|г)(\s|\.|$|,)|ग्राम|غرام|грамм');
+  static final _centimetre = RegExp(r'cm|см|सेमी|سم');
+  static final _metre =
+      RegExp(r'met(er|re|ro)|метр|मीटर|متر|(\d|\s)(m|м)(\s|\.|$|,)');
+
   // Matches integers and decimals, including comma-separated thousands.
   static final _numberPattern = RegExp(r'[\d][,\d]*\.?\d*');
 
@@ -22,8 +30,7 @@ class AnimalDataParser {
     final lower = line.toLowerCase();
 
     // Detect unit: prefer kg; fall back to grams.
-    final isGram =
-        lower.contains('gram') || lower.contains('g') && !lower.contains('kg');
+    final isGram = !_kilogram.hasMatch(lower) && _gram.hasMatch(lower);
 
     final numbers = _extractNumbers(line);
     if (numbers.isEmpty) return 0;
@@ -36,7 +43,7 @@ class AnimalDataParser {
     }
 
     // Convert grams to kg.
-    if (isGram && value < 100) {
+    if (isGram) {
       value = value / 1000;
     }
 
@@ -64,14 +71,9 @@ class AnimalDataParser {
       value = numbers[0];
     }
 
-    // Determine the unit.
-    final isMeter = lower.contains('metre') || lower.contains('meter');
-    if (isMeter || value < 50) {
-      // Numbers < 50 with no explicit "cm" likely represent metres.
-      if (!lower.contains('cm')) {
-        value = value * 100; // metres -> cm
-      }
-    }
+    // Determine the unit. Without one, numbers below 50 are taken as metres.
+    if (_centimetre.hasMatch(lower)) return value;
+    if (_metre.hasMatch(lower) || value < 50) value = value * 100;
 
     return value;
   }
@@ -108,16 +110,28 @@ class AnimalDataParser {
   // Private helpers
   // ---------------------------------------------------------------------------
 
-  /// Takes only the first line of a potentially multi-line string.
+  /// Takes the first line that carries a number, so a heading such as
+  /// "Varies by breed:" above the figures is skipped.
   static String _firstLine(String raw) {
-    final idx = raw.indexOf('\n');
-    return idx >= 0 ? raw.substring(0, idx) : raw;
+    final lines = raw.split('\n');
+    return lines.firstWhere(
+      (line) => _numberPattern.hasMatch(line),
+      orElse: () => lines.first,
+    );
   }
 
-  /// Extracts all numeric values found in [text], stripping comma separators.
+  // A comma followed by one or two digits is a decimal comma ("4,3 m"); a
+  // comma followed by three digits separates thousands ("4,000 kg").
+  static final _decimalComma = RegExp(r'(\d),(\d{1,2})(?!\d)');
+
+  /// Extracts all numeric values found in [text].
   static List<double> _extractNumbers(String text) {
+    final normalised = text.replaceAllMapped(
+      _decimalComma,
+      (m) => '${m.group(1)}.${m.group(2)}',
+    );
     return _numberPattern
-        .allMatches(text)
+        .allMatches(normalised)
         .map((m) => double.tryParse(m.group(0)!.replaceAll(',', '')) ?? 0)
         .where((v) => v > 0)
         .toList();

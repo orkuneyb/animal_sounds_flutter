@@ -1,3 +1,4 @@
+import 'package:animal_sounds_flutter/models/animal_traits.dart';
 import 'package:animal_sounds_flutter/models/discovery.dart';
 import 'package:animal_sounds_flutter/providers/discovery_provider.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
@@ -18,30 +19,17 @@ class CollectionPage extends StatefulWidget {
 class _CollectionPageState extends State<CollectionPage> {
   int _selectedCategoryIndex = 0;
 
-  // Category definitions matching the existing app categories
-  static const List<String> _categoryKeys = [
+  // "All" followed by the same picture groups as the home screen.
+  static final List<String> _categoryKeys = [
     'all',
-    'wild_animals',
-    'domestic_animals',
-    'sea_animals',
-    'farm_animals',
+    for (final group in AnimalGroup.values) group.labelKey,
   ];
 
-  static const Map<String, List<int>> _categoryAnimalIndices = {
-    'all': [], // empty means show all
-    'wild_animals': [0, 2, 11, 12, 16, 17, 18, 19, 23, 24, 28, 29],
-    'domestic_animals': [3, 4],
-    'sea_animals': [14, 15, 13],
-    'farm_animals': [5, 6, 7, 8, 9, 10],
-  };
-
   List<int> get _filteredAnimalIndices {
-    final key = _categoryKeys[_selectedCategoryIndex];
-    final indices = _categoryAnimalIndices[key]!;
-    if (indices.isEmpty) {
-      return List.generate(AnimalRepository.animals.length, (i) => i);
-    }
-    return indices;
+    final group = _selectedCategoryIndex == 0
+        ? null
+        : AnimalGroup.values[_selectedCategoryIndex - 1];
+    return [for (final animal in AnimalRepository.inGroup(group)) animal.index];
   }
 
   @override

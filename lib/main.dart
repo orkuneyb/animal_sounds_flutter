@@ -2,7 +2,6 @@ import 'dart:ui' show PlatformDispatcher;
 
 import 'package:animal_sounds_flutter/pages/main_navigation_page.dart';
 import 'package:animal_sounds_flutter/pages/settings.dart';
-import 'package:animal_sounds_flutter/providers/category_provider.dart';
 import 'package:animal_sounds_flutter/providers/favorites_provider.dart';
 import 'package:animal_sounds_flutter/providers/quiz_provider.dart';
 import 'package:animal_sounds_flutter/providers/search_provider.dart';
@@ -12,6 +11,7 @@ import 'package:animal_sounds_flutter/providers/daily_provider.dart';
 import 'package:animal_sounds_flutter/providers/discovery_provider.dart';
 import 'package:animal_sounds_flutter/providers/challenge_provider.dart';
 import 'package:animal_sounds_flutter/providers/game_provider.dart';
+import 'package:animal_sounds_flutter/providers/progress_wiring.dart';
 import 'package:animal_sounds_flutter/providers/usage_stats_provider.dart';
 import 'package:animal_sounds_flutter/providers/coloring_provider.dart';
 import 'package:animal_sounds_flutter/providers/purchase_provider.dart';
@@ -169,7 +169,6 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => SettingsProvider()),
-        ChangeNotifierProvider(create: (_) => CategoryProvider()),
         ChangeNotifierProvider(create: (_) => SearchProvider()),
         ChangeNotifierProvider(create: (_) => FavoritesProvider()),
         ChangeNotifierProvider(create: (_) => QuizProvider()),
@@ -322,6 +321,16 @@ class _AppWithDependenciesState extends State<_AppWithDependencies> {
     // Wire cross-provider dependencies
     quizProvider.setAchievementProvider(achievementProvider);
     dailyProvider.setAchievementProvider(achievementProvider);
+
+    // Weekly challenges and collection badges react to what the child does.
+    wireProgress(
+      achievements: achievementProvider,
+      challenges: Provider.of<ChallengeProvider>(context, listen: false),
+      favorites: Provider.of<FavoritesProvider>(context, listen: false),
+      discovery: Provider.of<DiscoveryProvider>(context, listen: false),
+      quiz: quizProvider,
+      game: Provider.of<GameProvider>(context, listen: false),
+    );
 
     // Register achievement unlock listener to show celebration dialog
     achievementProvider.addUnlockListener((achievement) {

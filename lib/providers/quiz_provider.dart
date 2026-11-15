@@ -31,6 +31,9 @@ class QuizProvider with ChangeNotifier {
     _achievementProvider = provider;
   }
 
+  /// Called once per finished quiz; weekly challenges listen here.
+  void Function(QuizScore score)? onQuizCompleted;
+
   Future<void> saveScore(QuizScore score) async {
     AnalyticsService().quizCompleted(score.correctAnswers);
     _scores.add(score);
@@ -47,6 +50,7 @@ class QuizProvider with ChangeNotifier {
     }
 
     _checkAchievements(isPerfect: isPerfect);
+    onQuizCompleted?.call(score);
     await _saveToPrefs();
     notifyListeners();
   }

@@ -56,8 +56,13 @@ class UsageStatsProvider extends ChangeNotifier {
   // Initialization
   // ---------------------------------------------------------------------------
   UsageStatsProvider() {
-    _load();
+    _ready = _load();
   }
+
+  /// Completes once the saved counters are in memory. Every counter update
+  /// waits for it, so a count made right at startup is not overwritten by
+  /// the load that finishes a moment later.
+  late final Future<void> _ready;
 
   Future<void> _load() async {
     final prefs = await SharedPreferences.getInstance();
@@ -96,6 +101,7 @@ class UsageStatsProvider extends ChangeNotifier {
   // ---------------------------------------------------------------------------
 
   Future<void> incrementSoundsListened(int animalId) async {
+    await _ready;
     _soundsListened++;
     final key = animalId.toString();
     _animalListenCounts[key] = (_animalListenCounts[key] ?? 0) + 1;
@@ -109,6 +115,7 @@ class UsageStatsProvider extends ChangeNotifier {
   }
 
   Future<void> incrementQuizzesCompleted(int score) async {
+    await _ready;
     _quizzesCompleted++;
     _quizScores.add(score);
     _incrementDailyActivity();
@@ -120,6 +127,7 @@ class UsageStatsProvider extends ChangeNotifier {
   }
 
   Future<void> incrementInfoVisited(int animalId) async {
+    await _ready;
     _infoVisited++;
     final key = animalId.toString();
     _animalInfoCounts[key] = (_animalInfoCounts[key] ?? 0) + 1;
@@ -133,6 +141,7 @@ class UsageStatsProvider extends ChangeNotifier {
   }
 
   Future<void> incrementAppOpens() async {
+    await _ready;
     _appOpens++;
     _incrementDailyActivity();
 
@@ -142,6 +151,7 @@ class UsageStatsProvider extends ChangeNotifier {
   }
 
   Future<void> updateFavoriteCount(int count) async {
+    await _ready;
     _favoriteCount = count;
     final prefs = await SharedPreferences.getInstance();
     await prefs.setInt(_keyFavoriteCount, _favoriteCount);

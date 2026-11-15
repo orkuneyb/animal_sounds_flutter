@@ -1,50 +1,44 @@
-class Animal {
-  late int index;
-  late String name;
-  late String description;
-  late String imagePath;
-  late String soundPath;
-  late String size;
-  late String weight;
-  late String lifespan;
-  late String habitat;
-  late String diet;
-  late List<String> funFacts;
+import 'package:flutter/material.dart';
 
-  Animal({
+import '../utils/colors/colors.dart';
+import 'animal_traits.dart';
+
+/// One animal: its picture, sound, translation keys and picture facts.
+///
+/// [index] is the animal's permanent id. Favourites, discoveries and usage
+/// stats are saved by index, so an index is never reused or reordered.
+class Animal {
+  final int index;
+
+  /// English key, also the base of every translation key and asset name.
+  final String name;
+  final AnimalGroup group;
+  final AnimalHome home;
+  final AnimalFood food;
+  final AnimalSize bigness;
+
+  const Animal({
     required this.index,
     required this.name,
-    required this.description,
-    required this.imagePath,
-    required this.soundPath,
-    this.size = '',
-    this.weight = '',
-    this.lifespan = '',
-    this.habitat = '',
-    this.diet = '',
-    this.funFacts = const [],
+    required this.group,
+    required this.home,
+    required this.food,
+    required this.bigness,
   });
 
-  Animal.fromJson(Map<String, dynamic> json) {
-    index = json['index'];
-    name = json['name'];
-    description = json['description'];
-    imagePath = json['imageUrl'];
-    soundPath = json['soundPath'];
-    size = json['size'];
-    weight = json['weight'];
-    lifespan = json['lifespan'];
-    diet = json['diet'];
-    funFacts = json['funFacts'];
-  }
+  String get imagePath => 'assets/animal_images/$name.png';
+  String get soundPath => 'assets/animal_sounds/$name.mp3';
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = index;
-    data['name'] = this.name;
-    data['description'] = this.description;
-    data['imageUrl'] = this.imagePath;
-    data['soundPath'] = this.soundPath;
-    return data;
-  }
+  // Translation keys of the longer texts.
+  String get description => '${name}_desc';
+  String get size => '${name}_size';
+  String get weight => '${name}_weight';
+  String get lifespan => '${name}_lifespan';
+  String get habitat => '${name}_habitat';
+  String get diet => '${name}_diet';
+  List<String> get funFacts =>
+      ['${name}_fun_fact_1', '${name}_fun_fact_2', '${name}_fun_fact_3'];
+
+  /// The animal's own soft background colour, the same on every screen.
+  Color get color => AppColors.cardColors[index % AppColors.cardColors.length];
 }

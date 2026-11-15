@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:animal_sounds_flutter/models/achievement.dart';
@@ -55,6 +56,23 @@ class _AchievementUnlockDialogState extends State<_AchievementUnlockDialog>
   late final AnimationController _iconBounceController;
   late final List<_ConfettiParticle> _particles;
   final Random _random = Random();
+  Timer? _autoDismiss;
+  bool _dismissed = false;
+
+  /// Closes the dialog exactly once. A second tap or the auto-dismiss timer
+  /// firing during the exit animation must not pop the page underneath.
+  void _dismiss() {
+    if (_dismissed || !mounted) return;
+    if (ModalRoute.of(context)?.isCurrent != true) {
+      // Another celebration is on top; close this one after it has gone.
+      _autoDismiss?.cancel();
+      _autoDismiss = Timer(const Duration(milliseconds: 600), _dismiss);
+      return;
+    }
+    _dismissed = true;
+    _autoDismiss?.cancel();
+    Navigator.of(context).pop();
+  }
 
   @override
   void initState() {
@@ -78,15 +96,12 @@ class _AchievementUnlockDialogState extends State<_AchievementUnlockDialog>
     _particles = List.generate(20, (_) => _ConfettiParticle(_random));
 
     // Auto-dismiss after 3 seconds.
-    Future.delayed(const Duration(seconds: 3), () {
-      if (mounted && Navigator.of(context).canPop()) {
-        Navigator.of(context).pop();
-      }
-    });
+    _autoDismiss = Timer(const Duration(seconds: 3), _dismiss);
   }
 
   @override
   void dispose() {
+    _autoDismiss?.cancel();
     _confettiController.dispose();
     _glowController.dispose();
     _iconBounceController.dispose();
@@ -96,11 +111,11 @@ class _AchievementUnlockDialogState extends State<_AchievementUnlockDialog>
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).pop(),
+      onTap: _dismiss,
       behavior: HitTestBehavior.opaque,
       child: Center(
         child: GestureDetector(
-          onTap: () => Navigator.of(context).pop(),
+          onTap: _dismiss,
           child: Stack(
             alignment: Alignment.center,
             children: [

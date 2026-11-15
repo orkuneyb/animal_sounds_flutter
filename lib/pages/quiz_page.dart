@@ -32,6 +32,9 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
 
   // Rewarded ad state
   bool _hintUsed = false;
+
+  /// True once any question of the running quiz used a hint.
+  bool _hintUsedInQuiz = false;
   Set<int> _eliminatedOptions = {};
   bool _extraLifeUsed = false;
   bool _showExtraLifeOption = false;
@@ -181,6 +184,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
 
     setState(() {
       _hintUsed = true;
+      _hintUsedInQuiz = true;
       _eliminatedOptions = toEliminate;
     });
 
@@ -901,6 +905,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
                             final saveScore = QuizScore(
                               correctAnswers: scoreDoubled ? _score : _score,
                               totalQuestions: questions.length,
+                              usedHint: _hintUsedInQuiz,
                               dateTime: DateTime.now(),
                             );
                             sheetContext.read<QuizProvider>().saveScore(saveScore);
@@ -948,6 +953,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
                               final saveScore = QuizScore(
                                 correctAnswers: scoreDoubled ? _score : _score,
                                 totalQuestions: questions.length,
+                                usedHint: _hintUsedInQuiz,
                                 dateTime: DateTime.now(),
                               );
                               sheetContext
@@ -956,6 +962,7 @@ class _QuizPageState extends State<QuizPage> with TickerProviderStateMixin {
                               Navigator.of(sheetContext).pop();
                               setState(() {
                                 _currentQuestionIndex = 0;
+                                _hintUsedInQuiz = false;
                                 _score = 0;
                                 _isAnswered = false;
                                 selectedAnswer = null;

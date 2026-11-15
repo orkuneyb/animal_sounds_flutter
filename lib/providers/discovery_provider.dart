@@ -27,6 +27,14 @@ class DiscoveryProvider extends ChangeNotifier {
   int get discoveredCount =>
       _discoveries.values.where((d) => d.isDiscovered).length;
 
+  /// Distinct animals whose sound has been played at least once.
+  int get soundListenedCount =>
+      _discoveries.values.where((d) => d.soundListened).length;
+
+  /// Distinct animals whose info page has been opened at least once.
+  int get infoVisitedCount =>
+      _discoveries.values.where((d) => d.infoVisited).length;
+
   double get progressPercentage =>
       totalAnimals == 0 ? 0.0 : discoveredCount / totalAnimals;
 
