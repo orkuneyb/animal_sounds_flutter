@@ -1,0 +1,14 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=Walrus sound effect}}
+|date=2012
+|source={{own}}
+|author=[[User:Zagzav12|Zagzav12]]
+|permission=
+|other versions=
+}}
+
+=={{int:license-header}}==
+{{self|cc-zero}}
+
+{{Uncategorized|year=2026|month=November|day=4}}

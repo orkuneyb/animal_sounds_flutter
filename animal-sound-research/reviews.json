@@ -1,0 +1,347 @@
+{
+ "raccoon": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T14:32:07"
+ },
+ "gibbon": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T14:32:15"
+ },
+ "walrus": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T14:32:27"
+ },
+ "jaguar": {
+  "status": "approved",
+  "note": "jaguar",
+  "decided": "2026-11-16T17:25:33"
+ },
+ "katydid": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T14:32:51"
+ },
+ "canary": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:19:39"
+ },
+ "rabbit": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:19:48"
+ },
+ "grasshopper": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:19:54"
+ },
+ "bison": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:19:58"
+ },
+ "hedgehog": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:20:01"
+ },
+ "chimpanzee": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:20:10"
+ },
+ "moose": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:20:20"
+ },
+ "fennec_fox": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:20:23"
+ },
+ "magpie": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T17:20:30"
+ },
+ "sparrow": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:20:35"
+ },
+ "pheasant": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:20:41"
+ },
+ "polar_bear": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:20:54"
+ },
+ "red_panda": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:04"
+ },
+ "baboon": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:07"
+ },
+ "japanese_macaque": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:11"
+ },
+ "budgerigar": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:18"
+ },
+ "nightjar": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:28"
+ },
+ "pelican": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:32"
+ },
+ "kiwi": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:37"
+ },
+ "cicada": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T17:21:39"
+ },
+ "rhinoceros": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:58:28"
+ },
+ "hippopotamus": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:58:36"
+ },
+ "stork": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:58:39"
+ },
+ "woodpecker": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:58:46"
+ },
+ "flamingo": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:58:51"
+ },
+ "kingfisher": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:58:57"
+ },
+ "ladybug": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T20:59:06"
+ },
+ "butterfly": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:59:14"
+ },
+ "ant": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T20:59:20"
+ },
+ "dragonfly": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:59:25"
+ },
+ "praying_mantis": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T20:59:29"
+ },
+ "llama": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T20:59:36"
+ },
+ "alpaca": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:59:42"
+ },
+ "wild_boar": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T20:59:52"
+ },
+ "beaver": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:00:05"
+ },
+ "porcupine": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:00:11"
+ },
+ "opossum": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:00:16"
+ },
+ "nightingale": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:00:26"
+ },
+ "crane": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:00:35"
+ },
+ "hoopoe": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:00:43"
+ },
+ "leopard": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:00:51"
+ },
+ "lynx": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:01:01"
+ },
+ "puma": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:01:07"
+ },
+ "meerkat": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:01:18"
+ },
+ "lemur": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:02:56"
+ },
+ "tapir": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:03:05"
+ },
+ "hamster": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:03:16"
+ },
+ "capuchin": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:03:23"
+ },
+ "dingo": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:03:33"
+ },
+ "serval": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:03:37"
+ },
+ "cockatoo": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:03:41"
+ },
+ "toucan": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:03:45"
+ },
+ "starling": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:03:49"
+ },
+ "chaffinch": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:03:52"
+ },
+ "song_thrush": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:03:56"
+ },
+ "reindeer": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:04:03"
+ },
+ "badger": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:04:14"
+ },
+ "emu": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:04:20"
+ },
+ "guineafowl": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:04:24"
+ },
+ "quail": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:04:28"
+ },
+ "partridge": {
+  "status": "rejected",
+  "note": "",
+  "decided": "2026-11-16T21:04:34"
+ },
+ "bustard": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:04:40"
+ },
+ "peregrine_falcon": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:04:45"
+ },
+ "wasp": {
+  "status": "approved",
+  "note": "",
+  "decided": "2026-11-16T21:04:55"
+ }
+}

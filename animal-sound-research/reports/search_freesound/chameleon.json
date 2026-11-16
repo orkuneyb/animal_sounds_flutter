@@ -1,0 +1,89 @@
+[
+ {
+  "id": 445974,
+  "url": "https://freesound.org/people/Breviceps/sounds/445974/",
+  "name": "Cartoon - Slurp!",
+  "tags": [
+   "cartoon",
+   "chameleon",
+   "dog",
+   "frog",
+   "lick",
+   "licking",
+   "puppy",
+   "slurp",
+   "slurping",
+   "smack",
+   "tongue"
+  ],
+  "description": "A cartoony slurp / licking sound",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 0.516417,
+  "samplerate": 44100.0,
+  "username": "Breviceps",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/445/445974_9159316-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/445/445974_9159316-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/445/445974_9159316-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/445/445974_9159316-lq.ogg"
+  },
+  "num_downloads": 7616,
+  "avg_rating": 4.593220338983051,
+  "num_ratings": 59
+ },
+ {
+  "id": 184314,
+  "url": "https://freesound.org/people/jakeatherton/sounds/184314/",
+  "name": "funk guitar pro tools.L.wav",
+  "tags": [
+   "field-recording",
+   "funk-guitar-jam",
+   "jake-atherton",
+   "pro-tools"
+  ],
+  "description": "A sci-fi, Martian inspired take on a small sampling of the classic jazz staple \"Chameleon\".",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 31.4024,
+  "samplerate": 48000.0,
+  "username": "jakeatherton",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/184/184314_3419795-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/184/184314_3419795-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/184/184314_3419795-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/184/184314_3419795-lq.ogg"
+  },
+  "num_downloads": 509,
+  "avg_rating": 4.916666666666667,
+  "num_ratings": 12
+ },
+ {
+  "id": 516725,
+  "url": "https://freesound.org/people/rorymceachan/sounds/516725/",
+  "name": "chameleon - 808 .wav",
+  "tags": [
+   "808",
+   "SINExWAVE",
+   "bass",
+   "drum",
+   "homemade",
+   "type"
+  ],
+  "description": "home made 808 bass drum ,  made using FL Studio and the plugin 3osc and camel crusher distortion   ( Fl studio is fun )",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 0.430227,
+  "samplerate": 44100.0,
+  "username": "rorymceachan",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/516/516725_5582978-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/516/516725_5582978-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/516/516725_5582978-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/516/516725_5582978-lq.ogg"
+  },
+  "num_downloads": 262,
+  "avg_rating": 4.5,
+  "num_ratings": 2
+ }
+]

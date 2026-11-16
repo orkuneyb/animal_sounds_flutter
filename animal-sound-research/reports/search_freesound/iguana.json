@@ -1,0 +1,86 @@
+[
+ {
+  "id": 71320,
+  "url": "https://freesound.org/people/mutanterrante/sounds/71320/",
+  "name": "la gorra-ster.mp3",
+  "tags": [
+   "beating",
+   "esther",
+   "great-grandmother",
+   "inconsistencies",
+   "ms",
+   "posta"
+  ],
+  "description": "cutting verense a radio program called \"Trankila La Iguana\"",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "mp3",
+  "duration": 3.40265,
+  "samplerate": 44100.0,
+  "username": "mutanterrante",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/71/71320_1023246-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/71/71320_1023246-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/71/71320_1023246-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/71/71320_1023246-lq.ogg"
+  },
+  "num_downloads": 71,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 177564,
+  "url": "https://freesound.org/people/Chobiboko/sounds/177564/",
+  "name": "Interesting.wav",
+  "tags": [
+   "Funny",
+   "Funny-voice",
+   "Horror",
+   "Odd",
+   "Strange-voice",
+   "Weird"
+  ],
+  "description": "Oh... that's really interesting.\r\n\r\nJust saying it in a really odd way, kind of ... Iguana?",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 3.6246,
+  "samplerate": 44100.0,
+  "username": "Chobiboko",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/177/177564_3296910-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/177/177564_3296910-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/177/177564_3296910-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/177/177564_3296910-lq.ogg"
+  },
+  "num_downloads": 75,
+  "avg_rating": 1.0,
+  "num_ratings": 2
+ },
+ {
+  "id": 71321,
+  "url": "https://freesound.org/people/mutanterrante/sounds/71321/",
+  "name": "okelaiguana.wav",
+  "tags": [
+   "beating",
+   "esther",
+   "great-grandmother",
+   "inconsistencies",
+   "ms",
+   "posta"
+  ],
+  "description": "cutting verense a radio program called \"Trankila La Iguana\"",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 2.66962,
+  "samplerate": 8000.0,
+  "username": "mutanterrante",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/71/71321_1023246-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/71/71321_1023246-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/71/71321_1023246-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/71/71321_1023246-lq.ogg"
+  },
+  "num_downloads": 65,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ }
+]

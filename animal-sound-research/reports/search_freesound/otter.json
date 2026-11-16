@@ -1,0 +1,490 @@
+[
+ {
+  "id": 572680,
+  "url": "https://freesound.org/people/marmar182/sounds/572680/",
+  "name": "otters.mp3",
+  "tags": [
+   "Otter",
+   "Voiceover",
+   "otters"
+  ],
+  "description": "Otter sound for my stream alerts",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "mp3",
+  "duration": 5.58098,
+  "samplerate": 48000.0,
+  "username": "marmar182",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/572/572680_12936666-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/572/572680_12936666-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/572/572680_12936666-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/572/572680_12936666-lq.ogg"
+  },
+  "num_downloads": 58,
+  "avg_rating": 1.0,
+  "num_ratings": 5
+ },
+ {
+  "id": 59825,
+  "url": "https://freesound.org/people/stamperadam/sounds/59825/",
+  "name": "african_otter.wav",
+  "tags": [
+   "animals",
+   "circuit-bent",
+   "lofi",
+   "otter",
+   "toys"
+  ],
+  "description": "a speaking educational toy run through a homemade bit-crushing and pith-shifting effects box.  VERY lo-fi (because I like that sort of thing) ",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 1.41463,
+  "samplerate": 44100.0,
+  "username": "stamperadam",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/59/59825_599669-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/59/59825_599669-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/59/59825_599669-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/59/59825_599669-lq.ogg"
+  },
+  "num_downloads": 115,
+  "avg_rating": 2.4,
+  "num_ratings": 5
+ },
+ {
+  "id": 253740,
+  "url": "https://freesound.org/people/malak1236/sounds/253740/",
+  "name": "The Otter.mp3",
+  "tags": [
+   "field-recording",
+   "otter",
+   "poem"
+  ],
+  "description": "This is a poem",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "mp3",
+  "duration": 20.4941,
+  "samplerate": 44100.0,
+  "username": "malak1236",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/253/253740_4686552-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/253/253740_4686552-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/253/253740_4686552-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/253/253740_4686552-lq.ogg"
+  },
+  "num_downloads": 213,
+  "avg_rating": 3.0,
+  "num_ratings": 2
+ },
+ {
+  "id": 316791,
+  "url": "https://freesound.org/people/wjoojoo/sounds/316791/",
+  "name": "Shards.ogg",
+  "tags": [
+   "bizarre",
+   "crazy",
+   "digital",
+   "drums",
+   "glitch",
+   "grains",
+   "granular",
+   "noise",
+   "noisy",
+   "random"
+  ],
+  "description": "An old sample created with a tool I developed with Max/MSP called \"Smooth Otter\"",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "ogg",
+  "duration": 71.0811,
+  "samplerate": 44100.0,
+  "username": "wjoojoo",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/316/316791_93137-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/316/316791_93137-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/316/316791_93137-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/316/316791_93137-lq.ogg"
+  },
+  "num_downloads": 99,
+  "avg_rating": 5.0,
+  "num_ratings": 1
+ },
+ {
+  "id": 80826,
+  "url": "https://freesound.org/people/NoiseCollector/sounds/80826/",
+  "name": "zoo_otters.mp3",
+  "tags": [
+   "animals",
+   "field-recording",
+   "zoo"
+  ],
+  "description": "Walking through the Miami Metro Zoo with Olympus DS-40 and Sony ECMDS70P. At the otter exhibit.",
+  "license": "http://creativecommons.org/licenses/by/3.0/",
+  "type": "mp3",
+  "duration": 25.2223,
+  "samplerate": 44100.0,
+  "username": "NoiseCollector",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/80/80826_4948-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/80/80826_4948-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/80/80826_4948-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/80/80826_4948-lq.ogg"
+  },
+  "num_downloads": 53,
+  "avg_rating": 2.0,
+  "num_ratings": 1
+ },
+ {
+  "id": 621237,
+  "url": "https://freesound.org/people/Calamity.chr/sounds/621237/",
+  "name": "Nixuss Game - wait at the baja lake with the otter.mp3",
+  "tags": [
+   "8bit",
+   "beepbox",
+   "loop",
+   "music",
+   "sparkly"
+  ],
+  "description": "(Wait at the lake with the otter) Yet another 'Chibi' song from Beepbox. I went for a mystical pond kind of sound that's kinda stupid and upbeat but eh... The presets were already there so I did what I could with them. I'm sure you'll find a use for it :)",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "mp3",
+  "duration": 118.192,
+  "samplerate": 44100.0,
+  "username": "Calamity.chr",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/621/621237_13101043-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/621/621237_13101043-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/621/621237_13101043-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/621/621237_13101043-lq.ogg"
+  },
+  "num_downloads": 93,
+  "avg_rating": 4.666666666666667,
+  "num_ratings": 6
+ },
+ {
+  "id": 221761,
+  "url": "https://freesound.org/people/Motion_S/sounds/221761/",
+  "name": "Otters Squeaking.wav",
+  "tags": [
+   "Animals",
+   "Forest",
+   "Otters",
+   "Park",
+   "Squeak",
+   "Squeaking",
+   "Squeal"
+  ],
+  "description": "Two otters Squeaking in the middle of a Wildlife Park centre . \r\n\r\nRecorded using Tascam DR-07 MKII . ",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "wav",
+  "duration": 37.4073,
+  "samplerate": 44100.0,
+  "username": "Motion_S",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/221/221761_3299593-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/221/221761_3299593-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/221/221761_3299593-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/221/221761_3299593-lq.ogg"
+  },
+  "num_downloads": 845,
+  "avg_rating": 5.0,
+  "num_ratings": 6
+ },
+ {
+  "id": 23142,
+  "url": "https://freesound.org/people/stackpool/sounds/23142/",
+  "name": "river otter or weasel 2006-09-17.mp3",
+  "tags": [
+   "call",
+   "cape-breton",
+   "cry",
+   "distress",
+   "field-recording",
+   "mammal",
+   "mustelid",
+   "nature",
+   "north-america",
+   "weasel"
+  ],
+  "description": "I believe this to be a weasel, but it could have been a river otter, asthe only part of the animal I saw was the snout down a dark hole. Theanimal was amidst the riprap at the end of our garden, and beingtormented by two neighbourhood dogs. I shooed the dogs away, but theanimal continued to shriek for some time. I have this in WAV format if anyone requires it, but I'm sending the MP3 because the original is 26Mb long and I'm on dialup. ===FYI - I saw an animal swimming in the river a few days later, and am 98.5% certain it was a river otter. =====2007-09-07OK. My biologist wife and I have come to the conclusion that it's an American mink (Mustela vison). Poor little guy.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "mp3",
+  "duration": 63.3872,
+  "samplerate": 44100.0,
+  "username": "stackpool",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/23/23142_92534-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/23/23142_92534-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/23/23142_92534-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/23/23142_92534-lq.ogg"
+  },
+  "num_downloads": 1391,
+  "avg_rating": 4.096774193548387,
+  "num_ratings": 31
+ },
+ {
+  "id": 531960,
+  "url": "https://freesound.org/people/dibko/sounds/531960/",
+  "name": "Sestrški ribnik - Slovenia.wav",
+  "tags": [
+   "ambience",
+   "animal",
+   "animals",
+   "birds",
+   "europe",
+   "field-recording",
+   "fly",
+   "nature",
+   "outdoor",
+   "pond",
+   "slovenia",
+   "sound",
+   "tree",
+   "water",
+   "wind"
+  ],
+  "description": "Recorder: ZOOM H4n Pro\n\nIt promised a hot day. A little laziness helped me leave home with my wife and dog. We drove to the Sestrze Pond. In the middle of the fields and meadows reigns a pond in which we find birds, fish, frogs and snakes. Sometimes otters were also present.\n\nLink: <a href=\"https://www.google.com/maps/search/sestr%C5%BEe+pond/@46.3566235,15.6688587,14z/data=!3m1!4b1?hl=sl\" rel=\"nofollow\">https://www.google.com/maps/search/sestr%C5%BEe+pond/@46.3566235,15.6688587,14z/data=!3m1!4b1?hl=sl</a>\n\nIf any of these sounds have been of help, and you are feeling charitable, please do consider <a href=\"https://freesound.org/donations/donate/\" rel=\"nofollow\">donating to Freesound.org</a> to help keep the site running (a link is also on the home page). Any donations are greatly appreciated!\n\nYOU ALWAYS HAVE TO CREDIT/ATTRIBUTE me (dibko) and <a href=\"https://freesound.org/\" rel=\"nofollow\">freesound.org</a> in your work if you use this sound.\nPlease do it like this if possible: <a href=\"https://freesound.org/people/dibko/\" rel=\"nofollow\">https://freesound.org/people/dibko/</a>\nThank you.\nThis sound may NOT be used in (royalty free) stock material. Don't put my raw sounds/files on youtube or anywhere else. You can use them in creative way as a part of art-form, but not \"re-distribute\" as (royalty free) stock material. Thank you.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "wav",
+  "duration": 48.0964,
+  "samplerate": 44100.0,
+  "username": "dibko",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/531/531960_10152894-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/531/531960_10152894-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/531/531960_10152894-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/531/531960_10152894-lq.ogg"
+  },
+  "num_downloads": 159,
+  "avg_rating": 5.0,
+  "num_ratings": 6
+ },
+ {
+  "id": 187475,
+  "url": "https://freesound.org/people/JamesmMcArdle/sounds/187475/",
+  "name": "Round hill Honiton.aiff",
+  "tags": [
+   "Devon",
+   "East",
+   "Honiton",
+   "October",
+   "Roundball",
+   "UK",
+   "birds",
+   "closing",
+   "gate",
+   "hill",
+   "opening"
+  ],
+  "description": "Walking from top of Roundball Hill above Honiton in East Devon, through a wooden gate, down gravel Roundball Lane and toward Sidmouth Road. \r\n\r\nRoundball Hill is in picturesque Roundball Wood, a small area of woodland to the south of Honiton, on the northern slope of Roundball Hill within the East Devon Area of Outstanding Natural Beauty.\r\n\r\nThe Wood is classic semi-ancient wet woodland, with magnificent standard oaks about 200 years old, interspersed with alders and beech of a similar age, and an understorey of holly, birch, and hazel, much of which was coppiced in the past. Last but not least, there are magnificent views over Honiton, up and down the Otter Valley and across to the Blackdown Hills AONB.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "aiff",
+  "duration": 60.8356,
+  "samplerate": 44100.0,
+  "username": "JamesmMcArdle",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/187/187475_3477952-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/187/187475_3477952-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/187/187475_3477952-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/187/187475_3477952-lq.ogg"
+  },
+  "num_downloads": 247,
+  "avg_rating": 4.0,
+  "num_ratings": 3
+ },
+ {
+  "id": 594266,
+  "url": "https://freesound.org/people/urrbano/sounds/594266/",
+  "name": "flying car taking off",
+  "tags": [
+   "fiction",
+   "future",
+   "sci"
+  ],
+  "description": "sound I made using a whale mating call, otter squealing, plastic bag as rain, and buses outside of my class. tried to make a blade runner type vehicle taking off and I also tried to create some ambience to go along with the moody blade runner type of style I was going for.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 22.4904,
+  "samplerate": 44100.0,
+  "username": "urrbano",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/594/594266_13225912-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/594/594266_13225912-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/594/594266_13225912-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/594/594266_13225912-lq.ogg"
+  },
+  "num_downloads": 142,
+  "avg_rating": 5.0,
+  "num_ratings": 6
+ },
+ {
+  "id": 735560,
+  "url": "https://freesound.org/people/borderblaster/sounds/735560/",
+  "name": "guiro-120bpm",
+  "tags": [
+   "drum",
+   "gourd",
+   "guiro",
+   "hispanic",
+   "latin",
+   "latino",
+   "percussion",
+   "rasp",
+   "scraper",
+   "shaker",
+   "sticks",
+   "sultry",
+   "wood"
+  ],
+  "description": "This is guiro or wooden scraper, a percussion instrument you hear rasping like a 200-pound cricket trilling in a cave. While the end of the clip cuts off the reverb that was already applied, it's 100% unnoticeable if used as intended, which is to repeat the clip back-to-back indefinitely and fade out.  \n\nThe tempo is 120 BPM and it's ready to loop. I used it in a 4/4 time demo clip elsewhere.\n\nI recorded this as part of a demo of a hybrid instrument that is a wooden guiro (rasp, scraper) built onto a Native American style flute (NAsF) sold under Otter Lake Flutes. You are welcome to use it however you like. I am the maker of the instrument, as well.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 4.27272,
+  "samplerate": 44100.0,
+  "username": "borderblaster",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/735/735560_8800407-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/735/735560_8800407-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/735/735560_8800407-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/735/735560_8800407-lq.ogg"
+  },
+  "num_downloads": 444,
+  "avg_rating": 4.588235294117647,
+  "num_ratings": 17
+ },
+ {
+  "id": 412197,
+  "url": "https://freesound.org/people/OutofPhaze/sounds/412197/",
+  "name": "Airplane warning",
+  "tags": [
+   "aircraft",
+   "airplane",
+   "computer",
+   "plane",
+   "recording",
+   "voice",
+   "warning"
+  ],
+  "description": "automated warning \"stall, stall\" \"too low, terrain\" computer voice in cockpit of airplane.\r\nAircraft intercom plugged directly into Sony 664 field recorder and recorded at 48Kh 16bit .WAV file of the Ground Proximity Warning System automated alert on a DHC-6 Twin Otter.\r\nFile converted to .aif for upload.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "aiff",
+  "duration": 9.4094,
+  "samplerate": 48000.0,
+  "username": "OutofPhaze",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/412/412197_8044044-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/412/412197_8044044-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/412/412197_8044044-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/412/412197_8044044-lq.ogg"
+  },
+  "num_downloads": 798,
+  "avg_rating": 4.5,
+  "num_ratings": 20
+ },
+ {
+  "id": 475221,
+  "url": "https://freesound.org/people/Sheyvan/sounds/475221/",
+  "name": "Impact: Metal 1",
+  "tags": [
+   "Door",
+   "Hit",
+   "Impact",
+   "Metal",
+   "Shut",
+   "Slam"
+  ],
+  "description": "This sound was NOT recorded by capturing the lost souls trapped in DougDougs basement. DougDoug is on record as a liar and needs to be held accountable! It is however performed by Sea Otter Rosa violently clapping her fuzzy little paws.\n\nRecorded by Joshua Rasch and Dominik Reinicke / Edited by Philipp Grzemba",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 1.18285,
+  "samplerate": 48000.0,
+  "username": "Sheyvan",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/475/475221_3248005-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/475/475221_3248005-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/475/475221_3248005-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/475/475221_3248005-lq.ogg"
+  },
+  "num_downloads": 2472,
+  "avg_rating": 4.757575757575758,
+  "num_ratings": 66
+ },
+ {
+  "id": 824533,
+  "url": "https://freesound.org/people/TicAshfield/sounds/824533/",
+  "name": "Cardiff - Otter Statue, Bute Park",
+  "tags": [
+   "Cardiff",
+   "City",
+   "Citycentre",
+   "fieldrecording",
+   "urban"
+  ],
+  "description": "Recorded on a Zoom H4N.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 169.232,
+  "samplerate": 44100.0,
+  "username": "TicAshfield",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/824/824533_2047664-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/824/824533_2047664-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/824/824533_2047664-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/824/824533_2047664-lq.ogg"
+  },
+  "num_downloads": 17,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 824532,
+  "url": "https://freesound.org/people/TicAshfield/sounds/824532/",
+  "name": "Cardiff - Walking From Stone Circle To Otter Statue, Bute Park",
+  "tags": [
+   "Cardiff",
+   "City",
+   "Citycentre",
+   "fieldrecording",
+   "urban"
+  ],
+  "description": "Recorded on a Zoom H4N.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 63.2578,
+  "samplerate": 44100.0,
+  "username": "TicAshfield",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/824/824532_2047664-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/824/824532_2047664-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/824/824532_2047664-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/824/824532_2047664-lq.ogg"
+  },
+  "num_downloads": 6,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 772103,
+  "url": "https://freesound.org/people/mushroom0otter/sounds/772103/",
+  "name": "opening",
+  "tags": [
+   "frozen",
+   "opening",
+   "window"
+  ],
+  "description": "just a frozen window opening sound",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "mp3",
+  "duration": 1.76299,
+  "samplerate": 44100.0,
+  "username": "mushroom0otter",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/772/772103_16641867-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/772/772103_16641867-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/772/772103_16641867-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/772/772103_16641867-lq.ogg"
+  },
+  "num_downloads": 23,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ }
+]

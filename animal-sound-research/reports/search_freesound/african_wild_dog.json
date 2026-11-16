@@ -1,0 +1,56 @@
+[
+ {
+  "id": 191763,
+  "url": "https://freesound.org/people/wolley/sounds/191763/",
+  "name": "lucky.wav",
+  "tags": [
+   "Lucky",
+   "noise",
+   "panting"
+  ],
+  "description": "First time to try the audacity to record the sound for my application, so accidentally I recorded Lucky's painting noise. \r\nLucky is my favor lady dog! ",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 5.89701,
+  "samplerate": 44100.0,
+  "username": "wolley",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/191/191763_3571359-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/191/191763_3571359-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/191/191763_3571359-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/191/191763_3571359-lq.ogg"
+  },
+  "num_downloads": 98,
+  "avg_rating": 2.3333333333333335,
+  "num_ratings": 3
+ },
+ {
+  "id": 813627,
+  "url": "https://freesound.org/people/solarpsychedelic/sounds/813627/",
+  "name": "Big Dog and Little Dog",
+  "tags": [
+   "cute",
+   "electronic",
+   "funny",
+   "game",
+   "humor",
+   "music",
+   "synth"
+  ],
+  "description": "Synth sounds that paint a musical portrait of two dogs, one big and one little, running around and playing together.\n\nMade with my MIDI controller.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 18.3732,
+  "samplerate": 44100.0,
+  "username": "solarpsychedelic",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/813/813627_8645255-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/813/813627_8645255-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/813/813627_8645255-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/813/813627_8645255-lq.ogg"
+  },
+  "num_downloads": 143,
+  "avg_rating": 4.2727272727272725,
+  "num_ratings": 11
+ }
+]

@@ -1,0 +1,321 @@
+{
+ "buffalo": {
+  "reason": "Tek aday, bizon ve manda seslerinin karışık olduğu, kaynağı doğrulanamayan bir derleme; hangi bölümün Afrika mandası olduğu bilinemediği için kullanılmadı. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "gazelle": {
+  "reason": "Çıkan tek dosya Antarktika kürklü fokuna (Arctocephalus gazella) ait; ceylan değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "skunk": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:Bonasa umbellus - Ruffed Grouse XC132863.ogg",
+    "page": "https://commons.wikimedia.org/wiki/File:Bonasa_umbellus_-_Ruffed_Grouse_XC132863.ogg",
+    "seconds": 215.232,
+    "licence": "CC BY-SA 3.0",
+    "author": "Jonathon Jongsma",
+    "description": "Unseen bird performing drumming display in open woodland. This recording contains 7 consecutive displays which were given at intervals of approximately 2 to 2.5 minutes. Intervals removed due to mic handling noise, etc. During display 3, I had to change position to avoid an unpleasant encounter with a wandering and rather oblivious striped skunk... Recorded with Olympus LS-10S and Sennheiser ME66 "
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "armadillo": {
+  "reason": "Çıkan dosyalar sesli kitap ve müzik; hayvan sesi değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:Bradyporus dasypus male.flac",
+    "page": "https://commons.wikimedia.org/wiki/File:Bradyporus_dasypus_male.flac",
+    "seconds": 24.47673469387755,
+    "licence": "CC BY-SA 4.0",
+    "author": "Zyoute",
+    "description": "Mâle chantant enregistré avec un Nikon D5300"
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "snow_leopard": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "mandrill": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "orangutan": {
+  "reason": "Uygun lisanslı tek kayıt, eğitilmiş bir orangutanın konuşma benzeri sesleri; türün doğal sesi olmadığı için kullanılmadı. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "ibex": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "musk_ox": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "squirrel_monkey": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "coati": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "african_wild_dog": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:Lycaon pictus hoo-sound.wav",
+    "page": "https://commons.wikimedia.org/wiki/File:Lycaon_pictus_hoo-sound.wav",
+    "seconds": 120.55219954648526,
+    "licence": "CC BY-SA 4.0",
+    "author": "Elsa Sandoval, Stichting Painted Dog Conservation",
+    "description": "recording of the hoo-sound, made by the African Wild dog, Lycaon pictus, while feeding"
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "arctic_fox": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "sand_cat": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "okapi": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "ostrich": {
+  "reason": "Çıkan dosya bir el işi atölyesi kaydı; hayvan sesi değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:Enyinnunu.ogg",
+    "page": "https://commons.wikimedia.org/wiki/File:Enyinnunu.ogg",
+    "seconds": 1.207437641723356,
+    "licence": "CC BY-SA 4.0",
+    "author": "Obihoja",
+    "description": "igbo language pronunciation of enyinnunu meaning ostrich"
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "chameleon": {
+  "reason": "Çıkan dosya bir konser tanıtımı; hayvan sesi değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:XDR half-dtmf for the string *dd74819b.ogg",
+    "page": "https://commons.wikimedia.org/wiki/File:XDR_half-dtmf_for_the_string_*dd74819b.ogg",
+    "seconds": 1,
+    "licence": "CC BY-SA 4.0",
+    "author": "Hackerb9",
+    "description": "Recreation of the data tones at end of an XDR cassette. This example is based on Chameleon Records catalog number 74819. (Cinéma Vérité by Dramarama, 1985). This was created using sox."
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "iguana": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "tortoise": {
+  "reason": "Çıkan dosyalar kelime telaffuzu; hayvan sesi değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 2 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:Sound of tortoise sex.ogg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sound_of_tortoise_sex.ogg",
+    "seconds": 50.24292517006803,
+    "licence": "CC BY-SA 3.0",
+    "author": "Amada44",
+    "description": "Sound of tortoise sex. Tortoise make very strange noises during sex. The species of tortoise is unknown. There where small ones keept as pets."
+   },
+   {
+    "title": "File:Tortoise-mbe.oga",
+    "page": "https://commons.wikimedia.org/wiki/File:Tortoise-mbe.oga",
+    "seconds": 2.176,
+    "licence": "CC BY-SA 4.0",
+    "author": "Suleiman6677",
+    "description": "Igbo words"
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "poison_dart_frog": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "salamander": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "bearded_dragon": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "tarantula": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:Maskotak, Ludoak.ogg",
+    "page": "https://commons.wikimedia.org/wiki/File:Maskotak,_Ludoak.ogg",
+    "seconds": 21.44,
+    "licence": "CC BY-SA 4.0",
+    "author": "Naielsd",
+    "description": "Tarantula lanerako parte bat"
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "rhinoceros_beetle": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "centipede": {
+  "reason": "Çıkan dosya müzik; hayvan sesi değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:The Flowers of Robert Mapplethorpe - centipede.ogg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Flowers_of_Robert_Mapplethorpe_-_centipede.ogg",
+    "seconds": 176,
+    "licence": "CC BY-SA 3.0",
+    "author": "Patricia Taxxon",
+    "description": "Track 3 from the album \"The Flowers of Robert Mapplethorpe\" by Patricia Taxxon."
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "chinchilla": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "tarsier": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "stag_beetle": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "sea_turtle": {
+  "reason": "Çıkan dosya müzik; hayvan sesi değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "clownfish": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "shark": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "starfish": {
+  "reason": "Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "seahorse": {
+  "reason": "Çıkan dosyalar beyin araştırması ekleri (Hippocampus = beynin bir bölgesi); hayvan sesi değil. Wikimedia Commons'ta ticari kullanıma uygun lisanslı (CC0, kamu malı, CC BY) ve türü doğrulanabilir kayıt bulunamadı. Hayvanın adı geçen 1 CC BY-SA kayıt ayrı listeye alındı (içlerinde konuyla ilgisiz olanlar olabilir). Freesound da tarandı; orada da uygun, türü belli bir kayıt çıkmadı. Xeno-canto API anahtarı istediği için taranamadı.",
+  "cc_by_sa_candidates": [
+   {
+    "title": "File:Hippocampus.ogg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hippocampus.ogg",
+    "seconds": 4163.952244897959,
+    "licence": "CC BY-SA 4.0",
+    "author": "Speaker: HumbleSolipsist1 Authors of the article",
+    "description": "This is a spoken word version of the Wikipedia article: Hippocampus Corresponding article version: [Click here to see the article as it was read https://en.wikipedia.org/w/index.php?title=Hippocampus&oldid=1303028356 ] Listen to this article ( audio help ) .mw-parser-output .see-also{background:var(--background-color-interactive-subtle,#f8f9fa);margin:1em 0;border:1px solid var(--border-color-subt"
+   }
+  ],
+  "environment_sound_considered": false
+ },
+ "ladybug": {
+  "reason": "Bulunan kayıt (Freesound, TravieDoodle) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "ant": {
+  "reason": "Bulunan kayıt (Freesound, 130221) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "praying_mantis": {
+  "reason": "Bulunan kayıt (Freesound, nicotep) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "llama": {
+  "reason": "Bulunan kayıt (Freesound, clawback) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "magpie": {
+  "reason": "Bulunan kayıt (Wikimedia Commons, Spyros Papanastasiou) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "leopard": {
+  "reason": "Bulunan kayıt (Freesound, drobiumdesign) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "tapir": {
+  "reason": "Bulunan kayıt (Freesound, miastodzwiekow) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "hamster": {
+  "reason": "Bulunan kayıt (Freesound, ondrosik) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "serval": {
+  "reason": "Bulunan kayıt (Freesound, TheKingOfGeeks360) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "song_thrush": {
+  "reason": "Bulunan kayıt (Wikimedia Commons, Barracuda1983) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "reindeer": {
+  "reason": "Bulunan kayıt (Freesound, YleArkisto) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "emu": {
+  "reason": "Bulunan kayıt (Freesound, TheKingOfGeeks360) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ },
+ "partridge": {
+  "reason": "Bulunan kayıt (Freesound, dobroide) kontrol sayfasında reddedildi; kararınız gereği yeniden araştırılmayacak, hayvan sessiz kalıyor.",
+  "cc_by_sa_candidates": [],
+  "environment_sound_considered": false
+ }
+}

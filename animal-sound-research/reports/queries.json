@@ -1,0 +1,403 @@
+{
+ "rhinoceros": [
+  "Rhinocerotidae",
+  "rhinoceros",
+  "Ceratotherium",
+  "Diceros"
+ ],
+ "hippopotamus": [
+  "Hippopotamus amphibius",
+  "hippopotamus"
+ ],
+ "bison": [
+  "Bison bison",
+  "Bison bonasus",
+  "bison"
+ ],
+ "buffalo": [
+  "Syncerus caffer",
+  "African buffalo"
+ ],
+ "gazelle": [
+  "Gazella",
+  "gazelle"
+ ],
+ "wild_boar": [
+  "Sus scrofa",
+  "wild boar",
+  "Wildschwein"
+ ],
+ "chimpanzee": [
+  "Pan troglodytes",
+  "chimpanzee"
+ ],
+ "moose": [
+  "Alces alces",
+  "moose"
+ ],
+ "skunk": [
+  "Mephitis",
+  "skunk"
+ ],
+ "porcupine": [
+  "Hystrix",
+  "Erethizon",
+  "porcupine"
+ ],
+ "armadillo": [
+  "Dasypus",
+  "armadillo"
+ ],
+ "fennec_fox": [
+  "Vulpes zerda",
+  "fennec"
+ ],
+ "leopard": [
+  "Panthera pardus",
+  "leopard"
+ ],
+ "lynx": [
+  "Lynx lynx",
+  "Lynx rufus",
+  "lynx"
+ ],
+ "puma": [
+  "Puma concolor",
+  "cougar",
+  "mountain lion"
+ ],
+ "snow_leopard": [
+  "Panthera uncia",
+  "snow leopard"
+ ],
+ "polar_bear": [
+  "Ursus maritimus",
+  "polar bear"
+ ],
+ "red_panda": [
+  "Ailurus fulgens",
+  "red panda"
+ ],
+ "meerkat": [
+  "Suricata suricatta",
+  "meerkat"
+ ],
+ "lemur": [
+  "Lemur catta",
+  "Indri indri",
+  "Varecia",
+  "lemur"
+ ],
+ "baboon": [
+  "Papio",
+  "baboon"
+ ],
+ "mandrill": [
+  "Mandrillus sphinx",
+  "mandrill"
+ ],
+ "orangutan": [
+  "Pongo pygmaeus",
+  "Pongo abelii",
+  "orangutan"
+ ],
+ "tapir": [
+  "Tapirus",
+  "tapir"
+ ],
+ "ibex": [
+  "Capra ibex",
+  "ibex",
+  "Steinbock"
+ ],
+ "musk_ox": [
+  "Ovibos moschatus",
+  "muskox",
+  "musk ox"
+ ],
+ "squirrel_monkey": [
+  "Saimiri",
+  "squirrel monkey"
+ ],
+ "capuchin": [
+  "Cebus",
+  "Sapajus",
+  "capuchin"
+ ],
+ "japanese_macaque": [
+  "Macaca fuscata",
+  "Japanese macaque"
+ ],
+ "coati": [
+  "Nasua",
+  "coati"
+ ],
+ "african_wild_dog": [
+  "Lycaon pictus",
+  "African wild dog"
+ ],
+ "dingo": [
+  "Canis lupus dingo",
+  "dingo"
+ ],
+ "arctic_fox": [
+  "Vulpes lagopus",
+  "arctic fox"
+ ],
+ "sand_cat": [
+  "Felis margarita",
+  "sand cat"
+ ],
+ "serval": [
+  "Leptailurus serval",
+  "serval"
+ ],
+ "reindeer": [
+  "Rangifer tarandus",
+  "reindeer",
+  "caribou"
+ ],
+ "okapi": [
+  "Okapia johnstoni",
+  "okapi"
+ ],
+ "badger": [
+  "Meles meles",
+  "badger"
+ ],
+ "stork": [
+  "Ciconia ciconia"
+ ],
+ "canary": [
+  "Serinus canaria",
+  "canary"
+ ],
+ "woodpecker": [
+  "Dendrocopos major",
+  "woodpecker"
+ ],
+ "flamingo": [
+  "Phoenicopterus",
+  "flamingo"
+ ],
+ "kingfisher": [
+  "Alcedo atthis",
+  "kingfisher"
+ ],
+ "magpie": [
+  "Pica pica",
+  "magpie"
+ ],
+ "sparrow": [
+  "Passer domesticus",
+  "house sparrow"
+ ],
+ "crane": [
+  "Grus grus",
+  "common crane"
+ ],
+ "pheasant": [
+  "Phasianus colchicus",
+  "pheasant"
+ ],
+ "cockatoo": [
+  "Cacatua",
+  "cockatoo"
+ ],
+ "toucan": [
+  "Ramphastos",
+  "toucan"
+ ],
+ "budgerigar": [
+  "Melopsittacus undulatus",
+  "budgerigar"
+ ],
+ "starling": [
+  "Sturnus vulgaris",
+  "starling"
+ ],
+ "chaffinch": [
+  "Fringilla coelebs",
+  "chaffinch"
+ ],
+ "song_thrush": [
+  "Turdus philomelos",
+  "song thrush"
+ ],
+ "nightjar": [
+  "Caprimulgus europaeus",
+  "nightjar"
+ ],
+ "pelican": [
+  "Pelecanus",
+  "pelican"
+ ],
+ "ostrich": [
+  "Struthio camelus",
+  "ostrich"
+ ],
+ "emu": [
+  "Dromaius novaehollandiae",
+  "emu"
+ ],
+ "kiwi": [
+  "Apteryx",
+  "kiwi"
+ ],
+ "guineafowl": [
+  "Numida meleagris",
+  "guineafowl"
+ ],
+ "quail": [
+  "Coturnix coturnix",
+  "common quail"
+ ],
+ "partridge": [
+  "Alectoris",
+  "Perdix perdix",
+  "partridge"
+ ],
+ "bustard": [
+  "Otis tarda",
+  "bustard"
+ ],
+ "peregrine_falcon": [
+  "Falco peregrinus",
+  "peregrine"
+ ],
+ "chameleon": [
+  "Chamaeleo",
+  "chameleon"
+ ],
+ "iguana": [
+  "Iguana iguana",
+  "iguana"
+ ],
+ "tortoise": [
+  "Testudo",
+  "tortoise"
+ ],
+ "poison_dart_frog": [
+  "Dendrobates",
+  "Dendrobatidae",
+  "poison frog"
+ ],
+ "salamander": [
+  "Salamandra",
+  "salamander"
+ ],
+ "bearded_dragon": [
+  "Pogona",
+  "bearded dragon"
+ ],
+ "ladybug": [
+  "Coccinellidae",
+  "ladybird",
+  "ladybug"
+ ],
+ "grasshopper": [
+  "Chorthippus",
+  "Acrididae",
+  "grasshopper"
+ ],
+ "ant": [
+  "Formicidae",
+  "ant stridulation"
+ ],
+ "dragonfly": [
+  "Odonata",
+  "dragonfly"
+ ],
+ "tarantula": [
+  "Theraphosidae",
+  "tarantula"
+ ],
+ "rhinoceros_beetle": [
+  "Oryctes",
+  "Dynastinae",
+  "rhinoceros beetle"
+ ],
+ "praying_mantis": [
+  "Mantis religiosa",
+  "Mantodea",
+  "mantis"
+ ],
+ "centipede": [
+  "Scolopendra",
+  "Chilopoda",
+  "centipede"
+ ],
+ "hedgehog": [
+  "Erinaceus europaeus",
+  "hedgehog"
+ ],
+ "opossum": [
+  "Didelphis",
+  "opossum"
+ ],
+ "chinchilla": [
+  "Chinchilla"
+ ],
+ "hamster": [
+  "Mesocricetus",
+  "hamster"
+ ],
+ "tarsier": [
+  "Tarsius",
+  "tarsier"
+ ],
+ "cicada": [
+  "Cicada orni",
+  "Lyristes plebejus",
+  "Cicadidae",
+  "cicada"
+ ],
+ "wasp": [
+  "Vespula",
+  "Vespa crabro",
+  "wasp"
+ ],
+ "stag_beetle": [
+  "Lucanus cervus",
+  "stag beetle"
+ ],
+ "sea_turtle": [
+  "Chelonia mydas",
+  "Cheloniidae",
+  "sea turtle"
+ ],
+ "clownfish": [
+  "Amphiprion",
+  "clownfish"
+ ],
+ "shark": [
+  "Selachimorpha",
+  "shark"
+ ],
+ "starfish": [
+  "Asteroidea",
+  "starfish"
+ ],
+ "seahorse": [
+  "Hippocampus",
+  "seahorse"
+ ],
+ "otter": [
+  "Lutra lutra",
+  "Lontra",
+  "otter"
+ ],
+ "beaver": [
+  "Castor fiber",
+  "Castor canadensis",
+  "beaver"
+ ],
+ "rabbit": [
+  "Oryctolagus cuniculus",
+  "rabbit"
+ ],
+ "llama": [
+  "Lama glama",
+  "llama"
+ ]
+}

@@ -1,0 +1,15 @@
+== {{int:filedesc}} ==
+{{Information
+|Description    ={{ru|1=Крик Серого журавля (Grus_grus) в полете, в момент «переклички» стаи (22 особи). Записано 17 апреля 2011 в ЦЛГПБЗ (Центрально-лесной государственный природный биосферный заповедник, Российская федерация, Тверская область, Нелидовский район}}
+|Source         =записано в лесу
+|Author         =Волков Владислав Петрович (с разрешения серого журавля)
+|Date           =2011-04-16
+|Permission     =
+|other_versions =
+}}
+
+== {{int:license-header}} ==
+{{self|Cc-zero}}
+
+[[Category:Grus grus (audio)]]
+[[Category:Central Forest Nature Reserve]]

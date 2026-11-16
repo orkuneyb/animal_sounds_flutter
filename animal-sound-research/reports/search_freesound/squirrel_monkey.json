@@ -1,0 +1,38 @@
+[
+ {
+  "id": 445119,
+  "url": "https://freesound.org/people/Breviceps/sounds/445119/",
+  "name": "Animal / Cartoon - Cooing, Curr - Parrot",
+  "tags": [
+   "animal",
+   "bird",
+   "cartoon",
+   "coo",
+   "cooing",
+   "curr",
+   "curring",
+   "cute",
+   "gnarl",
+   "goblin",
+   "monkey",
+   "parrot",
+   "snarl",
+   "squirrel"
+  ],
+  "description": "A cartoon parrot-like cooing",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 1.50508,
+  "samplerate": 44100.0,
+  "username": "Breviceps",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/445/445119_9159316-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/445/445119_9159316-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/445/445119_9159316-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/445/445119_9159316-lq.ogg"
+  },
+  "num_downloads": 2128,
+  "avg_rating": 4.565217391304348,
+  "num_ratings": 23
+ }
+]

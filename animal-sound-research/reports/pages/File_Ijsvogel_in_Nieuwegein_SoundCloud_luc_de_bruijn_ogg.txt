@@ -1,0 +1,52 @@
+{{Geluid van Nederland layout
+|attachments_uri=https://api.soundcloud.com/tracks/59984023/attachments
+|video_url=None
+|track_type=None
+|release_month=04
+|original_format=mp3
+|label_name=None
+|duration=180730
+|id=23393769
+|streamable=True
+|user_id=23393769
+|title=ijsvogel in Nieuwegein
+|favoritings_count=1
+|commentable=True
+|label_id=None
+|download_url=https://api.soundcloud.com/tracks/59984023/download
+|state=finished
+|avatar_url=https://a1.sndcdn.com/images/default_avatar_large.png?e48997d
+|downloadable=True
+|waveform_url=https://w1.sndcdn.com/bfVcgJIY19Il_m.png
+|username=luc de bruijn
+|sharing=public
+|description=IJsvogels broeden op allerlei plekken waar geschikte steile oevers en visrijk water aanwezig zijn. Hier in Park Oudegein In Nieuwegein
+|release_day=07
+|purchase_url=None
+|permalink=lucdebruijn
+|purchase_title=None
+|stream_url=https://api.soundcloud.com/tracks/59984023/stream
+|key_signature=None
+|genre=Field recording
+|isrc=None
+|download_count=2
+|permalink_url=http://soundcloud.com/lucdebruijn
+|playback_count=50
+|kind=user
+|release_year=2007
+|license=cc-by
+|artwork_url=None
+|created_at=2012/09/15 20:14:46 +0000
+|bpm=None
+|uri=https://api.soundcloud.com/users/23393769
+|original_content_size=7237147
+|comment_count=0
+|release=None
+|tag_list=geo:lat=52.017390751274 geo:lon=5.0861120222 ijsvogel Nieuwegein Oudegein
+|embeddable_by=all
+}}
+[[Category:Sounds of birds recorded in the Netherlands]]
+[[Category:Bird sounds from GvNL]]
+[[Category:Audio files of Troglodytes troglodytes]]
+[[Category:Audio files of Alcedo atthis]]
+[[Category:Media donated for Europeana Sounds edit-a-thons]]

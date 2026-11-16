@@ -1,0 +1,52 @@
+=={{int:filedesc}}==
+
+{{Musical_work
+ | composer =  | composition_date = 
+ | description = A male Yellow Baboon giving its alarm call from a vantage point high up in mango tree, recorded in Ramis, Kenya
+ | image = 
+ | lyrics_writer =  | notes = 
+ | other_fields = {{Information field|name=British Library Shelfmark|value=W1CDR0001419 BD20}}{{Information field|name=Copyright Holder|value=Roland McVicker}}{{Information field|name=Recordist|value=Roland McVicker}}{{Information field|name=Recording Date|value=4 September 1983}}{{Information field|name=Europeana link|value=https://www.europeana.eu/portal/en/record/9200252/BibliographicResource_3000055617832.html}}
+ | other_versions = 
+ | performance_date = 
+ | performer = |permission = {{PermissionTicket|id=2016091410010407|user=BU Rob13}}
+{{cc-by-4.0}}
+ | record_ID = 
+ | references = 
+ | source = {{British Library image |url=http://sounds.bl.uk/Environment/Listen-to-Nature/022M-LISTNAT00106-0001V0|shelfmark= |ms-shelfmark= |cim-msid= |ios= |dips= |system= |hasLicense=yes}}
+ | title = Yellow Baboon (Papio cynocephalus)
+}}
+
+{{Uploaded with GWToolset
+ | gwtoolset-title = Yellow Baboon (Papio cynocephalus) (W PAPIO CYNOCEPHALUS R1 C1)
+ | gwtoolset-url-to-the-media-file = https://www.webarchive.org.uk/bldatasets/Sounds/Wildlife/Yellow%20Baboon_Papio%20cynocephalus_W%20PAPIO%20CYNOCEPHALUS%20R1%20C1.ogg
+}}
+
+
+
+<!-- <metadata_mapped_json>{"composer":null,"composition_date":null,"description":"Yellow Baboon calls, recorded in Ramis, Kenya","image":null,"lyrics_writer":null,"notes":null,"other_fields":"{{Information field|name=British Library Shelfmark|value=W1CDR0001419 BD20}}; {{Information field|name=Copyright Holder|value=Roland McVicker}}; {{Information field|name=Recordist|value=Roland McVicker}}; {{Information field|name=Recording Date|value=30563}}; {{Information field|name=Europeana link|value=http:\/\/www.europeana.eu\/portal\/en\/record\/9200252\/BibliographicResource_3000055617832.html}}","other_versions":null,"performance_date":null,"performer":null,"permission":"{{cc-by-4.0}}","record_ID":null,"references":null,"source":"{{British Library image |url=http:\/\/sounds.bl.uk\/Environment\/Listen-to-Nature\/022M-LISTNAT00106-0001V0|shelfmark= |ms-shelfmark= |cim-msid= |ios= |dips= |system= |hasLicense=yes}}","title":"Yellow Baboon (Papio cynocephalus)","gwtoolset-title":"Yellow Baboon (Papio cynocephalus) (W PAPIO CYNOCEPHALUS R1 C1)","gwtoolset-url-to-the-media-file":"http:\/\/www.webarchive.org.uk\/bldatasets\/Sounds\/Wildlife\/Yellow%20Baboon_Papio%20cynocephalus_W%20PAPIO%20CYNOCEPHALUS%20R1%20C1.ogg"}</metadata_mapped_json> -->
+
+<!-- <metadata_raw>
+&lt;record&gt;
+    &lt;Source&gt;{{British Library image |url=http://sounds.bl.uk/Environment/Listen-to-Nature/022M-LISTNAT00106-0001V0|shelfmark= |ms-shelfmark= |cim-msid= |ios= |dips= |system= |hasLicense=yes}}&lt;/Source&gt;
+    &lt;Title&gt;Yellow Baboon (Papio cynocephalus)&lt;/Title&gt;
+    &lt;Description&gt;Yellow Baboon calls, recorded in Ramis, Kenya&lt;/Description&gt;
+    &lt;Institution&gt;British Library&lt;/Institution&gt;
+    &lt;Permission&gt;{{cc-by-4.0}}&lt;/Permission&gt;
+    &lt;OtherFields1&gt;{{Information field|name=British Library Shelfmark|value=W1CDR0001419 BD20}}&lt;/OtherFields1&gt;
+    &lt;OtherFields2&gt;{{Information field|name=Copyright Holder|value=Roland McVicker}}&lt;/OtherFields2&gt;
+    &lt;OtherFields3&gt;{{Information field|name=Recordist|value=Roland McVicker}}&lt;/OtherFields3&gt;
+    &lt;OtherFields4&gt;{{Information field|name=Recording Date|value=30563}}&lt;/OtherFields4&gt;
+    &lt;OtherFields5&gt;{{Information field|name=Europeana link|value=https://www.europeana.eu/portal/en/record/9200252/BibliographicResource_3000055617832.html}}&lt;/OtherFields5&gt;
+    &lt;GWToolsetTitle&gt;Yellow Baboon (Papio cynocephalus) (W PAPIO CYNOCEPHALUS R1 C1)&lt;/GWToolsetTitle&gt;
+    &lt;URLMediaFile&gt;https://www.webarchive.org.uk/bldatasets/Sounds/Wildlife/Yellow%20Baboon_Papio%20cynocephalus_W%20PAPIO%20CYNOCEPHALUS%20R1%20C1.ogg&lt;/URLMediaFile&gt;
+    &lt;Species&gt;Papio cynocephalus&lt;/Species&gt;
+&lt;/record&gt;
+</metadata_raw> -->
+
+
+
+[[Category:Wildlife Sounds in the British Library]]
+[[Category:Europeana Sounds Wildlife edit-a-thon at the British Library]]
+[[Category:Media donated for Europeana Sounds edit-a-thons]]
+[[Category:Papio cynocephalus in Kenya]]
+[[Category:Audio files of Papio]]

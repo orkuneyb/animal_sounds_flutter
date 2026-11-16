@@ -1,0 +1,15 @@
+== {{int:filedesc}} ==
+{{Information
+|Description={{en|1=Remote Camera Video
+}}
+|Source={{own}}
+|Author=[[User:Bwells|Bwells]]
+|Date=2010-10-26
+|Permission=
+|other_versions=
+}}
+
+== {{int:license-header}} ==
+{{PD-self}}
+
+[[Category:Audio files of animal sounds]]

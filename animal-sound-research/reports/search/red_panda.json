@@ -1,0 +1,47 @@
+[
+ {
+  "title": "File:Red panda twittering.ogg",
+  "page": "https://commons.wikimedia.org/wiki/File:Red_panda_twittering.ogg",
+  "file": "https://upload.wikimedia.org/wikipedia/commons/7/70/Red_panda_twittering.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "seconds": 7.534920634920635,
+  "bytes": 313703,
+  "mime": "application/ogg",
+  "licence": "Public domain",
+  "licence_url": "",
+  "author": "No machine-readable author provided. Mizunoryu assumed (based on copyright claims).",
+  "credit": "No machine-readable source provided. Own work assumed (based on copyright claims).",
+  "description": "Red Panda sounds.",
+  "categories": "Files with no machine-readable source|Ailurus fulgens in zoos|Self-published work|PD-self|Assumed own work",
+  "uploader": "Mizunoryu"
+ },
+ {
+  "title": "File:FireFox.ogg",
+  "page": "https://commons.wikimedia.org/wiki/File:FireFox.ogg",
+  "file": "https://upload.wikimedia.org/wikipedia/commons/a/a2/FireFox.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "seconds": 393.8989569160998,
+  "bytes": 4262425,
+  "mime": "application/ogg",
+  "licence": "CC BY-SA 3.0",
+  "licence_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "author": "",
+  "credit": "Own work",
+  "description": "",
+  "categories": "Mozilla Firefox|Files with no machine-readable author|Media lacking a description|License migration completed|GFDL-disclaimers|Media lacking author information",
+  "uploader": "FSII"
+ },
+ {
+  "title": "File:LL-Q1860 (eng)-Vealhurl-red panda.wav",
+  "page": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-red_panda.wav",
+  "file": "https://upload.wikimedia.org/wikipedia/commons/8/8b/LL-Q1860_%28eng%29-Vealhurl-red_panda.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "seconds": 1.1546666666666667,
+  "bytes": 110892,
+  "mime": "audio/wav",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Speaker: Vealhurl Recorder: Vealhurl",
+  "credit": "Own work",
+  "description": "Audio pronunciation file from the Lingua Libre project.",
+  "categories": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+  "uploader": "Vealhurl"
+ }
+]

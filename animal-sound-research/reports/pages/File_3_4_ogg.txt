@@ -1,0 +1,20 @@
+== {{int:filedesc}} ==
+{{Upload marker added by uk.wp UW}}
+{{Зображення
+|Опис = Їжак білочеревий, звуки їжаченят 3-4 тижні // Erinaceus roumanicus, 3-4 weeks hoglet sounds 
+|Джерело = {{own}}<br/>
+'''Перша публікація:''' Раніше не публікувалось.
+|Час створення = 17.06.2022
+|Автор = [[User:Alex Khimich|Alex Khimich]]
+}}
+
+
+{{self|GFDL|cc-by-sa-4.0|migration=redundant}}
+
+[[Category:Erinaceus roumanicus]]
+[[Category:Mammals of Vinnytsia Oblast]]
+[[Category:Hedgehogs in Ukraine]]
+[[Category:Nature of Vinnytsia Raion]]
+
+== {{int:license-header}} ==
+{{self|GFDL|cc-by-4.0|migration=redundant}}

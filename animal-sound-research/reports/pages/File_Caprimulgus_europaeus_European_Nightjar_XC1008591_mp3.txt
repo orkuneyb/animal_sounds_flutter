@@ -1,0 +1,29 @@
+== {{int:filedesc}} ==
+{{information
+|description={{en|1=
+:bird-seen:no
+:playback-used:no
+:'''Common name:''' European Nightjar
+:'''Type:''' song
+:'''Genus:''' Caprimulgus
+:'''Species:''' europaeus
+:'''Location:''' Schneverdingen
+:'''Country:''' Germany
+:'''Elevation:''' 70 m}}
+|date=2025-06-22 17:45
+|author=ChristianSW
+|source=
+:Metadata: https://www.xeno-canto.org/1008591
+:Audio file: https://www.xeno-canto.org/1008591/download
+}}
+{{object location dec|53.121|9.7383}}
+{{User:Fæ/Projects/Xeno-canto/credit}}
+{{gbif|5995332742}}
+
+== {{int:license-header}} ==
+{{self|Cc-zero}}
+
+[[Category:Audio files of Caprimulgus europaeus]]
+[[Category:Birds of Landkreis Heidekreis]]
+[[Category:Naturschutzgebiet Seemoor und Schwarzes Moor bei Zahrensen]]
+[[Category:Xeno-canto]]

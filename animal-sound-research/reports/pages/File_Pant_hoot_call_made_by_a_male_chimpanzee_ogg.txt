@@ -1,0 +1,14 @@
+== {{int:filedesc}} ==
+{{Uploaded with en.wp UW marker|year=2018|month=03|day=17}}
+{{Information
+|Description = {{en|This is not my own work, It is an example of a pant-hoot call made by an adult male chimpanzee}}
+|Source = https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5674848/#MOESM1
+|Date = 2017-11-06
+|Author = Pawel Fedurek et al.
+|Permission = Underneath "copyright and license information" the author explicitly states the details of the licence and provides the following link: https://creativecommons.org/licenses/by/4.0/
+}}
+
+== {{int:license-header}} ==
+{{cc-by-4.0}}
+
+[[Category:Pan troglodytes| ]]

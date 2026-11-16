@@ -1,0 +1,56 @@
+[
+ {
+  "id": 867552,
+  "url": "https://freesound.org/people/TheKingOfGeeks360/sounds/867552/",
+  "name": "Wild Cats - Serval, Hiss, some Room Tone, Close Perspective",
+  "tags": [
+   "africa",
+   "cat",
+   "exotic",
+   "savanna",
+   "serval",
+   "wild"
+  ],
+  "description": "The serval is a wild cat of the African savanna. Recorded with an LG Stylus 2022.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 1.13225,
+  "samplerate": 48000.0,
+  "username": "TheKingOfGeeks360",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/867/867552_15895934-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/867/867552_15895934-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/867/867552_15895934-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/867/867552_15895934-lq.ogg"
+  },
+  "num_downloads": 8,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 6016,
+  "url": "https://freesound.org/people/Jovica/sounds/6016/",
+  "name": "Rhythmmaker Randomized 140 bpm loop -19.wav",
+  "tags": [
+   "140-bpm",
+   "drumloop",
+   "electro",
+   "loop"
+  ],
+  "description": "A variation on \"Rhythmmaker Randomized 140 bpm loop -17.wav\". This loop is part of the \"Rhythmmaker Randomized 140 bpm\r\nloops pack\" sample pack. They were all created with the Rhythmmaker\r\nensemble, part of the Electronic Instruments Vol. 1, within Reaktor. Tempo is 140 bpm\r\nand duration 1 bar in 4/4. The measure division is sometimes different\r\nfrom the the straight four on the floor and quite experimental.\r\nExported as a loop within Cubase SX and mastering done within Wavelab using serval plugins (EQ, Stereo Enhancer, multiband compressor, limiter).",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "wav",
+  "duration": 1.71431,
+  "samplerate": 44100.0,
+  "username": "Jovica",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/6/6016_2518-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/6/6016_2518-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/6/6016_2518-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/6/6016_2518-lq.ogg"
+  },
+  "num_downloads": 223,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ }
+]

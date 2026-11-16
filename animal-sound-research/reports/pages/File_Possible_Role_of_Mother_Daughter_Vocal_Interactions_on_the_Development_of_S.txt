@@ -1,0 +1,29 @@
+=={{int:filedesc}}==
+
+{{Information
+|Description=
+{{en|1= Co-singing of Z group. }}
+|Date= 2013
+|Source= Sound S3 from {{Cite journal
+| author = Koda H, Lemasson A, Oyakawa C, Rizaldi, Pamungkas J, Masataka N
+| title = Possible Role of Mother-Daughter Vocal Interactions on the Development of Species-Specific Song in Gibbons
+| doi = 10.1371/journal.pone.0071432
+| journal = PLOS ONE
+| year = 2013
+| pmid = 23951160
+| pmc = 3741147
+}}
+|Author= Koda H, Lemasson A, Oyakawa C, Rizaldi, Pamungkas J, Masataka N
+|Permission= {{PLOS}}
+|Other_fields={{Information field|name=Provenance|value= {{Open Access Media Importer}} }}
+}}
+
+[[Category:Developmental biology]]
+[[Category:Behavioral ecology]]
+[[Category:Videos of evolutionary biology]]
+[[Category:Biological anthropology]]
+[[Category:Media from PLOS ONE]]
+[[Category:Uploaded with Open Access Media Importer]]
+[[Category:Uploaded with Open Access Media Importer and needing category review]]
+[[Category:Audio files from open-access scholarly articles]]
+[[Category:Hylobates agilis]]

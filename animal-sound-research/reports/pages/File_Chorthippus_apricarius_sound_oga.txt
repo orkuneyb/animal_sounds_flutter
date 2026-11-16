@@ -1,0 +1,17 @@
+=={{int:filedesc}}==
+{{Information
+|description={{nl|1=Geluid van het [[w:nl:Locomotiefje|Locomotiefje]] ''(Chorthippus apricarius)''}}
+{{en|1=Sound of [[w:en:Chorthippus apricarius|''(Chorthippus apricarius)'']], a grasshopper from the family Acrididae, subfamily Gomphocerinae.}}
+|date=2016-10-03
+|source=CD-ROM accompanying the book by Roy Kleukers and René Krekels: Veldgids Sprinkhanen en Krekels, Zeist, KNNV Uitgeverij, 2014
+|author=Baudewijn Odé
+|permission={{PermissionTicket|id=2016100310004754|user=Edoderoo}}
+|other versions=
+}}
+
+=={{int:license-header}}==
+{{cc-by-sa-4.0}}
+
+[[Category:Chorthippus apricarius]]
+[[Category:Sounds of grasshoppers and crickets of Northwestern Europe (Odé Collection)]]
+[[Category:Audio files of Chorthippus]]

@@ -1,0 +1,18 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=[[:File:Pica pica-2015.6.11.jpg|Pica pica Juvenile]]. It was found in the added location and transfered to a cage in my house where it is being raised.}}
+|date=2015-06-11
+|source={{own}}
+|author=[[User:Enfwm|Spyros Papanastasiou]]
+|permission=
+|other versions=
+}}
+{{Location dec|37.983909|23.731804}}
+[[:File:Pica pica-2015.6.11-orig.flac|Original file here]]
+
+=={{int:license-header}}==
+{{self|cc-zero}}
+
+[[Category:Audio files of Pica pica]]
+[[Category:Pica pica (captive)]]
+[[Category:Pica pica (juvenile)]]

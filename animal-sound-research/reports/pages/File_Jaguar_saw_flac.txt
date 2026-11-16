@@ -1,0 +1,15 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=The "saw" sound made by a jaguar. The audio was extracted from a CC BY licensed video recorded by [https://aboutzoos.info/ About Zoos] at Attica Zoological Park, Greece.}}
+|date=2021-12-02
+|source={{From YouTube|1=VJ0RCZXu0v4|2=https://www.youtube.com/watch?v=VJ0RCZXu0v4}}
+|author=About Zoos
+|permission=
+|other versions=
+}}
+
+=={{int:license-header}}==
+{{cc-by-4.0}}
+
+[[Category:Audio files of animal sounds]]
+[[Category:Panthera]]

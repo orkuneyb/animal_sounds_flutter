@@ -1,0 +1,14 @@
+== {{int:filedesc}} ==
+{{Information
+|Description={{en|Song Thrush (''[[Turdus philomelos]]'') in urban environment. Val de Marne (France).}}{{fr|Grive musicienne (''[[Turdus philomelos]]'') en environnement urbain. Val de Marne (France).}}
+|Source={{Own}}
+|Date=February 12, 2008 - 7:00 am
+|Author= [[User:Barracuda1983|Barracuda1983]]
+|Permission=
+|other_versions=[[:Image:Turdus_philomelos_816.ogg]] (longer)
+}}
+
+== {{int:license-header}} ==
+{{self|GFDL|cc-by-3.0}}
+
+[[Category:Audio files of Turdus philomelos]]

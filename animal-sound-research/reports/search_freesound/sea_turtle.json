@@ -1,0 +1,63 @@
+[
+ {
+  "id": 737221,
+  "url": "https://freesound.org/people/nathanwolek/sounds/737221/",
+  "name": "BIRDSea-tern-flyover-20201111",
+  "tags": [
+   "birds",
+   "field-recording",
+   "sea",
+   "wind"
+  ],
+  "description": "A group of terns flying overhead and calling to each other. The weather was windy, so there is background noise from this throughout. At 45 seconds, there is a large gust of wind. \n\nRecorded at Canaveral National Seashore on Turtle Mound by Nathan Wolek.\n\nCaptured with Sound Devices MixPre-6 and a Crown SASS microphone.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "wav",
+  "duration": 62.0,
+  "samplerate": 48000.0,
+  "username": "nathanwolek",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/737/737221_15709406-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/737/737221_15709406-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/737/737221_15709406-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/737/737221_15709406-lq.ogg"
+  },
+  "num_downloads": 38,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 848187,
+  "url": "https://freesound.org/people/DeqstersLab/sounds/848187/",
+  "name": "Birds of the sea who say mine mine mine",
+  "tags": [
+   "boat",
+   "finding",
+   "fish",
+   "funny",
+   "goofy",
+   "impression",
+   "lost",
+   "mine",
+   "notyours",
+   "parody",
+   "picksare",
+   "seagulls",
+   "water"
+  ],
+  "description": "My impression of The Birds of The Sea Who Say Mine. Something about a fish finding another fish, and like... sea turtles or something, dude? Covered under fair use for parody etc etc. Done for a nonsense story that breaks reality, probably.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "mp3",
+  "duration": 8.98898,
+  "samplerate": 48000.0,
+  "username": "DeqstersLab",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/848/848187_189858-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/848/848187_189858-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/848/848187_189858-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/848/848187_189858-lq.ogg"
+  },
+  "num_downloads": 22,
+  "avg_rating": 5.0,
+  "num_ratings": 1
+ }
+]
