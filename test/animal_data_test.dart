@@ -29,14 +29,33 @@ void main() {
     expect({for (final a in animals) a.name}, hasLength(animals.length));
   });
 
-  test('every animal has a picture, a drawing source and a sound', () {
+  test('every animal has a picture and a sound', () {
     for (final animal in animals) {
       expect(File(animal.imagePath).existsSync(), isTrue,
           reason: '${animal.imagePath} missing');
-      expect(File('scripts/art/svg/${animal.name}.svg').existsSync(), isTrue,
-          reason: 'drawing source for ${animal.name} missing');
       expect(File(animal.soundPath).existsSync(), isTrue,
           reason: '${animal.soundPath} missing');
+    }
+  });
+
+  test('every credit names a known animal, an author and a licence', () {
+    final credits = jsonDecode(File('assets/credits.json').readAsStringSync())
+        as List<dynamic>;
+    final names = {for (final a in animals) a.name};
+    final seen = <String>{};
+    for (final credit in credits.cast<Map<String, dynamic>>()) {
+      final id = '${credit['animal']}/${credit['kind']}';
+      expect(names, contains(credit['animal']), reason: id);
+      expect(['image', 'sound'], contains(credit['kind']), reason: id);
+      expect((credit['author'] as String).trim(), isNotEmpty, reason: id);
+      expect((credit['license'] as String).trim(), isNotEmpty, reason: id);
+      // Share-alike and non-commercial licences are not accepted.
+      expect(credit['license'], isNot(matches(RegExp(r'SA|NC|ND'))),
+          reason: id);
+      if ((credit['license'] as String).startsWith('CC BY')) {
+        expect(credit['license_url'], startsWith('http'), reason: id);
+      }
+      expect(seen.add(id), isTrue, reason: '$id listed twice');
     }
   });
 

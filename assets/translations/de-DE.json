@@ -1004,6 +1004,8 @@
     "squirrel_fun_fact_1": "Aus Nüssen, die ich vergesse, können neue Bäume wachsen.",
     "squirrel_fun_fact_2": "Mein buschiger Schwanz hilft beim Balancieren und hält mich warm.",
     "squirrel_fun_fact_3": "Ich kann kopfüber einen Baum hinunterklettern.",
-    "sound_credits": "Tonquellen",
-    "sound_credits_note": "Danke an die Menschen und Einrichtungen, die diese Töne aufgenommen haben. Die Aufnahmen wurden gekürzt und in der Lautstärke angepasst."
+    "sound_credits": "Quellen und Lizenzen",
+    "sound_credits_note": "Danke an die Menschen und Einrichtungen, die diese Fotos und Töne aufgenommen haben. Die Hintergründe der Fotos wurden entfernt; die Töne wurden gekürzt und in der Lautstärke angepasst.",
+    "credit_photo": "Foto",
+    "credit_sound": "Ton"
 }

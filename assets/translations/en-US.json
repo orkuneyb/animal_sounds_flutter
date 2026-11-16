@@ -1005,6 +1005,8 @@
     "squirrel_fun_fact_1": "The nuts I forget to dig up can grow into new trees.",
     "squirrel_fun_fact_2": "My bushy tail helps me balance and keeps me warm.",
     "squirrel_fun_fact_3": "I can climb down a tree head first.",
-    "sound_credits": "Sound credits",
-    "sound_credits_note": "Thank you to the people and institutions who recorded these sounds. The clips were shortened and their volume was adjusted."
+    "sound_credits": "Sources and licences",
+    "sound_credits_note": "Thank you to the people and institutions who took these photos and recorded these sounds. Photo backgrounds were removed; sounds were shortened and their volume adjusted.",
+    "credit_photo": "Photo",
+    "credit_sound": "Sound"
 }

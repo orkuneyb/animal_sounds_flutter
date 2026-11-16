@@ -1,0 +1,372 @@
+[
+ {
+  "animal": "cat",
+  "kind": "image",
+  "author": "Jakub Hałun",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Cat_in_Marrakech,_Morocco,_20250125_1014_7149.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Cat_in_Marrakech%2C_Morocco%2C_20250125_1014_7149.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "cat",
+  "kind": "sound",
+  "author": "PantheraLeo1359531 (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Weibliche_Britisch_Kurzhaar_will_Futter_C1277_MIAUEN.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Weibliche_Britisch_Kurzhaar_will_Futter_C1277_MIAUEN.wav",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "chicken",
+  "kind": "sound",
+  "author": "alys (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "cow",
+  "kind": "image",
+  "author": "Keith Weller/USDA",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Cow_female_black_white.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Cow_female_black_white.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "cricket",
+  "kind": "sound",
+  "author": "Natural History Museum, London (BioAcoustica)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "crow",
+  "kind": "sound",
+  "author": "G McGrane",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "cuckoo",
+  "kind": "sound",
+  "author": "Σ64 (Wikimedia Commons)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "deer",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "dog",
+  "kind": "image",
+  "author": "Shixart1985",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Beautiful_golden_retriever_dog_in_the_park.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Beautiful_golden_retriever_dog_in_the_park.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "donkey",
+  "kind": "sound",
+  "author": "felix-blume (Freesound)",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "eagle",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "elephant",
+  "kind": "image",
+  "author": "https://pixabay.com/users/laurentmarx-2651758/",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Elephant_in_Africa_(37478786891).jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e2/Elephant_in_Africa_%2837478786891%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "frog",
+  "kind": "image",
+  "author": "Holger Krisp",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Europ%C3%A4ische_Laubfrosch_Hyla_arborea_2.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Europ%C3%A4ische_Laubfrosch_Hyla_arborea_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "frog",
+  "kind": "sound",
+  "author": "NPS / Theresa Thom",
+  "license": "Public domain",
+  "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "source_page": "https://www.nps.gov/subjects/sound/sounds-green-treefrog.htm",
+  "file_url": "https://www.nps.gov/nps-audiovideo/legacy/mp3/nri/avElement/nri-GreenTreeFrogEvergladesNP.mp3",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "goat",
+  "kind": "sound",
+  "author": "stephan (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "goose",
+  "kind": "sound",
+  "author": "U.S. Fish and Wildlife Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "horse",
+  "kind": "image",
+  "author": "Notyourbroom",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Assateague_Island_horses_August_2009_3.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Assateague_Island_horses_August_2009_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "horse",
+  "kind": "sound",
+  "author": "Briefer E, Maigrot A, Mandel R, Freymond S, Bachmann I, Hillmann E",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Segregation-of-information-about-emotional-arousal-and-valence-in-horse-whinnies-srep09989-s2.oga",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Segregation-of-information-about-emotional-arousal-and-valence-in-horse-whinnies-srep09989-s2.oga",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "hyena",
+  "kind": "sound",
+  "author": "David Watts / The British Library",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "lion",
+  "kind": "image",
+  "author": "Daniel Aufgang",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Panthera_leo_(male)_(181091659).jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Panthera_leo_%28male%29_%28181091659%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "lion",
+  "kind": "sound",
+  "author": "Jonathan Growcott, Alex Lobora, Andrew Markham, Charlotte E. Searle, Johan Wahlström, Matthew Wijers, Benno I. Simmons",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Lionroar.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Lionroar.wav",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "mouse",
+  "kind": "sound",
+  "author": "Holy T, Guo Z. PLOS Biology, 2005",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "owl",
+  "kind": "image",
+  "author": "Uhu,_2.jpg : Rainer Lippert derivative work: Hic et nunc",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Uhu,_2a.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Uhu%2C_2a.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "owl",
+  "kind": "sound",
+  "author": "NPS (U.S. National Park Service)",
+  "license": "Public domain",
+  "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "source_page": "https://www.nps.gov/subjects/sound/sounds-spotted-owl.htm",
+  "file_url": "https://www.nps.gov/nps-audiovideo/legacy/mp3/nri/avElement/nri-SpottedOwlYOSE.mp3",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "panda",
+  "kind": "sound",
+  "author": "Wikimedia Commons contributor",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "parrot",
+  "kind": "sound",
+  "author": "Richard Ranft / The British Library Board",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "peacock",
+  "kind": "sound",
+  "author": "Ke4roh (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "pigeon",
+  "kind": "sound",
+  "author": "Oona Räisänen",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "seagull",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "seal",
+  "kind": "sound",
+  "author": "Department of Conservation (New Zealand)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "sheep",
+  "kind": "image",
+  "author": "Tiia Monto",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Sheep_in_Austria_3.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Sheep_in_Austria_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "sheep",
+  "kind": "sound",
+  "author": "earthcalling (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "https://commons.wikimedia.org/wiki/Template:PD-pdsounds.org",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Sheep_bleating.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Sheep_bleating.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "squirrel",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "swan",
+  "kind": "sound",
+  "author": "Richard Ridgeway / The British Library Board",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "tiger",
+  "kind": "image",
+  "author": "Kandukuru Nagarjun",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Son_of_D1_on_the_move_by_nagarjun.jpg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/05/Son_of_D1_on_the_move_by_nagarjun.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "background removed, cropped, resized"
+ },
+ {
+  "animal": "tiger",
+  "kind": "sound",
+  "author": "schots (Freesound)",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:439280_schots_angry-tiger.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/439280_schots_angry-tiger.wav",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "turkey",
+  "kind": "sound",
+  "author": "bod (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ }
+]

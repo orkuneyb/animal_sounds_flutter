@@ -1004,6 +1004,8 @@
     "squirrel_fun_fact_1": "As castanhas que esqueço enterradas podem virar árvores.",
     "squirrel_fun_fact_2": "Minha cauda peluda me dá equilíbrio e me mantém quentinho.",
     "squirrel_fun_fact_3": "Consigo descer de uma árvore de cabeça para baixo.",
-    "sound_credits": "Créditos dos sons",
-    "sound_credits_note": "Obrigado às pessoas e instituições que gravaram estes sons. As gravações foram encurtadas e o volume foi ajustado."
+    "sound_credits": "Fontes e licenças",
+    "sound_credits_note": "Obrigado às pessoas e instituições que tiraram estas fotos e gravaram estes sons. O fundo das fotos foi removido; os sons foram encurtados e o volume ajustado.",
+    "credit_photo": "Foto",
+    "credit_sound": "Som"
 }

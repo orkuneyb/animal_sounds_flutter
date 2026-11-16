@@ -1004,6 +1004,8 @@
     "squirrel_fun_fact_1": "De las nueces que olvido enterradas pueden crecer árboles nuevos.",
     "squirrel_fun_fact_2": "Mi cola peluda me ayuda a mantener el equilibrio y me abriga.",
     "squirrel_fun_fact_3": "Puedo bajar de un árbol cabeza abajo.",
-    "sound_credits": "Créditos de sonido",
-    "sound_credits_note": "Gracias a las personas e instituciones que grabaron estos sonidos. Las grabaciones se acortaron y se ajustó su volumen."
+    "sound_credits": "Fuentes y licencias",
+    "sound_credits_note": "Gracias a las personas e instituciones que tomaron estas fotos y grabaron estos sonidos. Se quitó el fondo de las fotos; los sonidos se acortaron y se ajustó su volumen.",
+    "credit_photo": "Foto",
+    "credit_sound": "Sonido"
 }

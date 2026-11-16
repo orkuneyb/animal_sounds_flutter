@@ -1004,6 +1004,8 @@
     "squirrel_fun_fact_1": "Gömüp unuttuğum fındıklar yeni ağaçlara dönüşebilir.",
     "squirrel_fun_fact_2": "Gür kuyruğum dengede durmamı sağlar ve beni sıcak tutar.",
     "squirrel_fun_fact_3": "Ağaçtan baş aşağı inebilirim.",
-    "sound_credits": "Ses kaynakları",
-    "sound_credits_note": "Bu sesleri kaydeden kişi ve kurumlara teşekkür ederiz. Kayıtlar kısaltıldı ve ses seviyeleri ayarlandı."
+    "sound_credits": "Kaynaklar ve lisanslar",
+    "sound_credits_note": "Bu fotoğrafları çeken ve sesleri kaydeden kişi ve kurumlara teşekkür ederiz. Fotoğrafların arka planı kaldırıldı; sesler kısaltıldı ve seviyeleri ayarlandı.",
+    "credit_photo": "Fotoğraf",
+    "credit_sound": "Ses"
 }

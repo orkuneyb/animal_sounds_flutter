@@ -1,0 +1,261 @@
+[
+ {
+  "animal": "cat",
+  "kind": "image",
+  "author": "Jakub Hałun",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0"
+ },
+ {
+  "animal": "cat",
+  "kind": "sound",
+  "author": "PantheraLeo1359531 (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "animal": "chicken",
+  "kind": "sound",
+  "author": "alys (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "cow",
+  "kind": "image",
+  "author": "Keith Weller/USDA",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "cricket",
+  "kind": "sound",
+  "author": "Natural History Museum, London (BioAcoustica)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/"
+ },
+ {
+  "animal": "crow",
+  "kind": "sound",
+  "author": "G McGrane",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "cuckoo",
+  "kind": "sound",
+  "author": "Σ64 (Wikimedia Commons)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/"
+ },
+ {
+  "animal": "deer",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "dog",
+  "kind": "image",
+  "author": "Shixart1985",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0"
+ },
+ {
+  "animal": "donkey",
+  "kind": "sound",
+  "author": "felix-blume (Freesound)",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+ },
+ {
+  "animal": "eagle",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "elephant",
+  "kind": "image",
+  "author": "https://pixabay.com/users/laurentmarx-2651758/",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ },
+ {
+  "animal": "frog",
+  "kind": "image",
+  "author": "Holger Krisp",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0"
+ },
+ {
+  "animal": "frog",
+  "kind": "sound",
+  "author": "NPS / Theresa Thom",
+  "license": "Public domain",
+  "license_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+ },
+ {
+  "animal": "goat",
+  "kind": "sound",
+  "author": "stephan (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "goose",
+  "kind": "sound",
+  "author": "U.S. Fish and Wildlife Service",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "horse",
+  "kind": "image",
+  "author": "Notyourbroom",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0"
+ },
+ {
+  "animal": "horse",
+  "kind": "sound",
+  "author": "Briefer E, Maigrot A, Mandel R, Freymond S, Bachmann I, Hillmann E",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "animal": "hyena",
+  "kind": "sound",
+  "author": "David Watts / The British Library",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "animal": "lion",
+  "kind": "image",
+  "author": "Daniel Aufgang",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0"
+ },
+ {
+  "animal": "lion",
+  "kind": "sound",
+  "author": "Jonathan Growcott, Alex Lobora, Andrew Markham, Charlotte E. Searle, Johan Wahlström, Matthew Wijers, Benno I. Simmons",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "animal": "mouse",
+  "kind": "sound",
+  "author": "Holy T, Guo Z. PLOS Biology, 2005",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/"
+ },
+ {
+  "animal": "owl",
+  "kind": "image",
+  "author": "Uhu,_2.jpg : Rainer Lippert derivative work: Hic et nunc",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+ },
+ {
+  "animal": "owl",
+  "kind": "sound",
+  "author": "NPS (U.S. National Park Service)",
+  "license": "Public domain",
+  "license_url": "https://www.nps.gov/aboutus/disclaimer.htm"
+ },
+ {
+  "animal": "panda",
+  "kind": "sound",
+  "author": "Wikimedia Commons contributor",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "parrot",
+  "kind": "sound",
+  "author": "Richard Ranft / The British Library Board",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "animal": "peacock",
+  "kind": "sound",
+  "author": "Ke4roh (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "pigeon",
+  "kind": "sound",
+  "author": "Oona Räisänen",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "seagull",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "seal",
+  "kind": "sound",
+  "author": "Department of Conservation (New Zealand)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "animal": "sheep",
+  "kind": "image",
+  "author": "Tiia Monto",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0"
+ },
+ {
+  "animal": "sheep",
+  "kind": "sound",
+  "author": "earthcalling (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "https://commons.wikimedia.org/wiki/Template:PD-pdsounds.org"
+ },
+ {
+  "animal": "squirrel",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": ""
+ },
+ {
+  "animal": "swan",
+  "kind": "sound",
+  "author": "Richard Ridgeway / The British Library Board",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/"
+ },
+ {
+  "animal": "tiger",
+  "kind": "image",
+  "author": "Kandukuru Nagarjun",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0"
+ },
+ {
+  "animal": "tiger",
+  "kind": "sound",
+  "author": "schots (Freesound)",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+ },
+ {
+  "animal": "turkey",
+  "kind": "sound",
+  "author": "bod (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": ""
+ }
+]
