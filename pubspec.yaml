@@ -43,9 +43,9 @@ dev_dependencies:
   plugin_platform_interface: ^2.1.8
 
 flutter_launcher_icons:
-  image_path: "assets/icon/icon_256.png"
-  adaptive_icon_background: "#c2c8b4"
-  adaptive_icon_foreground: "assets/icon/icon_256.png"
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#c3ccb7"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
   ios: true
   remove_alpha_ios: true
   android: true
@@ -57,13 +57,13 @@ flutter_launcher_icons:
     generate: true
 
 flutter_native_splash:
-  color: "#c2c8b4"
+  color: "#c3ccb7"
   image: assets/icon/icon_256.png
   ios: false
   web: false
   android_12:
-    color: "#c2c8b4"
-    icon_background_color: "#c2c8b4"
+    color: "#c3ccb7"
+    icon_background_color: "#c3ccb7"
 
 flutter:
   uses-material-design: true
