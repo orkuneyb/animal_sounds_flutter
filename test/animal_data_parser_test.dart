@@ -38,7 +38,8 @@ void main() {
         final life = AnimalDataParser.parseLifespan(t[animal.lifespan] as String);
         expect(size, inInclusiveRange(0.5, 3500),
             reason: '$language ${animal.name} size "${t[animal.size]}"');
-        expect(weight, inInclusiveRange(0.00005, 200000),
+        // An ant weighs a few milligrams.
+        expect(weight, inInclusiveRange(0.000001, 200000),
             reason: '$language ${animal.name} weight "${t[animal.weight]}"');
         expect(life, inInclusiveRange(0.05, 120),
             reason: '$language ${animal.name} lifespan "${t[animal.lifespan]}"');

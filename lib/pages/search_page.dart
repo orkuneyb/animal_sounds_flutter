@@ -261,7 +261,7 @@ class _AnimalSearchCardState extends State<_AnimalSearchCard>
                         widget.animal.imagePath,
                         width: 56,
                         height: 56,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                       ),
                     ),
                     const SizedBox(width: 14),

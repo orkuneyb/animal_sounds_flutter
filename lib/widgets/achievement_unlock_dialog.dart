@@ -250,7 +250,8 @@ class _AchievementUnlockDialogState extends State<_AchievementUnlockDialog>
 
                     // Description
                     Text(
-                      widget.achievement.description.tr(),
+                      widget.achievement.description
+                          .tr(args: ['${widget.achievement.maxProgress}']),
                       textAlign: TextAlign.center,
                       style: AppTextStyles.bodyMedium.copyWith(
                         color: AppColors.onSurfaceVariant,

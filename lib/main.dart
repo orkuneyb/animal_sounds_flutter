@@ -19,6 +19,7 @@ import 'package:animal_sounds_flutter/services/ad_service.dart';
 import 'package:animal_sounds_flutter/services/analytics_service.dart';
 import 'package:animal_sounds_flutter/services/notification_service.dart';
 import 'package:animal_sounds_flutter/services/purchase_service.dart';
+import 'package:animal_sounds_flutter/services/sound_library.dart';
 import 'package:animal_sounds_flutter/utils/colors/colors.dart';
 import 'package:animal_sounds_flutter/utils/styles.dart';
 import 'package:animal_sounds_flutter/widgets/achievement_unlock_dialog.dart';
@@ -37,6 +38,7 @@ void main() async {
   // Nunito ships in assets/google_fonts; never fetch fonts over the network.
   GoogleFonts.config.allowRuntimeFetching = false;
   await EasyLocalization.ensureInitialized();
+  await SoundLibrary.load();
   await _initFirebase();
 
   // The remove-ads entitlement is read from the cache before the first frame

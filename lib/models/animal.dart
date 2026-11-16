@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../services/sound_library.dart';
 import '../utils/colors/colors.dart';
 import 'animal_traits.dart';
 
@@ -28,6 +29,10 @@ class Animal {
 
   String get imagePath => 'assets/animal_images/$name.png';
   String get soundPath => 'assets/animal_sounds/$name.mp3';
+
+  /// False while the animal's sound has not been added yet. Screens then
+  /// show the animal without a play button and games never ask for it.
+  bool get hasSound => SoundLibrary.has(name);
 
   // Translation keys of the longer texts.
   String get description => '${name}_desc';

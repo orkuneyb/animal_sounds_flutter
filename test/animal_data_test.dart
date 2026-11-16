@@ -29,12 +29,27 @@ void main() {
     expect({for (final a in animals) a.name}, hasLength(animals.length));
   });
 
-  test('every animal has a picture and a sound', () {
+  test('every animal has a picture', () {
     for (final animal in animals) {
       expect(File(animal.imagePath).existsSync(), isTrue,
           reason: '${animal.imagePath} missing');
+    }
+  });
+
+  // Animals added later may wait for their sound (see SoundLibrary); the
+  // fifty that shipped with one must never lose it.
+  test('the first 50 animals keep their sounds', () {
+    for (final animal in animals.take(50)) {
       expect(File(animal.soundPath).existsSync(), isTrue,
           reason: '${animal.soundPath} missing');
+    }
+  });
+
+  test('every sound file belongs to an animal', () {
+    final names = {for (final a in animals) a.name};
+    for (final file in Directory('assets/animal_sounds').listSync()) {
+      final name = file.uri.pathSegments.last.replaceFirst('.mp3', '');
+      expect(names, contains(name), reason: '${file.path} matches no animal');
     }
   });
 

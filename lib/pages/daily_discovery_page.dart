@@ -226,6 +226,7 @@ class _DailyDiscoveryPageState extends State<DailyDiscoveryPage>
                           const SizedBox(height: 8),
 
                           // Play sound button
+                          if (animal.hasSound)
                           FilledButton.tonalIcon(
                             onPressed: () => _playSound(animal.soundPath),
                             icon: Icon(

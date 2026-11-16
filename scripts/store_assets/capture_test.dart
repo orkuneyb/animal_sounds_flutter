@@ -20,6 +20,7 @@ import 'package:animal_sounds_flutter/pages/daily_discovery_page.dart';
 import 'package:animal_sounds_flutter/pages/quiz_page.dart';
 import 'package:animal_sounds_flutter/pages/sound_guess_game_page.dart';
 import 'package:animal_sounds_flutter/repositories/animal_repository.dart';
+import 'package:animal_sounds_flutter/services/sound_library.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -205,6 +206,7 @@ void main() {
           'assets/google_fonts/Nunito-$w.ttf',
       ]);
       await EasyLocalization.ensureInitialized();
+      await SoundLibrary.load();
     });
 
     await tester.runAsync(() async {

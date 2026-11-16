@@ -1,0 +1,8258 @@
+{
+ "s01_p01_lion": {
+  "animal": "lion",
+  "sheet": "1.png",
+  "position": 1,
+  "file": "s01_p01_lion.png",
+  "source_box": [
+   9,
+   24,
+   355,
+   500
+  ],
+  "source_pixels": [
+   346,
+   476
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.598,
+  "solid_share": 0.378,
+  "bytes": 250887,
+  "name_tr": "Aslan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p02_tiger": {
+  "animal": "tiger",
+  "sheet": "1.png",
+  "position": 2,
+  "file": "s01_p02_tiger.png",
+  "source_box": [
+   312,
+   44,
+   617,
+   490
+  ],
+  "source_pixels": [
+   305,
+   446
+  ],
+  "upscaled": false,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.652,
+  "solid_share": 0.326,
+  "bytes": 231390,
+  "name_tr": "Kaplan",
+  "note": "OK: kullanıcı onayladı (fil kulağı üstüne biniyor, sağ yanak kesik)",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p03_elephant": {
+  "animal": "elephant",
+  "sheet": "1.png",
+  "position": 3,
+  "file": "s01_p03_elephant.png",
+  "source_box": [
+   580,
+   46,
+   1035,
+   497
+  ],
+  "source_pixels": [
+   455,
+   451
+  ],
+  "upscaled": false,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.506,
+  "solid_share": 0.471,
+  "bytes": 263854,
+  "name_tr": "Fil",
+  "note": "OK: kullanıcı onayladı (sol kulakta kaplan tüyü)",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p04_dog": {
+  "animal": "dog",
+  "sheet": "1.png",
+  "position": 4,
+  "file": "s01_p04_dog.png",
+  "source_box": [
+   950,
+   76,
+   1272,
+   495
+  ],
+  "source_pixels": [
+   322,
+   419
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.622,
+  "solid_share": 0.352,
+  "bytes": 225710,
+  "name_tr": "Köpek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p05_cat": {
+  "animal": "cat",
+  "sheet": "1.png",
+  "position": 5,
+  "file": "s01_p05_cat.png",
+  "source_box": [
+   1252,
+   69,
+   1535,
+   488
+  ],
+  "source_pixels": [
+   283,
+   419
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.662,
+  "solid_share": 0.312,
+  "bytes": 220406,
+  "name_tr": "Kedi",
+  "note": "OK: kullanıcı onayladı (bıyık uçları kaynak kenarında)",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p06_cow": {
+  "animal": "cow",
+  "sheet": "1.png",
+  "position": 6,
+  "file": "s01_p06_cow.png",
+  "source_box": [
+   0,
+   524,
+   348,
+   991
+  ],
+  "source_pixels": [
+   348,
+   467
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.655,
+  "solid_share": 0.313,
+  "bytes": 214246,
+  "name_tr": "İnek",
+  "note": "OK: kullanıcı onayladı (sol kulak ucu kaynak kenarında)",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p07_horse": {
+  "animal": "horse",
+  "sheet": "1.png",
+  "position": 7,
+  "file": "s01_p07_horse.png",
+  "source_box": [
+   349,
+   503,
+   636,
+   991
+  ],
+  "source_pixels": [
+   287,
+   488
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.713,
+  "solid_share": 0.255,
+  "bytes": 181746,
+  "name_tr": "At",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p08_sheep": {
+  "animal": "sheep",
+  "sheet": "1.png",
+  "position": 8,
+  "file": "s01_p08_sheep.png",
+  "source_box": [
+   637,
+   560,
+   899,
+   977
+  ],
+  "source_pixels": [
+   262,
+   417
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.667,
+  "solid_share": 0.307,
+  "bytes": 195207,
+  "name_tr": "Koyun",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p09_owl": {
+  "animal": "owl",
+  "sheet": "1.png",
+  "position": 9,
+  "file": "s01_p09_owl.png",
+  "source_box": [
+   916,
+   552,
+   1230,
+   966
+  ],
+  "source_pixels": [
+   314,
+   414
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.63,
+  "solid_share": 0.338,
+  "bytes": 242917,
+  "name_tr": "Baykuş",
+  "note": "OK: dal çizimin parçası",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s01_p10_dolphin": {
+  "animal": "dolphin",
+  "sheet": "1.png",
+  "position": 10,
+  "file": "s01_p10_dolphin.png",
+  "source_box": [
+   1176,
+   540,
+   1525,
+   987
+  ],
+  "source_pixels": [
+   349,
+   447
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 5,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.662,
+  "solid_share": 0.295,
+  "bytes": 205834,
+  "name_tr": "Yunus",
+  "note": "OK: su sıçraması çizimin parçası",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s02_p01_bear": {
+  "animal": "bear",
+  "sheet": "2.png",
+  "position": 1,
+  "file": "s02_p01_bear.png",
+  "source_box": [
+   8,
+   25,
+   385,
+   490
+  ],
+  "source_pixels": [
+   377,
+   465
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.581,
+  "solid_share": 0.4,
+  "bytes": 252038,
+  "name_tr": "Ayı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p02_wolf": {
+  "animal": "wolf",
+  "sheet": "2.png",
+  "position": 2,
+  "file": "s02_p02_wolf.png",
+  "source_box": [
+   366,
+   15,
+   679,
+   493
+  ],
+  "source_pixels": [
+   313,
+   478
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.705,
+  "solid_share": 0.266,
+  "bytes": 190416,
+  "name_tr": "Kurt",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p03_fox": {
+  "animal": "fox",
+  "sheet": "2.png",
+  "position": 3,
+  "file": "s02_p03_fox.png",
+  "source_box": [
+   644,
+   47,
+   993,
+   493
+  ],
+  "source_pixels": [
+   349,
+   446
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.647,
+  "solid_share": 0.329,
+  "bytes": 206451,
+  "name_tr": "Tilki",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p04_deer": {
+  "animal": "deer",
+  "sheet": "2.png",
+  "position": 4,
+  "file": "s02_p04_deer.png",
+  "source_box": [
+   979,
+   12,
+   1232,
+   497
+  ],
+  "source_pixels": [
+   253,
+   485
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.789,
+  "solid_share": 0.175,
+  "bytes": 145456,
+  "name_tr": "Geyik",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p05_giraffe": {
+  "animal": "giraffe",
+  "sheet": "2.png",
+  "position": 5,
+  "file": "s02_p05_giraffe.png",
+  "source_box": [
+   1223,
+   14,
+   1528,
+   494
+  ],
+  "source_pixels": [
+   305,
+   480
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.786,
+  "solid_share": 0.192,
+  "bytes": 141344,
+  "name_tr": "Zürafa",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p06_zebra": {
+  "animal": "zebra",
+  "sheet": "2.png",
+  "position": 6,
+  "file": "s02_p06_zebra.png",
+  "source_box": [
+   0,
+   509,
+   275,
+   991
+  ],
+  "source_pixels": [
+   275,
+   482
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.744,
+  "solid_share": 0.231,
+  "bytes": 176720,
+  "name_tr": "Zebra",
+  "note": "OK: kuyruk kaynak kenarına değiyor, tam görünüyor",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p07_rhinoceros": {
+  "animal": "rhinoceros",
+  "sheet": "2.png",
+  "position": 7,
+  "file": "s02_p07_rhinoceros.png",
+  "source_box": [
+   250,
+   529,
+   619,
+   980
+  ],
+  "source_pixels": [
+   369,
+   451
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.578,
+  "solid_share": 0.395,
+  "bytes": 243825,
+  "name_tr": "Gergedan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p08_hippopotamus": {
+  "animal": "hippopotamus",
+  "sheet": "2.png",
+  "position": 8,
+  "file": "s02_p08_hippopotamus.png",
+  "source_box": [
+   583,
+   544,
+   923,
+   983
+  ],
+  "source_pixels": [
+   340,
+   439
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.565,
+  "solid_share": 0.415,
+  "bytes": 248086,
+  "name_tr": "Su aygırı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p09_panda": {
+  "animal": "panda",
+  "sheet": "2.png",
+  "position": 9,
+  "file": "s02_p09_panda.png",
+  "source_box": [
+   916,
+   550,
+   1270,
+   986
+  ],
+  "source_pixels": [
+   354,
+   436
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.573,
+  "solid_share": 0.404,
+  "bytes": 259101,
+  "name_tr": "Panda",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s02_p10_koala": {
+  "animal": "koala",
+  "sheet": "2.png",
+  "position": 10,
+  "file": "s02_p10_koala.png",
+  "source_box": [
+   1216,
+   509,
+   1531,
+   980
+  ],
+  "source_pixels": [
+   315,
+   471
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.67,
+  "solid_share": 0.302,
+  "bytes": 222977,
+  "name_tr": "Koala",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s03_p01_seal": {
+  "animal": "seal",
+  "sheet": "3.png",
+  "position": 1,
+  "file": "s03_p01_seal.png",
+  "source_box": [
+   3,
+   80,
+   358,
+   464
+  ],
+  "source_pixels": [
+   355,
+   384
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.59,
+  "solid_share": 0.387,
+  "bytes": 226342,
+  "name_tr": "Fok",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s03_p02_penguin": {
+  "animal": "penguin",
+  "sheet": "3.png",
+  "position": 2,
+  "file": "s03_p02_penguin.png",
+  "source_box": [
+   324,
+   68,
+   645,
+   457
+  ],
+  "source_pixels": [
+   321,
+   389
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.612,
+  "solid_share": 0.364,
+  "bytes": 206025,
+  "name_tr": "Penguen",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s03_p03_sea_turtle": {
+  "animal": "sea_turtle",
+  "sheet": "3.png",
+  "position": 3,
+  "file": "s03_p03_sea_turtle.png",
+  "source_box": [
+   594,
+   100,
+   979,
+   458
+  ],
+  "source_pixels": [
+   385,
+   358
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.607,
+  "solid_share": 0.365,
+  "bytes": 242884,
+  "name_tr": "Deniz kaplumbağası",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s03_p04_clownfish": {
+  "animal": "clownfish",
+  "sheet": "3.png",
+  "position": 4,
+  "file": "s03_p04_clownfish.png",
+  "source_box": [
+   938,
+   142,
+   1242,
+   411
+  ],
+  "source_pixels": [
+   304,
+   269
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.582,
+  "solid_share": 0.387,
+  "bytes": 224266,
+  "name_tr": "Palyaço balığı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s03_p05_shark": {
+  "animal": "shark",
+  "sheet": "3.png",
+  "position": 5,
+  "file": "s03_p05_shark.png",
+  "source_box": [
+   1226,
+   65,
+   1536,
+   489
+  ],
+  "source_pixels": [
+   310,
+   424
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.702,
+  "solid_share": 0.275,
+  "bytes": 164388,
+  "name_tr": "Köpekbalığı",
+  "note": "OK: yüzgeç kaynak kenarına değiyor, tam görünüyor",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s03_p06_whale": {
+  "animal": "whale",
+  "sheet": "3.png",
+  "position": 6,
+  "file": "s03_p06_whale.png",
+  "source_box": [
+   11,
+   494,
+   391,
+   888
+  ],
+  "source_pixels": [
+   380,
+   394
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.576,
+  "solid_share": 0.388,
+  "bytes": 233220,
+  "name_tr": "Balina",
+  "note": "OK: su fıskiyesi çizimin parçası",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s03_p07_octopus": {
+  "animal": "octopus",
+  "sheet": "3.png",
+  "position": 7,
+  "file": "s03_p07_octopus.png",
+  "source_box": [
+   366,
+   537,
+   705,
+   899
+  ],
+  "source_pixels": [
+   339,
+   362
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.53,
+  "solid_share": 0.424,
+  "bytes": 281847,
+  "name_tr": "Ahtapot",
+  "note": "yengeçle üst üste, sağ kol bozuk",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s03_p08_crab": {
+  "animal": "crab",
+  "sheet": "3.png",
+  "position": 8,
+  "file": "s03_p08_crab.png",
+  "source_box": [
+   651,
+   541,
+   1024,
+   878
+  ],
+  "source_pixels": [
+   373,
+   337
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.607,
+  "solid_share": 0.335,
+  "bytes": 240228,
+  "name_tr": "Yengeç",
+  "note": "ahtapotla üst üste, sol bacakta parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": false,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s03_p09_starfish": {
+  "animal": "starfish",
+  "sheet": "3.png",
+  "position": 9,
+  "file": "s03_p09_starfish.png",
+  "source_box": [
+   1002,
+   572,
+   1322,
+   882
+  ],
+  "source_pixels": [
+   320,
+   310
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.601,
+  "solid_share": 0.37,
+  "bytes": 214438,
+  "name_tr": "Denizyıldızı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s03_p10_seahorse": {
+  "animal": "seahorse",
+  "sheet": "3.png",
+  "position": 10,
+  "file": "s03_p10_seahorse.png",
+  "source_box": [
+   1291,
+   486,
+   1521,
+   907
+  ],
+  "source_pixels": [
+   230,
+   421
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.761,
+  "solid_share": 0.213,
+  "bytes": 157542,
+  "name_tr": "Denizatı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p01_eagle": {
+  "animal": "eagle",
+  "sheet": "4.png",
+  "position": 1,
+  "file": "s04_p01_eagle.png",
+  "source_box": [
+   16,
+   28,
+   326,
+   491
+  ],
+  "source_pixels": [
+   310,
+   463
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.663,
+  "solid_share": 0.315,
+  "bytes": 219861,
+  "name_tr": "Kartal",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p02_parrot": {
+  "animal": "parrot",
+  "sheet": "4.png",
+  "position": 2,
+  "file": "s04_p02_parrot.png",
+  "source_box": [
+   303,
+   39,
+   580,
+   528
+  ],
+  "source_pixels": [
+   277,
+   489
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.752,
+  "solid_share": 0.225,
+  "bytes": 167837,
+  "name_tr": "Papağan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p03_peacock": {
+  "animal": "peacock",
+  "sheet": "4.png",
+  "position": 3,
+  "file": "s04_p03_peacock.png",
+  "source_box": [
+   564,
+   31,
+   974,
+   492
+  ],
+  "source_pixels": [
+   410,
+   461
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.574,
+  "solid_share": 0.394,
+  "bytes": 285231,
+  "name_tr": "Tavus kuşu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p04_owl": {
+  "animal": "owl",
+  "sheet": "4.png",
+  "position": 4,
+  "file": "s04_p04_owl.png",
+  "source_box": [
+   967,
+   30,
+   1267,
+   480
+  ],
+  "source_pixels": [
+   300,
+   450
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.667,
+  "solid_share": 0.309,
+  "bytes": 227624,
+  "name_tr": "Baykuş",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p05_stork": {
+  "animal": "stork",
+  "sheet": "4.png",
+  "position": 5,
+  "file": "s04_p05_stork.png",
+  "source_box": [
+   1258,
+   25,
+   1525,
+   493
+  ],
+  "source_pixels": [
+   267,
+   468
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.829,
+  "solid_share": 0.145,
+  "bytes": 116103,
+  "name_tr": "Leylek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p06_pigeon": {
+  "animal": "pigeon",
+  "sheet": "4.png",
+  "position": 6,
+  "file": "s04_p06_pigeon.png",
+  "source_box": [
+   10,
+   525,
+   330,
+   967
+  ],
+  "source_pixels": [
+   320,
+   442
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.706,
+  "solid_share": 0.272,
+  "bytes": 189863,
+  "name_tr": "Güvercin",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p07_canary": {
+  "animal": "canary",
+  "sheet": "4.png",
+  "position": 7,
+  "file": "s04_p07_canary.png",
+  "source_box": [
+   306,
+   534,
+   673,
+   950
+  ],
+  "source_pixels": [
+   367,
+   416
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.666,
+  "solid_share": 0.297,
+  "bytes": 206235,
+  "name_tr": "Kanarya",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p08_woodpecker": {
+  "animal": "woodpecker",
+  "sheet": "4.png",
+  "position": 8,
+  "file": "s04_p08_woodpecker.png",
+  "source_box": [
+   610,
+   530,
+   910,
+   963
+  ],
+  "source_pixels": [
+   300,
+   433
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.693,
+  "solid_share": 0.281,
+  "bytes": 199195,
+  "name_tr": "Ağaçkakan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p09_flamingo": {
+  "animal": "flamingo",
+  "sheet": "4.png",
+  "position": 9,
+  "file": "s04_p09_flamingo.png",
+  "source_box": [
+   931,
+   494,
+   1246,
+   967
+  ],
+  "source_pixels": [
+   315,
+   473
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.799,
+  "solid_share": 0.172,
+  "bytes": 135388,
+  "name_tr": "Flamingo",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s04_p10_kingfisher": {
+  "animal": "kingfisher",
+  "sheet": "4.png",
+  "position": 10,
+  "file": "s04_p10_kingfisher.png",
+  "source_box": [
+   1164,
+   544,
+   1523,
+   957
+  ],
+  "source_pixels": [
+   359,
+   413
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.643,
+  "solid_share": 0.325,
+  "bytes": 225829,
+  "name_tr": "Yalıçapkını",
+  "note": "OK: yaprak ayrı parça, çizimin parçası",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s05_p01_rooster": {
+  "animal": "rooster",
+  "sheet": "5.png",
+  "position": 1,
+  "file": "s05_p01_rooster.png",
+  "source_box": [
+   1,
+   15,
+   362,
+   482
+  ],
+  "source_pixels": [
+   361,
+   467
+  ],
+  "upscaled": false,
+  "touching_neighbour": true,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.658,
+  "solid_share": 0.305,
+  "bytes": 220687,
+  "name_tr": "Horoz",
+  "note": "OK: tavuktan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p02_chicken": {
+  "animal": "chicken",
+  "sheet": "5.png",
+  "position": 2,
+  "file": "s05_p02_chicken.png",
+  "source_box": [
+   357,
+   48,
+   659,
+   481
+  ],
+  "source_pixels": [
+   302,
+   433
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.677,
+  "solid_share": 0.298,
+  "bytes": 204150,
+  "name_tr": "Tavuk",
+  "note": "OK: komşulardan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p03_chick": {
+  "animal": "chick",
+  "sheet": "5.png",
+  "position": 3,
+  "file": "s05_p03_chick.png",
+  "source_box": [
+   641,
+   161,
+   938,
+   482
+  ],
+  "source_pixels": [
+   297,
+   321
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.601,
+  "solid_share": 0.364,
+  "bytes": 202788,
+  "name_tr": "Civciv",
+  "note": "hindi kuyruğundan parça kaldı, sağ kanat ucu bozuk",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s05_p04_turkey": {
+  "animal": "turkey",
+  "sheet": "5.png",
+  "position": 4,
+  "file": "s05_p04_turkey.png",
+  "source_box": [
+   843,
+   28,
+   1257,
+   481
+  ],
+  "source_pixels": [
+   414,
+   453
+  ],
+  "upscaled": false,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.53,
+  "solid_share": 0.437,
+  "bytes": 308674,
+  "name_tr": "Hindi",
+  "note": "OK: sol kuyruk kenarında civcivden kalan küçük çentik var; kullanılabilir olduğunu siz onayladınız",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p05_goose": {
+  "animal": "goose",
+  "sheet": "5.png",
+  "position": 5,
+  "file": "s05_p05_goose.png",
+  "source_box": [
+   1260,
+   16,
+   1530,
+   482
+  ],
+  "source_pixels": [
+   270,
+   466
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.776,
+  "solid_share": 0.201,
+  "bytes": 132377,
+  "name_tr": "Kaz",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p06_donkey": {
+  "animal": "donkey",
+  "sheet": "5.png",
+  "position": 6,
+  "file": "s05_p06_donkey.png",
+  "source_box": [
+   7,
+   473,
+   280,
+   992
+  ],
+  "source_pixels": [
+   273,
+   519
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.761,
+  "solid_share": 0.211,
+  "bytes": 161360,
+  "name_tr": "Eşek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p07_goat": {
+  "animal": "goat",
+  "sheet": "5.png",
+  "position": 7,
+  "file": "s05_p07_goat.png",
+  "source_box": [
+   288,
+   485,
+   609,
+   991
+  ],
+  "source_pixels": [
+   321,
+   506
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.716,
+  "solid_share": 0.251,
+  "bytes": 185323,
+  "name_tr": "Keçi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p08_pig": {
+  "animal": "pig",
+  "sheet": "5.png",
+  "position": 8,
+  "file": "s05_p08_pig.png",
+  "source_box": [
+   554,
+   545,
+   926,
+   989
+  ],
+  "source_pixels": [
+   372,
+   444
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.589,
+  "solid_share": 0.389,
+  "bytes": 227078,
+  "name_tr": "Domuz",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p09_rabbit": {
+  "animal": "rabbit",
+  "sheet": "5.png",
+  "position": 9,
+  "file": "s05_p09_rabbit.png",
+  "source_box": [
+   898,
+   478,
+   1181,
+   988
+  ],
+  "source_pixels": [
+   283,
+   510
+  ],
+  "upscaled": false,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.739,
+  "solid_share": 0.24,
+  "bytes": 165231,
+  "name_tr": "Tavşan",
+  "note": "OK: sincaptan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s05_p10_squirrel": {
+  "animal": "squirrel",
+  "sheet": "5.png",
+  "position": 10,
+  "file": "s05_p10_squirrel.png",
+  "source_box": [
+   1164,
+   538,
+   1529,
+   989
+  ],
+  "source_pixels": [
+   365,
+   451
+  ],
+  "upscaled": false,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.552,
+  "solid_share": 0.425,
+  "bytes": 272058,
+  "name_tr": "Sincap",
+  "note": "OK: tavşandan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p01_chameleon": {
+  "animal": "chameleon",
+  "sheet": "6.png",
+  "position": 1,
+  "file": "s06_p01_chameleon.png",
+  "source_box": [
+   7,
+   89,
+   370,
+   490
+  ],
+  "source_pixels": [
+   363,
+   401
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.534,
+  "solid_share": 0.429,
+  "bytes": 294622,
+  "name_tr": "Bukalemun",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p02_snake": {
+  "animal": "snake",
+  "sheet": "6.png",
+  "position": 2,
+  "file": "s06_p02_snake.png",
+  "source_box": [
+   325,
+   69,
+   615,
+   468
+  ],
+  "source_pixels": [
+   290,
+   399
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.656,
+  "solid_share": 0.317,
+  "bytes": 221080,
+  "name_tr": "Yılan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p03_iguana": {
+  "animal": "iguana",
+  "sheet": "6.png",
+  "position": 3,
+  "file": "s06_p03_iguana.png",
+  "source_box": [
+   612,
+   80,
+   949,
+   469
+  ],
+  "source_pixels": [
+   337,
+   389
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.573,
+  "solid_share": 0.383,
+  "bytes": 280800,
+  "name_tr": "İguana",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p04_tortoise": {
+  "animal": "tortoise",
+  "sheet": "6.png",
+  "position": 4,
+  "file": "s06_p04_tortoise.png",
+  "source_box": [
+   899,
+   159,
+   1239,
+   464
+  ],
+  "source_pixels": [
+   340,
+   305
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.542,
+  "solid_share": 0.428,
+  "bytes": 275894,
+  "name_tr": "Kara kaplumbağası",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p05_crocodile": {
+  "animal": "crocodile",
+  "sheet": "6.png",
+  "position": 5,
+  "file": "s06_p05_crocodile.png",
+  "source_box": [
+   1212,
+   124,
+   1528,
+   459
+  ],
+  "source_pixels": [
+   316,
+   335
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.518,
+  "solid_share": 0.441,
+  "bytes": 305811,
+  "name_tr": "Timsah",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p06_tree_frog": {
+  "animal": "tree_frog",
+  "sheet": "6.png",
+  "position": 6,
+  "file": "s06_p06_tree_frog.png",
+  "source_box": [
+   7,
+   548,
+   313,
+   926
+  ],
+  "source_pixels": [
+   306,
+   378
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.574,
+  "solid_share": 0.403,
+  "bytes": 237069,
+  "name_tr": "Ağaç kurbağası",
+  "note": "yaprağın sağ ucu komşu kurbağayla üst üste, hafif kesik",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s06_p07_poison_dart_frog": {
+  "animal": "poison_dart_frog",
+  "sheet": "6.png",
+  "position": 7,
+  "file": "s06_p07_poison_dart_frog.png",
+  "source_box": [
+   306,
+   552,
+   611,
+   879
+  ],
+  "source_pixels": [
+   305,
+   327
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.575,
+  "solid_share": 0.382,
+  "bytes": 249033,
+  "name_tr": "Ok zehri kurbağası",
+  "note": "OK: komşudan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p08_salamander": {
+  "animal": "salamander",
+  "sheet": "6.png",
+  "position": 8,
+  "file": "s06_p08_salamander.png",
+  "source_box": [
+   564,
+   597,
+   900,
+   893
+  ],
+  "source_pixels": [
+   336,
+   296
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.638,
+  "solid_share": 0.327,
+  "bytes": 220183,
+  "name_tr": "Semender",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p09_bearded_dragon": {
+  "animal": "bearded_dragon",
+  "sheet": "6.png",
+  "position": 9,
+  "file": "s06_p09_bearded_dragon.png",
+  "source_box": [
+   856,
+   539,
+   1187,
+   911
+  ],
+  "source_pixels": [
+   331,
+   372
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.611,
+  "solid_share": 0.351,
+  "bytes": 258818,
+  "name_tr": "Sakallı ejder",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s06_p10_sea_turtle": {
+  "animal": "sea_turtle",
+  "sheet": "6.png",
+  "position": 10,
+  "file": "s06_p10_sea_turtle.png",
+  "source_box": [
+   1162,
+   558,
+   1529,
+   898
+  ],
+  "source_pixels": [
+   367,
+   340
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.586,
+  "solid_share": 0.384,
+  "bytes": 271235,
+  "name_tr": "Deniz kaplumbağası",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p01_bee": {
+  "animal": "bee",
+  "sheet": "7.png",
+  "position": 1,
+  "file": "s07_p01_bee.png",
+  "source_box": [
+   8,
+   102,
+   374,
+   446
+  ],
+  "source_pixels": [
+   366,
+   344
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.603,
+  "solid_share": 0.36,
+  "bytes": 234022,
+  "name_tr": "Arı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p02_ladybug": {
+  "animal": "ladybug",
+  "sheet": "7.png",
+  "position": 2,
+  "file": "s07_p02_ladybug.png",
+  "source_box": [
+   321,
+   204,
+   614,
+   460
+  ],
+  "source_pixels": [
+   293,
+   256
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.558,
+  "solid_share": 0.404,
+  "bytes": 245323,
+  "name_tr": "Uğur böceği",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p03_butterfly": {
+  "animal": "butterfly",
+  "sheet": "7.png",
+  "position": 3,
+  "file": "s07_p03_butterfly.png",
+  "source_box": [
+   589,
+   91,
+   966,
+   461
+  ],
+  "source_pixels": [
+   377,
+   370
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.557,
+  "solid_share": 0.405,
+  "bytes": 270657,
+  "name_tr": "Kelebek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p04_grasshopper": {
+  "animal": "grasshopper",
+  "sheet": "7.png",
+  "position": 4,
+  "file": "s07_p04_grasshopper.png",
+  "source_box": [
+   891,
+   104,
+   1284,
+   463
+  ],
+  "source_pixels": [
+   393,
+   359
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.78,
+  "solid_share": 0.175,
+  "bytes": 152631,
+  "name_tr": "Çekirge",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p05_ant": {
+  "animal": "ant",
+  "sheet": "7.png",
+  "position": 5,
+  "file": "s07_p05_ant.png",
+  "source_box": [
+   1208,
+   146,
+   1528,
+   455
+  ],
+  "source_pixels": [
+   320,
+   309
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.669,
+  "solid_share": 0.274,
+  "bytes": 220153,
+  "name_tr": "Karınca",
+  "note": "OK: ince bacaklar, kesim temiz",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": false,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p06_dragonfly": {
+  "animal": "dragonfly",
+  "sheet": "7.png",
+  "position": 6,
+  "file": "s07_p06_dragonfly.png",
+  "source_box": [
+   7,
+   506,
+   362,
+   867
+  ],
+  "source_pixels": [
+   355,
+   361
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.669,
+  "solid_share": 0.282,
+  "bytes": 241699,
+  "name_tr": "Yusufçuk",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p07_tarantula": {
+  "animal": "tarantula",
+  "sheet": "7.png",
+  "position": 7,
+  "file": "s07_p07_tarantula.png",
+  "source_box": [
+   320,
+   590,
+   672,
+   883
+  ],
+  "source_pixels": [
+   352,
+   293
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.623,
+  "solid_share": 0.339,
+  "bytes": 255119,
+  "name_tr": "Tarantula",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p08_rhinoceros_beetle": {
+  "animal": "rhinoceros_beetle",
+  "sheet": "7.png",
+  "position": 8,
+  "file": "s07_p08_rhinoceros_beetle.png",
+  "source_box": [
+   665,
+   555,
+   982,
+   884
+  ],
+  "source_pixels": [
+   317,
+   329
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.641,
+  "solid_share": 0.313,
+  "bytes": 240165,
+  "name_tr": "Gergedan böceği",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p09_praying_mantis": {
+  "animal": "praying_mantis",
+  "sheet": "7.png",
+  "position": 9,
+  "file": "s07_p09_praying_mantis.png",
+  "source_box": [
+   932,
+   497,
+   1250,
+   890
+  ],
+  "source_pixels": [
+   318,
+   393
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.788,
+  "solid_share": 0.167,
+  "bytes": 154837,
+  "name_tr": "Peygamberdevesi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s07_p10_centipede": {
+  "animal": "centipede",
+  "sheet": "7.png",
+  "position": 10,
+  "file": "s07_p10_centipede.png",
+  "source_box": [
+   1216,
+   529,
+   1524,
+   902
+  ],
+  "source_pixels": [
+   308,
+   373
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.691,
+  "solid_share": 0.261,
+  "bytes": 216746,
+  "name_tr": "Kırkayak",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p01_kangaroo": {
+  "animal": "kangaroo",
+  "sheet": "8.png",
+  "position": 1,
+  "file": "s08_p01_kangaroo.png",
+  "source_box": [
+   8,
+   9,
+   333,
+   507
+  ],
+  "source_pixels": [
+   325,
+   498
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.769,
+  "solid_share": 0.208,
+  "bytes": 157608,
+  "name_tr": "Kanguru",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p02_camel": {
+  "animal": "camel",
+  "sheet": "8.png",
+  "position": 2,
+  "file": "s08_p02_camel.png",
+  "source_box": [
+   310,
+   27,
+   686,
+   493
+  ],
+  "source_pixels": [
+   376,
+   466
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.698,
+  "solid_share": 0.266,
+  "bytes": 211671,
+  "name_tr": "Deve",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p03_llama": {
+  "animal": "llama",
+  "sheet": "8.png",
+  "position": 3,
+  "file": "s08_p03_llama.png",
+  "source_box": [
+   628,
+   8,
+   896,
+   492
+  ],
+  "source_pixels": [
+   268,
+   484
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.747,
+  "solid_share": 0.23,
+  "bytes": 177701,
+  "name_tr": "Lama",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p04_alpaca": {
+  "animal": "alpaca",
+  "sheet": "8.png",
+  "position": 4,
+  "file": "s08_p04_alpaca.png",
+  "source_box": [
+   901,
+   16,
+   1160,
+   489
+  ],
+  "source_pixels": [
+   259,
+   473
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.738,
+  "solid_share": 0.241,
+  "bytes": 184618,
+  "name_tr": "Alpaka",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p05_bison": {
+  "animal": "bison",
+  "sheet": "8.png",
+  "position": 5,
+  "file": "s08_p05_bison.png",
+  "source_box": [
+   1139,
+   76,
+   1532,
+   490
+  ],
+  "source_pixels": [
+   393,
+   414
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.539,
+  "solid_share": 0.427,
+  "bytes": 294311,
+  "name_tr": "Bizon",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p06_buffalo": {
+  "animal": "buffalo",
+  "sheet": "8.png",
+  "position": 6,
+  "file": "s08_p06_buffalo.png",
+  "source_box": [
+   4,
+   553,
+   412,
+   964
+  ],
+  "source_pixels": [
+   408,
+   411
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.566,
+  "solid_share": 0.397,
+  "bytes": 268043,
+  "name_tr": "Manda",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p07_antelope": {
+  "animal": "antelope",
+  "sheet": "8.png",
+  "position": 7,
+  "file": "s08_p07_antelope.png",
+  "source_box": [
+   344,
+   501,
+   640,
+   973
+  ],
+  "source_pixels": [
+   296,
+   472
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.796,
+  "solid_share": 0.169,
+  "bytes": 148339,
+  "name_tr": "Antilop",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p08_wild_boar": {
+  "animal": "wild_boar",
+  "sheet": "8.png",
+  "position": 8,
+  "file": "s08_p08_wild_boar.png",
+  "source_box": [
+   586,
+   595,
+   960,
+   963
+  ],
+  "source_pixels": [
+   374,
+   368
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.532,
+  "solid_share": 0.43,
+  "bytes": 303157,
+  "name_tr": "Yaban domuzu",
+  "note": "OK: kirpiden temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p09_hedgehog": {
+  "animal": "hedgehog",
+  "sheet": "8.png",
+  "position": 9,
+  "file": "s08_p09_hedgehog.png",
+  "source_box": [
+   943,
+   643,
+   1232,
+   953
+  ],
+  "source_pixels": [
+   289,
+   310
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.463,
+  "solid_share": 0.501,
+  "bytes": 332945,
+  "name_tr": "Kirpi",
+  "note": "OK: yaban domuzundan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s08_p10_raccoon": {
+  "animal": "raccoon",
+  "sheet": "8.png",
+  "position": 10,
+  "file": "s08_p10_raccoon.png",
+  "source_box": [
+   1219,
+   554,
+   1530,
+   956
+  ],
+  "source_pixels": [
+   311,
+   402
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.601,
+  "solid_share": 0.374,
+  "bytes": 257417,
+  "name_tr": "Rakun",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p01_cow": {
+  "animal": "cow",
+  "sheet": "9.png",
+  "position": 1,
+  "file": "s09_p01_cow.png",
+  "source_box": [
+   9,
+   24,
+   379,
+   494
+  ],
+  "source_pixels": [
+   370,
+   470
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.651,
+  "solid_share": 0.313,
+  "bytes": 213134,
+  "name_tr": "İnek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p02_sheep": {
+  "animal": "sheep",
+  "sheet": "9.png",
+  "position": 2,
+  "file": "s09_p02_sheep.png",
+  "source_box": [
+   310,
+   84,
+   661,
+   493
+  ],
+  "source_pixels": [
+   351,
+   409
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.611,
+  "solid_share": 0.36,
+  "bytes": 227219,
+  "name_tr": "Koyun",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p03_donkey": {
+  "animal": "donkey",
+  "sheet": "9.png",
+  "position": 3,
+  "file": "s09_p03_donkey.png",
+  "source_box": [
+   618,
+   16,
+   947,
+   493
+  ],
+  "source_pixels": [
+   329,
+   477
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.739,
+  "solid_share": 0.232,
+  "bytes": 175408,
+  "name_tr": "Eşek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p04_horse": {
+  "animal": "horse",
+  "sheet": "9.png",
+  "position": 4,
+  "file": "s09_p04_horse.png",
+  "source_box": [
+   876,
+   10,
+   1264,
+   494
+  ],
+  "source_pixels": [
+   388,
+   484
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.681,
+  "solid_share": 0.284,
+  "bytes": 206418,
+  "name_tr": "At",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p05_wolf": {
+  "animal": "wolf",
+  "sheet": "9.png",
+  "position": 5,
+  "file": "s09_p05_wolf.png",
+  "source_box": [
+   1190,
+   34,
+   1524,
+   491
+  ],
+  "source_pixels": [
+   334,
+   457
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.701,
+  "solid_share": 0.275,
+  "bytes": 199716,
+  "name_tr": "Kurt",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p06_lion": {
+  "animal": "lion",
+  "sheet": "9.png",
+  "position": 6,
+  "file": "s09_p06_lion.png",
+  "source_box": [
+   10,
+   530,
+   327,
+   986
+  ],
+  "source_pixels": [
+   317,
+   456
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.599,
+  "solid_share": 0.377,
+  "bytes": 247483,
+  "name_tr": "Aslan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p07_elephant": {
+  "animal": "elephant",
+  "sheet": "9.png",
+  "position": 7,
+  "file": "s09_p07_elephant.png",
+  "source_box": [
+   310,
+   495,
+   691,
+   988
+  ],
+  "source_pixels": [
+   381,
+   493
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.617,
+  "solid_share": 0.358,
+  "bytes": 231547,
+  "name_tr": "Fil",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p08_rooster": {
+  "animal": "rooster",
+  "sheet": "9.png",
+  "position": 8,
+  "file": "s09_p08_rooster.png",
+  "source_box": [
+   657,
+   518,
+   966,
+   992
+  ],
+  "source_pixels": [
+   309,
+   474
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.706,
+  "solid_share": 0.261,
+  "bytes": 189081,
+  "name_tr": "Horoz",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p09_goose": {
+  "animal": "goose",
+  "sheet": "9.png",
+  "position": 9,
+  "file": "s09_p09_goose.png",
+  "source_box": [
+   969,
+   535,
+   1260,
+   987
+  ],
+  "source_pixels": [
+   291,
+   452
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.742,
+  "solid_share": 0.229,
+  "bytes": 157737,
+  "name_tr": "Kaz",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s09_p10_dog": {
+  "animal": "dog",
+  "sheet": "9.png",
+  "position": 10,
+  "file": "s09_p10_dog.png",
+  "source_box": [
+   1227,
+   560,
+   1526,
+   985
+  ],
+  "source_pixels": [
+   299,
+   425
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.648,
+  "solid_share": 0.326,
+  "bytes": 209226,
+  "name_tr": "Köpek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p01_chimpanzee": {
+  "animal": "chimpanzee",
+  "sheet": "10.png",
+  "position": 1,
+  "file": "s10_p01_chimpanzee.png",
+  "source_box": [
+   13,
+   68,
+   308,
+   506
+  ],
+  "source_pixels": [
+   295,
+   438
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.611,
+  "solid_share": 0.366,
+  "bytes": 244627,
+  "name_tr": "Şempanze",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p02_gorilla": {
+  "animal": "gorilla",
+  "sheet": "10.png",
+  "position": 2,
+  "file": "s10_p02_gorilla.png",
+  "source_box": [
+   294,
+   32,
+   653,
+   498
+  ],
+  "source_pixels": [
+   359,
+   466
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.59,
+  "solid_share": 0.389,
+  "bytes": 262351,
+  "name_tr": "Goril",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p03_gibbon": {
+  "animal": "gibbon",
+  "sheet": "10.png",
+  "position": 3,
+  "file": "s10_p03_gibbon.png",
+  "source_box": [
+   657,
+   6,
+   888,
+   522
+  ],
+  "source_pixels": [
+   231,
+   516
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.79,
+  "solid_share": 0.191,
+  "bytes": 145104,
+  "name_tr": "Gibon",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p04_hyena": {
+  "animal": "hyena",
+  "sheet": "10.png",
+  "position": 4,
+  "file": "s10_p04_hyena.png",
+  "source_box": [
+   872,
+   94,
+   1237,
+   501
+  ],
+  "source_pixels": [
+   365,
+   407
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.595,
+  "solid_share": 0.369,
+  "bytes": 264779,
+  "name_tr": "Sırtlan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p05_jackal": {
+  "animal": "jackal",
+  "sheet": "10.png",
+  "position": 5,
+  "file": "s10_p05_jackal.png",
+  "source_box": [
+   1175,
+   46,
+   1522,
+   495
+  ],
+  "source_pixels": [
+   347,
+   449
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.708,
+  "solid_share": 0.264,
+  "bytes": 202711,
+  "name_tr": "Çakal",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p06_seal": {
+  "animal": "seal",
+  "sheet": "10.png",
+  "position": 6,
+  "file": "s10_p06_seal.png",
+  "source_box": [
+   10,
+   547,
+   354,
+   952
+  ],
+  "source_pixels": [
+   344,
+   405
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.624,
+  "solid_share": 0.349,
+  "bytes": 225350,
+  "name_tr": "Fok",
+  "note": "OK: morstan temiz ayrıldı, bıyıklar ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s10_p07_walrus": {
+  "animal": "walrus",
+  "sheet": "10.png",
+  "position": 7,
+  "file": "s10_p07_walrus.png",
+  "source_box": [
+   288,
+   534,
+   643,
+   945
+  ],
+  "source_pixels": [
+   355,
+   411
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.545,
+  "solid_share": 0.433,
+  "bytes": 291235,
+  "name_tr": "Mors",
+  "note": "OK: foktan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p08_raven": {
+  "animal": "raven",
+  "sheet": "10.png",
+  "position": 8,
+  "file": "s10_p08_raven.png",
+  "source_box": [
+   627,
+   545,
+   943,
+   959
+  ],
+  "source_pixels": [
+   316,
+   414
+  ],
+  "upscaled": true,
+  "touching_neighbour": true,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.706,
+  "solid_share": 0.262,
+  "bytes": 205237,
+  "name_tr": "Kuzgun",
+  "note": "OK: komşudan temiz ayrıldı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": false,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p09_cuckoo": {
+  "animal": "cuckoo",
+  "sheet": "10.png",
+  "position": 9,
+  "file": "s10_p09_cuckoo.png",
+  "source_box": [
+   895,
+   535,
+   1230,
+   950
+  ],
+  "source_pixels": [
+   335,
+   415
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.753,
+  "solid_share": 0.223,
+  "bytes": 175634,
+  "name_tr": "Guguk kuşu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s10_p10_otter": {
+  "animal": "otter",
+  "sheet": "10.png",
+  "position": 10,
+  "file": "s10_p10_otter.png",
+  "source_box": [
+   1146,
+   559,
+   1524,
+   959
+  ],
+  "source_pixels": [
+   378,
+   400
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.596,
+  "solid_share": 0.38,
+  "bytes": 248090,
+  "name_tr": "Su samuru",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p01_deer": {
+  "animal": "deer",
+  "sheet": "11.png",
+  "position": 1,
+  "file": "s11_p01_deer.png",
+  "source_box": [
+   6,
+   11,
+   306,
+   543
+  ],
+  "source_pixels": [
+   300,
+   532
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.795,
+  "solid_share": 0.163,
+  "bytes": 154096,
+  "name_tr": "Geyik",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p02_moose": {
+  "animal": "moose",
+  "sheet": "11.png",
+  "position": 2,
+  "file": "s11_p02_moose.png",
+  "source_box": [
+   267,
+   12,
+   683,
+   546
+  ],
+  "source_pixels": [
+   416,
+   534
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.692,
+  "solid_share": 0.268,
+  "bytes": 217038,
+  "name_tr": "Sığın",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p03_fox": {
+  "animal": "fox",
+  "sheet": "11.png",
+  "position": 3,
+  "file": "s11_p03_fox.png",
+  "source_box": [
+   550,
+   77,
+   932,
+   527
+  ],
+  "source_pixels": [
+   382,
+   450
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.622,
+  "solid_share": 0.358,
+  "bytes": 240811,
+  "name_tr": "Tilki",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p04_raccoon": {
+  "animal": "raccoon",
+  "sheet": "11.png",
+  "position": 4,
+  "file": "s11_p04_raccoon.png",
+  "source_box": [
+   904,
+   117,
+   1240,
+   517
+  ],
+  "source_pixels": [
+   336,
+   400
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.583,
+  "solid_share": 0.394,
+  "bytes": 276175,
+  "name_tr": "Rakun",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p05_skunk": {
+  "animal": "skunk",
+  "sheet": "11.png",
+  "position": 5,
+  "file": "s11_p05_skunk.png",
+  "source_box": [
+   1240,
+   121,
+   1529,
+   520
+  ],
+  "source_pixels": [
+   289,
+   399
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.578,
+  "solid_share": 0.397,
+  "bytes": 269825,
+  "name_tr": "Kokarca",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p06_beaver": {
+  "animal": "beaver",
+  "sheet": "11.png",
+  "position": 6,
+  "file": "s11_p06_beaver.png",
+  "source_box": [
+   5,
+   580,
+   321,
+   955
+  ],
+  "source_pixels": [
+   316,
+   375
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.577,
+  "solid_share": 0.4,
+  "bytes": 277597,
+  "name_tr": "Kunduz",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p07_porcupine": {
+  "animal": "porcupine",
+  "sheet": "11.png",
+  "position": 7,
+  "file": "s11_p07_porcupine.png",
+  "source_box": [
+   308,
+   584,
+   645,
+   936
+  ],
+  "source_pixels": [
+   337,
+   352
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.463,
+  "solid_share": 0.472,
+  "bytes": 376402,
+  "name_tr": "Oklu kirpi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p08_armadillo": {
+  "animal": "armadillo",
+  "sheet": "11.png",
+  "position": 8,
+  "file": "s11_p08_armadillo.png",
+  "source_box": [
+   634,
+   634,
+   961,
+   934
+  ],
+  "source_pixels": [
+   327,
+   300
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.509,
+  "solid_share": 0.456,
+  "bytes": 328435,
+  "name_tr": "Armadillo",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p09_opossum": {
+  "animal": "opossum",
+  "sheet": "11.png",
+  "position": 9,
+  "file": "s11_p09_opossum.png",
+  "source_box": [
+   924,
+   578,
+   1240,
+   950
+  ],
+  "source_pixels": [
+   316,
+   372
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.584,
+  "solid_share": 0.381,
+  "bytes": 268037,
+  "name_tr": "Opossum",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s11_p10_fennec_fox": {
+  "animal": "fennec_fox",
+  "sheet": "11.png",
+  "position": 10,
+  "file": "s11_p10_fennec_fox.png",
+  "source_box": [
+   1222,
+   544,
+   1526,
+   942
+  ],
+  "source_pixels": [
+   304,
+   398
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.651,
+  "solid_share": 0.324,
+  "bytes": 225860,
+  "name_tr": "Çöl tilkisi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p01_crow": {
+  "animal": "crow",
+  "sheet": "12.png",
+  "position": 1,
+  "file": "s12_p01_crow.png",
+  "source_box": [
+   13,
+   41,
+   383,
+   467
+  ],
+  "source_pixels": [
+   370,
+   426
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.666,
+  "solid_share": 0.305,
+  "bytes": 228953,
+  "name_tr": "Karga",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p02_magpie": {
+  "animal": "magpie",
+  "sheet": "12.png",
+  "position": 2,
+  "file": "s12_p02_magpie.png",
+  "source_box": [
+   314,
+   36,
+   682,
+   461
+  ],
+  "source_pixels": [
+   368,
+   425
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.719,
+  "solid_share": 0.252,
+  "bytes": 189977,
+  "name_tr": "Saksağan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p03_sparrow": {
+  "animal": "sparrow",
+  "sheet": "12.png",
+  "position": 3,
+  "file": "s12_p03_sparrow.png",
+  "source_box": [
+   615,
+   150,
+   907,
+   461
+  ],
+  "source_pixels": [
+   292,
+   311
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.545,
+  "solid_share": 0.417,
+  "bytes": 288209,
+  "name_tr": "Serçe",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p04_nightingale": {
+  "animal": "nightingale",
+  "sheet": "12.png",
+  "position": 4,
+  "file": "s12_p04_nightingale.png",
+  "source_box": [
+   910,
+   52,
+   1228,
+   465
+  ],
+  "source_pixels": [
+   318,
+   413
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.716,
+  "solid_share": 0.246,
+  "bytes": 204108,
+  "name_tr": "Bülbül",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p05_duck": {
+  "animal": "duck",
+  "sheet": "12.png",
+  "position": 5,
+  "file": "s12_p05_duck.png",
+  "source_box": [
+   1222,
+   53,
+   1516,
+   467
+  ],
+  "source_pixels": [
+   294,
+   414
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.706,
+  "solid_share": 0.266,
+  "bytes": 195120,
+  "name_tr": "Ördek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p06_swan": {
+  "animal": "swan",
+  "sheet": "12.png",
+  "position": 6,
+  "file": "s12_p06_swan.png",
+  "source_box": [
+   7,
+   504,
+   362,
+   950
+  ],
+  "source_pixels": [
+   355,
+   446
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.619,
+  "solid_share": 0.355,
+  "bytes": 213936,
+  "name_tr": "Kuğu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p07_crane": {
+  "animal": "crane",
+  "sheet": "12.png",
+  "position": 7,
+  "file": "s12_p07_crane.png",
+  "source_box": [
+   339,
+   470,
+   643,
+   958
+  ],
+  "source_pixels": [
+   304,
+   488
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.841,
+  "solid_share": 0.131,
+  "bytes": 122744,
+  "name_tr": "Turna",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p08_seagull": {
+  "animal": "seagull",
+  "sheet": "12.png",
+  "position": 8,
+  "file": "s12_p08_seagull.png",
+  "source_box": [
+   513,
+   533,
+   929,
+   949
+  ],
+  "source_pixels": [
+   416,
+   416
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.736,
+  "solid_share": 0.235,
+  "bytes": 163830,
+  "name_tr": "Martı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p09_hoopoe": {
+  "animal": "hoopoe",
+  "sheet": "12.png",
+  "position": 9,
+  "file": "s12_p09_hoopoe.png",
+  "source_box": [
+   862,
+   498,
+   1242,
+   954
+  ],
+  "source_pixels": [
+   380,
+   456
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.77,
+  "solid_share": 0.199,
+  "bytes": 170308,
+  "name_tr": "İbibik",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s12_p10_pheasant": {
+  "animal": "pheasant",
+  "sheet": "12.png",
+  "position": 10,
+  "file": "s12_p10_pheasant.png",
+  "source_box": [
+   1098,
+   504,
+   1518,
+   955
+  ],
+  "source_pixels": [
+   420,
+   451
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.747,
+  "solid_share": 0.224,
+  "bytes": 186265,
+  "name_tr": "Sülün",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p01_leopard": {
+  "animal": "leopard",
+  "sheet": "13.png",
+  "position": 1,
+  "file": "s13_p01_leopard.png",
+  "source_box": [
+   3,
+   17,
+   415,
+   480
+  ],
+  "source_pixels": [
+   412,
+   463
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.632,
+  "solid_share": 0.346,
+  "bytes": 253260,
+  "name_tr": "Leopar",
+  "note": "OK: bıyıklar ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s13_p02_cheetah": {
+  "animal": "cheetah",
+  "sheet": "13.png",
+  "position": 2,
+  "file": "s13_p02_cheetah.png",
+  "source_box": [
+   309,
+   26,
+   659,
+   481
+  ],
+  "source_pixels": [
+   350,
+   455
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.715,
+  "solid_share": 0.263,
+  "bytes": 198499,
+  "name_tr": "Çita",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p03_jaguar": {
+  "animal": "jaguar",
+  "sheet": "13.png",
+  "position": 3,
+  "file": "s13_p03_jaguar.png",
+  "source_box": [
+   579,
+   26,
+   990,
+   476
+  ],
+  "source_pixels": [
+   411,
+   450
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.591,
+  "solid_share": 0.385,
+  "bytes": 274007,
+  "name_tr": "Jaguar",
+  "note": "OK: bıyıklar ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s13_p04_lynx": {
+  "animal": "lynx",
+  "sheet": "13.png",
+  "position": 4,
+  "file": "s13_p04_lynx.png",
+  "source_box": [
+   914,
+   6,
+   1236,
+   477
+  ],
+  "source_pixels": [
+   322,
+   471
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.706,
+  "solid_share": 0.275,
+  "bytes": 212439,
+  "name_tr": "Vaşak",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p05_puma": {
+  "animal": "puma",
+  "sheet": "13.png",
+  "position": 5,
+  "file": "s13_p05_puma.png",
+  "source_box": [
+   1187,
+   38,
+   1519,
+   477
+  ],
+  "source_pixels": [
+   332,
+   439
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.652,
+  "solid_share": 0.33,
+  "bytes": 221050,
+  "name_tr": "Puma",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p06_snow_leopard": {
+  "animal": "snow_leopard",
+  "sheet": "13.png",
+  "position": 6,
+  "file": "s13_p06_snow_leopard.png",
+  "source_box": [
+   7,
+   500,
+   403,
+   977
+  ],
+  "source_pixels": [
+   396,
+   477
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.627,
+  "solid_share": 0.353,
+  "bytes": 256475,
+  "name_tr": "Kar leoparı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p07_polar_bear": {
+  "animal": "polar_bear",
+  "sheet": "13.png",
+  "position": 7,
+  "file": "s13_p07_polar_bear.png",
+  "source_box": [
+   293,
+   498,
+   701,
+   973
+  ],
+  "source_pixels": [
+   408,
+   475
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.566,
+  "solid_share": 0.415,
+  "bytes": 250181,
+  "name_tr": "Kutup ayısı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p08_red_panda": {
+  "animal": "red_panda",
+  "sheet": "13.png",
+  "position": 8,
+  "file": "s13_p08_red_panda.png",
+  "source_box": [
+   653,
+   534,
+   1023,
+   974
+  ],
+  "source_pixels": [
+   370,
+   440
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.589,
+  "solid_share": 0.4,
+  "bytes": 265042,
+  "name_tr": "Kızıl panda",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p09_meerkat": {
+  "animal": "meerkat",
+  "sheet": "13.png",
+  "position": 9,
+  "file": "s13_p09_meerkat.png",
+  "source_box": [
+   997,
+   507,
+   1232,
+   975
+  ],
+  "source_pixels": [
+   235,
+   468
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.783,
+  "solid_share": 0.198,
+  "bytes": 155163,
+  "name_tr": "Mirket",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s13_p10_lemur": {
+  "animal": "lemur",
+  "sheet": "13.png",
+  "position": 10,
+  "file": "s13_p10_lemur.png",
+  "source_box": [
+   1205,
+   524,
+   1532,
+   972
+  ],
+  "source_pixels": [
+   327,
+   448
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.604,
+  "solid_share": 0.372,
+  "bytes": 270831,
+  "name_tr": "Lemur",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p01_baboon": {
+  "animal": "baboon",
+  "sheet": "14.png",
+  "position": 1,
+  "file": "s14_p01_baboon.png",
+  "source_box": [
+   9,
+   17,
+   299,
+   477
+  ],
+  "source_pixels": [
+   290,
+   460
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.623,
+  "solid_share": 0.359,
+  "bytes": 237181,
+  "name_tr": "Babun",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p02_mandrill": {
+  "animal": "mandrill",
+  "sheet": "14.png",
+  "position": 2,
+  "file": "s14_p02_mandrill.png",
+  "source_box": [
+   286,
+   12,
+   555,
+   482
+  ],
+  "source_pixels": [
+   269,
+   470
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.653,
+  "solid_share": 0.33,
+  "bytes": 221649,
+  "name_tr": "Mandril",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p03_howler_monkey": {
+  "animal": "howler_monkey",
+  "sheet": "14.png",
+  "position": 3,
+  "file": "s14_p03_howler_monkey.png",
+  "source_box": [
+   547,
+   18,
+   848,
+   479
+  ],
+  "source_pixels": [
+   301,
+   461
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.658,
+  "solid_share": 0.322,
+  "bytes": 213927,
+  "name_tr": "Uluyan maymun",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p04_orangutan": {
+  "animal": "orangutan",
+  "sheet": "14.png",
+  "position": 4,
+  "file": "s14_p04_orangutan.png",
+  "source_box": [
+   819,
+   18,
+   1222,
+   481
+  ],
+  "source_pixels": [
+   403,
+   463
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.511,
+  "solid_share": 0.47,
+  "bytes": 309158,
+  "name_tr": "Orangutan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p05_tapir": {
+  "animal": "tapir",
+  "sheet": "14.png",
+  "position": 5,
+  "file": "s14_p05_tapir.png",
+  "source_box": [
+   1205,
+   59,
+   1536,
+   475
+  ],
+  "source_pixels": [
+   331,
+   416
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.635,
+  "solid_share": 0.339,
+  "bytes": 211445,
+  "name_tr": "Tapir",
+  "note": "OK: kaynak kenarına değiyor, tam görünüyor",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p06_ibex": {
+  "animal": "ibex",
+  "sheet": "14.png",
+  "position": 6,
+  "file": "s14_p06_ibex.png",
+  "source_box": [
+   10,
+   488,
+   321,
+   955
+  ],
+  "source_pixels": [
+   311,
+   467
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.73,
+  "solid_share": 0.233,
+  "bytes": 185583,
+  "name_tr": "Dağ keçisi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p07_musk_ox": {
+  "animal": "musk_ox",
+  "sheet": "14.png",
+  "position": 7,
+  "file": "s14_p07_musk_ox.png",
+  "source_box": [
+   247,
+   514,
+   699,
+   976
+  ],
+  "source_pixels": [
+   452,
+   462
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.5,
+  "solid_share": 0.476,
+  "bytes": 311209,
+  "name_tr": "Misk öküzü",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s14_p08_marmot": {
+  "animal": "marmot",
+  "sheet": "14.png",
+  "position": 8,
+  "file": "s14_p08_marmot.png",
+  "source_box": [
+   605,
+   533,
+   954,
+   976
+  ],
+  "source_pixels": [
+   349,
+   443
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.66,
+  "solid_share": 0.319,
+  "bytes": 219563,
+  "name_tr": "Dağ sıçanı",
+  "note": "OK: bıyıklar ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s14_p09_chinchilla": {
+  "animal": "chinchilla",
+  "sheet": "14.png",
+  "position": 9,
+  "file": "s14_p09_chinchilla.png",
+  "source_box": [
+   903,
+   562,
+   1291,
+   955
+  ],
+  "source_pixels": [
+   388,
+   393
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 3,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.473,
+  "solid_share": 0.494,
+  "bytes": 324446,
+  "name_tr": "Şinşilla",
+  "note": "OK: bıyıklar ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s14_p10_hamster": {
+  "animal": "hamster",
+  "sheet": "14.png",
+  "position": 10,
+  "file": "s14_p10_hamster.png",
+  "source_box": [
+   1255,
+   576,
+   1523,
+   951
+  ],
+  "source_pixels": [
+   268,
+   375
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.576,
+  "solid_share": 0.399,
+  "bytes": 238552,
+  "name_tr": "Hamster",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p01_squirrel_monkey": {
+  "animal": "squirrel_monkey",
+  "sheet": "15.png",
+  "position": 1,
+  "file": "s15_p01_squirrel_monkey.png",
+  "source_box": [
+   7,
+   26,
+   316,
+   482
+  ],
+  "source_pixels": [
+   309,
+   456
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.635,
+  "solid_share": 0.341,
+  "bytes": 247650,
+  "name_tr": "Sincap maymunu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p02_capuchin": {
+  "animal": "capuchin",
+  "sheet": "15.png",
+  "position": 2,
+  "file": "s15_p02_capuchin.png",
+  "source_box": [
+   282,
+   10,
+   614,
+   479
+  ],
+  "source_pixels": [
+   332,
+   469
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.628,
+  "solid_share": 0.354,
+  "bytes": 240196,
+  "name_tr": "Kapuçin maymunu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p03_japanese_macaque": {
+  "animal": "japanese_macaque",
+  "sheet": "15.png",
+  "position": 3,
+  "file": "s15_p03_japanese_macaque.png",
+  "source_box": [
+   567,
+   12,
+   941,
+   478
+  ],
+  "source_pixels": [
+   374,
+   466
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.538,
+  "solid_share": 0.442,
+  "bytes": 309790,
+  "name_tr": "Japon makağı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p04_tarsier": {
+  "animal": "tarsier",
+  "sheet": "15.png",
+  "position": 4,
+  "file": "s15_p04_tarsier.png",
+  "source_box": [
+   936,
+   6,
+   1205,
+   486
+  ],
+  "source_pixels": [
+   269,
+   480
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.712,
+  "solid_share": 0.263,
+  "bytes": 209077,
+  "name_tr": "Tarsiyer",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p05_coati": {
+  "animal": "coati",
+  "sheet": "15.png",
+  "position": 5,
+  "file": "s15_p05_coati.png",
+  "source_box": [
+   1198,
+   9,
+   1531,
+   469
+  ],
+  "source_pixels": [
+   333,
+   460
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.642,
+  "solid_share": 0.331,
+  "bytes": 255318,
+  "name_tr": "Koati",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p06_african_wild_dog": {
+  "animal": "african_wild_dog",
+  "sheet": "15.png",
+  "position": 6,
+  "file": "s15_p06_african_wild_dog.png",
+  "source_box": [
+   9,
+   484,
+   372,
+   992
+  ],
+  "source_pixels": [
+   363,
+   508
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.707,
+  "solid_share": 0.261,
+  "bytes": 211409,
+  "name_tr": "Afrika yaban köpeği",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p07_dingo": {
+  "animal": "dingo",
+  "sheet": "15.png",
+  "position": 7,
+  "file": "s15_p07_dingo.png",
+  "source_box": [
+   265,
+   487,
+   637,
+   990
+  ],
+  "source_pixels": [
+   372,
+   503
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.712,
+  "solid_share": 0.261,
+  "bytes": 197292,
+  "name_tr": "Dingo",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p08_arctic_fox": {
+  "animal": "arctic_fox",
+  "sheet": "15.png",
+  "position": 8,
+  "file": "s15_p08_arctic_fox.png",
+  "source_box": [
+   548,
+   522,
+   982,
+   986
+  ],
+  "source_pixels": [
+   434,
+   464
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.564,
+  "solid_share": 0.415,
+  "bytes": 251689,
+  "name_tr": "Kutup tilkisi",
+  "note": "OK: bıyıklar ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s15_p09_sand_cat": {
+  "animal": "sand_cat",
+  "sheet": "15.png",
+  "position": 9,
+  "file": "s15_p09_sand_cat.png",
+  "source_box": [
+   916,
+   537,
+   1315,
+   981
+  ],
+  "source_pixels": [
+   399,
+   444
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.624,
+  "solid_share": 0.352,
+  "bytes": 252645,
+  "name_tr": "Kum kedisi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s15_p10_serval": {
+  "animal": "serval",
+  "sheet": "15.png",
+  "position": 10,
+  "file": "s15_p10_serval.png",
+  "source_box": [
+   1216,
+   463,
+   1525,
+   987
+  ],
+  "source_pixels": [
+   309,
+   524
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.749,
+  "solid_share": 0.232,
+  "bytes": 183066,
+  "name_tr": "Serval",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p01_cockatoo": {
+  "animal": "cockatoo",
+  "sheet": "16.png",
+  "position": 1,
+  "file": "s16_p01_cockatoo.png",
+  "source_box": [
+   12,
+   5,
+   296,
+   552
+  ],
+  "source_pixels": [
+   284,
+   547
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.748,
+  "solid_share": 0.225,
+  "bytes": 164351,
+  "name_tr": "Kakadu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p02_toucan": {
+  "animal": "toucan",
+  "sheet": "16.png",
+  "position": 2,
+  "file": "s16_p02_toucan.png",
+  "source_box": [
+   289,
+   47,
+   689,
+   538
+  ],
+  "source_pixels": [
+   400,
+   491
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.692,
+  "solid_share": 0.283,
+  "bytes": 195217,
+  "name_tr": "Tukan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p03_macaw": {
+  "animal": "macaw",
+  "sheet": "16.png",
+  "position": 3,
+  "file": "s16_p03_macaw.png",
+  "source_box": [
+   587,
+   25,
+   956,
+   661
+  ],
+  "source_pixels": [
+   369,
+   636
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.81,
+  "solid_share": 0.17,
+  "bytes": 131795,
+  "name_tr": "Ara papağanı",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p04_budgerigar": {
+  "animal": "budgerigar",
+  "sheet": "16.png",
+  "position": 4,
+  "file": "s16_p04_budgerigar.png",
+  "source_box": [
+   877,
+   86,
+   1200,
+   562
+  ],
+  "source_pixels": [
+   323,
+   476
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.782,
+  "solid_share": 0.197,
+  "bytes": 159301,
+  "name_tr": "Muhabbet kuşu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p05_starling": {
+  "animal": "starling",
+  "sheet": "16.png",
+  "position": 5,
+  "file": "s16_p05_starling.png",
+  "source_box": [
+   1195,
+   64,
+   1523,
+   518
+  ],
+  "source_pixels": [
+   328,
+   454
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.708,
+  "solid_share": 0.263,
+  "bytes": 224944,
+  "name_tr": "Sığırcık",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p06_chaffinch": {
+  "animal": "chaffinch",
+  "sheet": "16.png",
+  "position": 6,
+  "file": "s16_p06_chaffinch.png",
+  "source_box": [
+   6,
+   572,
+   292,
+   979
+  ],
+  "source_pixels": [
+   286,
+   407
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.723,
+  "solid_share": 0.249,
+  "bytes": 199866,
+  "name_tr": "İspinoz",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p07_song_thrush": {
+  "animal": "song_thrush",
+  "sheet": "16.png",
+  "position": 7,
+  "file": "s16_p07_song_thrush.png",
+  "source_box": [
+   253,
+   535,
+   568,
+   988
+  ],
+  "source_pixels": [
+   315,
+   453
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.759,
+  "solid_share": 0.216,
+  "bytes": 180292,
+  "name_tr": "Ardıç kuşu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p08_nightjar": {
+  "animal": "nightjar",
+  "sheet": "16.png",
+  "position": 8,
+  "file": "s16_p08_nightjar.png",
+  "source_box": [
+   523,
+   592,
+   897,
+   949
+  ],
+  "source_pixels": [
+   374,
+   357
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.63,
+  "solid_share": 0.34,
+  "bytes": 267196,
+  "name_tr": "Çobanaldatan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p09_woodcock": {
+  "animal": "woodcock",
+  "sheet": "16.png",
+  "position": 9,
+  "file": "s16_p09_woodcock.png",
+  "source_box": [
+   854,
+   592,
+   1247,
+   994
+  ],
+  "source_pixels": [
+   393,
+   402
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.709,
+  "solid_share": 0.258,
+  "bytes": 214749,
+  "name_tr": "Çulluk",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s16_p10_pelican": {
+  "animal": "pelican",
+  "sheet": "16.png",
+  "position": 10,
+  "file": "s16_p10_pelican.png",
+  "source_box": [
+   1140,
+   536,
+   1527,
+   996
+  ],
+  "source_pixels": [
+   387,
+   460
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.663,
+  "solid_share": 0.309,
+  "bytes": 209997,
+  "name_tr": "Pelikan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p01_ostrich": {
+  "animal": "ostrich",
+  "sheet": "18.png",
+  "position": 1,
+  "file": "s18_p01_ostrich.png",
+  "source_box": [
+   7,
+   10,
+   374,
+   515
+  ],
+  "source_pixels": [
+   367,
+   505
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.764,
+  "solid_share": 0.208,
+  "bytes": 167271,
+  "name_tr": "Devekuşu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p02_emu": {
+  "animal": "emu",
+  "sheet": "18.png",
+  "position": 2,
+  "file": "s18_p02_emu.png",
+  "source_box": [
+   320,
+   12,
+   685,
+   509
+  ],
+  "source_pixels": [
+   365,
+   497
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.748,
+  "solid_share": 0.225,
+  "bytes": 186238,
+  "name_tr": "Emu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p03_kiwi": {
+  "animal": "kiwi",
+  "sheet": "18.png",
+  "position": 3,
+  "file": "s18_p03_kiwi.png",
+  "source_box": [
+   620,
+   158,
+   1001,
+   514
+  ],
+  "source_pixels": [
+   381,
+   356
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.642,
+  "solid_share": 0.318,
+  "bytes": 245396,
+  "name_tr": "Kivi",
+  "note": "OK: gaga kılları ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s18_p04_guineafowl": {
+  "animal": "guineafowl",
+  "sheet": "18.png",
+  "position": 4,
+  "file": "s18_p04_guineafowl.png",
+  "source_box": [
+   942,
+   80,
+   1241,
+   513
+  ],
+  "source_pixels": [
+   299,
+   433
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.703,
+  "solid_share": 0.273,
+  "bytes": 228773,
+  "name_tr": "Beç tavuğu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p05_quail": {
+  "animal": "quail",
+  "sheet": "18.png",
+  "position": 5,
+  "file": "s18_p05_quail.png",
+  "source_box": [
+   1222,
+   127,
+   1529,
+   515
+  ],
+  "source_pixels": [
+   307,
+   388
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.694,
+  "solid_share": 0.278,
+  "bytes": 220310,
+  "name_tr": "Bıldırcın",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p06_partridge": {
+  "animal": "partridge",
+  "sheet": "18.png",
+  "position": 6,
+  "file": "s18_p06_partridge.png",
+  "source_box": [
+   5,
+   545,
+   293,
+   1004
+  ],
+  "source_pixels": [
+   288,
+   459
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.742,
+  "solid_share": 0.233,
+  "bytes": 177937,
+  "name_tr": "Keklik",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p07_bustard": {
+  "animal": "bustard",
+  "sheet": "18.png",
+  "position": 7,
+  "file": "s18_p07_bustard.png",
+  "source_box": [
+   290,
+   507,
+   662,
+   1004
+  ],
+  "source_pixels": [
+   372,
+   497
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.699,
+  "solid_share": 0.273,
+  "bytes": 220305,
+  "name_tr": "Toy kuşu",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p08_kite": {
+  "animal": "kite",
+  "sheet": "18.png",
+  "position": 8,
+  "file": "s18_p08_kite.png",
+  "source_box": [
+   593,
+   542,
+   964,
+   1002
+  ],
+  "source_pixels": [
+   371,
+   460
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.705,
+  "solid_share": 0.269,
+  "bytes": 209558,
+  "name_tr": "Çaylak",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p09_peregrine_falcon": {
+  "animal": "peregrine_falcon",
+  "sheet": "18.png",
+  "position": 9,
+  "file": "s18_p09_peregrine_falcon.png",
+  "source_box": [
+   896,
+   542,
+   1253,
+   1009
+  ],
+  "source_pixels": [
+   357,
+   467
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.719,
+  "solid_share": 0.255,
+  "bytes": 208042,
+  "name_tr": "Doğan",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s18_p10_kestrel": {
+  "animal": "kestrel",
+  "sheet": "18.png",
+  "position": 10,
+  "file": "s18_p10_kestrel.png",
+  "source_box": [
+   1212,
+   521,
+   1525,
+   1010
+  ],
+  "source_pixels": [
+   313,
+   489
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.738,
+  "solid_share": 0.239,
+  "bytes": 195108,
+  "name_tr": "Kerkenez",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s17_p01_red_deer": {
+  "animal": "red_deer",
+  "sheet": "17.png",
+  "position": 1,
+  "file": "s17_p01_red_deer.png",
+  "source_box": [
+   0,
+   0,
+   357,
+   508
+  ],
+  "source_pixels": [
+   357,
+   508
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.728,
+  "solid_share": 0.229,
+  "bytes": 203244,
+  "name_tr": "Kızıl geyik",
+  "note": "arka ayaklar kaynakta çimenin içinde, toynaklar yok",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s17_p02_reindeer": {
+  "animal": "reindeer",
+  "sheet": "17.png",
+  "position": 2,
+  "file": "s17_p02_reindeer.png",
+  "source_box": [
+   302,
+   10,
+   684,
+   531
+  ],
+  "source_pixels": [
+   382,
+   521
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.72,
+  "solid_share": 0.235,
+  "bytes": 208074,
+  "name_tr": "Ren geyiği",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s17_p03_antelope": {
+  "animal": "antelope",
+  "sheet": "17.png",
+  "position": 3,
+  "file": "s17_p03_antelope.png",
+  "source_box": [
+   610,
+   14,
+   939,
+   535
+  ],
+  "source_pixels": [
+   329,
+   521
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.824,
+  "solid_share": 0.142,
+  "bytes": 133105,
+  "name_tr": "Antilop",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s17_p04_okapi": {
+  "animal": "okapi",
+  "sheet": "17.png",
+  "position": 4,
+  "file": "s17_p04_okapi.png",
+  "source_box": [
+   905,
+   7,
+   1243,
+   542
+  ],
+  "source_pixels": [
+   338,
+   535
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.779,
+  "solid_share": 0.19,
+  "bytes": 156921,
+  "name_tr": "Okapi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s17_p05_buffalo": {
+  "animal": "buffalo",
+  "sheet": "17.png",
+  "position": 5,
+  "file": "s17_p05_buffalo.png",
+  "source_box": [
+   1156,
+   65,
+   1533,
+   523
+  ],
+  "source_pixels": [
+   377,
+   458
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.612,
+  "solid_share": 0.357,
+  "bytes": 255390,
+  "name_tr": "Manda",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s17_p06_donkey": {
+  "animal": "donkey",
+  "sheet": "17.png",
+  "position": 6,
+  "file": "s17_p06_donkey.png",
+  "source_box": [
+   13,
+   487,
+   363,
+   954
+  ],
+  "source_pixels": [
+   350,
+   467
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.731,
+  "solid_share": 0.237,
+  "bytes": 194190,
+  "name_tr": "Eşek",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s17_p07_otter": {
+  "animal": "otter",
+  "sheet": "17.png",
+  "position": 7,
+  "file": "s17_p07_otter.png",
+  "source_box": [
+   220,
+   576,
+   657,
+   927
+  ],
+  "source_pixels": [
+   437,
+   351
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.734,
+  "solid_share": 0.242,
+  "bytes": 189363,
+  "name_tr": "Su samuru",
+  "note": "arka gövde ve kuyruk kaynakta taşın arkasında, düz kesik",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s17_p08_pine_marten": {
+  "animal": "pine_marten",
+  "sheet": "17.png",
+  "position": 8,
+  "file": "s17_p08_pine_marten.png",
+  "source_box": [
+   566,
+   558,
+   973,
+   944
+  ],
+  "source_pixels": [
+   407,
+   386
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.694,
+  "solid_share": 0.277,
+  "bytes": 209268,
+  "name_tr": "Ağaç sansarı",
+  "note": "bıyık ve kuyruk ucunda zemin kalıntısı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "needs_review"
+ },
+ "s17_p09_stoat": {
+  "animal": "stoat",
+  "sheet": "17.png",
+  "position": 9,
+  "file": "s17_p09_stoat.png",
+  "source_box": [
+   885,
+   593,
+   1244,
+   943
+  ],
+  "source_pixels": [
+   359,
+   350
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.728,
+  "solid_share": 0.239,
+  "bytes": 182615,
+  "name_tr": "Kakım",
+  "note": "bıyık çevresinde zemin kalıntısı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s17_p10_badger": {
+  "animal": "badger",
+  "sheet": "17.png",
+  "position": 10,
+  "file": "s17_p10_badger.png",
+  "source_box": [
+   1168,
+   554,
+   1512,
+   908
+  ],
+  "source_pixels": [
+   344,
+   354
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.492,
+  "solid_share": 0.48,
+  "bytes": 338528,
+  "name_tr": "Porsuk",
+  "note": "OK: yakından bakıldı, temiz",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s19_p01_cicada": {
+  "animal": "cicada",
+  "sheet": "19.png",
+  "position": 1,
+  "file": "s19_p01_cicada.png",
+  "source_box": [
+   42,
+   46,
+   308,
+   453
+  ],
+  "source_pixels": [
+   266,
+   407
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.713,
+  "solid_share": 0.261,
+  "bytes": 203647,
+  "name_tr": "Ağustos böceği",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s19_p02_grasshopper": {
+  "animal": "grasshopper",
+  "sheet": "19.png",
+  "position": 2,
+  "file": "s19_p02_grasshopper.png",
+  "source_box": [
+   274,
+   28,
+   658,
+   404
+  ],
+  "source_pixels": [
+   384,
+   376
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.791,
+  "solid_share": 0.166,
+  "bytes": 151160,
+  "name_tr": "Çekirge",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s19_p03_cricket": {
+  "animal": "cricket",
+  "sheet": "19.png",
+  "position": 3,
+  "file": "s19_p03_cricket.png",
+  "source_box": [
+   589,
+   46,
+   960,
+   410
+  ],
+  "source_pixels": [
+   371,
+   364
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.799,
+  "solid_share": 0.157,
+  "bytes": 152791,
+  "name_tr": "Cırcır böceği",
+  "note": "OK: yakından bakıldı, temiz",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s19_p04_katydid": {
+  "animal": "katydid",
+  "sheet": "19.png",
+  "position": 4,
+  "file": "s19_p04_katydid.png",
+  "source_box": [
+   901,
+   157,
+   1233,
+   421
+  ],
+  "source_pixels": [
+   332,
+   264
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.746,
+  "solid_share": 0.206,
+  "bytes": 160856,
+  "name_tr": "Çalı çekirgesi",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s19_p05_honey_bee": {
+  "animal": "honey_bee",
+  "sheet": "19.png",
+  "position": 5,
+  "file": "s19_p05_honey_bee.png",
+  "source_box": [
+   1218,
+   77,
+   1532,
+   385
+  ],
+  "source_pixels": [
+   314,
+   308
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 2,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.638,
+  "solid_share": 0.317,
+  "bytes": 239381,
+  "name_tr": "Bal arısı",
+  "note": "OK: bacak ucu ayrı parça",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ },
+ "s19_p06_bumblebee": {
+  "animal": "bumblebee",
+  "sheet": "19.png",
+  "position": 6,
+  "file": "s19_p06_bumblebee.png",
+  "source_box": [
+   12,
+   513,
+   350,
+   850
+  ],
+  "source_pixels": [
+   338,
+   337
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.604,
+  "solid_share": 0.351,
+  "bytes": 260237,
+  "name_tr": "Bombus arısı",
+  "note": "iki ayak ucunda pembe çiçek kalıntısı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s19_p07_wasp": {
+  "animal": "wasp",
+  "sheet": "19.png",
+  "position": 7,
+  "file": "s19_p07_wasp.png",
+  "source_box": [
+   319,
+   555,
+   649,
+   884
+  ],
+  "source_pixels": [
+   330,
+   329
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.721,
+  "solid_share": 0.217,
+  "bytes": 189176,
+  "name_tr": "Eşek arısı",
+  "note": "OK: ince bacaklar, kesim temiz",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": false,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s19_p08_stag_beetle": {
+  "animal": "stag_beetle",
+  "sheet": "19.png",
+  "position": 8,
+  "file": "s19_p08_stag_beetle.png",
+  "source_box": [
+   539,
+   472,
+   928,
+   930
+  ],
+  "source_pixels": [
+   389,
+   458
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.79,
+  "solid_share": 0.172,
+  "bytes": 162625,
+  "name_tr": "Geyik böceği",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s19_p09_firefly": {
+  "animal": "firefly",
+  "sheet": "19.png",
+  "position": 9,
+  "file": "s19_p09_firefly.png",
+  "source_box": [
+   916,
+   580,
+   1175,
+   884
+  ],
+  "source_pixels": [
+   259,
+   304
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.734,
+  "solid_share": 0.216,
+  "bytes": 187662,
+  "name_tr": "Ateş böceği",
+  "note": "alttaki ışıltı düzensiz kesildi, ayak ucunda yeşil kalıntı",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "needs_review"
+ },
+ "s19_p10_dragonfly": {
+  "animal": "dragonfly",
+  "sheet": "19.png",
+  "position": 10,
+  "file": "s19_p10_dragonfly.png",
+  "source_box": [
+   1183,
+   487,
+   1536,
+   904
+  ],
+  "source_pixels": [
+   353,
+   417
+  ],
+  "upscaled": true,
+  "touching_neighbour": false,
+  "touches_sheet_edge": true,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.794,
+  "solid_share": 0.169,
+  "bytes": 163364,
+  "name_tr": "Yusufçuk",
+  "note": "OK: kuyruk ucu kaynak kenarına değiyor, tam görünüyor",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": false,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s20_p01_frog": {
+  "animal": "frog",
+  "sheet": "20.png",
+  "position": 1,
+  "file": "s20_p01_frog.png",
+  "source_box": [
+   55,
+   198,
+   658,
+   836
+  ],
+  "source_pixels": [
+   603,
+   638
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 1,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.551,
+  "solid_share": 0.419,
+  "bytes": 252536,
+  "name_tr": "Kurbağa",
+  "note": "",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": true
+  },
+  "status": "ok"
+ },
+ "s20_p02_mouse": {
+  "animal": "mouse",
+  "sheet": "20.png",
+  "position": 2,
+  "file": "s20_p02_mouse.png",
+  "source_box": [
+   796,
+   139,
+   1490,
+   847
+  ],
+  "source_pixels": [
+   694,
+   708
+  ],
+  "upscaled": false,
+  "touching_neighbour": false,
+  "touches_sheet_edge": false,
+  "pieces": 3,
+  "size": [
+   512,
+   512
+  ],
+  "mode": "RGBA",
+  "transparent_share": 0.66,
+  "solid_share": 0.307,
+  "bytes": 210391,
+  "name_tr": "Fare",
+  "note": "OK: ayrı parçalar bıyık telleri; kürk kenarındaki beyaz hat temizlendi",
+  "checks": {
+   "size_512": true,
+   "rgba": true,
+   "background_clear": true,
+   "body_solid": true,
+   "corners_clear": true,
+   "margin_kept": true,
+   "no_haze": true,
+   "not_joined": true,
+   "inside_sheet": true,
+   "one_piece": false
+  },
+  "status": "ok"
+ }
+}

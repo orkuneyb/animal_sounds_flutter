@@ -56,3 +56,10 @@ android/.kotlin/
 
 # Gradle build output
 android/build/
+
+# Working copies that the scripts can make again (large)
+/docs/animal-art/cut/*.png
+/docs/animal-art/final/
+/docs/animal-art/archive/
+/animal-sound-research/originals/
+/animal-sound-research/rejected/*/

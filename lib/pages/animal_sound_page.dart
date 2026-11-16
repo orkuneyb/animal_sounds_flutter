@@ -132,6 +132,12 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
   }
 
   Future<void> _play() async {
+    if (!_animal.hasSound) {
+      // Nothing to play yet: stay silent rather than play another animal.
+      await _player.stop();
+      if (mounted) _setPlaying(false);
+      return;
+    }
     final volume = context.read<SettingsProvider>().getAnimalSoundLevel;
     try {
       await _player.stop();
@@ -221,7 +227,8 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
               children: [
                 _buildTopBar(),
                 Expanded(child: _buildAnimal()),
-                _buildWave(),
+                // No sound yet: keep the layout, show no sound wave.
+                if (_animal.hasSound) _buildWave() else const SizedBox(height: 30),
                 const SizedBox(height: 12),
                 _buildControls(),
                 const SizedBox(height: 20),
@@ -304,6 +311,17 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
                 ),
               ),
             ),
+            if (!_animal.hasSound)
+              Padding(
+                padding: const EdgeInsets.only(top: 4),
+                child: Text(
+                  'sound_coming_soon'.tr(),
+                  style: AppTextStyles.bodyMedium.copyWith(
+                    color: AppColors.inkSoft,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+              ),
           ],
         ),
       ),
@@ -355,23 +373,42 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
             onTap: () => _step(-1),
           ),
         const SizedBox(width: 22),
-        Pressable(
-          onTap: _togglePlay,
-          semanticLabel: 'play_sound'.tr(),
-          child: Container(
-            width: 104,
-            height: 104,
-            decoration: const BoxDecoration(
-              color: AppColors.pop,
-              shape: BoxShape.circle,
+        if (_animal.hasSound)
+          Pressable(
+            onTap: _togglePlay,
+            semanticLabel: 'play_sound'.tr(),
+            child: Container(
+              width: 104,
+              height: 104,
+              decoration: const BoxDecoration(
+                color: AppColors.pop,
+                shape: BoxShape.circle,
+              ),
+              child: Icon(
+                _isPlaying ? Icons.stop_rounded : Icons.play_arrow_rounded,
+                size: 60,
+                color: Colors.white,
+              ),
             ),
-            child: Icon(
-              _isPlaying ? Icons.stop_rounded : Icons.play_arrow_rounded,
-              size: 60,
-              color: Colors.white,
+          )
+        else
+          // The sound is not added yet: a quiet, untappable button.
+          Semantics(
+            label: 'sound_coming_soon'.tr(),
+            child: Container(
+              width: 104,
+              height: 104,
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.7),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.volume_off_rounded,
+                size: 48,
+                color: AppColors.inkSoft,
+              ),
             ),
           ),
-        ),
         const SizedBox(width: 22),
         if (showArrows)
           _RoundButton(
@@ -404,7 +441,9 @@ class _AnimalSoundPageState extends State<AnimalSoundPage>
           label: 'coloring'.tr(),
           onTap: () => _open(ColoringPage(animal: _animal)),
         ),
-        const SizedBox(width: 18),
+        // The recorder compares the child's voice with the animal's sound.
+        if (_animal.hasSound) const SizedBox(width: 18),
+        if (_animal.hasSound)
         _RoundButton(
           icon: Icons.mic_rounded,
           size: 64,

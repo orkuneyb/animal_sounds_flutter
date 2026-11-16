@@ -301,7 +301,7 @@ class _FavoriteAnimalCard extends StatelessWidget {
                       animal.imagePath,
                       width: 68,
                       height: 68,
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                     ),
                   ),
                   const SizedBox(width: 14),

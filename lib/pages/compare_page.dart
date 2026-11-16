@@ -72,12 +72,15 @@ class _ComparePageState extends State<ComparePage> {
     setState(() => _isPlayingBoth = true);
 
     try {
-      await _audioPlayer.stop();
-      await _audioPlayer.play(AssetSource(_left!.soundPath.replaceFirst('assets/', '')));
-      await Future.delayed(const Duration(milliseconds: 1500));
-      await _audioPlayer.stop();
-      await _audioPlayer.play(AssetSource(_right!.soundPath.replaceFirst('assets/', '')));
-      await Future.delayed(const Duration(milliseconds: 1500));
+      // An animal whose sound is not added yet is skipped.
+      for (final animal in [_left!, _right!]) {
+        if (!animal.hasSound) continue;
+        await _audioPlayer.stop();
+        await _audioPlayer.play(
+          AssetSource(animal.soundPath.replaceFirst('assets/', '')),
+        );
+        await Future.delayed(const Duration(milliseconds: 1500));
+      }
       await _audioPlayer.stop();
     } catch (_) {
       // Gracefully ignore playback errors.
@@ -128,7 +131,7 @@ class _ComparePageState extends State<ComparePage> {
             const SizedBox(height: 16),
 
             // ---- Play Both Sounds ----
-            if (bothSelected)
+            if (bothSelected && (_left!.hasSound || _right!.hasSound))
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
                 child: ElevatedButton.icon(
@@ -200,7 +203,7 @@ class _ComparePageState extends State<ComparePage> {
                       borderRadius: BorderRadius.circular(16),
                       child: Image.asset(
                         animal.imagePath,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                         errorBuilder: (_, __, ___) =>
                             const Icon(Icons.pets, size: 40),
                       ),
@@ -548,7 +551,7 @@ class _AnimalSelectorSheet extends StatelessWidget {
                               clipBehavior: Clip.antiAlias,
                               child: Image.asset(
                                 animal.imagePath,
-                                fit: BoxFit.cover,
+                                fit: BoxFit.contain,
                                 errorBuilder: (_, __, ___) =>
                                     const Icon(Icons.pets),
                               ),

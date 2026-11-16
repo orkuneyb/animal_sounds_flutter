@@ -60,7 +60,8 @@ class AchievementProvider with ChangeNotifier {
           title: 'achievement_sound_master_title',
           description: 'achievement_sound_master_desc',
           category: AchievementCategory.listening,
-          maxProgress: AnimalRepository.animals.length,
+          // Animals whose sound is not added yet cannot be listened to.
+          maxProgress: AnimalRepository.withSound.length,
           iconData: Icons.stars_rounded,
         ),
         Achievement(

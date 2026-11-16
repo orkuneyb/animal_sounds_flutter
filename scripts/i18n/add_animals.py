@@ -6,8 +6,8 @@ Usage (from the project root):
 For every named animal and every language it takes the ten texts from
 scripts/i18n/new_animals/<lang>.json, adds them to
 assets/translations/<lang>.json, adds the name to the nested "animal_names"
-block, and rewrites the two badge texts that state the number of animals so
-they match the animal list in lib/repositories/animal_repository.dart.
+block, and turns the number in the two badge texts that state how many
+animals there are into a {} placeholder, which the app fills in itself.
 Safe to run again.
 """
 import json
@@ -23,11 +23,6 @@ SUFFIXES = ["", "_desc", "_size", "_weight", "_lifespan", "_habitat", "_diet",
             "_fun_fact_1", "_fun_fact_2", "_fun_fact_3"]
 COUNT_KEYS = ["achievement_sound_master_desc", "achievement_animal_expert_desc"]
 OLD_COUNT = re.compile(r"\d+|[٠-٩]+|[०-९]+")
-
-
-def animal_count() -> int:
-    repo = (ROOT / "lib" / "repositories" / "animal_repository.dart").read_text(encoding="utf-8")
-    return len(re.findall(r"^\s*\('\w+', AnimalGroup\.", repo, flags=re.M))
 
 
 def add_names(text: str, names: dict) -> str:
@@ -48,7 +43,6 @@ def main() -> int:
     if not animals:
         print(__doc__)
         return 1
-    count = animal_count()
     for lang in LANGS:
         source = json.loads((SRC / f"{lang}.json").read_text(encoding="utf-8"))
         path = DIR / f"{lang}.json"
@@ -56,12 +50,12 @@ def main() -> int:
         current = json.loads(text)
         pairs = {f"{a}{s}": source[f"{a}{s}"] for a in animals for s in SUFFIXES}
         for key in COUNT_KEYS:
-            pairs[key] = OLD_COUNT.sub(str(count), current[key], count=1)
+            pairs[key] = OLD_COUNT.sub("{}", current[key], count=1)
         text = insert(text, pairs)
         text = add_names(text, {a: source[a] for a in animals})
         json.loads(text)
         path.write_text(text, encoding="utf-8", newline="\n")
-        print(lang, "ok:", len(animals), "animals, count text ->", count)
+        print(lang, "ok:", len(animals), "animals")
     return 0
 
 
