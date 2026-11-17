@@ -1,0 +1,18 @@
+== {{int:filedesc}} ==
+{{Information
+|Description={{en|1=Saint-Etienne d'Issensac - Brissac (34) - France ,  9 July 2006. Cicada orni "singing" near  Hérault river.}}
+{{fr|1=Saint-Etienne d'Issensac - Brissac (34) - France , le 9 Juillet 2006. Un cigale grise (Cicada orni) "chantant" dans un frêne à proximité du fleuve Hérault (d'où les cris d'enfants !).}}
+|Source={{own}}
+|Author=[[User:DavidDelon|DavidDelon]]
+|Date=2006-07-24
+|Permission=
+|other_versions=
+}}
+
+== {{int:license-header}} ==
+{{PD-self}}
+
+[[Category:Audio files of Cicadidae]]
+[[Category:Audio files of 2006]]
+[[Category:Audio files of France]]
+[[Category:Cicada orni]]

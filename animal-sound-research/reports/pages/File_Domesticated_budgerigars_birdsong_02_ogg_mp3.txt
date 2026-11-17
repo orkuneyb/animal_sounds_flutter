@@ -1,0 +1,14 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=Birdsong of two domesticated budgerigars.}}
+|date=2020-03-15
+|source={{own}}
+|author=[[User:Pyb|Pyb]]
+|permission=
+|other versions=
+}}
+
+=={{int:license-header}}==
+{{self|cc-by-4.0}}
+
+[[Category:Audio files of budgerigars]]

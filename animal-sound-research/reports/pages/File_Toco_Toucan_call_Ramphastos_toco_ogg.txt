@@ -1,0 +1,17 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=Call of the Toco Toucan}}
+|date=2021-07-03
+|source=https://xeno-canto.org/1054733
+|author=Fabrício Grigolin
+|permission=
+|other versions=
+}}
+{{Location|-20.2839|-50.246}}
+
+=={{int:license-header}}==
+{{cc-by-4.0}}
+
+[[Category:Birds of South America]]
+[[Category:Sounds of birds]]
+[[Category:Audio files of Aves]]

@@ -1,0 +1,14 @@
+== {{int:filedesc}} ==
+{{Information
+|Description    ={{en|1=a recording of a bison call}}
+|Source         =http://www.nps.gov/wica/naturescience/bison-buffalo-bison-bison.htm
+|Author         =National Park Service
+|Date           = {{unknown|date}}
+|Permission     =
+|other_versions ={{en|Changed from a .wav file to a .ogg file. Was orginally found at [[:w:en:File:Bison.wav]].}}
+}}
+
+== {{int:license-header}} ==
+{{PD-USGov-Interior-NPS}}
+
+[[Category:Bison bison]]

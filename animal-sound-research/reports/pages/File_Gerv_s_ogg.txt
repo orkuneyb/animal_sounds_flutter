@@ -1,0 +1,17 @@
+== {{int:filedesc}} ==
+{{Information
+|Description    ={{en|1=Song of crane (''Grus grus'') at Josvainiai Forest, Kėdainiai district, Lithuania}}
+{{lt|1=Gervių giesmė, Josvainių miškai, Kėdainių raj. }}
+|Source         ={{own}}
+|Author         =[[User:Hugo.arg|Hugo.arg]]
+|Date           =2011-05-22
+|Permission     =
+|other_versions =
+}}
+
+== {{int:license-header}} ==
+{{self|Cc-zero}}
+
+
+[[Category:Josvainiai Forest]]
+[[Category:Grus grus (audio)]]

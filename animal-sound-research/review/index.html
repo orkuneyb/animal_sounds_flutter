@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hayvan sesleri kontrolü</title>
+<style>
+  :root { --bg:#fffbf5; --card:#fff; --ink:#3b2a20; --soft:#8a6b55; --line:#eadfd2; --accent:#e8632c;
+          --ok:#3f7d3a; --no:#c0392b; --again:#b7791f; --real:#2f6f9f; --env:#7a5aa8; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 system-ui, "Segoe UI", sans-serif; }
+  header { position:sticky; top:0; z-index:2; background:var(--bg); border-bottom:1px solid var(--line); padding:12px 16px; }
+  h1 { margin:0 0 6px; font-size:20px; }
+  #summary { color:var(--soft); font-size:13px; }
+  .filters { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+  .filters button { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px;
+                    padding:5px 12px; font:inherit; font-size:13px; cursor:pointer; }
+  .filters button.on { background:var(--ink); color:#fff; border-color:var(--ink); }
+  main { padding:16px; display:grid; gap:14px; grid-template-columns:repeat(auto-fill, minmax(330px, 1fr)); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; display:flex; flex-direction:column; gap:8px; }
+  .card.approved { border-color:var(--ok); } .card.rejected { border-color:var(--no); } .card.research_again { border-color:var(--again); }
+  .top { display:flex; gap:12px; align-items:center; }
+  .top img { width:84px; height:84px; object-fit:contain; background:#ffe9c9; border-radius:12px; flex:none; }
+  .names b { font-size:17px; display:block; }
+  .names span { color:var(--soft); font-size:13px; }
+  .tag { display:inline-block; border-radius:6px; padding:1px 8px; font-size:12px; font-weight:600; color:#fff; margin:2px 4px 0 0; }
+  .tag.real { background:var(--real); } .tag.env { background:var(--env); } .tag.none { background:#9a8f85; }
+  .tag.warn { background:var(--again); } .tag.review { background:var(--no); }
+  audio { width:100%; height:36px; }
+  dl { margin:0; display:grid; grid-template-columns:auto 1fr; gap:2px 10px; font-size:13px; }
+  dt { color:var(--soft); } dd { margin:0; overflow-wrap:anywhere; }
+  a { color:var(--accent); }
+  .note { font-size:13px; color:var(--soft); }
+  .decide { display:flex; gap:6px; flex-wrap:wrap; margin-top:auto; }
+  .decide button { flex:1; border:1px solid var(--line); background:#fff; border-radius:9px; padding:7px 6px; font:inherit; font-size:13px; cursor:pointer; white-space:nowrap; }
+  .decide button.sel[data-s=approved] { background:var(--ok); color:#fff; border-color:var(--ok); }
+  .decide button.sel[data-s=rejected] { background:var(--no); color:#fff; border-color:var(--no); }
+  .decide button.sel[data-s=research_again] { background:var(--again); color:#fff; border-color:var(--again); }
+  input.n { width:100%; border:1px solid var(--line); border-radius:8px; padding:6px 8px; font:inherit; font-size:13px; }
+  .saved { font-size:12px; color:var(--ok); min-height:16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Hayvan sesleri kontrolü</h1>
+  <div id="summary">Yükleniyor…</div>
+  <div class="filters" id="filters"></div>
+</header>
+<main id="list"></main>
+<script>
+const FILTERS = [["all","Tümü"],["with","Sesi hazır"],["pending","Kararı bekleyen"],["approved","Onaylanan"],
+                 ["rejected","Reddedilen"],["research_again","Tekrar araştır"],["missing","Ses bulunamayan"],["later","Henüz araştırılmadı"]];
+const LABEL = {approved:"Onayla", rejected:"Reddet", research_again:"Tekrar araştır"};
+let rows = [], filter = "with";
+const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+function matches(r) {
+  if (filter === "all") return true;
+  if (filter === "with") return !!r.file;
+  if (filter === "missing") return r.state === "no_usable_recording";
+  if (filter === "later") return r.state === "not_researched";
+  if (filter === "pending") return !!r.file && r.review_status === "pending";
+  return r.review_status === filter;
+}
+function row(dl, k, v, href) {
+  if (!v) return;
+  dl.append(el("dt", "", k));
+  const dd = el("dd");
+  if (href) { const a = el("a", "", v); a.href = href; a.target = "_blank"; a.rel = "noopener noreferrer"; dd.append(a); } else dd.textContent = v;
+  dl.append(dd);
+}
+function card(r) {
+  const c = el("section", "card " + r.review_status);
+  const top = el("div", "top"), img = el("img");
+  img.src = "/image/" + r.animal_id + ".png"; img.alt = r.name_tr; img.loading = "lazy";
+  const names = el("div", "names");
+  names.append(el("b", "", r.name_tr), el("span", "", r.name_en + " · " + r.animal_id));
+  const tags = el("div");
+  if (r.sound_type === "REAL_ANIMAL_SOUND") tags.append(el("span", "tag real", "Gerçek hayvan sesi"));
+  else if (r.sound_type === "ENVIRONMENT_OR_MOVEMENT_SOUND") tags.append(el("span", "tag env", "Ortam / hareket sesi"));
+  else tags.append(el("span", "tag none", r.state === "not_researched" ? "Henüz araştırılmadı" : "Uygun ses bulunamadı"));
+  if (r.state === "needs_review") tags.append(el("span", "tag review", "Lisans / tür şüpheli"));
+  if (r.name_confidence === "medium") tags.append(el("span", "tag warn", "Hayvanın adı onayınızı bekliyor"));
+  names.append(tags); top.append(img, names); c.append(top);
+  if (r.file) {
+    const a = el("audio"); a.controls = true; a.preload = "none"; a.src = "/sound/" + r.file; c.append(a);
+    const dl = el("dl");
+    row(dl, "Kayıttaki tür", r.recorded_species);
+    row(dl, "Süre", r.seconds.toFixed(1).replace(".", ",") + " sn");
+    row(dl, "Kaynak", r.source + " — " + r.author, r.source_page);
+    row(dl, "Lisans", r.license, r.license_url);
+    row(dl, "Köken", r.origin);
+    row(dl, "Lisans kontrolü", r.license_check);
+    row(dl, "Tür kontrolü", r.species_check);
+    row(dl, "Düzenleme", (r.edits || []).join("; "));
+    c.append(dl);
+  }
+  if (r.notes) c.append(el("div", "note", "Not: " + r.notes));
+  if (r.state !== "not_researched") {
+    const note = el("input", "n"); note.placeholder = "Notunuz (isteğe bağlı)"; note.value = r.review_note || ""; note.maxLength = 500;
+    const saved = el("div", "saved"), bar = el("div", "decide");
+    const send = async (status) => {
+      const res = await fetch("/review", {method:"POST", headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({animal_id: r.animal_id, status, note: note.value})});
+      if (res.ok) { r.review_status = status; r.review_note = note.value; render(); }
+      else saved.textContent = "Kaydedilemedi";
+    };
+    for (const s of Object.keys(LABEL)) {
+      const b = el("button", r.review_status === s ? "sel" : "", LABEL[s]); b.dataset.s = s;
+      b.onclick = () => send(r.review_status === s ? "pending" : s); bar.append(b);
+    }
+    note.onchange = () => send(r.review_status);
+    if (r.review_status !== "pending") saved.textContent = "Kaydedildi";
+    c.append(note, bar, saved);
+  }
+  return c;
+}
+function render() {
+  const withFile = rows.filter(r => r.file);
+  const count = s => rows.filter(r => r.review_status === s).length;
+  document.getElementById("summary").textContent =
+    rows.length + " hayvan · " + withFile.length + " ses hazır · " + count("approved") + " onaylandı · " +
+    count("rejected") + " reddedildi · " + count("research_again") + " tekrar araştırılacak · " +
+    rows.filter(r => r.state === "no_usable_recording").length + " hayvanda uygun ses bulunamadı";
+  const f = document.getElementById("filters"); f.replaceChildren();
+  for (const [key, text] of FILTERS) { const b = el("button", key === filter ? "on" : "", text); b.onclick = () => { filter = key; render(); }; f.append(b); }
+  const list = document.getElementById("list"); list.replaceChildren();
+  rows.filter(matches).forEach(r => list.append(card(r)));
+}
+fetch("/data").then(r => r.json()).then(d => { rows = d; render(); });
+</script>
+</body>
+</html>

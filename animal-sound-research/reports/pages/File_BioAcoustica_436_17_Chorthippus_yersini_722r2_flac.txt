@@ -1,0 +1,36 @@
+{{BioAcousticaSample
+ |description        = Sound recording of Chorthippus Glyptobothrus yersini
+ |date               = 
+ |source             = http://bio.acousti.ca/node/9784
+ |permission         = {{Cc-by-3.0}}
+ |copyright holder   = Natural History Museum, London
+ |recorder           = 
+ |recorder power supply = 
+ |peak meter reading = 
+ |gain control position = 
+ |tape = 
+ |tape speed = 
+ |track = 
+ |record local time = 
+ |reference signal = 
+ |temperature initial = 
+ |temperature final = 
+ |relative humidity initial = 
+ |relative humidity final = 
+ |light = 
+ |extraneous noise = 
+ |substrate = 
+ |air movement = 
+ |biotic factors = 
+ |microphone = 
+ |microphone distance from subject = 
+ |microphone windshield = 
+ |microphone reflector = 
+ |microphone preamplifier = 
+ |microphone filter = 
+ |original classification = Chorthippus Glyptobothrus yersini
+}}
+
+[[Category:Chorthippus yersini]]
+[[Category:Audio files of Chorthippus]]
+[[Category:Files from BioAcoustica]]

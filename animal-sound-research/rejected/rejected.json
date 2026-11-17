@@ -1,0 +1,161 @@
+[
+ {
+  "animal_id": "cicada",
+  "file": "rejected/cicada/magicicada_septendecim.mp3",
+  "recorded_species": "Magicicada septendecim",
+  "source": "PLOS ONE 2007, doi:10.1371/journal.pone.0000892",
+  "license": "CC BY",
+  "reason": "Kontrol sayfasında reddedildi",
+  "decided": "2026-11-16T14:32:43",
+  "replaced_by": "processed/cicada.mp3 (Cicada orni)"
+ },
+ {
+  "animal_id": "rhinoceros",
+  "file": "rejected/rhinoceros/rhinoceros.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:Rhinoceros_sound_effect.wav",
+  "license": "CC0 (beyan)",
+  "reason": "Kaynağı ve lisansı daha güvenilir bir kayıt bulundu (Freesound).",
+  "replaced_by": "https://freesound.org/people/Breviceps/sounds/535810/"
+ },
+ {
+  "animal_id": "hippopotamus",
+  "file": "rejected/hippopotamus/hippopotamus.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:Hippopotamus_sound_effect.wav",
+  "license": "CC0 (beyan)",
+  "reason": "Kaynağı ve lisansı daha güvenilir bir kayıt bulundu (Freesound).",
+  "replaced_by": "https://freesound.org/people/toadie/sounds/194870/"
+ },
+ {
+  "animal_id": "kingfisher",
+  "file": "rejected/kingfisher/kingfisher.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:Ijsvogel_in_Nieuwegein_-_SoundCloud_-_luc_de_bruijn.ogg",
+  "license": "CC BY 3.0 (beyan)",
+  "reason": "Kaynağı ve lisansı daha güvenilir bir kayıt bulundu (Freesound).",
+  "replaced_by": "https://freesound.org/people/klankbeeld/sounds/677304/"
+ },
+ {
+  "animal_id": "toucan",
+  "file": "rejected/toucan/toucan.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:Toco_Toucan_call_(Ramphastos_toco).ogg",
+  "license": "CC BY 4.0 (beyan)",
+  "reason": "Kaynağı ve lisansı daha güvenilir bir kayıt bulundu (Freesound).",
+  "replaced_by": "https://freesound.org/people/felix.blume/sounds/376669/"
+ },
+ {
+  "animal_id": "ladybug",
+  "file": "rejected/ladybug/ladybug.mp3",
+  "source": "https://freesound.org/people/TravieDoodle/sounds/634746/",
+  "license": "CC0",
+  "recorded_species": "uğur böceği",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T20:59:06"
+ },
+ {
+  "animal_id": "ant",
+  "file": "rejected/ant/ant.mp3",
+  "source": "https://freesound.org/people/130221/sounds/140327/",
+  "license": "CC0",
+  "recorded_species": "karınca (tür belirtilmemiş, Mali)",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T20:59:20"
+ },
+ {
+  "animal_id": "praying_mantis",
+  "file": "rejected/praying_mantis/praying_mantis.mp3",
+  "source": "https://freesound.org/people/nicotep/sounds/547894/",
+  "license": "CC0",
+  "recorded_species": "Mantis religiosa",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T20:59:29"
+ },
+ {
+  "animal_id": "llama",
+  "file": "rejected/llama/llama.mp3",
+  "source": "https://freesound.org/people/clawback/sounds/426966/",
+  "license": "CC0",
+  "recorded_species": "lama",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T20:59:36"
+ },
+ {
+  "animal_id": "magpie",
+  "file": "rejected/magpie/magpie.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:Pica_pica-2015.6.11-part_12.flac",
+  "license": "CC0",
+  "recorded_species": "Pica pica (yavru)",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T17:20:30"
+ },
+ {
+  "animal_id": "leopard",
+  "file": "rejected/leopard/leopard.mp3",
+  "source": "https://freesound.org/people/drobiumdesign/sounds/346402/",
+  "license": "CC BY 3.0",
+  "recorded_species": "Panthera pardus",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:00:51"
+ },
+ {
+  "animal_id": "tapir",
+  "file": "rejected/tapir/tapir.mp3",
+  "source": "https://freesound.org/people/miastodzwiekow/sounds/80379/",
+  "license": "CC BY 4.0",
+  "recorded_species": "tapir (Poznań hayvanat bahçesi)",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:03:05"
+ },
+ {
+  "animal_id": "hamster",
+  "file": "rejected/hamster/hamster.mp3",
+  "source": "https://freesound.org/people/ondrosik/sounds/165906/",
+  "license": "CC0",
+  "recorded_species": "hamster",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:03:16"
+ },
+ {
+  "animal_id": "serval",
+  "file": "rejected/serval/serval.mp3",
+  "source": "https://freesound.org/people/TheKingOfGeeks360/sounds/867552/",
+  "license": "CC0",
+  "recorded_species": "Leptailurus serval",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:03:37"
+ },
+ {
+  "animal_id": "song_thrush",
+  "file": "rejected/song_thrush/song_thrush.mp3",
+  "source": "https://commons.wikimedia.org/wiki/File:Turdus_philomelos_815.ogg",
+  "license": "CC BY 3.0",
+  "recorded_species": "Turdus philomelos",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:03:56"
+ },
+ {
+  "animal_id": "reindeer",
+  "file": "rejected/reindeer/reindeer.mp3",
+  "source": "https://freesound.org/people/YleArkisto/sounds/250313/",
+  "license": "CC BY 4.0",
+  "recorded_species": "Rangifer tarandus",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:04:03"
+ },
+ {
+  "animal_id": "emu",
+  "file": "rejected/emu/emu.mp3",
+  "source": "https://freesound.org/people/TheKingOfGeeks360/sounds/842354/",
+  "license": "CC0",
+  "recorded_species": "Dromaius novaehollandiae",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:04:20"
+ },
+ {
+  "animal_id": "partridge",
+  "file": "rejected/partridge/partridge.mp3",
+  "source": "https://freesound.org/people/dobroide/sounds/153501/",
+  "license": "CC BY 4.0",
+  "recorded_species": "Alectoris rufa (kınalı keklik)",
+  "reason": "Kontrol sayfasında reddedildi; yeniden araştırılmayacak.",
+  "decided": "2026-11-16T21:04:34"
+ }
+]

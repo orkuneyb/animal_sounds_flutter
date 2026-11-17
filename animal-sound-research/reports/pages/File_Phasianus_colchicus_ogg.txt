@@ -1,0 +1,12 @@
+{{Information
+|Description=Call of the Common Pheasant (''Phasianus colchicus'')
+|Source=http://www.nps.gov/archive/wica/Bird_List.htm
+|Date={{unknown|date}}
+|Author={{unknown|author}}
+|Permission=Work of the National Park Service - Public Domain
+|other_versions=
+}}
+
+{{PD-USGov-NPS}}
+
+[[Category:Audio files of feral Phasianus colchicus|Phasianus colchicus]]

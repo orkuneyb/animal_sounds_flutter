@@ -1,0 +1,846 @@
+[
+ {
+  "animal": "alpaca",
+  "kind": "sound",
+  "author": "mayanespirit (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/mayanespirit/sounds/201983/",
+  "file_url": "https://cdn.freesound.org/previews/201/201983_2568677-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "baboon",
+  "kind": "sound",
+  "author": "British Library (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Yellow_Baboon_(Papio_cynocephalus)_(W_PAPIO_CYNOCEPHALUS_R1_C1).ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Yellow_Baboon_%28Papio_cynocephalus%29_%28W_PAPIO_CYNOCEPHALUS_R1_C1%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "badger",
+  "kind": "sound",
+  "author": "TEDAgame (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/TEDAgame/sounds/527390/",
+  "file_url": "https://cdn.freesound.org/previews/527/527390_9311684-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "movement sound of the animal, not its call"
+ },
+ {
+  "animal": "beaver",
+  "kind": "sound",
+  "author": "Mobius_Play109 (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/Mobius_Play109/sounds/685527/",
+  "file_url": "https://cdn.freesound.org/previews/685/685527_14284969-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "movement sound of the animal, not its call"
+ },
+ {
+  "animal": "bison",
+  "kind": "sound",
+  "author": "National Park Service (ABD) (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Bison.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Bison.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "budgerigar",
+  "kind": "sound",
+  "author": "Pyb (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Domesticated_budgerigars_birdsong_02.ogg.mp3",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/98/Domesticated_budgerigars_birdsong_02.ogg.mp3?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "bustard",
+  "kind": "sound",
+  "author": "rockeso3 (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/rockeso3/sounds/521446/",
+  "file_url": "https://cdn.freesound.org/previews/521/521446_3454578-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "butterfly",
+  "kind": "sound",
+  "author": "Yuval (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/Yuval/sounds/198818/",
+  "file_url": "https://cdn.freesound.org/previews/198/198818_770707-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "movement sound of the animal, not its call"
+ },
+ {
+  "animal": "canary",
+  "kind": "sound",
+  "author": "Markowitz J, Ivie E, Kligler L, Gardner T (Wikimedia Commons)",
+  "license": "CC BY",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Long-range-Order-in-Canary-Song-pcbi.1003052.s001.oga",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Long-range-Order-in-Canary-Song-pcbi.1003052.s001.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "capuchin",
+  "kind": "sound",
+  "author": "ricardoemfield (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/ricardoemfield/sounds/795413/",
+  "file_url": "https://cdn.freesound.org/previews/795/795413_14157557-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "cat",
+  "kind": "sound",
+  "author": "PantheraLeo1359531 (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Weibliche_Britisch_Kurzhaar_will_Futter_C1277_MIAUEN.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/08/Weibliche_Britisch_Kurzhaar_will_Futter_C1277_MIAUEN.wav",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "chaffinch",
+  "kind": "sound",
+  "author": "reinsamba (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/reinsamba/sounds/53973/",
+  "file_url": "https://cdn.freesound.org/previews/53/53973_18799-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "chicken",
+  "kind": "sound",
+  "author": "alys (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "chimpanzee",
+  "kind": "sound",
+  "author": "Pawel Fedurek ve ark. (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Pant-hoot_call_made_by_a_male_chimpanzee.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/56/Pant-hoot_call_made_by_a_male_chimpanzee.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "cicada",
+  "kind": "sound",
+  "author": "DavidDelon (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Cicada_orni.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Cicada_orni.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "cockatoo",
+  "kind": "sound",
+  "author": "Metalman101 (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/Metalman101/sounds/231303/",
+  "file_url": "https://cdn.freesound.org/previews/231/231303_2210464-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "crane",
+  "kind": "sound",
+  "author": "Hugo.arg (Wikimedia Commons)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Gerv%C4%97s.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Gerv%C4%97s.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "cricket",
+  "kind": "sound",
+  "author": "Natural History Museum, London (BioAcoustica)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "crow",
+  "kind": "sound",
+  "author": "G McGrane",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "cuckoo",
+  "kind": "sound",
+  "author": "Σ64 (Wikimedia Commons)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "deer",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "dingo",
+  "kind": "sound",
+  "author": "kangaroovindaloo (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/kangaroovindaloo/sounds/517552/",
+  "file_url": "https://cdn.freesound.org/previews/517/517552_1728127-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "donkey",
+  "kind": "sound",
+  "author": "felix-blume (Freesound)",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "dragonfly",
+  "kind": "sound",
+  "author": "antoineopeng (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/antoineopeng/sounds/447319/",
+  "file_url": "https://cdn.freesound.org/previews/447/447319_6400805-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "movement sound of the animal, not its call"
+ },
+ {
+  "animal": "eagle",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "fennec_fox",
+  "kind": "sound",
+  "author": "Eosin-Y (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Fennec_Singing.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Fennec_Singing.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "flamingo",
+  "kind": "sound",
+  "author": "InspectorJ (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/InspectorJ/sounds/400860/",
+  "file_url": "https://cdn.freesound.org/previews/400/400860_5121236-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "frog",
+  "kind": "sound",
+  "author": "NPS / Theresa Thom",
+  "license": "Public domain",
+  "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "source_page": "https://www.nps.gov/subjects/sound/sounds-green-treefrog.htm",
+  "file_url": "https://www.nps.gov/nps-audiovideo/legacy/mp3/nri/avElement/nri-GreenTreeFrogEvergladesNP.mp3",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "gibbon",
+  "kind": "sound",
+  "author": "Koda H, Lemasson A, Oyakawa C, Rizaldi, Pamungkas J, Masataka N (Wikimedia Commons)",
+  "license": "CC BY",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Possible-Role-of-Mother-Daughter-Vocal-Interactions-on-the-Development-of-Species-Specific-Song-in-pone.0071432.s006.oga",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Possible-Role-of-Mother-Daughter-Vocal-Interactions-on-the-Development-of-Species-Specific-Song-in-pone.0071432.s006.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "goat",
+  "kind": "sound",
+  "author": "stephan (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "goose",
+  "kind": "sound",
+  "author": "U.S. Fish and Wildlife Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "grasshopper",
+  "kind": "sound",
+  "author": "Natural History Museum, London (BioAcoustica) (Wikimedia Commons)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:BioAcoustica_561_13_Chorthippus_yersini_757r9.flac",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/74/BioAcoustica_561_13_Chorthippus_yersini_757r9.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "guineafowl",
+  "kind": "sound",
+  "author": "EpicWizard (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/EpicWizard/sounds/386985/",
+  "file_url": "https://cdn.freesound.org/previews/386/386985_2291325-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "hedgehog",
+  "kind": "sound",
+  "author": "Commons yükleyicisi (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:%D0%87%D0%B6%D0%B0%D0%BA_%D0%B1%D1%96%D0%BB%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B2%D0%B8%D0%B9,_%D0%B7%D0%B2%D1%83%D0%BA%D0%B8_%D1%97%D0%B6%D0%B0%D1%87%D0%B5%D0%BD%D1%8F%D1%82_3-4_%D1%82%D0%B8%D0%B6%D0%BD%D1%96.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/%D0%87%D0%B6%D0%B0%D0%BA_%D0%B1%D1%96%D0%BB%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B2%D0%B8%D0%B9%2C_%D0%B7%D0%B2%D1%83%D0%BA%D0%B8_%D1%97%D0%B6%D0%B0%D1%87%D0%B5%D0%BD%D1%8F%D1%82_3-4_%D1%82%D0%B8%D0%B6%D0%BD%D1%96.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "hippopotamus",
+  "kind": "sound",
+  "author": "toadie (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/toadie/sounds/194870/",
+  "file_url": "https://cdn.freesound.org/previews/194/194870_3311332-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "hoopoe",
+  "kind": "sound",
+  "author": "dobroide (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/dobroide/sounds/70958/",
+  "file_url": "https://cdn.freesound.org/previews/70/70958_8043-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "horse",
+  "kind": "sound",
+  "author": "Briefer E, Maigrot A, Mandel R, Freymond S, Bachmann I, Hillmann E",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Segregation-of-information-about-emotional-arousal-and-valence-in-horse-whinnies-srep09989-s2.oga",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Segregation-of-information-about-emotional-arousal-and-valence-in-horse-whinnies-srep09989-s2.oga",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "hyena",
+  "kind": "sound",
+  "author": "David Watts / The British Library",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "jaguar",
+  "kind": "sound",
+  "author": "About Zoos (Wikimedia Commons)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Jaguar_saw.flac",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Jaguar_saw.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "japanese_macaque",
+  "kind": "sound",
+  "author": "Furuyama T, Kobayasi K, Riquimaroux H (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Role-of-vocal-tract-characteristics-in-individual-discrimination-by-Japanese-macaques-(Macaca-srep32042-s2.oga",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Role-of-vocal-tract-characteristics-in-individual-discrimination-by-Japanese-macaques-%28Macaca-srep32042-s2.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "katydid",
+  "kind": "sound",
+  "author": "Natural History Museum, London (BioAcoustica) (Wikimedia Commons)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:BioAcoustica_399-11_Tettigonia_viridissima_412c_.flac",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/BioAcoustica_399-11_Tettigonia_viridissima_412c_.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "kingfisher",
+  "kind": "sound",
+  "author": "klankbeeld (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/klankbeeld/sounds/677304/",
+  "file_url": "https://cdn.freesound.org/previews/677/677304_1648170-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "kiwi",
+  "kind": "sound",
+  "author": "Department of Conservation (Yeni Zelanda) (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Kiwi_Male_North_Island_brown_kiwi_song.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Kiwi_Male_North_Island_brown_kiwi_song.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "lemur",
+  "kind": "sound",
+  "author": "CHRISFOPFILMS (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/CHRISFOPFILMS/sounds/277427/",
+  "file_url": "https://cdn.freesound.org/previews/277/277427_3808723-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "lion",
+  "kind": "sound",
+  "author": "Jonathan Growcott, Alex Lobora, Andrew Markham, Charlotte E. Searle, Johan Wahlström, Matthew Wijers, Benno I. Simmons",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Lionroar.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Lionroar.wav",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "lynx",
+  "kind": "sound",
+  "author": "YleArkisto (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/YleArkisto/sounds/243496/",
+  "file_url": "https://cdn.freesound.org/previews/243/243496_4415905-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "meerkat",
+  "kind": "sound",
+  "author": "jimipoo32 (Freesound)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "https://freesound.org/people/jimipoo32/sounds/489874/",
+  "file_url": "https://cdn.freesound.org/previews/489/489874_10578054-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "moose",
+  "kind": "sound",
+  "author": "Bwells (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Moose_mate.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Moose_mate.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "mouse",
+  "kind": "sound",
+  "author": "Holy T, Guo Z. PLOS Biology, 2005",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "nightingale",
+  "kind": "sound",
+  "author": "reinsamba (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/reinsamba/sounds/95713/",
+  "file_url": "https://cdn.freesound.org/previews/95/95713_18799-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "nightjar",
+  "kind": "sound",
+  "author": "ElsaDono (Wikimedia Commons)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Caprimulgus_europaeus.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Caprimulgus_europaeus.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "opossum",
+  "kind": "sound",
+  "author": "olliehahn12 (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/olliehahn12/sounds/262006/",
+  "file_url": "https://cdn.freesound.org/previews/262/262006_3820822-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "owl",
+  "kind": "sound",
+  "author": "NPS (U.S. National Park Service)",
+  "license": "Public domain",
+  "license_url": "https://www.nps.gov/aboutus/disclaimer.htm",
+  "source_page": "https://www.nps.gov/subjects/sound/sounds-spotted-owl.htm",
+  "file_url": "https://www.nps.gov/nps-audiovideo/legacy/mp3/nri/avElement/nri-SpottedOwlYOSE.mp3",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "panda",
+  "kind": "sound",
+  "author": "Wikimedia Commons contributor",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "parrot",
+  "kind": "sound",
+  "author": "Richard Ranft / The British Library Board",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "peacock",
+  "kind": "sound",
+  "author": "Ke4roh (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "pelican",
+  "kind": "sound",
+  "author": "Marco Dragonetti (Wikimedia Commons)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Great_White_Pelican_(Pelecanus_onocrotalus)_sounds.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Great_White_Pelican_%28Pelecanus_onocrotalus%29_sounds.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "peregrine_falcon",
+  "kind": "sound",
+  "author": "digifishmusic (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/digifishmusic/sounds/54083/",
+  "file_url": "https://cdn.freesound.org/previews/54/54083_29541-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "pheasant",
+  "kind": "sound",
+  "author": "National Park Service (ABD) (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Phasianus_colchicus.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/39/Phasianus_colchicus.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "pigeon",
+  "kind": "sound",
+  "author": "Oona Räisänen",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "polar_bear",
+  "kind": "sound",
+  "author": "Zagzav12 (Wikimedia Commons)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Polar_bear_sound_effect.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Polar_bear_sound_effect.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "porcupine",
+  "kind": "sound",
+  "author": "craigsmith (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/craigsmith/sounds/675452/",
+  "file_url": "https://cdn.freesound.org/previews/675/675452_2524442-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "puma",
+  "kind": "sound",
+  "author": "MPooman (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/MPooman/sounds/648372/",
+  "file_url": "https://cdn.freesound.org/previews/648/648372_14220990-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "quail",
+  "kind": "sound",
+  "author": "dobroide (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/dobroide/sounds/20529/",
+  "file_url": "https://cdn.freesound.org/previews/20/20529_8043-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "rabbit",
+  "kind": "sound",
+  "author": "kessir (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Rabbit_oinks_and_squeaks.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Rabbit_oinks_and_squeaks.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "raccoon",
+  "kind": "sound",
+  "author": "jnargus (Wikimedia Commons)",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Baby_Raccoon_Chatter_1.flac",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Baby_Raccoon_Chatter_1.flac?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "red_panda",
+  "kind": "sound",
+  "author": "Mizunoryu (varsayılan) (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Red_panda_twittering.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/70/Red_panda_twittering.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "rhinoceros",
+  "kind": "sound",
+  "author": "Breviceps (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/Breviceps/sounds/535810/",
+  "file_url": "https://cdn.freesound.org/previews/535/535810_9159316-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "seagull",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "seal",
+  "kind": "sound",
+  "author": "Department of Conservation (New Zealand)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "sheep",
+  "kind": "sound",
+  "author": "earthcalling (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "https://commons.wikimedia.org/wiki/Template:PD-pdsounds.org",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Sheep_bleating.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/13/Sheep_bleating.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "sparrow",
+  "kind": "sound",
+  "author": "Oona Räisänen (Mysid) (Wikimedia Commons)",
+  "license": "Public domain",
+  "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Passer_domesticus.ogg",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Passer_domesticus.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "squirrel",
+  "kind": "sound",
+  "author": "U.S. National Park Service",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "starling",
+  "kind": "sound",
+  "author": "dobroide (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/dobroide/sounds/185512/",
+  "file_url": "https://cdn.freesound.org/previews/185/185512_8043-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "stork",
+  "kind": "sound",
+  "author": "Breviceps (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/Breviceps/sounds/705861/",
+  "file_url": "https://cdn.freesound.org/previews/705/705861_9159316-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "swan",
+  "kind": "sound",
+  "author": "Richard Ridgeway / The British Library Board",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "tiger",
+  "kind": "sound",
+  "author": "schots (Freesound)",
+  "license": "CC0 1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:439280_schots_angry-tiger.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/439280_schots_angry-tiger.wav",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "toucan",
+  "kind": "sound",
+  "author": "felix.blume (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/felix.blume/sounds/376669/",
+  "file_url": "https://cdn.freesound.org/previews/376/376669_1661766-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "turkey",
+  "kind": "sound",
+  "author": "bod (PDSounds.org)",
+  "license": "Public domain",
+  "license_url": "",
+  "source_page": "see docs/credits/sounds.md",
+  "file_url": "",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "walrus",
+  "kind": "sound",
+  "author": "Zagzav12 (Wikimedia Commons)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://commons.wikimedia.org/wiki/File:Walrus_sound_effect.wav",
+  "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Walrus_sound_effect.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "changes": "trimmed, volume adjusted, converted to MP3",
+  "note": "licence or species could not be verified at the source; approved by the owner"
+ },
+ {
+  "animal": "wasp",
+  "kind": "sound",
+  "author": "dobroide (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/dobroide/sounds/20569/",
+  "file_url": "https://cdn.freesound.org/previews/20/20569_8043-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "wild_boar",
+  "kind": "sound",
+  "author": "Garuda1982 (Freesound)",
+  "license": "CC0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source_page": "https://freesound.org/people/Garuda1982/sounds/425241/",
+  "file_url": "https://cdn.freesound.org/previews/425/425241_2061858-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ },
+ {
+  "animal": "woodpecker",
+  "kind": "sound",
+  "author": "InspectorJ (Freesound)",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "source_page": "https://freesound.org/people/InspectorJ/sounds/418738/",
+  "file_url": "https://cdn.freesound.org/previews/418/418738_5121236-hq.ogg",
+  "changes": "trimmed, volume adjusted, converted to MP3"
+ }
+]

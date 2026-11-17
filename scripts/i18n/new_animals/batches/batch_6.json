@@ -1,0 +1,103 @@
+{
+ "traits": {
+  "buffalo": {"group": "wild", "home": "savanna", "food": "grass", "size": "bigger"}
+ },
+ "texts": {
+  "en-US": {
+   "buffalo": "African buffalo",
+   "buffalo_desc": "I am a strong African buffalo. I live on the savanna with my big herd.",
+   "buffalo_size": "Length: 1.7-3.4 m",
+   "buffalo_weight": "300-900 kg",
+   "buffalo_lifespan": "15-25 years",
+   "buffalo_habitat": "Savannas, grasslands and swamps of Africa",
+   "buffalo_diet": "Herbivorous. Grass and leaves",
+   "buffalo_fun_fact_1": "My thick horns join in the middle like a helmet.",
+   "buffalo_fun_fact_2": "My herd stands together to protect the calves from lions.",
+   "buffalo_fun_fact_3": "I love rolling in mud to stay cool."
+  },
+  "tr-TR": {
+   "buffalo": "Afrika mandası",
+   "buffalo_desc": "Ben güçlü bir Afrika mandasıyım. Kalabalık sürümle savanda yaşarım.",
+   "buffalo_size": "Uzunluk: 1.7-3.4 m",
+   "buffalo_weight": "300-900 kg",
+   "buffalo_lifespan": "15-25 yıl",
+   "buffalo_habitat": "Afrika'nın savanları, otlakları ve bataklıkları",
+   "buffalo_diet": "Otçul. Otlar ve yapraklar",
+   "buffalo_fun_fact_1": "Kalın boynuzlarım ortada bir miğfer gibi birleşir.",
+   "buffalo_fun_fact_2": "Sürüm, yavruları aslanlardan korumak için omuz omuza durur.",
+   "buffalo_fun_fact_3": "Serinlemek için çamurda yuvarlanmayı çok severim."
+  },
+  "de-DE": {
+   "buffalo": "Afrikanischer Büffel",
+   "buffalo_desc": "Ich bin ein starker Afrikanischer Büffel. Ich lebe mit meiner großen Herde in der Savanne.",
+   "buffalo_size": "Länge: 1.7-3.4 m",
+   "buffalo_weight": "300-900 kg",
+   "buffalo_lifespan": "15-25 Jahre",
+   "buffalo_habitat": "Savannen, Grasland und Sümpfe in Afrika",
+   "buffalo_diet": "Pflanzenfresser. Gras und Blätter",
+   "buffalo_fun_fact_1": "Meine dicken Hörner wachsen in der Mitte wie ein Helm zusammen.",
+   "buffalo_fun_fact_2": "Meine Herde hält zusammen, um die Kälber vor Löwen zu schützen.",
+   "buffalo_fun_fact_3": "Ich wälze mich gern im Schlamm, um mich abzukühlen."
+  },
+  "es-ES": {
+   "buffalo": "Búfalo africano",
+   "buffalo_desc": "Soy un búfalo africano muy fuerte. Vivo en la sabana con mi gran manada.",
+   "buffalo_size": "Longitud: 1.7-3.4 m",
+   "buffalo_weight": "300-900 kg",
+   "buffalo_lifespan": "15-25 años",
+   "buffalo_habitat": "Sabanas, praderas y pantanos de África",
+   "buffalo_diet": "Herbívoro. Hierba y hojas",
+   "buffalo_fun_fact_1": "Mis gruesos cuernos se unen en el centro como un casco.",
+   "buffalo_fun_fact_2": "Mi manada se junta para proteger a las crías de los leones.",
+   "buffalo_fun_fact_3": "Me encanta revolcarme en el barro para refrescarme."
+  },
+  "pt-BR": {
+   "buffalo": "Búfalo-africano",
+   "buffalo_desc": "Eu sou um búfalo-africano bem forte. Vivo na savana com a minha grande manada.",
+   "buffalo_size": "Comprimento: 1.7-3.4 m",
+   "buffalo_weight": "300-900 kg",
+   "buffalo_lifespan": "15-25 anos",
+   "buffalo_habitat": "Savanas, campos e pântanos da África",
+   "buffalo_diet": "Herbívoro. Capim e folhas",
+   "buffalo_fun_fact_1": "Meus chifres grossos se juntam no meio como um capacete.",
+   "buffalo_fun_fact_2": "Minha manada fica unida para proteger os filhotes dos leões.",
+   "buffalo_fun_fact_3": "Adoro rolar na lama para me refrescar."
+  },
+  "ru-RU": {
+   "buffalo": "Африканский буйвол",
+   "buffalo_desc": "Я — сильный африканский буйвол. Я живу в саванне со своим большим стадом.",
+   "buffalo_size": "Длина: 1.7-3.4 м",
+   "buffalo_weight": "300-900 кг",
+   "buffalo_lifespan": "15-25 лет",
+   "buffalo_habitat": "Саванны, луга и болота Африки",
+   "buffalo_diet": "Травоядный. Трава и листья",
+   "buffalo_fun_fact_1": "Мои толстые рога срастаются посередине, как шлем.",
+   "buffalo_fun_fact_2": "Моё стадо встаёт плечом к плечу, чтобы защитить телят от львов.",
+   "buffalo_fun_fact_3": "Я люблю валяться в грязи, чтобы охладиться."
+  },
+  "hi-IN": {
+   "buffalo": "अफ़्रीकी भैंसा",
+   "buffalo_desc": "मैं एक ताक़तवर अफ़्रीकी भैंसा हूँ। मैं अपने बड़े झुंड के साथ सवाना में रहता हूँ।",
+   "buffalo_size": "लंबाई: 1.7-3.4 मीटर",
+   "buffalo_weight": "300-900 किलो",
+   "buffalo_lifespan": "15-25 साल",
+   "buffalo_habitat": "अफ़्रीका के सवाना, घास के मैदान और दलदल",
+   "buffalo_diet": "शाकाहारी। घास और पत्तियाँ",
+   "buffalo_fun_fact_1": "मेरे मोटे सींग बीच में हेलमेट की तरह जुड़े होते हैं।",
+   "buffalo_fun_fact_2": "मेरा झुंड बच्चों को शेरों से बचाने के लिए एक साथ खड़ा हो जाता है।",
+   "buffalo_fun_fact_3": "ठंडक पाने के लिए मुझे कीचड़ में लोटना बहुत पसंद है।"
+  },
+  "ar-SA": {
+   "buffalo": "الجاموس الأفريقي",
+   "buffalo_desc": "أنا جاموس أفريقي قوي. أعيش في السافانا مع قطيعي الكبير.",
+   "buffalo_size": "الطول: 1.7-3.4 متر",
+   "buffalo_weight": "300-900 كغ",
+   "buffalo_lifespan": "15-25 سنة",
+   "buffalo_habitat": "السافانا والسهول العشبية والمستنقعات في أفريقيا",
+   "buffalo_diet": "عشبي. العشب وأوراق النباتات",
+   "buffalo_fun_fact_1": "قرناي السميكان يلتقيان في الوسط مثل الخوذة.",
+   "buffalo_fun_fact_2": "يقف قطيعي معاً لحماية الصغار من الأسود.",
+   "buffalo_fun_fact_3": "أحب التمرغ في الطين لأبرّد جسمي."
+  }
+ }
+}

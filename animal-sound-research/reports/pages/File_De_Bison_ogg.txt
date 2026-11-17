@@ -1,0 +1,21 @@
+=={{int:filedesc}}==
+{{Information
+|description = {{en|1=Pronunciation recording of German noun "Bison". Male voice, recorded by native German speaker from Berlin, Germany.}}
+{{de|1=Aussprachebeispiel des deutschen Substantivs "Bison". Männliche Stimme, aufgenommen von deutschem Muttersprachler aus Berlin, Deutschland.}}
+|date = 2016-12-16
+|source = {{own}}
+|author = [[user:Jeuwre|Jeuwre]]
+|permission = 
+|other_versions = 
+}}
+
+=={{int:license-header}}==
+{{self|cc-by-sa-4.0}}
+
+{{Supported by Wikimedia Deutschland}}
+
+[[Category:German pronunciation of nouns|Bison]]
+[[Category:Audio files made using a Rode NT-USB (supported by Wikimedia Deutschland)|Bison]]
+[[Category:Audio files made by jeuwre|Bison]]
+[[Category:Uploaded with VicuñaUploader]]
+[[Category:Created with Audacity|Bison]]

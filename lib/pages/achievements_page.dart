@@ -198,7 +198,7 @@ class _AchievementCard extends StatelessWidget {
   Widget _buildDescription(bool isUnlocked) {
     if (!isUnlocked && hintRevealed) {
       return Text(
-        '${'achievement_hint_prefix'.tr()}${achievement.description.tr()}',
+        '${'achievement_hint_prefix'.tr()}${achievement.description.tr(args: ['${achievement.maxProgress}'])}',
         textAlign: TextAlign.center,
         maxLines: 2,
         overflow: TextOverflow.ellipsis,
@@ -211,7 +211,7 @@ class _AchievementCard extends StatelessWidget {
       );
     }
     return Text(
-      isUnlocked ? achievement.description.tr() : '???',
+      isUnlocked ? achievement.description.tr(args: ['${achievement.maxProgress}']) : '???',
       textAlign: TextAlign.center,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,

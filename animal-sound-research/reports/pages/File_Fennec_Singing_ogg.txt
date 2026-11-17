@@ -1,0 +1,21 @@
+== {{int:filedesc}} ==
+{{Information
+|Description=
+{{de|1=Tonaufnahme einer Lautäußerung eines Fenneks (''[[Vulpes zerda]]''), aufgenommen Morgens oder am Vormittag.}}
+{{en|1=Sound recording of a fennec fox (''[[Vulpes zerda]]'') "singing" in the morning.}}
+|Source={{Transferred from|en.wikipedia}}
+|Date={{original upload date|2007-10-02}}
+|Author=[[:en:User:Eosin-Y|Eosin-Y]]
+|Permission=
+|other_versions=
+}}
+
+== {{int:license-header}} ==
+{{PD-user-en|Eosin-Y}}
+
+== {{original upload log}} ==
+{{original description page|en.wikipedia|Fennec_Singing.ogg}}
+* 2007-10-02 21:35 [[:en:User:Eosin-Y|Eosin-Y]] 000 (209468 bytes) ''<nowiki>This is the sound of a fennec fox "singing" in the morning.</nowiki>''
+
+[[Category:Vulpes zerda]]
+[[Category:Audio files of Canidae]]

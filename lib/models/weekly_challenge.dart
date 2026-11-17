@@ -7,6 +7,9 @@ class WeeklyChallenge {
   int progress;
   final int iconCodePoint;
 
+  /// Animals already counted, for challenges about different animals.
+  final Set<int> seenAnimals;
+
   WeeklyChallenge({
     required this.id,
     required this.titleKey,
@@ -15,7 +18,8 @@ class WeeklyChallenge {
     required this.target,
     this.progress = 0,
     required this.iconCodePoint,
-  });
+    Set<int>? seenAnimals,
+  }) : seenAnimals = seenAnimals ?? <int>{};
 
   bool get isCompleted => progress >= target;
   double get progressPercent => (progress / target).clamp(0.0, 1.0);
@@ -29,6 +33,9 @@ class WeeklyChallenge {
       target: json['target'] as int,
       progress: json['progress'] as int? ?? 0,
       iconCodePoint: json['iconCodePoint'] as int,
+      seenAnimals: (json['seen'] as List<dynamic>? ?? const [])
+          .map((e) => e as int)
+          .toSet(),
     );
   }
 
@@ -41,6 +48,7 @@ class WeeklyChallenge {
       'target': target,
       'progress': progress,
       'iconCodePoint': iconCodePoint,
+      'seen': seenAnimals.toList(),
     };
   }
 }

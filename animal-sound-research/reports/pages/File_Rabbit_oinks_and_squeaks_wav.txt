@@ -1,0 +1,14 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=From Freesound: Oinking of one of my Rabbits. He's very audible and sounds a bit like a guinea pig, but he is definitely a rabbit ;)}}
+|date=12-31-2016
+|source=[https://freesound.org/people/kessir/sounds/372075/ Freesound]
+|author=kessir
+|permission=
+|other versions=
+}}
+
+=={{int:license-header}}==
+{{cc-zero}}
+
+[[Category:Rabbit sounds]]

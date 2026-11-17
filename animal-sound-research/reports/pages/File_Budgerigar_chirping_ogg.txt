@@ -1,0 +1,23 @@
+== {{int:filedesc}} ==
+{{Information
+|Description={{en|<br>
+:'''Title''' budgerigar chirping
+:'''Artist''' mary905
+:'''Original mp3 data''' Length:0:05 minutes (22.7 KB) Format:MP3 Mono 22kHz 32Kbps (CBR)
+:'''User tags''' *chirp*, Animal, Bird, Budgerigar, chippering, chirping, Parakeet, Pets, trilling, twittering, Vor es tierisch vorlesen tun geld verdienen doppelt Lichtmikroskop ignoriert zinkengeld quittengelb diejenigen.
+:'''Type''' Single Subject
+:'''PDSounds record number''' 506
+:'''Comment''' Budgerigars chirping.
+}}
+|Date =2008-05-01
+|Author = mary905
+|Source = http://www.pdsounds.org/audio/download/506/budgerigarchirping.mp3
+* PDSounds description: http://www.pdsounds.org/sounds/budgerigar_chirping
+*Transferred by [[User:Fæ|Fæ]]
+|Permission={{PD-pdsounds.org}}
+}}
+== {{int:license-header}} ==
+{{PD-author|mary905}}
+[[Category:PDsounds.org]]
+[[Category:Sound files uploaded by Fæ]]
+[[Category:Audio files of Aves]]

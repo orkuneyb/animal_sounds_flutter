@@ -1,0 +1,47 @@
+[
+ {
+  "title": "File:Jer-Tarsyi.ogg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jer-Tarsyi.ogg",
+  "file": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Jer-Tarsyi.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "seconds": 1.15,
+  "bytes": 14145,
+  "mime": "application/ogg",
+  "licence": "Public domain",
+  "licence_url": "",
+  "author": "Man vyi",
+  "credit": "Own work",
+  "description": "Prononciâtion en Jèrriais",
+  "categories": "Tarsius|Jèrriais pronunciation|Self-published work|PD-self",
+  "uploader": "Man vyi"
+ },
+ {
+  "title": "File:LL-Q150 (fra)-Lyokoï-tarsier.wav",
+  "page": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Lyoko%C3%AF-tarsier.wav",
+  "file": "https://upload.wikimedia.org/wikipedia/commons/c/cb/LL-Q150_%28fra%29-Lyoko%C3%AF-tarsier.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "seconds": 1.0359183673469388,
+  "bytes": 91412,
+  "mime": "audio/wav",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Speaker: Lyokoï Recorder: Lyokoï",
+  "credit": "Own work ( Lingua Libre )",
+  "description": "Audio pronunciation file from the Lingua Libre project.",
+  "categories": "Lingua Libre pronunciation by Lyokoï|Lingua Libre pronunciation-fra",
+  "uploader": "Lyokoï"
+ },
+ {
+  "title": "File:LL-Q1860 (eng)-Vealhurl-tarsier.wav",
+  "page": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-tarsier.wav",
+  "file": "https://upload.wikimedia.org/wikipedia/commons/5/57/LL-Q1860_%28eng%29-Vealhurl-tarsier.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+  "seconds": 0.9386666666666666,
+  "bytes": 90156,
+  "mime": "audio/wav",
+  "licence": "CC BY-SA 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "author": "Speaker: Vealhurl Recorder: Vealhurl",
+  "credit": "Own work ( Lingua Libre )",
+  "description": "Audio pronunciation file from the Lingua Libre project.",
+  "categories": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+  "uploader": "Vealhurl"
+ }
+]

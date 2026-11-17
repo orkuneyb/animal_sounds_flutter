@@ -376,50 +376,68 @@ class _ExploreTabState extends State<ExploreTab>
 
                       // Preview of discovered animals
                       if (previewAnimals.isNotEmpty)
-                        SizedBox(
-                          height: 40,
-                          child: Row(
-                            children: [
-                              ...previewAnimals.map((animal) {
-                                return Padding(
-                                  padding: const EdgeInsets.only(right: 6),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(8),
-                                    child: Container(
-                                      width: 40,
-                                      height: 40,
-                                      color: AppColors.primaryContainer
-                                          .withValues(alpha: 0.3),
-                                      padding: const EdgeInsets.all(4),
-                                      child: Image.asset(
-                                        animal.imagePath,
-                                        fit: BoxFit.contain,
+                        // Show only as many tiles as the card is wide, so the
+                        // row never overflows on narrow phones.
+                        LayoutBuilder(
+                          builder: (context, constraints) {
+                            const tile = 40.0;
+                            const gap = 6.0;
+                            final slots =
+                                ((constraints.maxWidth + gap) / (tile + gap))
+                                    .floor()
+                                    .clamp(1, 5);
+                            final needsMore = discovered > slots;
+                            final shown = previewAnimals
+                                .take(needsMore ? slots - 1 : slots)
+                                .toList();
+                            final hidden = discovered - shown.length;
+                            return SizedBox(
+                              height: tile,
+                              child: Row(
+                                children: [
+                                  for (final animal in shown)
+                                    Padding(
+                                      padding:
+                                          const EdgeInsets.only(right: gap),
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: Container(
+                                          width: tile,
+                                          height: tile,
+                                          color: AppColors.primaryContainer
+                                              .withValues(alpha: 0.3),
+                                          padding: const EdgeInsets.all(4),
+                                          child: Image.asset(
+                                            animal.imagePath,
+                                            fit: BoxFit.contain,
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                );
-                              }),
-                              if (discovered > 4)
-                                Container(
-                                  width: 40,
-                                  height: 40,
-                                  decoration: BoxDecoration(
-                                    color: AppColors.primaryContainer
-                                        .withValues(alpha: 0.3),
-                                    borderRadius: BorderRadius.circular(8),
-                                  ),
-                                  child: Center(
-                                    child: Text(
-                                      '+${discovered - 4}',
-                                      style: AppTextStyles.bodySmall.copyWith(
-                                        fontWeight: FontWeight.w700,
-                                        color: AppColors.primary,
+                                  if (hidden > 0)
+                                    Container(
+                                      width: tile,
+                                      height: tile,
+                                      decoration: BoxDecoration(
+                                        color: AppColors.primaryContainer
+                                            .withValues(alpha: 0.3),
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Center(
+                                        child: Text(
+                                          '+$hidden',
+                                          style:
+                                              AppTextStyles.bodySmall.copyWith(
+                                            fontWeight: FontWeight.w700,
+                                            color: AppColors.primary,
+                                          ),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                ),
-                            ],
-                          ),
+                                ],
+                              ),
+                            );
+                          },
                         )
                       else
                         Text(

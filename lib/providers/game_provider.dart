@@ -56,12 +56,16 @@ class GameProvider with ChangeNotifier {
     _selectedAnimal = null;
     _lastAnswerCorrect = null;
 
-    final animals = List<Animal>.from(AnimalRepository.animals);
-    animals.shuffle(_random);
+    // Only an animal with a sound can be the one to guess; the wrong
+    // choices may be any animal.
+    final audible = AnimalRepository.withSound;
+    _correctAnimal = audible[_random.nextInt(audible.length)];
 
-    _correctAnimal = animals.first;
-
-    final wrongAnimals = animals.skip(1).take(3).toList();
+    final others = [
+      for (final animal in AnimalRepository.animals)
+        if (animal.index != _correctAnimal!.index) animal,
+    ]..shuffle(_random);
+    final wrongAnimals = others.take(3).toList();
 
     _currentOptions = [_correctAnimal!, ...wrongAnimals];
     _currentOptions.shuffle(_random);
@@ -70,7 +74,7 @@ class GameProvider with ChangeNotifier {
   }
 
   Future<void> playSound() async {
-    if (_correctAnimal == null) return;
+    if (_correctAnimal == null || !_correctAnimal!.hasSound) return;
 
     try {
       _isPlaying = true;
@@ -94,6 +98,9 @@ class GameProvider with ChangeNotifier {
     }
   }
 
+  /// Called when a Guess the Sound round ends; weekly challenges listen here.
+  void Function(int score)? onGameOver;
+
   bool checkAnswer(int animalIndex) {
     if (_isGameOver || _correctAnimal == null) return false;
 
@@ -108,6 +115,7 @@ class GameProvider with ChangeNotifier {
       _isGameOver = true;
       _lastAnswerCorrect = false;
       saveHighScore();
+      onGameOver?.call(_currentScore);
       AnalyticsService().soundGameOver(_currentScore);
     }
 

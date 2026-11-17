@@ -1,0 +1,82 @@
+[
+ {
+  "id": 871494,
+  "url": "https://freesound.org/people/CSStudios/sounds/871494/",
+  "name": "Armadillo_tragando",
+  "tags": [
+   "cowboy",
+   "videogame",
+   "voice"
+  ],
+  "description": "The sound of a human-shaped Armadillo drinking.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 1.02994,
+  "samplerate": 48000.0,
+  "username": "CSStudios",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/871/871494_19287889-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/871/871494_19287889-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/871/871494_19287889-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/871/871494_19287889-lq.ogg"
+  },
+  "num_downloads": 9,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 871493,
+  "url": "https://freesound.org/people/CSStudios/sounds/871493/",
+  "name": "Armadillo_death",
+  "tags": [
+   "cowboy",
+   "videogame",
+   "voice"
+  ],
+  "description": "The sound of a human-shaped Armadillo dying.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 1.18271,
+  "samplerate": 24000.0,
+  "username": "CSStudios",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/871/871493_19287889-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/871/871493_19287889-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/871/871493_19287889-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/871/871493_19287889-lq.ogg"
+  },
+  "num_downloads": 7,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 162493,
+  "url": "https://freesound.org/people/TasmanianPower/sounds/162493/",
+  "name": "Vinyl rewind",
+  "tags": [
+   "disc",
+   "dj",
+   "rewind",
+   "spin",
+   "stop",
+   "technique",
+   "turntable",
+   "vinyl"
+  ],
+  "description": "► CHECK OUT MY WEIRD RAP SONG:\n<a href=\"https://www.youtube.com/watch?v=eRWHvvWe3Dw&amp;list=PLuSoPs42TqP0vc0NPR11xFwAaCRLGItUU\" rel=\"nofollow\">miles under – Armadillo</a>\n\nAn emulation of the classic \"rewind and stop\" sound performed by DJs to add tension before the drop.\nMade after tens of trials using FL Studio's Fruity Scratcher on a sample I don't remember.\n\nLE: I'm happy this sample from 10 years ago helped so many people, cheers to all!",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 2.68048,
+  "samplerate": 44100.0,
+  "username": "TasmanianPower",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/162/162493_1739698-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/162/162493_1739698-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/162/162493_1739698-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/162/162493_1739698-lq.ogg"
+  },
+  "num_downloads": 72478,
+  "avg_rating": 4.624678663239075,
+  "num_ratings": 389
+ }
+]

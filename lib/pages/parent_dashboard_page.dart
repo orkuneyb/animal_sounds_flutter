@@ -377,7 +377,7 @@ class _PopularAnimalsSection extends StatelessWidget {
                       clipBehavior: Clip.antiAlias,
                       child: Image.asset(
                         animal.imagePath,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.contain,
                         errorBuilder: (_, __, ___) =>
                             const Icon(Icons.pets, size: 32),
                       ),

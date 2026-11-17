@@ -1,0 +1,54 @@
+[
+ {
+  "id": 521446,
+  "url": "https://freesound.org/people/rockeso3/sounds/521446/",
+  "name": "Avutarda.mp3",
+  "tags": [
+   "Bird",
+   "Bustard",
+   "Nature",
+   "Oiseau",
+   "great"
+  ],
+  "description": "Bird found in the Iberian Peninsula.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "mp3",
+  "duration": 13.3504,
+  "samplerate": 48000.0,
+  "username": "rockeso3",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/521/521446_3454578-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/521/521446_3454578-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/521/521446_3454578-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/521/521446_3454578-lq.ogg"
+  },
+  "num_downloads": 49,
+  "avg_rating": 5.0,
+  "num_ratings": 1
+ },
+ {
+  "id": 135037,
+  "url": "https://freesound.org/people/MrLindstrom/sounds/135037/",
+  "name": "CrystalSwoop.wav",
+  "tags": [
+   "calm",
+   "crystal",
+   "fade"
+  ],
+  "description": "Accoustic Mirror galore... what would I do without you?\r\nMy attempt at making a sound similar to the outro noise in the demo GLExcess by Paolo \"Bustard\" Martella.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 6.29315,
+  "samplerate": 22050.0,
+  "username": "MrLindstrom",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/135/135037_2466312-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/135/135037_2466312-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/135/135037_2466312-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/135/135037_2466312-lq.ogg"
+  },
+  "num_downloads": 761,
+  "avg_rating": 4.133333333333334,
+  "num_ratings": 15
+ }
+]

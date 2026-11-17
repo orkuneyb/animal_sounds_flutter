@@ -7,10 +7,15 @@ import '../services/ad_service.dart';
 
 /// The shared banner used on the home and explore tabs.
 ///
-/// Collapses to nothing while no ad is loaded, and never requests an ad when
+/// Collapses to nothing while no ad is loaded (unless [reserveSpace] is set),
+/// and never requests an ad when
 /// the parent owns the remove-ads purchase ([PurchaseProvider.adsRemoved]).
 class BannerAdWidget extends StatefulWidget {
-  const BannerAdWidget({Key? key}) : super(key: key);
+  const BannerAdWidget({Key? key, this.reserveSpace = false}) : super(key: key);
+
+  /// Keeps the banner's height free while ads are on, even before an ad has
+  /// loaded, so content below never jumps under a child's finger.
+  final bool reserveSpace;
 
   @override
   State<BannerAdWidget> createState() => _BannerAdWidgetState();
@@ -69,8 +74,11 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   Widget build(BuildContext context) {
     final adsRemoved = context.watch<PurchaseProvider>().adsRemoved;
     final ad = _bannerAd;
-    if (adsRemoved || !_isBannerAdReady || ad == null) {
-      return const SizedBox.shrink();
+    if (adsRemoved) return const SizedBox.shrink();
+    if (!_isBannerAdReady || ad == null) {
+      return widget.reserveSpace
+          ? SizedBox(height: AdSize.banner.height.toDouble())
+          : const SizedBox.shrink();
     }
     return SizedBox(
       width: ad.size.width.toDouble(),

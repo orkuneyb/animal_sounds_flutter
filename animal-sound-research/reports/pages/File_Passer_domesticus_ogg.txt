@@ -1,0 +1,13 @@
+== {{int:filedesc}} ==
+{{Information
+|Description={{en|Nesting [[:w:House Sparrow|House Sparrow]]s (''[[Passer domesticus]]'') in a suburban environment in Southern Finland}}
+|Source=Own recording, recorded using a home-made parabolic microphone and a Minidisc recorder.
+|Date=2007-05-31
+|Author= Oona Räisänen ([[User:Mysid|Mysid]])
+|Permission=
+|other_versions=
+}}
+== {{int:license-header}} ==
+{{PD-self}}
+
+[[Category:Audio files of Passer domesticus]]

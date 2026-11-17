@@ -1,0 +1,19 @@
+== {{int:filedesc}} ==
+{{Information
+|Description={{en|1=The sound of a tree full of Cicadas. Recorded in Stavros, Ithaca, Greece. July 2008.}}
+|Source={{Own}}
+|Author=[[User:Channel R|Channel R]]
+|Date=2008-07
+|Permission=
+|other_versions=
+}}
+
+== {{int:license-header}} ==
+{{PD-self}}
+
+[[Category:Unidentified Cicadidae]]
+[[Category:Audio files of Cicadidae]]
+[[Category:Audio files of 2008]]
+[[Category:Audio files of Greece]]
+[[Category:Auchenorrhyncha of Greece]]
+[[Category:Ithaka]]

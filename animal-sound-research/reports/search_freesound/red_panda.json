@@ -1,0 +1,107 @@
+[
+ {
+  "id": 665256,
+  "url": "https://freesound.org/people/Solar01/sounds/665256/",
+  "name": "Science Fiction Ambient.wav",
+  "tags": [
+   "abstract",
+   "alien",
+   "ambiance",
+   "ambience",
+   "ambient",
+   "atmos",
+   "atmosphere",
+   "atmospheric",
+   "background",
+   "cinematic",
+   "dark",
+   "drone",
+   "electronic",
+   "experimental",
+   "future",
+   "futuristic",
+   "guitar",
+   "movie",
+   "sci-fi",
+   "science-fiction",
+   "soundscape",
+   "spaceship",
+   "tv",
+   "unusual",
+   "weird"
+  ],
+  "description": "Futuristic abstract soundscape created with my guitar and the Red Panda Tensor pedal.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 55.4955,
+  "samplerate": 96000.0,
+  "username": "Solar01",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/665/665256_14490715-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/665/665256_14490715-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/665/665256_14490715-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/665/665256_14490715-lq.ogg"
+  },
+  "num_downloads": 162,
+  "avg_rating": 4.6,
+  "num_ratings": 5
+ },
+ {
+  "id": 824563,
+  "url": "https://freesound.org/people/KellyHopp/sounds/824563/",
+  "name": "Vox AC-15 Amp Noise",
+  "tags": [
+   "amp",
+   "amp-noise",
+   "effects",
+   "electric-guitar",
+   "tremolo"
+  ],
+  "description": "Vox AC-15 amp with tremolo and reverb, run through four pedals: Red Panda Particle, Electro-Harmonix Satisfaction (modded for more harmonic distortion), Line 6 Echo Park, and EarthQuaker Avalanche Run. Recorded in 48k and 24bit with AKG C414 mic.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "type": "wav",
+  "duration": 42.0,
+  "samplerate": 48000.0,
+  "username": "KellyHopp",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/824/824563_8960395-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/824/824563_8960395-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/824/824563_8960395-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/824/824563_8960395-lq.ogg"
+  },
+  "num_downloads": 32,
+  "avg_rating": 3.0,
+  "num_ratings": 1
+ },
+ {
+  "id": 432368,
+  "url": "https://freesound.org/people/xauque/sounds/432368/",
+  "name": "Heavy Rain On Car",
+  "tags": [
+   "Car",
+   "Den-Haag",
+   "Dutch",
+   "Heavy",
+   "Holland",
+   "Motorway",
+   "Netherlands",
+   "Rain",
+   "The-Hague"
+  ],
+  "description": "Heavy rain on a red 2006 Fiat Panda near the city of The Hague The Netherlands. On a small road to skip the late afternoon traffic jam on Tuesday 29-05-2018.",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 121.0,
+  "samplerate": 44100.0,
+  "username": "xauque",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/432/432368_2631805-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/432/432368_2631805-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/432/432368_2631805-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/432/432368_2631805-lq.ogg"
+  },
+  "num_downloads": 222,
+  "avg_rating": 5.0,
+  "num_ratings": 6
+ }
+]

@@ -1,0 +1,52 @@
+[
+ {
+  "id": 676570,
+  "url": "https://freesound.org/people/isaaku/sounds/676570/",
+  "name": "Chinchilla.m4a",
+  "tags": [
+   "all",
+   "but",
+   "car"
+  ],
+  "description": "all  but car",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "m4a",
+  "duration": 9.51467,
+  "samplerate": 44100.0,
+  "username": "isaaku",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/676/676570_14730112-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/676/676570_14730112-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/676/676570_14730112-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/676/676570_14730112-lq.ogg"
+  },
+  "num_downloads": 14,
+  "avg_rating": 0.0,
+  "num_ratings": 0
+ },
+ {
+  "id": 443847,
+  "url": "https://freesound.org/people/checholio/sounds/443847/",
+  "name": "64 Grito Chinchilla.wav",
+  "tags": [
+   "cartoon",
+   "scream",
+   "voice"
+  ],
+  "description": "cartoony small creature scream",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 2.16644,
+  "samplerate": 44100.0,
+  "username": "checholio",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/443/443847_9184212-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/443/443847_9184212-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/443/443847_9184212-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/443/443847_9184212-lq.ogg"
+  },
+  "num_downloads": 369,
+  "avg_rating": 4.75,
+  "num_ratings": 4
+ }
+]

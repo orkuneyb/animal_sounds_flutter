@@ -1,0 +1,35 @@
+{{BioAcousticaSample
+ |description        = Sound recording of Tettigonia viridissima
+ |date               = 1981-09-08
+ |source             = http://bio.acousti.ca/node/9131
+ |permission         = {{Cc-by-3.0}}
+ |copyright holder   = Natural History Museum, London
+ |recorder           = Kudelski Nagra IV-D (-17dB at 50 Hz)
+ |recorder power supply = ATN2/QED750
+ |peak meter reading = -25.0
+ |gain control position = 120.0
+ |tape = BASF SP 52
+ |tape speed = 19.0 cm/s
+ |track = Full
+ |record local time = 1545
+ |reference signal = 1 kHz for 10 s 
+ |temperature initial = 23.0 c
+ |temperature final = 23.0 c
+ |relative humidity initial = 55.0 %
+ |relative humidity final = 55.0 %
+ |light = Through observation window
+ |extraneous noise = 
+ |substrate = Large recording cage
+ |air movement = Nil
+ |biotic factors = The specimen had been kept in darkness until 0400 hours and it had been receiving heat and light from a 75 W bench lamp since 0900
+ |microphone = Sennheiser MKH 405
+ |microphone distance from subject = 30.0 cm
+ |microphone windshield = 
+ |microphone reflector = 
+ |microphone preamplifier = 
+ |microphone filter = 
+ |original classification = Tettigonia viridissima
+}}
+
+[[Category:Audio files of Tettigonia viridissima]]
+[[Category:Files from BioAcoustica]]

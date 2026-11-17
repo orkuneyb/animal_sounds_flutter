@@ -11,6 +11,11 @@ class FavoritesProvider extends ChangeNotifier {
 
   List<Favorite> get favorites => _favorites;
 
+  /// Called after every toggle with the new favourite count, whether the
+  /// animal was added, and its index. Achievements and weekly challenges
+  /// listen here.
+  void Function(int count, bool added, int animalId)? onFavoritesChanged;
+
   List<Animal> get favoriteAnimals {
     return _favorites.map((fav) {
       return AnimalRepository.animals.firstWhere(
@@ -47,7 +52,8 @@ class FavoritesProvider extends ChangeNotifier {
   }
 
   Future<void> toggleFavorite(int animalId) async {
-    if (isFavorite(animalId)) {
+    final added = !isFavorite(animalId);
+    if (!added) {
       _favorites.removeWhere((fav) => fav.animalId == animalId);
     } else {
       _favorites.add(Favorite(
@@ -57,6 +63,7 @@ class FavoritesProvider extends ChangeNotifier {
     }
     _sortFavorites();
     notifyListeners();
+    onFavoritesChanged?.call(_favorites.length, added, animalId);
     await _saveFavorites();
   }
 

@@ -1,0 +1,20 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=Male brown kiwi calling his mate.}}
+{{pl|1=Samiec [[:pl:Kiwi północny|kiwi północnego]] (''[[Apteryx mantelli]]'') nawołujący swoją partnerkę.}}
+{{cs| Sameček ptáka {{w|kivi hnědý||cs}} ''({{c|Apteryx mantelli}})'' volá svoji družku, {{w|Nový Zéland}}.}}
+|date={{other date|unknown}}
+|source=https://www.doc.govt.nz/nature/native-animals/birds/bird-songs-and-calls/
+|author={{Creator|Wikidata=Q1191417}}
+|permission=
+|other versions=
+}}
+
+=={{int:license-header}}==
+{{NZ-DOC}}
+
+=={{Assessment}}==
+{{Media of the day|2020|07|03}}
+
+[[Category:Apteryx mantelli]]
+[[Category:Audio files from the Department of Conservation (New Zealand)]]

@@ -1,0 +1,14 @@
+== {{int:filedesc}} ==
+{{Information
+ |description = Red Panda sounds.
+ |date = {{Original upload date|2008-01-11}}
+ |source = {{own assumed}}
+ |author = {{Author assumed|[[User:Mizunoryu|Mizunoryu]]}}
+ |permission = 
+ |other_versions = 
+}}
+
+== {{int:license-header}} ==
+{{PD-self}}
+
+[[Category:Ailurus fulgens in zoos]]

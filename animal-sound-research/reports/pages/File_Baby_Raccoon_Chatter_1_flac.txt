@@ -1,0 +1,14 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=Baby raccoon calling for its mother.}}
+|date=2014-05-23
+|source={{From YouTube|1=BGjFP1CP7E0|2=https://www.youtube.com/watch?v=BGjFP1CP7E0}}
+|author=jnargus
+|permission=
+|other versions=
+}}
+
+=={{int:license-header}}==
+ {{YouTube|jnargus}}
+
+[[Category:Procyon lotor (juvenile)]]

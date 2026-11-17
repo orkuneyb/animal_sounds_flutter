@@ -1,0 +1,19 @@
+=={{int:filedesc}}==
+{{Information
+|description={{en|1=Great White Pelican (Pelecanus onocrotalus) calls while feeding}}
+|date=2016-08-16
+|source=https://xeno-canto.org/331138
+|author=Marco Dragonetti
+|permission=
+|other versions=
+}}
+{{Location|45.2277|29.1297}}
+
+=={{int:license-header}}==
+{{cc-by-4.0}}
+
+[[Category:Audio files of Aves]]
+[[Category:Sounds of birds]]
+[[Category:Feeding waterfowl]]
+[[Category:Pelecanus]]
+[[Category:Danube Delta]]

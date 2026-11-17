@@ -1,0 +1,15 @@
+=={{int:filedesc}}==
+{{Information
+|description={{ru|1=Голос ушастого ежа.}}
+|date=2013-11-20 23:48:04
+|source={{own}}
+|author=[[User:Ullus|Ullus]]
+|permission=
+|other_versions=
+}}
+
+=={{int:license-header}}==
+{{self|cc-zero}}
+
+[[Category:Audio files of animal sounds]]
+[[Category:Hemiechinus auritus]]

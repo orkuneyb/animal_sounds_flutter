@@ -1,0 +1,32 @@
+=={{int:filedesc}}==
+
+{{Information
+|Description=
+{{en|1= Calling song of ''{{w|Magicicada septendecim}}''.}}
+{{uk|1=Заклична дзвінка пісня цикади ''{{wu|Періодичні цикади|Magicicada septendecim}}''.}}
+
+|Date= 2007
+|Source= Audio S1 from {{Cite journal
+| author = Fontaine K, Cooley J, Simon C
+| title = Evidence for Paternal Leakage in Hybrid Periodical Cicadas (Hemiptera: Magicicada spp.)
+| doi = 10.1371/journal.pone.0000892
+| journal = PLOS ONE
+| year = 2007
+| pmid = 17849021
+| pmc = 1963320
+}}
+|Author= Fontaine K, Cooley J, Simon C
+|Permission= {{PLOS}}
+|Other_fields={{Information field|name=Provenance|value= {{Open Access Media Importer}} }}
+}}
+
+== {{Assessment}} ==
+{{Media of the day|2025|05|14}}
+
+[[Category:Media from PLOS ONE]]
+[[Category:Uploaded with Open Access Media Importer]]
+[[Category:Magicicada septendecim]]
+[[Category:Audio files of Cicadidae]]
+[[Category:Audio files of Arthropoda]]
+[[Category:Open Access File of the Day]]
+[[Category:Audio files from open-access scholarly articles]]

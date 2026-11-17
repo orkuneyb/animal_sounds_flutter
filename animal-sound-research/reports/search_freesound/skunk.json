@@ -1,0 +1,31 @@
+[
+ {
+  "id": 399041,
+  "url": "https://freesound.org/people/.Andre_Onate/sounds/399041/",
+  "name": "French func skunk.wav",
+  "tags": [
+   "86-bpm",
+   "Downtempo",
+   "beat",
+   "drum-loop",
+   "groovy",
+   "percussion-loop",
+   "quantized"
+  ],
+  "description": "A beat i m using for a track im trying to make.  While learning how to speak french.  86 bpm",
+  "license": "http://creativecommons.org/publicdomain/zero/1.0/",
+  "type": "wav",
+  "duration": 24.3457,
+  "samplerate": 44100.0,
+  "username": ".Andre_Onate",
+  "previews": {
+   "preview-hq-mp3": "https://cdn.freesound.org/previews/399/399041_2448533-hq.mp3",
+   "preview-hq-ogg": "https://cdn.freesound.org/previews/399/399041_2448533-hq.ogg",
+   "preview-lq-mp3": "https://cdn.freesound.org/previews/399/399041_2448533-lq.mp3",
+   "preview-lq-ogg": "https://cdn.freesound.org/previews/399/399041_2448533-lq.ogg"
+  },
+  "num_downloads": 166,
+  "avg_rating": 4.0,
+  "num_ratings": 5
+ }
+]

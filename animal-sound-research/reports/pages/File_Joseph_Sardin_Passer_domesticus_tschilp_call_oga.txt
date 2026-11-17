@@ -1,0 +1,11 @@
+{{Information
+|Description    ={{en|1=A recording of the House Sparrow's typical ''tschilp'' call}}
+|Source         =[http://www.lasonotheque.org/detail.php?id=0421 Moineau domestique en peluche]
+|Author         =Joseph Sardin
+|Date           =2008-07-04
+|Permission     ={{LaSonotheque}}
+|other_versions =
+}}
+
+[[Category:Audio files of Passer domesticus]]
+[[Category:Sons seuls (LaSonotheque.org)]]

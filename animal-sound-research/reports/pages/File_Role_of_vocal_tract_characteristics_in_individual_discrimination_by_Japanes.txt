@@ -1,0 +1,25 @@
+=={{int:filedesc}}==
+
+{{Information
+|Description=
+{{en|1=Supplemental Audio 4 }}
+|Date= 2016-08-23
+|Source= [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4994087/bin/srep32042-s5.wav Audio file] from {{Cite journal
+| author = Furuyama T, Kobayasi K, Riquimaroux H
+| title = Role of vocal tract characteristics in individual discrimination by Japanese macaques (Macaca fuscata)
+| doi = 10.1038/srep32042
+| journal = Scientific Reports
+| year = 2016
+| pmid = 27550840
+| pmc = 4994087
+}}
+|Author= Furuyama T, Kobayasi K, Riquimaroux H
+|Permission= {{cc-by-4.0}}
+|Other_fields={{Information field|name=Provenance|value= {{Open Access Media Importer}} }}
+}}
+
+[[Category:Media from Scientific Reports]]
+[[Category:Uploaded with Open Access Media Importer]]
+[[Category:Uploaded with Open Access Media Importer and needing category review]]
+[[Category:Audio files from open-access scholarly articles]]
+[[Category:Macaca fuscata]]

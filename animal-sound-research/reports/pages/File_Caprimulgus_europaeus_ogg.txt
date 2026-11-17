@@ -1,0 +1,39 @@
+
+== {{int:filedesc}} ==
+{{Information
+|Description    ={{ru|1=Пение козодоя}}
+|Source         ={{own}}
+|Author         =[[User:ElsaDono|ElsaDono]]
+|Date           =2010-01-02
+|Permission     =
+|other_versions =
+}}
+{{FileContentsByBot
+| botName = [[User:DrTrigonBot|DrTrigonBot]] ([[User talk:DrTrigonBot|<span class="signature-talk">talk</span>]])
+|
+{{FileContentsByBot/Streams|
+  {{FileContentsByBot/Streams
+  | Rate = 2/-/44100
+  | Dimensions-00 = None
+  | Dimensions-01 = None
+  | ID = 1
+  | Format = audio/vorbis
+  }}
+}}
+{{FileContentsByBot/Properties|
+  {{FileContentsByBot/Properties
+  | MIME = application/ogg
+  | Filesize = 376056
+  | Format = OGG
+  | Dimensions-00 = None
+  | Dimensions-01 = None
+  }}
+}}
+}}
+
+== {{int:license-header}} ==
+{{self|Cc-zero}}
+
+[[Category:Categorized by DrTrigonBot]]
+[[Category:Audio files of animal sounds]]
+[[Category:Audio files of Caprimulgus europaeus]]
