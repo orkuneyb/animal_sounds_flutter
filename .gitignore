@@ -66,3 +66,6 @@ android/build/
 
 # Promo videos are large and made again by scripts/store_assets/video.py
 /docs/store-assets/*/promo_video.mp4
+
+# The Play Console hand-over folder is a copy made by scripts/store_assets/package.py
+/docs/play-store/
