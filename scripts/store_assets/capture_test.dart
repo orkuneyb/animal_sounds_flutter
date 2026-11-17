@@ -57,6 +57,32 @@ String _flutterRoot() {
   return File(Platform.resolvedExecutable).parent.parent.parent.parent.parent.path;
 }
 
+/// Nunito has no Hindi or Arabic letters. On a phone the system font steps
+/// in; a test has no such fallback and draws empty boxes. For those two
+/// languages the app's font files are answered with a Windows font that has
+/// the letters, so the screens show real text.
+void _useScriptFont() {
+  final language = _localeTag.split('-').first;
+  String? pick(String asset) {
+    if (language == 'hi') return 'C:/Windows/Fonts/Nirmala.ttc';
+    if (language != 'ar') return null;
+    final heavy = RegExp('Bold|Black').hasMatch(asset);
+    return 'C:/Windows/Fonts/DUBAI-${heavy ? 'BOLD' : 'MEDIUM'}.TTF';
+  }
+
+  if (pick('') == null || !File(pick('')!).existsSync()) return;
+  TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+      .setMockMessageHandler('flutter/assets', (message) async {
+    final key = Uri.decodeFull(utf8.decode(message!.buffer
+        .asUint8List(message.offsetInBytes, message.lengthInBytes)));
+    final file = key.contains('google_fonts/Nunito-')
+        ? File(pick(key)!)
+        : File('build/unit_test_assets/$key');
+    if (!file.existsSync()) return null;
+    return ByteData.view(file.readAsBytesSync().buffer);
+  });
+}
+
 /// Answers every plugin channel with null so missing native code never throws.
 void _stubPlugins() {
   final messenger =
@@ -87,8 +113,8 @@ void _stubPlugins() {
         return <String, dynamic>{
           'appName': 'Animal Sounds',
           'packageName': 'com.devork.animalsounds',
-          'version': '1.5.0',
-          'buildNumber': '13',
+          'version': '1.6.0',
+          'buildNumber': '14',
         };
       }
       return null;
@@ -194,6 +220,7 @@ void main() {
     // ignore: invalid_use_of_visible_for_testing_member
     SharedPreferences.setMockInitialValues(_seedPrefs());
 
+    _useScriptFont();
     final root = _flutterRoot();
     await tester.runAsync(() async {
       await _loadFont('MaterialIcons', [

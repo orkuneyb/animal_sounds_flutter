@@ -13,7 +13,7 @@ class AnimalDataParser {
   static final _gram = RegExp(r'gram|(\d|\s)(g|gr|г)(\s|\.|$|,)|ग्राम|غرام|грамм');
   static final _centimetre = RegExp(r'cm|см|सेमी|سم');
   static final _metre =
-      RegExp(r'met(er|re|ro)|метр|मीटर|متر|(\d|\s)(m|м)(\s|\.|$|,)');
+      RegExp(r'met(er|re|ro)|метр|मीटर|متر|أمتار|(\d|\s)(m|м)(\s|\.|$|,)');
 
   // Matches integers and decimals, including comma-separated thousands.
   static final _numberPattern = RegExp(r'[\d][,\d]*\.?\d*');
@@ -26,7 +26,7 @@ class AnimalDataParser {
   ///
   /// Returns 0 when no usable number is found.
   static double parseWeight(String raw) {
-    final line = _firstLine(raw);
+    final line = _firstLine(_western(raw));
     final lower = line.toLowerCase();
 
     // Detect unit: prefer kg; fall back to grams.
@@ -58,7 +58,7 @@ class AnimalDataParser {
   ///
   /// Returns 0 when no usable number is found.
   static double parseSize(String raw) {
-    final line = _firstLine(raw);
+    final line = _firstLine(_western(raw));
     final lower = line.toLowerCase();
 
     final numbers = _extractNumbers(line);
@@ -85,7 +85,7 @@ class AnimalDataParser {
   ///
   /// Returns 0 when no usable number is found.
   static double parseLifespan(String raw) {
-    final line = _firstLine(raw);
+    final line = _firstLine(_western(raw));
     final lower = line.toLowerCase();
 
     final numbers = _extractNumbers(line);
@@ -109,6 +109,26 @@ class AnimalDataParser {
   // ---------------------------------------------------------------------------
   // Private helpers
   // ---------------------------------------------------------------------------
+
+  /// Rewrites Arabic and Hindi digits and the Arabic decimal and thousands
+  /// marks as 0-9, "." and ",", so texts written with them can be read.
+  static String _western(String raw) {
+    final out = StringBuffer();
+    for (final rune in raw.runes) {
+      if (rune >= 0x0660 && rune <= 0x0669) {
+        out.writeCharCode(0x30 + rune - 0x0660);
+      } else if (rune >= 0x0966 && rune <= 0x096F) {
+        out.writeCharCode(0x30 + rune - 0x0966);
+      } else if (rune == 0x066B) {
+        out.write('.');
+      } else if (rune == 0x066C) {
+        out.write(',');
+      } else {
+        out.writeCharCode(rune);
+      }
+    }
+    return out.toString();
+  }
 
   /// Takes the first line that carries a number, so a heading such as
   /// "Varies by breed:" above the figures is skipped.

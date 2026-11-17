@@ -25,11 +25,21 @@ void main() {
       expect(AnimalDataParser.parseSize('Длина: 7-10 см'), 8.5);
       expect(AnimalDataParser.parseSize('Males: 1.7-2.5 meters in length'), 210);
     });
+
+    test('Arabic and Hindi digits are read like 0-9', () {
+      expect(AnimalDataParser.parseSize('الذكور: ١٫٧-٢٫٥ متر طولاً'), 210);
+      expect(AnimalDataParser.parseSize('٣٫٥-٤ أمتار ارتفاعاً'), 375);
+      expect(AnimalDataParser.parseWeight('٤٬٠٠٠-٧٬٠٠٠ كغ'), 5500);
+      expect(AnimalDataParser.parseLifespan('١٠-١٤ سنة في البرية'), 12);
+      expect(AnimalDataParser.parseWeight('१५०-२५० किलो'), 200);
+    });
   });
 
   // The compare screen draws bars from these numbers; zero or absurd values
   // would show an empty or a full bar.
-  for (final language in const ['en-US', 'tr-TR', 'de-DE', 'es-ES', 'pt-BR']) {
+  for (final language in const [
+    'en-US', 'tr-TR', 'de-DE', 'es-ES', 'pt-BR', 'ru-RU', 'hi-IN', 'ar-SA'
+  ]) {
     test('every animal has plausible numbers in $language', () {
       final t = texts(language);
       for (final animal in AnimalRepository.animals) {

@@ -63,3 +63,6 @@ android/build/
 /docs/animal-art/archive/
 /animal-sound-research/originals/
 /animal-sound-research/rejected/*/
+
+# Promo videos are large and made again by scripts/store_assets/video.py
+/docs/store-assets/*/promo_video.mp4

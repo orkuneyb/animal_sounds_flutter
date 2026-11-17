@@ -1,0 +1,50 @@
+{
+ "en-US": {
+  "title": "Animal Sounds", "tagline": "Listen · Learn · Play", "badge": "153 animals", "ribbon": "103 new!",
+  "new": ["103 New Animals", "153 in total"],
+  "shots": [["Meet 153", "Cute Animals"], ["Real Animal", "Sounds"], ["Guess the", "Sound!"], ["Fun Quizzes", "for little learners"],
+            ["Fun Facts", "Read Aloud"], ["A New Animal", "Every Day"], ["Collect", "Them All"], ["Who Is", "Bigger?"]]
+ },
+ "tr-TR": {
+  "title": "Hayvan Sesleri", "tagline": "Dinle · Öğren · Oyna", "badge": "153 hayvan", "ribbon": "103 yeni!",
+  "new": ["103 Yeni Hayvan", "Toplam 153"],
+  "shots": [["153 Sevimli", "Hayvanla Tanış"], ["Gerçek Hayvan", "Sesleri"], ["Sesi", "Tahmin Et!"], ["Eğlenceli Quiz", "minik kaşifler için"],
+            ["Eğlenceli Bilgiler", "sesli anlatımla"], ["Her Gün", "yeni bir hayvan"], ["Hepsini", "Topla"], ["Hangisi", "Daha Büyük?"]]
+ },
+ "ru-RU": {
+  "title": "Звуки животных", "tagline": "Слушай · Учись · Играй", "badge": "153 животных", "ribbon": "103 новых!",
+  "new": ["103 новых животных", "всего 153"],
+  "shots": [["153 милых", "животных"], ["Настоящие", "голоса животных"], ["Угадай", "звук!"], ["Весёлые викторины", "для малышей"],
+            ["Интересные факты", "с озвучкой"], ["Каждый день", "новое животное"], ["Собери", "их всех"], ["Кто", "больше?"]]
+ },
+ "pt-BR": {
+  "title": "Sons de Animais", "tagline": "Ouça · Aprenda · Brinque", "badge": "153 animais", "ribbon": "103 novos!",
+  "new": ["103 Novos Animais", "153 no total"],
+  "shots": [["Conheça 153", "Animais Fofos"], ["Sons Reais", "de Animais"], ["Adivinhe", "o Som!"], ["Quizzes Divertidos", "para os pequenos"],
+            ["Curiosidades", "com narração"], ["Um Animal Novo", "Todo Dia"], ["Colecione", "Todos"], ["Quem é", "Maior?"]]
+ },
+ "hi-IN": {
+  "title": "जानवरों की आवाज़ें", "tagline": "सुनो · सीखो · खेलो", "badge": "153 जानवर", "ribbon": "103 नए!",
+  "new": ["103 नए जानवर", "कुल 153"],
+  "shots": [["मिलो 153", "प्यारे जानवरों से"], ["जानवरों की", "असली आवाज़ें"], ["आवाज़", "पहचानो!"], ["मज़ेदार क्विज़", "नन्हे बच्चों के लिए"],
+            ["रोचक बातें", "बोलकर सुनाए"], ["हर दिन", "एक नया जानवर"], ["सबको", "इकट्ठा करो"], ["कौन", "बड़ा है?"]]
+ },
+ "es-ES": {
+  "title": "Sonidos de Animales", "tagline": "Escucha · Aprende · Juega", "badge": "153 animales", "ribbon": "¡103 nuevos!",
+  "new": ["103 Animales Nuevos", "153 en total"],
+  "shots": [["Conoce 153", "Animales Adorables"], ["Sonidos Reales", "de Animales"], ["¡Adivina", "el Sonido!"], ["Quizzes Divertidos", "para los peques"],
+            ["Datos Curiosos", "leídos en voz alta"], ["Un Animal Nuevo", "Cada Día"], ["Colecciónalos", "Todos"], ["¿Quién es", "Más Grande?"]]
+ },
+ "ar-SA": {
+  "title": "أصوات الحيوانات", "tagline": "استمع · تعلّم · العب", "badge": "153 حيوانًا", "ribbon": "103 جديدة!",
+  "new": ["103 حيوانات جديدة", "المجموع 153"],
+  "shots": [["تعرّف على", "153 حيوانًا"], ["أصوات حقيقية", "للحيوانات"], ["خمّن", "الصوت!"], ["مسابقات ممتعة", "للصغار"],
+            ["معلومات ممتعة", "بصوت مسموع"], ["حيوان جديد", "كل يوم"], ["اجمعها", "كلها"], ["من", "الأكبر؟"]]
+ },
+ "de-DE": {
+  "title": "Tiergeräusche", "tagline": "Hören · Lernen · Spielen", "badge": "153 Tiere", "ribbon": "103 neu!",
+  "new": ["103 neue Tiere", "153 insgesamt"],
+  "shots": [["Entdecke 153", "süße Tiere"], ["Echte", "Tierstimmen"], ["Errate", "das Geräusch!"], ["Lustige Quizze", "für kleine Entdecker"],
+            ["Spannende Fakten", "zum Anhören"], ["Jeden Tag", "ein neues Tier"], ["Sammle", "sie alle"], ["Wer ist", "größer?"]]
+ }
+}
